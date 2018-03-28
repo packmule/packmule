@@ -11,7 +11,7 @@
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
-    "prepublish": "tsc"
+    "postinstall": "tsc"
   },
   "main": "module/",
   "typings": "module/",
