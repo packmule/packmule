@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "target": "es2015",
+        "newLine": "lf",
+        "outDir": "module/",
+        "declaration": true,
+        "removeComments": true,
+        "strictNullChecks": true,
+        "alwaysStrict": true,
+        "allowUnreachableCode": true,
+        "noImplicitAny": true,
+        "noUnusedParameters": false,
+        "noUnusedLocals": true,
+        "noEmitOnError": true,
+        "noImplicitThis": true,
+        "noFallthroughCasesInSwitch": true
+    }
+}
