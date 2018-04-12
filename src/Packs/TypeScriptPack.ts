@@ -44,6 +44,7 @@ export default class TypeScriptPack implements Pack {
             loader: 'ts-loader',
             options: {
                 logLevel: 'warn',
+                onlyCompileBundledFiles: true,
                 compilerOptions: {
                     sourceMap: options.debug,
                 },
