@@ -16,7 +16,6 @@
   "main": "module/",
   "typings": "module/",
   "dependencies": {
-    "@sucrase/webpack-object-rest-spread-plugin": "^1.0.0",
     "@types/browser-sync": "0.0.40",
     "@types/micromatch": "^3.1.0",
     "@types/node": "^10.1.2",

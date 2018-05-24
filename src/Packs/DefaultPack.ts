@@ -1,5 +1,4 @@
 import * as webpack from 'webpack';
-// import * as ObjectRestSpreadPlugin from '@sucrase/webpack-object-rest-spread-plugin';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 
@@ -10,7 +9,6 @@ export default class DefaultPack implements Pack {
         },
         plugins: [
             new webpack.ProgressPlugin(),
-            // new ObjectRestSpreadPlugin(),
         ],
     };
 
