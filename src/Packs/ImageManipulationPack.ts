@@ -10,7 +10,7 @@ export default class ImageManipulationPack implements Pack {
     private instructions: any[] = [];
 
     private configuration: webpack.Configuration & {
-        module: webpack.NewModule;
+        module: webpack.Module;
     } = {
         module: {
             rules: [] as any[],
@@ -29,7 +29,7 @@ export default class ImageManipulationPack implements Pack {
 
     public generate (options: Options): webpack.Configuration {
         const use: any[] = [];
-        const rule: webpack.NewUseRule = {
+        const rule: webpack.RuleSetRule = {
             test: /\.(svg|gif|png|jpe?g|webp|tiff)$/,
             include: (path: string) => (this.glob ? micromatch.isMatch(path, this.glob) : true),
             use: [],

@@ -6,7 +6,7 @@ import Options from '../Core/Options';
 
 export default class SassPack implements Pack {
     private configuration: webpack.Configuration &{
-        module: webpack.NewModule;
+        module: webpack.Module;
     } = {
         resolve: {
             extensions: ['.scss', '.sass'],
@@ -55,7 +55,7 @@ export default class SassPack implements Pack {
             ];
         }
 
-        const rule: webpack.UseRule = {
+        const rule: webpack.RuleSetRule = {
             test: /\.s[ac]ss$/,
             use: loaders,
         };

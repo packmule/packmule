@@ -36,8 +36,8 @@ export default class ChunkPack implements Pack {
             };
         }
 
-        const chunk = new webpack.optimize.CommonsChunkPlugin(options);
-        this.configuration.plugins!.push(chunk);
+        //const chunk = new webpack.optimize.SplitChunksPlugin(options);
+        // this.configuration.plugins!.push(chunk);
 
         return this.configuration;
     }

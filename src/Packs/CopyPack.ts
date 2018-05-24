@@ -12,7 +12,7 @@ export default class CopyPack implements Pack {
     private options: CopyPackOptions = {};
 
     private configuration: webpack.Configuration & {
-        module: webpack.NewModule;
+        module: webpack.Module;
     } = {
         module: {
             rules: [],
@@ -30,7 +30,7 @@ export default class CopyPack implements Pack {
     }
 
     public generate (options: Options): webpack.Configuration {
-        const rule: webpack.NewUseRule = {
+        const rule: webpack.RuleSetRule = {
             test: /.+/,
             include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : false),
             use: [] as any[],

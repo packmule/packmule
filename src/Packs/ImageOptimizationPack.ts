@@ -16,7 +16,7 @@ export default class ImageOptimizationPack implements Pack {
     };
 
     private configuration: webpack.Configuration & {
-        module: webpack.NewModule;
+        module: webpack.Module;
     } = {
         module: {
             rules: [],
@@ -41,7 +41,7 @@ export default class ImageOptimizationPack implements Pack {
         const pattern = '(' + this.options.extensions.map((extension: string) => `\\.${extension}`).join('|') + ')$';
         const expression = new RegExp(pattern, 'i');
 
-        const rule: webpack.NewUseRule = {
+        const rule: webpack.RuleSetRule = {
             test: expression,
             include: (path: string) => this.options.glob ? micromatch.isMatch(path, this.options.glob) : true,
             use: [] as any[],

@@ -11,7 +11,7 @@ export default class JavaScriptPack implements Pack {
     private options: JavaScriptPackOptions = {};
 
     private configuration: webpack.Configuration &{
-        module: webpack.NewModule;
+        module: webpack.Module;
     } = {
         resolve: {
             extensions: ['.js'],
@@ -27,7 +27,7 @@ export default class JavaScriptPack implements Pack {
     }
 
     public generate (options: Options): webpack.Configuration {
-        const rule: webpack.NewUseRule = {
+        const rule: webpack.RuleSetRule = {
             test: /\.js$/,
             include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : true),
             use: [],

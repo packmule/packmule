@@ -11,7 +11,7 @@ export default class TypeScriptPack implements Pack {
     private options: TypeScriptPackOptions = {};
 
     private configuration: webpack.Configuration &{
-        module: webpack.NewModule;
+        module: webpack.Module;
     } = {
         resolve: {
             extensions: ['.ts', '.tsx'],
@@ -27,7 +27,7 @@ export default class TypeScriptPack implements Pack {
     }
 
     public generate (options: Options): webpack.Configuration {
-        const rule: webpack.NewUseRule = {
+        const rule: webpack.RuleSetRule = {
             test: /\.tsx?$/,
             include: (path: string) => this.options.glob ? micromatch.isMatch(path, this.options.glob) : true,
             use: [],
@@ -59,7 +59,7 @@ export default class TypeScriptPack implements Pack {
         this.configuration.module.rules.push(rule);
 
         if (options.lint) {
-            const linter: webpack.NewUseRule = {
+            const linter: webpack.RuleSetRule = {
                 test: /\.tsx?$/,
                 include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : true),
                 enforce: 'pre',

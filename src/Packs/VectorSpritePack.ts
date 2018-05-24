@@ -16,7 +16,7 @@ export default class VectorSpritePack implements Pack {
     };
 
     private configuration: webpack.Configuration &{
-        module: webpack.NewModule;
+        module: webpack.Module;
     } = {
         module: {
             rules: [],
@@ -39,7 +39,7 @@ export default class VectorSpritePack implements Pack {
     }
 
     public generate (options: Options): webpack.Configuration {
-        const rule: webpack.NewUseRule = {
+        const rule: webpack.RuleSetRule = {
             test: /\.svg$/,
             include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : true),
             use: [],
