@@ -4,6 +4,7 @@ import Options from '../Core/Options';
 
 export default class DefaultPack implements Pack {
     private configuration: webpack.Configuration = {
+        mode: 'none',
         resolve: {
             extensions: ['.json'],
         },
