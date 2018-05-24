@@ -12,9 +12,7 @@ export default class ChunkPack implements Pack {
         name: '',
         glob: '',
     };
-    private configuration: webpack.Configuration = {
-        plugins: [],
-    };
+    private configuration: webpack.Configuration;
 
     public constructor (name: string) {
         this.options.name = name;
@@ -26,18 +24,19 @@ export default class ChunkPack implements Pack {
     }
 
     public generate (): webpack.Configuration {
-        const options: any = {
-            name: this.options.name,
+       this.configuration = {
+            optimization: {
+                splitChunks: {
+                    cacheGroups: {
+                        [this.options.name]: {
+                            test: micromatch.makeRe(this.options.glob),
+                            name: this.options.name,
+                            chunks: 'all',
+                        }
+                    },
+                },
+            },
         };
-
-        if (this.options.glob) {
-            options.minChunks = (module: any) => {
-                return module.context && micromatch.isMatch(module.context, this.options.glob);
-            };
-        }
-
-        //const chunk = new webpack.optimize.SplitChunksPlugin(options);
-        // this.configuration.plugins!.push(chunk);
 
         return this.configuration;
     }
