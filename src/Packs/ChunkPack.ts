@@ -34,7 +34,7 @@ export default class ChunkPack implements Pack {
                         name: this.options.name,
                     },
                 },
-            }
+            };
         } else {
             this.configuration = {
                 optimization: {
