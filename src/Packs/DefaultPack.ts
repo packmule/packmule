@@ -22,6 +22,8 @@ export default class DefaultPack implements Pack {
             this.configuration.devtool = 'cheap-source-map';
         }
 
+        this.configuration.cache = options.cache;
+
         return this.configuration;
     }
 }
