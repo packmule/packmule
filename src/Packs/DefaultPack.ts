@@ -11,18 +11,21 @@ export default class DefaultPack implements Pack {
         plugins: [
             new webpack.ProgressPlugin(),
         ],
+        optimization: {},
     };
 
     public generate (options: Options): webpack.Configuration {
-        if (options.optimize) {
-            this.configuration.plugins!.push(new webpack.optimize.ModuleConcatenationPlugin());
-        }
+        this.configuration.optimization!.concatenateModules = options.optimize;
+        this.configuration.optimization!.occurrenceOrder = options.optimize;
+        this.configuration.optimization!.flagIncludedChunks = options.optimize;
+        this.configuration.optimization!.namedModules = options.debug;
+        this.configuration.optimization!.namedChunks = options.debug;
+
+        this.configuration.cache = options.cache;
 
         if (options.debug) {
             this.configuration.devtool = 'cheap-source-map';
         }
-
-        this.configuration.cache = options.cache;
 
         return this.configuration;
     }
