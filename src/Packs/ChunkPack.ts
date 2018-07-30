@@ -43,7 +43,7 @@ export default class ChunkPack implements Pack {
                             [this.options.name]: {
                                 test: micromatch.makeRe(this.options.glob),
                                 name: this.options.name,
-                                chunks: 'all',
+                                chunks: 'initial',
                             }
                         },
                     },
