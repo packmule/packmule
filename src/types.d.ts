@@ -14,4 +14,4 @@ declare module 'webpack-combine-loaders';
 declare module 'workbox-webpack-plugin';
 declare module 'webpack-notifier';
 declare module 'webpack-merge';
-declare module 'extract-text-webpack-plugin';
+declare module 'mini-css-extract-plugin';

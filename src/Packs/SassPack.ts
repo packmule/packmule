@@ -1,5 +1,5 @@
 import * as webpack from 'webpack';
-import * as ExtractPlugin from 'extract-text-webpack-plugin';
+import * as ExtractPlugin from 'mini-css-extract-plugin';
 import * as LintPlugin from 'stylelint-webpack-plugin';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
@@ -35,14 +35,17 @@ export default class SassPack implements Pack {
         }
 
         if (options.extract) {
-            const styles = new ExtractPlugin({
+            const extraction = new ExtractPlugin({
                 filename: '[name].css',
-                allChunks: true,
+                chunkFilename: '[id].css',
             });
 
-            this.configuration.plugins!.push(styles);
+            this.configuration.plugins!.push(extraction);
 
-            loaders = styles.extract(loaders);
+            loaders = [
+                ExtractPlugin.loader,
+                ...loaders,
+            ];
         } else {
             loaders = [
                 {
