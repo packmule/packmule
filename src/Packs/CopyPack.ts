@@ -1,5 +1,5 @@
-import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
+import * as CopyPlugin from 'copy-webpack-plugin';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 
@@ -11,12 +11,8 @@ interface CopyPackOptions {
 export default class CopyPack implements Pack {
     private options: CopyPackOptions = {};
 
-    private configuration: webpack.Configuration & {
-        module: webpack.Module;
-    } = {
-        module: {
-            rules: [],
-        },
+    private configuration: webpack.Configuration = {
+        plugins: [],
     };
 
     public include (glob: string): this {
@@ -30,23 +26,12 @@ export default class CopyPack implements Pack {
     }
 
     public generate (options: Options): webpack.Configuration {
-        const rule: webpack.RuleSetRule = {
-            test: /.+/,
-            include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : false),
-            use: [] as any[],
-        };
+        const copy = new CopyPlugin([{
+            from: this.options.glob!,
+            to: this.options.path!,
+        }]);
 
-        const extraction: webpack.NewLoader = {
-            loader: 'file-loader',
-            options:  {
-                name: '[name].[ext]',
-                outputPath: this.options.path,
-            },
-        };
-
-        Array.isArray(rule.use) && rule.use.push(extraction);
-
-        this.configuration.module.rules.push(rule);
+        this.configuration.plugins!.push(copy);
 
         return this.configuration;
     }
