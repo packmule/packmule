@@ -11,7 +11,12 @@ export default class DefaultPack implements Pack {
         plugins: [
             new webpack.ProgressPlugin(),
         ],
-        optimization: {},
+        optimization: {
+            splitChunks: {
+                minSize: 0,
+                minChunks: 0,
+            },
+        },
     };
 
     public generate (options: Options): webpack.Configuration {
