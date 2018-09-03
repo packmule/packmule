@@ -14,7 +14,7 @@ export default class DefaultPack implements Pack {
         optimization: {
             splitChunks: {
                 minSize: 0,
-                minChunks: 0,
+                minChunks: 1,
             },
         },
     };
