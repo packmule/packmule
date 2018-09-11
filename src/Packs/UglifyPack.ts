@@ -5,7 +5,9 @@ import Options from '../Core/Options';
 
 export default class UglifyPack implements Pack {
     private configuration: webpack.Configuration = {
-        plugins: [],
+        optimization: {
+            minimizer: [],
+        },
     };
 
     public generate (options: Options): webpack.Configuration {
@@ -15,7 +17,8 @@ export default class UglifyPack implements Pack {
             sourceMap: options.debug,
         });
 
-        this.configuration.plugins!.push(uglify);
+        this.configuration.optimization!.minimizer!.push(uglify);
+
         return this.configuration;
     }
 }
