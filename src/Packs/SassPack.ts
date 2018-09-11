@@ -15,6 +15,9 @@ export default class SassPack implements Pack {
         module: {
             rules: [],
         },
+        optimization: {
+            minimizer: [],
+        },
         plugins: [],
     };
 
@@ -61,7 +64,7 @@ export default class SassPack implements Pack {
 
         if (options.optimize) {
             const optimization = new OptimizePlugin();
-            this.configuration.plugins!.push(optimization);
+            this.configuration.optimization!.minimizer!.push(optimization);
         }
 
         const rule: webpack.RuleSetRule = {
