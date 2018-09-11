@@ -15,6 +15,7 @@ export default class DefaultPack implements Pack {
             splitChunks: {
                 minSize: 0,
                 minChunks: 1,
+                cacheGroups: false,
             },
         },
     };
