@@ -13,7 +13,6 @@ export { default as JarvisPack } from './Packs/JarvisPack';
 export { default as JavaScriptPack } from './Packs/JavaScriptPack';
 export { default as LogPack } from './Packs/LogPack';
 export { default as MeasurePack } from './Packs/MeasurePack';
-export { default as NamedModulesPack } from './Packs/NamedModulesPack';
 export { default as NotifyPack } from './Packs/NotifyPack';
 export { default as OutputPack } from './Packs/OutputPack';
 export { default as RawPack } from './Packs/RawPack';
