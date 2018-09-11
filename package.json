@@ -62,13 +62,13 @@
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0",
-    "autoprefixer": "^8.6.0",
-    "browser-sync": "^2.24.0",
-    "node-sass": "^4.9.0",
-    "stylelint": "^9.5.0",
-    "tslint": "^5.11.0",
+    "autoprefixer": "^9.0.0",
+    "browser-sync": "^2.0.0",
+    "node-sass": "^4.0.0",
+    "stylelint": "^9.0.0",
+    "tslint": "^5.0.0",
     "typescript": "^3.0.0",
-    "webpack": "^4.17.0"
+    "webpack": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
