@@ -1,5 +1,6 @@
 import * as webpack from 'webpack';
 import * as ExtractPlugin from 'mini-css-extract-plugin';
+import * as OptimizePlugin from 'optimize-css-assets-webpack-plugin';
 import * as LintPlugin from 'stylelint-webpack-plugin';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
@@ -56,6 +57,11 @@ export default class SassPack implements Pack {
                 },
                 ...loaders,
             ];
+        }
+
+        if (options.optimize) {
+            const optimization = new OptimizePlugin();
+            this.configuration.plugins!.push(optimization);
         }
 
         const rule: webpack.RuleSetRule = {
