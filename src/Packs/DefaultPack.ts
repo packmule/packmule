@@ -25,6 +25,7 @@ export default class DefaultPack implements Pack {
         this.configuration.optimization!.flagIncludedChunks = options.optimize;
         this.configuration.optimization!.namedModules = options.debug;
         this.configuration.optimization!.namedChunks = options.debug;
+        this.configuration.optimization!.noEmitOnErrors = true;
 
         this.configuration.cache = options.cache;
 

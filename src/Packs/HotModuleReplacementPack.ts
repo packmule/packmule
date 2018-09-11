@@ -23,10 +23,8 @@ export default class HotModuleReplacementPack implements Pack {
 
     public generate (options: Options): webpack.Configuration {
         const hmr = new webpack.HotModuleReplacementPlugin();
-        const error = new webpack.NoEmitOnErrorsPlugin();
 
         this.configuration.plugins!.push(hmr);
-        this.configuration.plugins!.push(error);
 
         return this.configuration;
     }
