@@ -21,12 +21,12 @@ export default class JavaScriptPack implements Pack {
         },
     };
 
-    public include (glob: string): this {
+    public include(glob: string): this {
         this.options.glob = glob;
         return this;
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.js$/,
             include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : true),

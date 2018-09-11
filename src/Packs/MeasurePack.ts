@@ -21,11 +21,11 @@ export default class MeasurePack implements Pack {
         },
     };
 
-    public constructor (options?: {}) {
+    public constructor(options?: {}) {
         this.options = {...this.defaults, ...options};
     }
 
-    public generate (): webpack.Configuration {
+    public generate(): webpack.Configuration {
         this.configuration.performance!.maxEntrypointSize = this.options.entrySize;
         this.configuration.performance!.maxAssetSize = this.options.assetSize;
 

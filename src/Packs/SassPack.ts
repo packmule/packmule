@@ -21,7 +21,7 @@ export default class SassPack implements Pack {
         plugins: [],
     };
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         let loaders: webpack.Loader[] | webpack.Loader = [
             { loader: 'css-loader', options: { sourceMap: false, minimize: options.optimize } },
             { loader: 'postcss-loader', options: { sourceMap: options.debug } },

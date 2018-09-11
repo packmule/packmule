@@ -15,17 +15,17 @@ export default class ServiceWorkerPack implements Pack {
         plugins: [],
     };
 
-    public include (glob: string): this {
+    public include(glob: string): this {
         this.options.glob = glob;
         return this;
     }
 
-    public to (path: string): this {
+    public to(path: string): this {
         this.options.path = path;
         return this;
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         this.configuration.plugins!.push(new WorkboxPlugin.GenerateSW({
             clientsClaim: true,
             skipWaiting: true,

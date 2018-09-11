@@ -16,17 +16,17 @@ export default class ChunkPack implements Pack {
     };
     private configuration: webpack.Configuration;
 
-    public constructor (name: string, runtime: boolean = false) {
+    public constructor(name: string, runtime: boolean = false) {
         this.options.name = name;
         this.options.runtime = runtime;
     }
 
-    public include (glob: string): this {
+    public include(glob: string): this {
         this.options.glob = glob;
         return this;
     }
 
-    public generate (): webpack.Configuration {
+    public generate(): webpack.Configuration {
         if (this.options.runtime) {
             this.configuration = {
                 optimization: {

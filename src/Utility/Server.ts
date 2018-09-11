@@ -7,7 +7,7 @@ export default class Server {
     private webpackConfiguration: webpack.Configuration;
     private browsersyncOptions: browsersync.Options;
 
-    public constructor (
+    public constructor(
         webpackConfiguration: webpack.Configuration,
         browsersyncOptions: browsersync.Options = {},
     ) {
@@ -15,7 +15,7 @@ export default class Server {
         this.browsersyncOptions = browsersyncOptions;
     }
 
-    public launch (): browsersync.BrowserSyncInstance {
+    public launch(): browsersync.BrowserSyncInstance {
         const server = browsersync.create();
         const compiler = webpack(this.webpackConfiguration);
 

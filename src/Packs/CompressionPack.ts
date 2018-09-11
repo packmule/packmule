@@ -23,16 +23,16 @@ export default class CompressionPack implements Pack {
         plugins: [],
     };
 
-    public constructor (options?: Options) {
+    public constructor(options?: Options) {
         this.options = {...this.defaults, ...options};
     }
 
-    public include (glob: string): this {
+    public include(glob: string): this {
         this.options.glob = glob;
         return this;
     }
 
-    public generate (): webpack.Configuration {
+    public generate(): webpack.Configuration {
         const pattern = '(' + this.options.extensions.map((extension: string) => `\\.${extension}`).join('|') + ')$';
         const expression = new RegExp(pattern, 'i');
         const options = {

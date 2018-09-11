@@ -10,11 +10,11 @@ export default class CleanPack implements Pack {
         plugins: [],
     };
 
-    public constructor (path: string) {
+    public constructor(path: string) {
         this.path = path;
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const settings = {
             root: options.root,
             verbose: false,

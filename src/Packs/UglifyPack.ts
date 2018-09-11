@@ -10,7 +10,7 @@ export default class UglifyPack implements Pack {
         },
     };
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const uglify = new UglifyPlugin({
             parallel: true,
             cache: options.cache,

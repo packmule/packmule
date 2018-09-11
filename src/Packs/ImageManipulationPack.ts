@@ -17,17 +17,17 @@ export default class ImageManipulationPack implements Pack {
         },
     };
 
-    public include (glob: string): this {
+    public include(glob: string): this {
         this.glob = glob;
         return this;
     }
 
-    public set (name: string, options: any): this {
+    public set(name: string, options: any): this {
         this.instructions.push({name, options});
         return this;
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const use: any[] = [];
         const rule: webpack.RuleSetRule = {
             test: /\.(svg|gif|png|jpe?g|webp|tiff)$/,

@@ -7,7 +7,7 @@ export default class LogPack implements Pack {
         plugins: [],
     };
 
-    public generate (): webpack.Configuration {
+    public generate(): webpack.Configuration {
         if (process.argv.indexOf('--json') === -1) {
             this.configuration.stats = false;
             this.configuration.plugins!.push(new ReporterPlugin());

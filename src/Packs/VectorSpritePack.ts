@@ -24,21 +24,21 @@ export default class VectorSpritePack implements Pack {
         plugins: [],
     };
 
-    public constructor (name: string) {
+    public constructor(name: string) {
         this.options.name = name;
     }
 
-    public include (glob: string): this {
+    public include(glob: string): this {
         this.options.glob = glob;
         return this;
     }
 
-    public to (path: string): this {
+    public to(path: string): this {
         this.options.path = path;
         return this;
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.svg$/,
             include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : true),

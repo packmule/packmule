@@ -19,11 +19,11 @@ export default class NotifyPack implements Pack {
         excludeWarnings: false,
     };
 
-    public constructor (options: NotifyPackOptions = {}) {
+    public constructor(options: NotifyPackOptions = {}) {
         this.options = {...this.defaults, ...options};
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         if(options.notify) {
             this.configuration.plugins!.push(new NotifierPlugin(this.options));
         }

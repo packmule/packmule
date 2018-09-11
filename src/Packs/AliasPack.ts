@@ -11,12 +11,12 @@ export default class AliasPack implements Pack {
         },
     };
 
-    public constructor (name: string, target: string) {
+    public constructor(name: string, target: string) {
         this.name = name;
         this.target = target;
     }
 
-    public generate (): webpack.Configuration {
+    public generate(): webpack.Configuration {
         this.configuration.resolve!.alias![this.name] = this.target;
 
         return this.configuration;

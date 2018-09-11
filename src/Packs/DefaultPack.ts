@@ -20,7 +20,7 @@ export default class DefaultPack implements Pack {
         },
     };
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         this.configuration.optimization!.concatenateModules = options.optimize;
         this.configuration.optimization!.occurrenceOrder = options.optimize;
         this.configuration.optimization!.flagIncludedChunks = options.optimize;

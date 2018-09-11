@@ -18,14 +18,14 @@ export default class OutputPack implements Pack {
         },
     };
 
-    public constructor (path: string, web: string = '/') {
+    public constructor(path: string, web: string = '/') {
         this.options = {
             path,
             web,
         };
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         this.configuration.output!.path = resolve(options.root!, this.options.path);
         this.configuration.output!.publicPath = this.options.web;
 

@@ -17,11 +17,11 @@ export default class HotModuleReplacementPack implements Pack {
         plugins: [],
     };
 
-    public constructor (options?: {}) {
+    public constructor(options?: {}) {
         this.options = {...this.options, ...options};
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const hmr = new webpack.HotModuleReplacementPlugin();
 
         this.configuration.plugins!.push(hmr);
@@ -29,7 +29,7 @@ export default class HotModuleReplacementPack implements Pack {
         return this.configuration;
     }
 
-    public process (configuration: webpack.Configuration & {
+    public process(configuration: webpack.Configuration & {
         entry: {
             [key: string]: string[];
         };

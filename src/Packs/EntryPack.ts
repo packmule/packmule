@@ -19,14 +19,14 @@ export default class EntryPack implements Pack {
         entry: {},
     };
 
-    public constructor (path: string, name?: string) {
+    public constructor(path: string, name?: string) {
         this.options = {
             path,
             name: (name || basename(path, extname(path))),
         };
     }
 
-    public generate (options: Options): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         this.configuration.entry[this.options.name] = [resolve(options.root!, this.options.path)];
         return this.configuration;
     }

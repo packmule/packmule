@@ -19,17 +19,17 @@ export default class Packmule {
         cache: true,
     };
 
-    public constructor (options: Options = {}) {
+    public constructor(options: Options = {}) {
         this.options = {...this.defaults, ...options};
         this.use(new DefaultPack());
     }
 
-    public use (pack: Pack): this {
+    public use(pack: Pack): this {
         this.packs.push(pack);
         return this;
     }
 
-    public generate (): webpack.Configuration {
+    public generate(): webpack.Configuration {
         const parts: webpack.Configuration[] = [];
 
         this.packs.forEach((pack: Pack) => {
