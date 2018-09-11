@@ -26,7 +26,6 @@ return packmule.generate();
 * **HotModuleReplacementPack** - Includes the `hot module replacement` plugin for development.
 * **ImageManipulationPack** - Manipulates images using `sharp` and optimizes them using `imagemin`.
 * **ImageOptimizationPack** - Optimizes images using `imagemin`.
-* **JarvisPack** - Runs the Jarvis web-interface displaying bundle statistics.
 * **JavaScriptPack** - Processes JS including Babel support.
 * **LogPack** - Configures console logging.
 * **MeasurePack** - Configures entry and asset sizes.

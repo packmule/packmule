@@ -9,7 +9,6 @@ export { default as EntryPack } from './Packs/EntryPack';
 export { default as HotModuleReplacementPack } from './Packs/HotModuleReplacementPack';
 export { default as ImageManipulationPack } from './Packs/ImageManipulationPack';
 export { default as ImageOptimizationPack } from './Packs/ImageOptimizationPack';
-export { default as JarvisPack } from './Packs/JarvisPack';
 export { default as JavaScriptPack } from './Packs/JavaScriptPack';
 export { default as LogPack } from './Packs/LogPack';
 export { default as MeasurePack } from './Packs/MeasurePack';
