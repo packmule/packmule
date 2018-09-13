@@ -43,6 +43,7 @@ export default class CompressionPack implements Pack {
                     test: expression,
                     include: this.options.glob && micromatch.makeRe(this.options.glob),
                     cache: options.cache,
+                    filename: '[path].br[query]',
                 });
 
                 this.configuration.plugins!.push(gzip);
@@ -53,9 +54,10 @@ export default class CompressionPack implements Pack {
                     test: expression,
                     include: this.options.glob && micromatch.makeRe(this.options.glob),
                     cache: options.cache,
+                    filename: '[path].br[query]',
                     algorithm(input: any, compressionOptions: any, callback: any) {
                         return iltorb.compress(input, compressionOptions, callback);
-                    }
+                    },
                 });
 
                 this.configuration.plugins!.push(brotli);
