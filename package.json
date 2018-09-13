@@ -16,7 +16,6 @@
   "main": "module/",
   "typings": "module/",
   "dependencies": {
-    "@gfx/zopfli": "^1.0.8",
     "@types/browser-sync": "0.0.40",
     "@types/iltorb": "^2.3.0",
     "@types/micromatch": "^3.1.0",

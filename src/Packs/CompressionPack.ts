@@ -1,7 +1,6 @@
 import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
 import * as CompressionPlugin from 'compression-webpack-plugin';
-import * as zopfli from '@gfx/zopfli';
 import * as iltorb from 'iltorb';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
@@ -44,9 +43,6 @@ export default class CompressionPack implements Pack {
                     test: expression,
                     include: this.options.glob && micromatch.makeRe(this.options.glob),
                     cache: options.cache,
-                    algorithm(input: any, compressionOptions: any, callback: any) {
-                        return zopfli.gzip(input, compressionOptions, callback);
-                    },
                 });
 
                 this.configuration.plugins!.push(gzip);
