@@ -7,37 +7,56 @@
 
 **Example**
 ```ts
-import Packmule, { SassPack } from '@pixelart/packmule';
+import Packmule, {
+    EntryPack,
+    OutputPack,
+    SassPack,
+    TypeScriptPack,
+    ChunkPack,
+    UglifyPack,
+    CompressionPack,
+} from '@pixelart/packmule';
 
 const packmule = new Packmule();
+
+packmule.use(new EntryPack('main.ts'));
+packmule.use(new OutputPack('public/', '/'));
 packmule.use(new SassPack());
+packmule.use(new TypeScriptPack());
+packmule.use(new ChunkPack('manifest', true));
+packmule.use(new ChunkPack('vendors').include('**/node_modules/**'));
+
+if (env.production) {
+    packmule.use(new UglifyPack());
+    packmule.use(new CompressionPack());
+}
+
 return packmule.generate();
 ```
 
 ### Packs
 `packmule` plugins are called `packs` and each `pack` handles configuration generation for a specific task.
 
-* **AliasPack** - Configures Webpack aliases.
-* **ChunkPack** - Wraps the Webpack chunk-plugin.
-* **CleanPack** - Deletes everything within a given directory.
-* **CompressionPack** - Generates `gzip` and `brotli` versions of configured assets.
-* **CopyPack** - Simply copies files.
-* **EntryPack** - Defines the entrypoints for Webpack.
-* **HotModuleReplacementPack** - Includes the `hot module replacement` plugin for development.
-* **ImageManipulationPack** - Manipulates images using `sharp` and optimizes them using `imagemin`.
-* **ImageOptimizationPack** - Optimizes images using `imagemin`.
-* **JavaScriptPack** - Processes JS including Babel support.
-* **LogPack** - Configures console logging.
-* **MeasurePack** - Configures entry and asset sizes.
-* **NamedModulesPack** - Uses named modules (for development) instead of hashing them.
-* **NotifyPack** - Enables desktop notifications for development builds.
-* **OutputPack** - Defines the output options for Webpack.
-* **RawPack** - Merges raw Webpack configuration directly.
-* **SassPack** - Compiles and optimizes Sass/SCSS to CSS including PostCSS processing.
-* **ServiceWorkerPack** - Generates a simple service worker using `workbox`.
-* **TypeScriptPack** - Compiles TS to JS including Babel support.
-* **UglifyPack** - Optimizes JS using `Uglify`.
-* **VectorSpritePack** - Generates a SVG-based vector-sprite.
+* **AliasPack** - Configure Webpack aliases.
+* **ChunkPack** - Wrap the Webpack chunk-plugin.
+* **CleanPack** - Delete everything within a given directory.
+* **CompressionPack** - Generate `gzip` and `brotli` versions of configured assets.
+* **CopyPack** - Copy files.
+* **EntryPack** - Define the entrypoints for Webpack.
+* **HotModuleReplacementPack** - Include the `hot module replacement` plugin for development.
+* **ImageManipulationPack** - Manipulate images using `sharp` and optimizes them using `imagemin`.
+* **ImageOptimizationPack** - Optimize images using `imagemin`.
+* **JavaScriptPack** - Processe JS including Babel support.
+* **LogPack** - Configure console logging.
+* **MeasurePack** - Configure entry and asset sizes.
+* **NotifyPack** - Enable desktop notifications for development builds.
+* **OutputPack** - Define the output options for Webpack.
+* **RawPack** - Merge raw Webpack configuration directly.
+* **SassPack** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
+* **ServiceWorkerPack** - Generate a simple service worker using `workbox`.
+* **TypeScriptPack** - Compile TS to JS including Babel support.
+* **UglifyPack** - Optimize JS using `Uglify`.
+* **VectorSpritePack** - Generate a SVG-based vector-sprite.
 
 ## Utilities
 
