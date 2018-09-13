@@ -43,7 +43,7 @@ export default class CompressionPack implements Pack {
                     test: expression,
                     include: this.options.glob && micromatch.makeRe(this.options.glob),
                     cache: options.cache,
-                    filename: '[path].br[query]',
+                    filename: '[path].gz[query]',
                 });
 
                 this.configuration.plugins!.push(gzip);
