@@ -1,5 +1,9 @@
 # TypeScript Pack
-> Compile TS to JS including Babel transpiling.
+> Compile TypeScript to JavaScript including Babel transpiling.
+
+Internally the `TypeScript Pack` uses `Babel` to transpile the code if needed.
+To configure `Babel` settings in your project, a `.babelrc.json` file can be used.
+`tslint` is used to lint TypeScript code, which can be configured via a `tslint.json` file.
 
 ## API
 ```ts
@@ -20,5 +24,3 @@ const packmule = new Packmule();
 packmule.use(new TypeScriptPack());
 return packmule.generate();
 ```
-
-## Configuration

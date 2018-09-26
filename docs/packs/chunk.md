@@ -8,12 +8,12 @@
 
 **Example**
 
-Generates a chunk file for all node dependencies.
+Generate a chunk file for all node dependencies.
 
 ```ts
 import Packmule, { ChunkPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new ChunkPack('vendors').include('node_modules/**'));
+packmule.use(new ChunkPack('vendor').include('**/node_modules/**'));
 return packmule.generate();
 ```
