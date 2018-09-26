@@ -29,9 +29,12 @@ export default class ServiceWorkerPack implements Pack {
         const configuration: any = {
             clientsClaim: true,
             skipWaiting: true,
-            swDest: this.options.path,
             importWorkboxFrom: 'local',
         };
+
+        if (this.options.path) {
+            configuration.swDest = this.options.path;
+        }
 
         if (this.options.glob) {
             configuration.include = micromatch.makeRe(this.options.glob);
