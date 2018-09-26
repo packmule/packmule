@@ -2,26 +2,24 @@ import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
 
 interface Options {
-    name: string;
+    name?: string;
 }
 
 export default class RuntimePack implements Pack {
     private options: Options = {
-        name: '',
+        name: 'runtime',
     };
-    private configuration: webpack.Configuration;
+    private configuration: webpack.Configuration = {
+        optimization: {},
+    };
 
-    public constructor(name: string) {
+    public constructor(name?: string) {
         this.options.name = name;
     }
 
     public generate(): webpack.Configuration {
-        this.configuration = {
-            optimization: {
-                runtimeChunk: {
-                    name: this.options.name,
-                },
-            },
+        this.configuration.optimization!.runtimeChunk = {
+            name: this.options.name,
         };
 
         return this.configuration;
