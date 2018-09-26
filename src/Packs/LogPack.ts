@@ -1,18 +1,44 @@
-import * as ReporterPlugin from 'webpack-stylish';
 import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
 
 export default class LogPack implements Pack {
     private configuration: webpack.Configuration = {
-        plugins: [],
+        stats: {
+            assets: true,
+            assetsSort: 'field',
+            builtAt: false,
+            cached: true,
+            cachedAssets: true,
+            children: false,
+            chunks: false,
+            // chunkGroups: false,
+            chunkModules: false,
+            chunkOrigins: false,
+            chunksSort: 'field',
+            colors: true,
+            depth: false,
+            entrypoints: false,
+            env: false,
+            errors: true,
+            errorDetails: true,
+            hash: true,
+            maxModules: 25,
+            modules: false,
+            modulesSort: 'field',
+            moduleTrace: false,
+            performance: true,
+            providedExports: false,
+            publicPath: false,
+            reasons: false,
+            source: false,
+            timings: false,
+            usedExports: false,
+            version: false,
+            warnings: true,
+        },
     };
 
     public generate(): webpack.Configuration {
-        if (process.argv.indexOf('--json') === -1) {
-            this.configuration.stats = false;
-            this.configuration.plugins!.push(new ReporterPlugin());
-        }
-
         return this.configuration;
     }
 }

@@ -4,7 +4,6 @@ declare module 'uglifyjs-webpack-plugin';
 declare module 'clean-webpack-plugin';
 declare module 'stylelint-webpack-plugin';
 declare module 'external-svg-sprite-loader/lib/SvgStorePlugin';
-declare module 'webpack-stylish';
 declare module 'multi-loader';
 declare module 'webpack-combine-loaders';
 declare module 'workbox-webpack-plugin';
