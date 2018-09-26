@@ -15,6 +15,7 @@ export { default as MeasurePack } from './Packs/MeasurePack';
 export { default as NotifyPack } from './Packs/NotifyPack';
 export { default as OutputPack } from './Packs/OutputPack';
 export { default as RawPack } from './Packs/RawPack';
+export { default as RuntimePack } from './Packs/RuntimePack';
 export { default as SassPack } from './Packs/SassPack';
 export { default as ServiceWorkerPack } from './Packs/ServiceWorkerPack';
 export { default as TypeScriptPack } from './Packs/TypeScriptPack';
