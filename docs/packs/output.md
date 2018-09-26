@@ -1,5 +1,5 @@
 # Output Pack
-> Define the output options for Webpack.
+> Define the [output options](https://webpack.js.org/configuration/output/) for Webpack.
 
 ## API
 ```ts

@@ -1,5 +1,5 @@
 # Runtime Pack
-> Configures the webpack runtime.
+> Configures the [webpack runtime](https://webpack.js.org/configuration/optimization/#optimization-runtimechunk).
 
 ## API
 ```ts

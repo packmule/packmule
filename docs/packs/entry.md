@@ -1,5 +1,5 @@
 # Entry Pack
-> Defines the entry points for Webpack.
+> Defines an [entry point](https://webpack.js.org/configuration/entry-context/#entry) for Webpack.
 
 The `Entry Pack` configures the actual [entry points](https://webpack.js.org/concepts/#entry)
 for the bundle and can be used multiple times to define multiple entry points.

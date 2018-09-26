@@ -18,6 +18,6 @@ Optimize images.
 import Packmule, { ImageOptimizationPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new ImageOptimizationPack().include('**/assets/images/**').to('images/'));
+packmule.use(new ImageOptimizationPack().include('assets/images/**').to('images/'));
 return packmule.generate();
 ```

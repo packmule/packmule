@@ -1,8 +1,8 @@
 # Measure Pack
-> Configure entry and asset sizes.
+> Configure [entry size](https://webpack.js.org/configuration/performance/#performance-maxentrypointsize) and [asset sizes](https://webpack.js.org/configuration/performance/#performance-maxassetsize).
 
 ## API
-    ```ts
+```ts
 TypeScriptPack({
    entrySize: number;
    assetSize: number;

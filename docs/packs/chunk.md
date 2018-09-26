@@ -1,5 +1,5 @@
 # Chunk Pack
-> Wraps the Webpack chunk-plugin and splits code into chunks.
+> Wraps the Webpack [split-chunks plugin](https://webpack.js.org/plugins/split-chunks-plugin/) to split code into chunks.
 
 ## API
 `ChunkPack(name: string)`
