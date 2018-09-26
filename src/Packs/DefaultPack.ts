@@ -29,6 +29,7 @@ export default class DefaultPack implements Pack {
         this.configuration.optimization!.namedChunks = options.debug;
         this.configuration.optimization!.noEmitOnErrors = true;
 
+        this.configuration.context = options.root;
         this.configuration.cache = options.cache;
 
         if (options.debug) {
