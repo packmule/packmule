@@ -24,7 +24,7 @@ export default class Server {
             // noInfo: true,
             // quiet: true,
             lazy: false,
-            stats: false,
+            stats: this.webpackConfiguration.stats,
         });
 
         const hmr = webpackHotMiddleware(compiler);
