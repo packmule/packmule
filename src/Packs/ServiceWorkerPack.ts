@@ -26,13 +26,18 @@ export default class ServiceWorkerPack implements Pack {
     }
 
     public generate(options: Options): webpack.Configuration {
-        this.configuration.plugins!.push(new WorkboxPlugin.GenerateSW({
+        const configuration: any = {
             clientsClaim: true,
             skipWaiting: true,
             swDest: this.options.path,
             importWorkboxFrom: 'local',
-            include: this.options.glob && [micromatch.makeRe(this.options.glob)],
-        }));
+        };
+
+        if (this.options.glob) {
+            configuration.include = micromatch.makeRe(this.options.glob);
+        }
+
+        this.configuration.plugins!.push(new WorkboxPlugin.GenerateSW(configuration));
 
         return this.configuration;
     }
