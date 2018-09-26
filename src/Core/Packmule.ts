@@ -21,10 +21,10 @@ export default class Packmule {
 
     public constructor(options: Options = {}) {
         this.options = {...this.defaults, ...options};
-        this.use(new DefaultPack());
+        this.register(new DefaultPack());
     }
 
-    public use(pack: Pack): this {
+    public register(pack: Pack): this {
         this.packs.push(pack);
         return this;
     }
