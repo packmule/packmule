@@ -14,7 +14,9 @@ export default class RuntimePack implements Pack {
     };
 
     public constructor(name?: string) {
-        this.options.name = name;
+        if (name) {
+            this.options.name = name;
+        }
     }
 
     public generate(): webpack.Configuration {
