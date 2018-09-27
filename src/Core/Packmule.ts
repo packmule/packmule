@@ -5,6 +5,7 @@ import Pack from './Pack';
 import Options from './Options';
 import BasePack from './Packs/BasePack';
 import OptimizationPack from './Packs/OptimizationPack';
+import MinificationPack from './Packs/MinificationPack';
 
 export default class Packmule {
     private packs: Pack[] = [];
@@ -24,6 +25,7 @@ export default class Packmule {
         this.options = {...this.defaults, ...options};
         this.register(new BasePack());
         this.register(new OptimizationPack());
+        this.register(new MinificationPack());
     }
 
     public register(pack: Pack): this {

@@ -20,7 +20,6 @@ export { default as RuntimePack } from './Packs/RuntimePack';
 export { default as SassPack } from './Packs/SassPack';
 export { default as ServiceWorkerPack } from './Packs/ServiceWorkerPack';
 export { default as TypeScriptPack } from './Packs/TypeScriptPack';
-export { default as UglifyPack } from './Packs/UglifyPack';
 export { default as VectorSpritePack } from './Packs/VectorSpritePack';
 
 export { default as Server } from './Utility/Server';
