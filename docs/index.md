@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-npm install --save-dev @pixelart/packmule`
+npm install --save-dev @pixelart/packmule
 ```
 
 ## API
@@ -30,14 +30,14 @@ Options are shared with and used by packs. Packs can choose which options to use
 | **cache** | `boolean` | `true` | Enables caching. |
 
 ## Packs
-`packmule` plugins are called `packs` and each `pack` handles generation for a specific webpack configuration part.
+`packmule` plugins are called `packs` and each `pack` handles generation for a specific `webpack` configuration part.
 
-* **[AliasPack](packs/alias.md)** - Configure Webpack aliases.
-* **[ChunkPack](packs/chunk.md)** - Wrap the Webpack chunk-plugin.
+* **[AliasPack](packs/alias.md)** - Configure webpack aliases.
+* **[ChunkPack](packs/chunk.md)** - Wrap the webpack chunk-plugin.
 * **[CleanPack](packs/clean.md)** - Delete everything within a given directory.
 * **[CompressionPack](packs/compression.md)** - Generate `gzip` and `brotli` versions of configured assets.
 * **[CopyPack](packs/copy.md)** - Copy files.
-* **[EntryPack](packs/entry.md)** - Define the entrypoints for Webpack.
+* **[EntryPack](packs/entry.md)** - Define the entrypoints for webpack.
 * **[HotModuleReplacementPack](packs/hot-module-replacement.md)** - Include the `hot module replacement` plugin for development.
 * **[ImageManipulationPack](packs/image-manipulation.md)** - Manipulate images using `sharp` and optimizes them using `imagemin`.
 * **[ImageOptimizationPack](packs/image-optimization.md)** - Optimize images using `imagemin`.
@@ -46,8 +46,8 @@ Options are shared with and used by packs. Packs can choose which options to use
 * **[ManifestPack](packs/manifest.md)** - Generate a web app manifest.
 * **[MeasurePack](packs/measure.md)** - Configure entry and asset sizes.
 * **[NotifyPack](packs/notify.md)** - Enable desktop notifications for development builds.
-* **[OutputPack](packs/output.md)** - Define the output options for Webpack.
-* **[RawPack](packs/raw.md)** - Merge raw Webpack configuration directly.
+* **[OutputPack](packs/output.md)** - Define the output options for webpack.
+* **[RawPack](packs/raw.md)** - Merge raw webpack configuration directly.
 * **[RuntimePack](packs/runtime.md)** - Configure the webpack runtime chunk.
 * **[SassPack](packs/sass.md)** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
 * **[ServiceWorkerPack](packs/service-worker.md)** - Generate a simple service worker using `workbox`.

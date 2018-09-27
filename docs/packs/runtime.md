@@ -3,14 +3,14 @@
 
 ## API
 ```ts
-RuntimePack('runtime');
+RuntimePack();
 ```
 
 ## Usage
 
 **Example**
 
-Enables the webpack runtime with a custom name.
+Enables the `webpack` runtime with a custom name.
 
 ```ts
 import Packmule, { RuntimePack } from '@pixelart/packmule';

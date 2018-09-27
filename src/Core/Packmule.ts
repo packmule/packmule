@@ -1,9 +1,10 @@
 import * as webpack from 'webpack';
 import * as merge from 'webpack-merge';
 import * as dir from 'pkg-dir';
-import DefaultPack from '../Packs/DefaultPack';
 import Pack from './Pack';
 import Options from './Options';
+import BasePack from './Packs/BasePack';
+import OptimizationPack from './Packs/OptimizationPack';
 
 export default class Packmule {
     private packs: Pack[] = [];
@@ -21,7 +22,8 @@ export default class Packmule {
 
     public constructor(options: Options = {}) {
         this.options = {...this.defaults, ...options};
-        this.register(new DefaultPack());
+        this.register(new BasePack());
+        this.register(new OptimizationPack());
     }
 
     public register(pack: Pack): this {
