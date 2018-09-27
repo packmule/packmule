@@ -11,6 +11,7 @@ export { default as ImageManipulationPack } from './Packs/ImageManipulationPack'
 export { default as ImageOptimizationPack } from './Packs/ImageOptimizationPack';
 export { default as JavaScriptPack } from './Packs/JavaScriptPack';
 export { default as LogPack } from './Packs/LogPack';
+export { default as ManifestPack } from './Packs/ManifestPack';
 export { default as MeasurePack } from './Packs/MeasurePack';
 export { default as NotifyPack } from './Packs/NotifyPack';
 export { default as OutputPack } from './Packs/OutputPack';

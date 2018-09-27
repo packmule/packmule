@@ -43,6 +43,7 @@ Options are shared with and used by packs. Packs can choose which options to use
 * **[ImageOptimizationPack](packs/image-optimization.md)** - Optimize images using `imagemin`.
 * **[JavaScriptPack](packs/javascript.md)** - Processe JS including Babel support.
 * **[LogPack](packs/log.md)** - Configure console logging.
+* **[ManifestPack](packs/manifest.md)** - Generate a web app manifest.
 * **[MeasurePack](packs/measure.md)** - Configure entry and asset sizes.
 * **[NotifyPack](packs/notify.md)** - Enable desktop notifications for development builds.
 * **[OutputPack](packs/output.md)** - Define the output options for Webpack.
