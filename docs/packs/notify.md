@@ -18,7 +18,7 @@ import Packmule, { NotifyPack } from '@pixelart/packmule';
 const packmule = new Packmule();
 
 if (env.development && env.server) {
-    packmule.use(new NotifyPack());
+    packmule.register(new NotifyPack());
 }
 
 return packmule.generate();

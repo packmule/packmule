@@ -1,2 +1,76 @@
-# PACKMULE 📦 🐴
-> Stubborn configuration generator for webpack.
+# Documentation
+
+## Installation
+
+```sh
+npm install --save-dev @pixelart/packmule`
+```
+
+## API
+
+```ts
+Packmule(options: Options)
+    .register(pack: Pack)
+    .generate();
+```
+
+### Options
+
+Options are shared with and used by packs. Packs can choose which options to use.
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| **root** | `string` | `dir.sync(process.cwd())` | Sets the project root directory. |
+| **optimize** | `boolean` | `false` | Enables optimization steps. |
+| **extract** | `boolean` | `false` | Enables file extraction. |
+| **notify** | `boolean` | `false` | Enables desktop notifications. |
+| **watch** | `boolean` | `false` | Enables file watching. |
+| **lint** | `boolean` | `false` | Enables code linting. |
+| **debug** | `boolean` | `false` | Enables debugging. |
+| **cache** | `boolean` | `true` | Enables caching. |
+
+## Packs
+`packmule` plugins are called `packs` and each `pack` handles generation for a specific webpack configuration part.
+
+* **[AliasPack](packs/alias.md)** - Configure Webpack aliases.
+* **[ChunkPack](packs/chunk.md)** - Wrap the Webpack chunk-plugin.
+* **[CleanPack](packs/clean.md)** - Delete everything within a given directory.
+* **[CompressionPack](packs/compression.md)** - Generate `gzip` and `brotli` versions of configured assets.
+* **[CopyPack](packs/copy.md)** - Copy files.
+* **[EntryPack](packs/entry.md)** - Define the entrypoints for Webpack.
+* **[HotModuleReplacementPack](packs/hot-module-replacement.md)** - Include the `hot module replacement` plugin for development.
+* **[ImageManipulationPack](packs/image-manipulation.md)** - Manipulate images using `sharp` and optimizes them using `imagemin`.
+* **[ImageOptimizationPack](packs/image-optimization.md)** - Optimize images using `imagemin`.
+* **[JavaScriptPack](packs/javascript.md)** - Processe JS including Babel support.
+* **[LogPack](packs/log.md)** - Configure console logging.
+* **[MeasurePack](packs/measure.md)** - Configure entry and asset sizes.
+* **[NotifyPack](packs/notify.md)** - Enable desktop notifications for development builds.
+* **[OutputPack](packs/output.md)** - Define the output options for Webpack.
+* **[RawPack](packs/raw.md)** - Merge raw Webpack configuration directly.
+* **[RuntimePack](packs/runtime.md)** - Configure the webpack runtime chunk.
+* **[SassPack](packs/sass.md)** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
+* **[ServiceWorkerPack](packs/service-worker.md)** - Generate a simple service worker using `workbox`.
+* **[TypeScriptPack](packs/typescript.md)** - Compile TS to JS including Babel support.
+* **[UglifyPack](packs/uglify.md)** - Optimize JS using `Uglify`.
+* **[VectorSpritePack](packs/vector-sprite.md)** - Generate a SVG-based vector-sprite.
+
+## Utilities
+
+### Development Server
+
+Packmule comes with a development-server which wraps the `browser-sync` server
+and uses the `webpack-dev-middleware` and `webpack-hot-middleware` to watch and
+reload the web application on demand.
+
+```ts
+import { Server } from '@pixelart/packmule';
+import configuration from './webpack.config.ts';
+import * as options from './.browsersyncrc.json';
+
+const server = new Server(configuration({
+    development: true,
+    server: true,
+}), options);
+
+server.launch();
+```

@@ -1,11 +1,11 @@
 # Copy Pack
-> Simply copies files.
+> Simply copy files.
 
 ## API
 ```ts
 CopyPack()
-    .to(path: string)
     .include(glob: string)
+    .to(path: string)
 ```
 
 ## Usage
@@ -18,6 +18,6 @@ Copy JSON files.
 import Packmule, { CopyPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new CopyPack().to('data/').include('**/data/*.json'));
+packmule.register(new CopyPack().include('**/data/*.json').to('data/'));
 return packmule.generate();
 ```

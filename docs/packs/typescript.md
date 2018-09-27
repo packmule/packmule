@@ -1,5 +1,5 @@
 # TypeScript Pack
-> Compile TypeScript to JavaScript including Babel transpiling.
+> Compile `TypeScript` to `JavaScript` including `Babel` transpiling.
 
 Internally the `TypeScript Pack` uses `Babel` to transpile the code if needed.
 To configure `Babel` settings in your project, a `.babelrc.json` file can be used.
@@ -21,6 +21,6 @@ Configure TS to JS transpiling.
 import Packmule, { TypeScriptPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new TypeScriptPack());
+packmule.register(new TypeScriptPack());
 return packmule.generate();
 ```

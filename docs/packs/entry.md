@@ -1,5 +1,5 @@
 # Entry Pack
-> Defines an [entry point](https://webpack.js.org/configuration/entry-context/#entry) for Webpack.
+> Define an [entry point](https://webpack.js.org/configuration/entry-context/#entry) for webpack.
 
 The `Entry Pack` configures the actual [entry points](https://webpack.js.org/concepts/#entry)
 for the bundle and can be used multiple times to define multiple entry points.
@@ -19,7 +19,7 @@ Set single entry point and generate an `app` bundle.
 import Packmule, { EntryPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new EntryPack('assets/entry.ts', 'app'));
+packmule.register(new EntryPack('assets/entry.ts', 'app'));
 return packmule.generate();
 ```
 
@@ -31,7 +31,7 @@ Set multiple entrypoints and generate a `one` and a `two` bundle.
 import Packmule, { EntryPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new EntryPack('assets/one.ts'));
-packmule.use(new EntryPack('assets/two.ts'));
+packmule.register(new EntryPack('assets/one.ts'));
+packmule.register(new EntryPack('assets/two.ts'));
 return packmule.generate();
 ```

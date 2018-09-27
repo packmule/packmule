@@ -1,5 +1,5 @@
 # Chunk Pack
-> Wraps the Webpack [split-chunks plugin](https://webpack.js.org/plugins/split-chunks-plugin/) to split code into chunks.
+> Split code into chunks using the [split-chunks plugin](https://webpack.js.org/plugins/split-chunks-plugin/).
 
 ## API
 `ChunkPack(name: string)`
@@ -14,6 +14,6 @@ Generate a chunk file for all node dependencies.
 import Packmule, { ChunkPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new ChunkPack('vendor').include('**/node_modules/**'));
+packmule.register(new ChunkPack('vendor').include('**/node_modules/**'));
 return packmule.generate();
 ```

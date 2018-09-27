@@ -1,5 +1,5 @@
 # Raw Pack
-> Merge raw Webpack configuration directly.
+> Merge raw `webpack` configuration.
 
 ## API
 ```ts
@@ -17,7 +17,7 @@ import Packmule, { RawPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 
-packmule.use(new RawPack({
+packmule.register(new RawPack({
     cache: false,
 ));
 

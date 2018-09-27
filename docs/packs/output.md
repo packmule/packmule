@@ -1,5 +1,5 @@
 # Output Pack
-> Define the [output options](https://webpack.js.org/configuration/output/) for Webpack.
+> Define the [output options](https://webpack.js.org/configuration/output/) for `webpack`.
 
 ## API
 ```ts
@@ -16,6 +16,6 @@ Configure the output options for the bundle.
 import Packmule, { OutputPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new OutputPack('public/', '/'));
+packmule.register(new OutputPack('public/', '/'));
 return packmule.generate();
 ```

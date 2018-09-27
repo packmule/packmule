@@ -1,5 +1,5 @@
 # JavaScript Pack
-> Process JS including Babel support.
+> Transpile JavaScript using Babel.
 
 Internally the `JavaScript Pack` uses `Babel` to transpile the code if needed.
 To configure `Babel` settings in your project, a `.babelrc.json` file can be used.
@@ -20,6 +20,6 @@ Process JavaScript code.
 import Packmule, { JavaScriptPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new JavaScriptPack());
+packmule.register(new JavaScriptPack());
 return packmule.generate();
 ```

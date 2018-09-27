@@ -1,5 +1,5 @@
 # Clean Pack
-> Clears a directory prior to building the bundle.
+> Clear a directory prior to building the bundle.
 
 ## API
 `CleanPack(path: string)`
@@ -14,6 +14,6 @@ Clears the contents of the `web/static/` directory before building.
 import Packmule, { CleanPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new CleanPack('web/static/'));
+packmule.register(new CleanPack('web/static/'));
 return packmule.generate();
 ```

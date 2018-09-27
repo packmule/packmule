@@ -1,5 +1,5 @@
 # Compression Pack
-> Generates `gzip` and `brotli` versions of configured assets.
+> Generate `gzip` and `brotli` versions of configured assets.
 
 ## API
 ```ts
@@ -22,7 +22,7 @@ import Packmule, { CompressionPack } from '@pixelart/packmule';
 const packmule = new Packmule();
 
 if (env.production) {
-    packmule.use(new CompressionPack());
+    packmule.register(new CompressionPack());
 }
 
 return packmule.generate();

@@ -20,7 +20,7 @@ import Packmule, { MeasurePack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 
-packmule.use(new MeasurePack({
+packmule.register(new MeasurePack({
     entrySize: 256000,
     assetSize: 102400,
 }));

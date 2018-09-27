@@ -1,5 +1,5 @@
 # Image Optimization Pack
-> Optimizes images using `imagemin`.
+> Optimize images using `imagemin`.
 
 ## API
 ```ts
@@ -18,6 +18,6 @@ Optimize images.
 import Packmule, { ImageOptimizationPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.use(new ImageOptimizationPack().include('assets/images/**').to('images/'));
+packmule.register(new ImageOptimizationPack().include('assets/images/**').to('images/'));
 return packmule.generate();
 ```
