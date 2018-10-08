@@ -2,7 +2,7 @@ import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
 
 interface Options {
-    name?: string;
+    name?: string | ((...args: any[]) => any);
 }
 
 export default class RuntimePack implements Pack {
@@ -13,7 +13,7 @@ export default class RuntimePack implements Pack {
         optimization: {},
     };
 
-    public constructor(name?: string) {
+    public constructor(name?: string | ((...args: any[]) => any)) {
         if (name) {
             this.options.name = name;
         }
