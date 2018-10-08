@@ -16,7 +16,7 @@
   "main": "module/",
   "typings": "module/",
   "dependencies": {
-    "@types/browser-sync": "0.0.41",
+    "@types/browser-sync": "^0.0.42",
     "@types/iltorb": "^2.3.0",
     "@types/micromatch": "^3.1.0",
     "@types/node": "^10.11.4",
