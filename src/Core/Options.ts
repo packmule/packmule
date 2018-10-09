@@ -7,4 +7,5 @@ export default interface Options {
     lint?: boolean;
     debug?: boolean;
     cache?: boolean;
+    hash?: boolean;
 }

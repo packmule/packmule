@@ -19,6 +19,7 @@ export default class Packmule {
         lint: false,
         debug: false,
         cache: true,
+        hash: false,
     };
 
     public constructor(options: Options = {}) {

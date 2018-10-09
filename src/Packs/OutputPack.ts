@@ -12,10 +12,7 @@ export default class OutputPack implements Pack {
     private options: OutputPackOptions;
 
     private configuration: webpack.Configuration = {
-        output: {
-            filename: '[name].js',
-            chunkFilename: 'chunks/[name].js',
-        },
+        output: {},
     };
 
     public constructor(path: string, web: string = '/') {
@@ -26,8 +23,12 @@ export default class OutputPack implements Pack {
     }
 
     public generate(options: Options): webpack.Configuration {
-        this.configuration.output!.path = resolve(options.root!, this.options.path);
-        this.configuration.output!.publicPath = this.options.web;
+        if (this.configuration.output) {
+            this.configuration.output.path = resolve(options.root!, this.options.path);
+            this.configuration.output.publicPath = this.options.web;
+            this.configuration.output.filename = options.hash ? '[name].js' : '[name].[contenthash:8].js';
+            this.configuration.output.chunkFilename = options.hash ? 'chunks/[name].js' : 'chunks/[name].[contenthash:8].js';
+        }
 
         return this.configuration;
     }

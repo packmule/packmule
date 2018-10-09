@@ -1,6 +1,7 @@
 export { default as default } from './Core/Packmule';
 
 export { default as AliasPack } from './Packs/AliasPack';
+export { default as AssetMapPack } from './Packs/AssetMapPack';
 export { default as ChunkPack } from './Packs/ChunkPack';
 export { default as CleanPack } from './Packs/CleanPack';
 export { default as CompressionPack } from './Packs/CompressionPack';
