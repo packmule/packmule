@@ -41,7 +41,7 @@ export default class SassPack implements Pack {
         if (options.extract) {
             const extraction = new ExtractPlugin({
                 filename: options.hash ? '[name].[contenthash:8].css' : '[name].css',
-                chunkFilename: options.hash ? '' : 'chunks/[name].[contenthash:8].css',
+                chunkFilename: options.hash ? 'chunks/[name].[contenthash:8].css' : 'chunks/[name].css',
             });
 
             this.configuration.plugins!.push(extraction);
