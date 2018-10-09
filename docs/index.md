@@ -33,6 +33,7 @@ Options are shared with and used by packs. Packs can choose which options to use
 `packmule` plugins are called `packs` and each `pack` handles generation for a specific `webpack` configuration part.
 
 * **[AliasPack](packs/alias.md)** - Configure webpack aliases.
+* **[AssetMapPack](packs/asset-map.md)** - Create an asset map file for use with hashed file names.
 * **[ChunkPack](packs/chunk.md)** - Wrap the webpack chunk-plugin.
 * **[CleanPack](packs/clean.md)** - Delete everything within a given directory.
 * **[CompressionPack](packs/compression.md)** - Generate `gzip` and `brotli` versions of configured assets.
