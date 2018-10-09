@@ -29,7 +29,9 @@ export default class ChunkPack implements Pack {
                 splitChunks: {
                     cacheGroups: {
                         [this.options.name]: {
-                            test: micromatch.makeRe(this.options.glob),
+                            test: micromatch.makeRe(this.options.glob, {
+                                dot: true,
+                            }),
                             name: this.options.name,
                             chunks: 'initial',
                         },

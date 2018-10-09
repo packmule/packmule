@@ -41,7 +41,9 @@ export default class CompressionPack implements Pack {
             if (this.options.gzip) {
                 const gzip = new CompressionPlugin({
                     test: expression,
-                    include: this.options.glob && micromatch.makeRe(this.options.glob),
+                    include: this.options.glob && micromatch.makeRe(this.options.glob, {
+                        dot: true,
+                    }),
                     cache: options.cache,
                     filename: '[path].gz[query]',
                 });
@@ -52,7 +54,9 @@ export default class CompressionPack implements Pack {
             if (this.options.brotli) {
                 const brotli = new CompressionPlugin({
                     test: expression,
-                    include: this.options.glob && micromatch.makeRe(this.options.glob),
+                    include: this.options.glob && micromatch.makeRe(this.options.glob, {
+                        dot: true,
+                    }),
                     cache: options.cache,
                     filename: '[path].br[query]',
                     algorithm(input: any, compressionOptions: any, callback: any) {

@@ -37,7 +37,9 @@ export default class ServiceWorkerPack implements Pack {
         }
 
         if (this.options.glob) {
-            configuration.include = micromatch.makeRe(this.options.glob);
+            configuration.include = micromatch.makeRe(this.options.glob, {
+                dot: true,
+            });
         }
 
         this.configuration.plugins!.push(new WorkboxPlugin.GenerateSW(configuration));
