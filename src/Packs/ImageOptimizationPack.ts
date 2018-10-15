@@ -43,7 +43,7 @@ export default class ImageOptimizationPack implements Pack {
 
         const rule: webpack.RuleSetRule = {
             test: expression,
-            include: (path: string) => this.options.glob ? micromatch.isMatch(path, this.options.glob) : true,
+            include: (path: string) => this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true,
             use: [] as any[],
         };
 

@@ -31,7 +31,7 @@ export default class ImageManipulationPack implements Pack {
         const use: any[] = [];
         const rule: webpack.RuleSetRule = {
             test: /\.(svg|gif|png|jpe?g|webp|tiff)$/,
-            include: (path: string) => (this.glob ? micromatch.isMatch(path, this.glob) : true),
+            include: (path: string) => (this.glob ? micromatch.isMatch(path, this.glob, { dot: true }) : true),
             use: [],
         };
 

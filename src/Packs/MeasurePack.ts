@@ -39,7 +39,7 @@ export default class MeasurePack implements Pack {
 
         if (this.options.glob) {
             this.configuration.performance!.assetFilter = (path: string) => {
-                return micromatch.isMatch(path, this.options.glob!);
+                return micromatch.isMatch(path, this.options.glob!, { dot: true });
             };
         }
 

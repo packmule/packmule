@@ -29,7 +29,7 @@ export default class JavaScriptPack implements Pack {
     public generate(options: Options): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.js$/,
-            include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : true),
+            include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true),
             use: [],
         };
 

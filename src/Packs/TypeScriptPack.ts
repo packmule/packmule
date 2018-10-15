@@ -29,7 +29,7 @@ export default class TypeScriptPack implements Pack {
     public generate(options: Options): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.tsx?$/,
-            include: (path: string) => this.options.glob ? micromatch.isMatch(path, this.options.glob) : true,
+            include: (path: string) => this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true,
             use: [],
         };
 
@@ -61,7 +61,7 @@ export default class TypeScriptPack implements Pack {
         if (options.lint) {
             const linter: webpack.RuleSetRule = {
                 test: /\.tsx?$/,
-                include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : true),
+                include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true),
                 enforce: 'pre',
                 use: [
                     {

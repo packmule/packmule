@@ -33,7 +33,7 @@ export default class CopyPack implements Pack {
         const rule: webpack.RuleSetRule = {
             test: /.+/,
             type: 'javascript/auto',
-            include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : false),
+            include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : false),
             use: [] as any[],
         };
 

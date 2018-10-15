@@ -41,7 +41,7 @@ export default class VectorSpritePack implements Pack {
     public generate(options: Options): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.svg$/,
-            include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob) : true),
+            include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true),
             use: [],
         };
 
