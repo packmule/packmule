@@ -10,7 +10,7 @@ RawPack(configuration: webpack.Configuration)
 
 **Example**
 
-Merge in custom Webpack configuration.
+Merge custom Webpack configuration.
 
 ```ts
 import Packmule, { RawPack } from '@pixelart/packmule';
