@@ -11,6 +11,11 @@ TypeScriptPack()
     .include(glob: string)
 ```
 
+## Options
+* **cache** - *Controls cache utilization of the `babel-loader`.*
+* **debug** - *Controls generation of source maps for the generated JS.*
+* **lint** - *Defines whether code linting via `tslint` is enabled or not.*
+
 ## Usage
 
 **Example**

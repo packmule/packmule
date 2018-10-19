@@ -1,28 +1,34 @@
 # Sass Pack
 > Compile `Sass` to `CSS`.
 
-Internally the `Sass Pack` uses `PostCSS` to transform code as needed.
-To configure `PostCSS` settings in your project, a `.postcssrc.json` file can be used.
-`stylelint` is used to lint Sass code, which can be configured via a `stylelint.json` file.
+`Sass Pack` uses `PostCSS` to transform code as needed.
+To configure `PostCSS` settings in your project, a `.postcssrc.json`
+file can be used. `stylelint` is used to lint Sass code, which can
+be configured via a `stylelint.json` file.
 
 ## API
 ```ts
-TypeScriptPack()
+SassPack()
     .include(glob: string)
 ```
+
+## Options
+* **optimize** - *Enables or disables minification of the generated CSS.*
+* **debug** - *Controls generation of source maps for the generated CSS.*
+* **lint** - *Defines whether code linting via `stylelint` is enabled or not.*
+* **extract** - *Used to determine if actual CSS files are being created.*
+* **hash** - *Configures whether file name hashing is enabled or not.*
 
 ## Usage
 
 **Example**
 
-Configure TS to JS transpiling.
+Configure compiling SCSS to CSS.
 
 ```ts
-import Packmule, { TypeScriptPack } from '@pixelart/packmule';
+import Packmule, { SassPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
-packmule.register(new TypeScriptPack());
+packmule.register(new SassPack());
 return packmule.generate();
 ```
-
-## Configuration

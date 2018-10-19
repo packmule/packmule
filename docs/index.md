@@ -53,7 +53,6 @@ Options are shared with and used by packs. Packs can choose which options to use
 * **[SassPack](packs/sass.md)** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
 * **[ServiceWorkerPack](packs/service-worker.md)** - Generate a simple service worker using `workbox`.
 * **[TypeScriptPack](packs/typescript.md)** - Compile TS to JS including Babel support.
-* **[UglifyPack](packs/uglify.md)** - Optimize JS using `Uglify`.
 * **[VectorSpritePack](packs/vector-sprite.md)** - Generate a SVG-based vector-sprite.
 
 ## Utilities

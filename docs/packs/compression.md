@@ -1,6 +1,9 @@
 # Compression Pack
 > Generate `gzip` and `brotli` versions of configured assets.
 
+`Compression Pack` uses `compression-webpack-plugin` and libraries
+like `iltorb` to create compressed `gzip` and `brotli` files.
+
 ## API
 ```ts
 CompressionPack({
@@ -9,6 +12,10 @@ CompressionPack({
     brotli: true,
 })
 ```
+
+## Options
+* **optimize** - *Controls whether the pack is actually enabled or not.*
+* **cache** - *Controls cache utilization for the compression libraries.*
 
 ## Usage
 

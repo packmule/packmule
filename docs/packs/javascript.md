@@ -10,6 +10,9 @@ JavaScriptPack()
     .include(glob: string)
 ```
 
+## Options
+* **cache** - *Controls cache utilization of the `babel-loader`.*
+
 ## Usage
 
 **Example**

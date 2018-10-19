@@ -1,13 +1,16 @@
 # Entry Pack
 > Define an [entry point](https://webpack.js.org/configuration/entry-context/#entry) for webpack.
 
-The `Entry Pack` configures the actual [entry points](https://webpack.js.org/concepts/#entry)
+`Entry Pack` configures the actual [entry point](https://webpack.js.org/concepts/#entry)
 for the bundle and can be used multiple times to define multiple entry points.
 
 ## API
 ```ts
 EntryPack(path: string, name?: string)
 ```
+
+## Options
+* **root** - *Used to build an absolute path of the configured entry file path.*
 
 ## Usage
 

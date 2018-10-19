@@ -6,6 +6,10 @@
 OutputPack(path: string, web: string = '/')
 ```
 
+## Options
+* **root** - *Used to build an absolute path of the configured output path.*
+* **hash** - *Configures whether file name hashing is enabled or not.*
+
 ## Usage
 
 **Example**

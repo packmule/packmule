@@ -1,12 +1,17 @@
 # Image Optimization Pack
 > Optimize images using `imagemin`.
 
+`Image Optimization Pack` uses `image-webpack-loader` to optimize images.
+
 ## API
 ```ts
 ImageOptimizationPack()
     .include(glob: string)
     .to(path: string)
 ```
+
+## Options
+* **optimize** - *Controls whether `image-webpack-loader` optimizes images or not.*
 
 ## Usage
 

@@ -1,10 +1,16 @@
 # Notify Pack
 > Enable desktop notifications for build messages.
 
+`Notify Pack` uses `webpack-notifier` to
+show desktop notification for build errors.
+
 ## API
 ```ts
 NotifyPack()
 ```
+
+## Options
+* **notify** - *Controls whether the pack is actually enabled or not.*
 
 ## Usage
 
@@ -17,7 +23,7 @@ import Packmule, { NotifyPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 
-if (env.development && env.server) {
+if (env.server) {
     packmule.register(new NotifyPack());
 }
 
