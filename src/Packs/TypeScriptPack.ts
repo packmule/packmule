@@ -1,18 +1,19 @@
 import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
-import Pack from '../Core/Pack';
+import Pack, { PackIncludeOption } from '../Core/Pack';
 import Options from '../Core/Options';
 
 interface TypeScriptPackOptions {
-    glob?: string;
+    include?: PackIncludeOption;
 }
 
 export default class TypeScriptPack implements Pack {
-    private options: TypeScriptPackOptions = {};
+    private options: TypeScriptPackOptions;
+    private defaults: TypeScriptPackOptions = {
+        include: () => true,
+    };
 
-    private configuration: webpack.Configuration &{
-        module: webpack.Module;
-    } = {
+    private configuration: webpack.Configuration = {
         resolve: {
             extensions: ['.ts', '.tsx'],
         },
@@ -21,26 +22,33 @@ export default class TypeScriptPack implements Pack {
         },
     };
 
-    public include(glob: string): this {
-        this.options.glob = glob;
+    constructor() {
+        this.options = this.defaults;
+    }
+
+    public include(include: PackIncludeOption): this {
+        this.options.include = typeof include === 'string'
+            ? micromatch.makeRe(include, { dot: true })
+            : include;
+
         return this;
     }
 
     public generate(options: Options): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.tsx?$/,
-            include: (path: string) => this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true,
+            include: this.options.include,
             use: [],
         };
 
-        const transpilation: webpack.NewLoader = {
+        const transpilation: webpack.Loader = {
             loader: 'babel-loader',
             options: {
                 cacheDirectory: options.cache,
             },
         };
 
-        const compilation: webpack.NewLoader = {
+        const compilation: webpack.Loader = {
             loader: 'ts-loader',
             options: {
                 logLevel: 'warn',
@@ -56,12 +64,12 @@ export default class TypeScriptPack implements Pack {
             rule.use.push(compilation);
         }
 
-        this.configuration.module.rules.push(rule);
+        this.configuration.module!.rules.push(rule);
 
         if (options.lint) {
             const linter: webpack.RuleSetRule = {
                 test: /\.tsx?$/,
-                include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true),
+                include: this.options.include,
                 enforce: 'pre',
                 use: [
                     {
@@ -73,7 +81,7 @@ export default class TypeScriptPack implements Pack {
                 ],
             };
 
-            this.configuration.module.rules.push(linter);
+            this.configuration.module!.rules.push(linter);
         }
 
         return this.configuration;

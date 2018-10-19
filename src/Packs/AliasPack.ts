@@ -1,9 +1,17 @@
 import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
 
+interface AliasPackOptions {
+    name: string;
+    target: string;
+}
+
 export default class AliasPack implements Pack {
-    private name: string;
-    private target: string;
+    private options: AliasPackOptions;
+    private defaults: AliasPackOptions = {
+        name: '',
+        target: '',
+    };
 
     private configuration: webpack.Configuration = {
         resolve: {
@@ -12,12 +20,16 @@ export default class AliasPack implements Pack {
     };
 
     public constructor(name: string, target: string) {
-        this.name = name;
-        this.target = target;
+        this.options = {
+            ...this.defaults,
+            ...{ name, target },
+        };
     }
 
     public generate(): webpack.Configuration {
-        this.configuration.resolve!.alias![this.name] = this.target;
+        if (this.options.name) {
+            this.configuration.resolve!.alias![this.options.name] = this.options.target;
+        }
 
         return this.configuration;
     }

@@ -2,14 +2,14 @@ import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
 import * as CompressionPlugin from 'compression-webpack-plugin';
 import * as iltorb from 'iltorb';
-import Pack from '../Core/Pack';
 import Options from '../Core/Options';
+import Pack, { PackIncludeOption } from '../Core/Pack';
 
 export interface CompressionPackOptions {
     extensions: string[];
     gzip: boolean;
     brotli: boolean;
-    glob?: string;
+    include?: PackIncludeOption;
 }
 
 export default class CompressionPack implements Pack {
@@ -25,11 +25,17 @@ export default class CompressionPack implements Pack {
     };
 
     public constructor(options?: CompressionPackOptions) {
-        this.options = {...this.defaults, ...options};
+        this.options = {
+            ...this.defaults,
+            ...options,
+        };
     }
 
-    public include(glob: string): this {
-        this.options.glob = glob;
+    public include(include: PackIncludeOption): this {
+        this.options.include = typeof include === 'string'
+            ? micromatch.makeRe(include, { dot: true })
+            : include;
+
         return this;
     }
 
@@ -41,7 +47,7 @@ export default class CompressionPack implements Pack {
             if (this.options.gzip) {
                 const gzip = new CompressionPlugin({
                     test: expression,
-                    include: this.options.glob && micromatch.makeRe(this.options.glob, { dot: true }),
+                    include: this.options.include,
                     cache: options.cache,
                     filename: '[path].gz[query]',
                 });
@@ -52,7 +58,7 @@ export default class CompressionPack implements Pack {
             if (this.options.brotli) {
                 const brotli = new CompressionPlugin({
                     test: expression,
-                    include: this.options.glob && micromatch.makeRe(this.options.glob, { dot: true }),
+                    include: this.options.include,
                     cache: options.cache,
                     filename: '[path].br[query]',
                     algorithm(input: any, compressionOptions: any, callback: any) {

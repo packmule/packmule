@@ -1,22 +1,21 @@
 import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
 import * as SpritePlugin from 'external-svg-sprite-loader/lib/SvgStorePlugin';
-import Pack from '../Core/Pack';
+import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface VectorSpritePackOptions {
     name?: string;
-    glob?: string;
-    path: string;
+    path?: string;
+    include?: PackIncludeOption;
 }
 
 export default class VectorSpritePack implements Pack {
-    private options: VectorSpritePackOptions = {
-        path: '',
+    private options: VectorSpritePackOptions;
+    private defaults: VectorSpritePackOptions = {
+        include: () => true,
     };
 
-    private configuration: webpack.Configuration &{
-        module: webpack.Module;
-    } = {
+    private configuration: webpack.Configuration = {
         module: {
             rules: [],
         },
@@ -24,11 +23,17 @@ export default class VectorSpritePack implements Pack {
     };
 
     public constructor(name: string) {
-        this.options.name = name;
+        this.options = {
+            ...this.defaults,
+            ...{ name }
+        };
     }
 
-    public include(glob: string): this {
-        this.options.glob = glob;
+    public include(include: PackIncludeOption): this {
+        this.options.include = typeof include === 'string'
+            ? micromatch.makeRe(include, { dot: true })
+            : include;
+
         return this;
     }
 
@@ -40,11 +45,11 @@ export default class VectorSpritePack implements Pack {
     public generate(): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.svg$/,
-            include: (path: string) => (this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true),
+            include: this.options.include,
             use: [],
         };
 
-        const generation: webpack.NewLoader = {
+        const generation: webpack.Loader = {
             loader: 'external-svg-sprite-loader',
             options: {
                 name: `${this.options.path}${this.options.name}.svg`,
@@ -57,7 +62,7 @@ export default class VectorSpritePack implements Pack {
         const sprite = new SpritePlugin();
         this.configuration.plugins!.push(sprite);
 
-        this.configuration.module.rules.push(rule);
+        this.configuration.module!.rules.push(rule);
 
         return this.configuration;
     }

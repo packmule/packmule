@@ -6,9 +6,7 @@ import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 
 export default class SassPack implements Pack {
-    private configuration: webpack.Configuration &{
-        module: webpack.Module;
-    } = {
+    private configuration: webpack.Configuration= {
         resolve: {
             extensions: ['.scss', '.sass'],
         },
@@ -72,7 +70,7 @@ export default class SassPack implements Pack {
             use: loaders,
         };
 
-        this.configuration.module.rules.push(rule);
+        this.configuration.module!.rules.push(rule);
 
         return this.configuration;
     }

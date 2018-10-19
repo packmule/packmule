@@ -2,28 +2,41 @@ import * as micromatch from 'micromatch';
 import * as multi from 'multi-loader';
 import * as combine from 'webpack-combine-loaders';
 import * as webpack from 'webpack';
-import Pack from '../Core/Pack';
 import Options from '../Core/Options';
+import Pack, { PackIncludeOption } from '../Core/Pack';
+
+interface ImageManipulationPackOptions {
+    instructions?: any[];
+    include?: PackIncludeOption;
+}
 
 export default class ImageManipulationPack implements Pack {
-    private glob: string;
-    private instructions: any[] = [];
+    private options: ImageManipulationPackOptions;
+    private defaults: ImageManipulationPackOptions = {
+        instructions: [],
+        include: () => true,
+    };
 
-    private configuration: webpack.Configuration & {
-        module: webpack.Module;
-    } = {
+    private configuration: webpack.Configuration = {
         module: {
             rules: [] as any[],
         },
     };
 
-    public include(glob: string): this {
-        this.glob = glob;
+    constructor() {
+        this.options = this.defaults;
+    }
+
+    public include(include: PackIncludeOption): this {
+        this.options.include = typeof include === 'string'
+            ? micromatch.makeRe(include, { dot: true })
+            : include;
+
         return this;
     }
 
     public set(name: string, options: any): this {
-        this.instructions.push({name, options});
+        this.options.instructions!.push({name, options});
         return this;
     }
 
@@ -31,14 +44,14 @@ export default class ImageManipulationPack implements Pack {
         const use: any[] = [];
         const rule: webpack.RuleSetRule = {
             test: /\.(svg|gif|png|jpe?g|webp|tiff)$/,
-            include: (path: string) => (this.glob ? micromatch.isMatch(path, this.glob, { dot: true }) : true),
+            include: this.options.include,
             use: [],
         };
 
-        this.instructions.forEach((instruction: any) => {
+        this.options.instructions!.forEach((instruction: any) => {
             const loaders = [];
 
-            const extraction: webpack.NewLoader = {
+            const extraction: webpack.Loader = {
                 loader: 'file-loader',
                 options: {
                     name: `[name]-${instruction.name}.[ext]`,
@@ -49,7 +62,7 @@ export default class ImageManipulationPack implements Pack {
             loaders.push(extraction);
 
             if (options.optimize) {
-                const optimization: webpack.NewLoader = {
+                const optimization: webpack.Loader = {
                     loader: 'image-webpack-loader',
                     options: {},
                 };
@@ -57,7 +70,7 @@ export default class ImageManipulationPack implements Pack {
                 loaders.push(optimization);
             }
 
-            const manipulation: webpack.NewLoader = {
+            const manipulation: webpack.Loader = {
                 loader: 'sharp-image-loader',
                 options: instruction.options,
             };
@@ -69,7 +82,7 @@ export default class ImageManipulationPack implements Pack {
 
         rule.use = multi(...use);
 
-        this.configuration.module.rules.push(rule);
+        this.configuration.module!.rules.push(rule);
 
         return this.configuration;
     }

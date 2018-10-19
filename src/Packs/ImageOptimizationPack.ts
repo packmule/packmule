@@ -1,12 +1,12 @@
 import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
-import Pack from '../Core/Pack';
+import Pack, { PackIncludeOption } from '../Core/Pack';
 import Options from '../Core/Options';
 
 interface ImageOptimizationPackOptions {
     extensions: string[];
-    glob?: string;
     path?: string;
+    include?: PackIncludeOption;
 }
 
 export default class ImageOptimizationPack implements Pack {
@@ -27,8 +27,11 @@ export default class ImageOptimizationPack implements Pack {
         this.options = this.defaults;
     }
 
-    public include(glob: string): this {
-        this.options.glob = glob;
+    public include(include: PackIncludeOption): this {
+        this.options.include = typeof include === 'string'
+            ? micromatch.makeRe(include, { dot: true })
+            : include;
+
         return this;
     }
 
@@ -43,11 +46,11 @@ export default class ImageOptimizationPack implements Pack {
 
         const rule: webpack.RuleSetRule = {
             test: expression,
-            include: (path: string) => this.options.glob ? micromatch.isMatch(path, this.options.glob, { dot: true }) : true,
+            include: this.options.include,
             use: [] as any[],
         };
 
-        const extraction: webpack.NewLoader = {
+        const extraction: webpack.Loader = {
             loader: 'file-loader',
             options: {
                 name: '[name].[ext]',
@@ -58,7 +61,7 @@ export default class ImageOptimizationPack implements Pack {
         Array.isArray(rule.use) && rule.use.push(extraction);
 
         if (options.optimize) {
-            const optimization: webpack.NewLoader = {
+            const optimization: webpack.Loader = {
                 loader: 'image-webpack-loader',
                 options: {
                     mozjpeg: {

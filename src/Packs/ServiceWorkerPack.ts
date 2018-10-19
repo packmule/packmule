@@ -1,21 +1,32 @@
 import * as webpack from 'webpack';
 import * as WorkboxPlugin from 'workbox-webpack-plugin';
 import * as micromatch from 'micromatch';
-import Pack from '../Core/Pack';
+import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface ServiceWorkerPackOptions {
     path?: string;
-    glob?: string;
+    include?: PackIncludeOption,
 }
 
 export default class ServiceWorkerPack implements Pack {
-    private options: ServiceWorkerPackOptions = {};
+    private options: ServiceWorkerPackOptions;
+    private defaults: ServiceWorkerPackOptions = {
+        include: () => true,
+    };
+
     private configuration: webpack.Configuration = {
         plugins: [],
     };
 
-    public include(glob: string): this {
-        this.options.glob = glob;
+    constructor() {
+        this.options = this.defaults;
+    }
+
+    public include(include: PackIncludeOption): this {
+        this.options.include = typeof include === 'string'
+            ? micromatch.makeRe(include, { dot: true })
+            : include;
+
         return this;
     }
 
@@ -29,14 +40,11 @@ export default class ServiceWorkerPack implements Pack {
             clientsClaim: true,
             skipWaiting: true,
             importWorkboxFrom: 'local',
+            include: this.options.include,
         };
 
         if (this.options.path) {
             configuration.swDest = this.options.path;
-        }
-
-        if (this.options.glob) {
-            configuration.include = micromatch.makeRe(this.options.glob, { dot: true });
         }
 
         this.configuration.plugins!.push(new WorkboxPlugin.GenerateSW(configuration));

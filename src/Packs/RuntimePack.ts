@@ -1,21 +1,24 @@
 import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
 
-interface Options {
+interface RuntimePackOptions {
     name?: string | ((...args: any[]) => any);
 }
 
 export default class RuntimePack implements Pack {
-    private options: Options = {
+    private options: RuntimePackOptions;
+    private defaults: RuntimePackOptions = {
         name: 'runtime',
     };
+
     private configuration: webpack.Configuration = {
         optimization: {},
     };
 
     public constructor(name?: string | ((...args: any[]) => any)) {
-        if (name) {
-            this.options.name = name;
+        this.options = {
+            ...this.defaults,
+            ...{ name },
         }
     }
 

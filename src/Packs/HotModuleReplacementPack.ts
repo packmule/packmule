@@ -17,7 +17,10 @@ export default class HotModuleReplacementPack implements Pack {
     };
 
     public constructor(options?: {}) {
-        this.options = {...this.options, ...options};
+        this.options = {
+            ...this.options,
+            ...options,
+        };
     }
 
     public generate(): webpack.Configuration {

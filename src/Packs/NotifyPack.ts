@@ -9,14 +9,14 @@ export interface NotifyPackOptions {
 }
 
 export default class NotifyPack implements Pack {
-    private configuration: webpack.Configuration = {
-        plugins: [],
-    };
-
     private options: NotifyPackOptions;
     private defaults: NotifyPackOptions = {
         alwaysNotify: false,
         excludeWarnings: true,
+    };
+
+    private configuration: webpack.Configuration = {
+        plugins: [],
     };
 
     public constructor(options: NotifyPackOptions = {}) {
