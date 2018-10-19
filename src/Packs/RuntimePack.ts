@@ -16,9 +16,10 @@ export default class RuntimePack implements Pack {
     };
 
     public constructor(name?: string | ((...args: any[]) => any)) {
-        this.options = {
-            ...this.defaults,
-            ...{ name },
+        this.options = this.defaults;
+
+        if (name) {
+            this.options.name = name;
         }
     }
 
