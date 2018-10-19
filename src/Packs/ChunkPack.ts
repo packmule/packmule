@@ -18,10 +18,12 @@ export default class ChunkPack implements Pack {
     private configuration: webpack.Configuration = {};
 
     public constructor(name: string, chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.compilation.Chunk) => boolean)) {
-        this.options = {
-            ...this.defaults,
-            ...{ name, chunks }
-        };
+        this.options = this.defaults;
+        this.options.name = name;
+
+        if (chunks) {
+            this.options.chunks = chunks;
+        }
     }
 
     public include(include: PackIncludeOption): this {

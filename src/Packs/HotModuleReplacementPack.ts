@@ -1,12 +1,15 @@
 import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
 
+export interface HotModuleReplacementPackOptions {
+    overlay?: boolean;
+    info?: boolean;
+    reload?: boolean;
+}
+
 export default class HotModuleReplacementPack implements Pack {
-    private options: {
-        overlay?: boolean;
-        info?: boolean;
-        reload?: boolean;
-    } = {
+    private options: HotModuleReplacementPackOptions;
+    private defaults: HotModuleReplacementPackOptions = {
         overlay: true,
         info: true,
         reload: true,
@@ -16,9 +19,9 @@ export default class HotModuleReplacementPack implements Pack {
         plugins: [],
     };
 
-    public constructor(options?: {}) {
+    public constructor(options: HotModuleReplacementPackOptions = {}) {
         this.options = {
-            ...this.options,
+            ...this.defaults,
             ...options,
         };
     }

@@ -20,7 +20,10 @@ export default class NotifyPack implements Pack {
     };
 
     public constructor(options: NotifyPackOptions = {}) {
-        this.options = {...this.defaults, ...options};
+        this.options = {
+            ...this.defaults,
+            ...options,
+        };
     }
 
     public generate(options: Options): webpack.Configuration {

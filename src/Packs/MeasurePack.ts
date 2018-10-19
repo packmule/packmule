@@ -23,10 +23,15 @@ export default class MeasurePack implements Pack {
     };
 
     public constructor(entrySize?: number, assetSize?: number) {
-        this.options = {
-            ...this.defaults,
-            ...{ entrySize, assetSize },
-        };
+        this.options = this.defaults;
+
+        if (entrySize) {
+            this.options.entrySize = entrySize;
+        }
+
+        if (assetSize) {
+            this.options.assetSize = assetSize;
+        }
     }
 
     public generate(): webpack.Configuration {

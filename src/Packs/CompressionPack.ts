@@ -6,9 +6,9 @@ import Options from '../Core/Options';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 
 export interface CompressionPackOptions {
-    extensions: string[];
-    gzip: boolean;
-    brotli: boolean;
+    extensions?: string[];
+    gzip?: boolean;
+    brotli?: boolean;
     include?: PackIncludeOption;
 }
 
@@ -24,7 +24,7 @@ export default class CompressionPack implements Pack {
         plugins: [],
     };
 
-    public constructor(options?: CompressionPackOptions) {
+    public constructor(options: CompressionPackOptions = {}) {
         this.options = {
             ...this.defaults,
             ...options,
@@ -40,7 +40,7 @@ export default class CompressionPack implements Pack {
     }
 
     public generate(options: Options): webpack.Configuration {
-        const pattern = '(' + this.options.extensions.map((extension: string) => `\\.${extension}`).join('|') + ')$';
+        const pattern = '(' + this.options.extensions!.map((extension: string) => `\\.${extension}`).join('|') + ')$';
         const expression = new RegExp(pattern, 'i');
 
         if (options.optimize) {
