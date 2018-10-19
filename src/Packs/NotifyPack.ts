@@ -16,7 +16,7 @@ export default class NotifyPack implements Pack {
     private options: NotifyPackOptions;
     private defaults: NotifyPackOptions = {
         alwaysNotify: false,
-        excludeWarnings: false,
+        excludeWarnings: true,
     };
 
     public constructor(options: NotifyPackOptions = {}) {
