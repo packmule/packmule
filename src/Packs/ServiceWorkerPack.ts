@@ -2,7 +2,6 @@ import * as webpack from 'webpack';
 import * as WorkboxPlugin from 'workbox-webpack-plugin';
 import * as micromatch from 'micromatch';
 import Pack from '../Core/Pack';
-import Options from '../Core/Options';
 
 interface ServiceWorkerPackOptions {
     path?: string;
@@ -25,7 +24,7 @@ export default class ServiceWorkerPack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(): webpack.Configuration {
         const configuration: any = {
             clientsClaim: true,
             skipWaiting: true,
@@ -37,9 +36,7 @@ export default class ServiceWorkerPack implements Pack {
         }
 
         if (this.options.glob) {
-            configuration.include = micromatch.makeRe(this.options.glob, {
-                dot: true,
-            });
+            configuration.include = micromatch.makeRe(this.options.glob, { dot: true });
         }
 
         this.configuration.plugins!.push(new WorkboxPlugin.GenerateSW(configuration));

@@ -1,7 +1,6 @@
 import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
-import Options from '../Core/Options';
 
 interface CopyPackOptions {
     path?: string;
@@ -29,7 +28,7 @@ export default class CopyPack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /.+/,
             type: 'javascript/auto',

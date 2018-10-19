@@ -1,6 +1,5 @@
 import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
-import Options from '../Core/Options';
 
 export default class HotModuleReplacementPack implements Pack {
     private options: {
@@ -21,7 +20,7 @@ export default class HotModuleReplacementPack implements Pack {
         this.options = {...this.options, ...options};
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(): webpack.Configuration {
         const hmr = new webpack.HotModuleReplacementPlugin();
 
         this.configuration.plugins!.push(hmr);

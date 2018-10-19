@@ -24,7 +24,7 @@ export default class NotifyPack implements Pack {
     }
 
     public generate(options: Options): webpack.Configuration {
-        if(options.notify) {
+        if (options.notify) {
             this.configuration.plugins!.push(new NotifierPlugin(this.options));
         }
 
