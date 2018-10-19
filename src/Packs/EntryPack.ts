@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve, basename, extname } from 'path';
 import * as webpack from 'webpack';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
@@ -25,7 +25,10 @@ export default class EntryPack implements Pack {
     public constructor(path: string, name?: string) {
         this.options = {
             ...this.defaults,
-            ...{ path, name },
+            ...{
+                path,
+                name: name || basename(path, extname(path)),
+            },
         };
     }
 
