@@ -16,11 +16,7 @@ export default class MeasurePack implements Pack {
         include: '**/*.{js,css,html,ttf,woff,woff2,otf}',
     };
 
-    private configuration: webpack.Configuration = {
-        performance: {
-            hints: 'warning',
-        },
-    };
+    private configuration: webpack.Configuration = {};
 
     public constructor(entrySize?: number, assetSize?: number) {
         this.options = this.defaults;
@@ -35,10 +31,13 @@ export default class MeasurePack implements Pack {
     }
 
     public generate(): webpack.Configuration {
-        this.configuration.performance!.maxEntrypointSize = this.options.entrySize;
-        this.configuration.performance!.maxAssetSize = this.options.assetSize;
-        this.configuration.performance!.assetFilter = (path: string) => {
-            return micromatch.isMatch(path, this.options.include!, { dot: true })
+        this.configuration.performance = {
+            hints: 'warning',
+            maxEntrypointSize: this.options.entrySize,
+            maxAssetSize: this.options.assetSize,
+            assetFilter: (path: string) => {
+                return micromatch.isMatch(path, this.options.include!, {dot: true});
+            },
         };
 
         return this.configuration;
