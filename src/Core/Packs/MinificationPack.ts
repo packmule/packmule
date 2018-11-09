@@ -12,13 +12,13 @@ export default class MinificationPack implements Pack {
 
     public generate(options: Options): webpack.Configuration {
         if (options.optimize) {
-            const uglify = new TerserPlugin({
+            const terser = new TerserPlugin({
                 parallel: true,
                 cache: options.cache,
                 sourceMap: options.debug,
             });
 
-            this.configuration.optimization!.minimizer!.push(uglify);
+            this.configuration.optimization!.minimizer!.push(terser);
         }
 
         return this.configuration;
