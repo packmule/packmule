@@ -16,6 +16,11 @@ export default class MinificationPack implements Pack {
                 parallel: true,
                 cache: options.cache,
                 sourceMap: options.debug,
+                terserOptions: {
+                    mangle: {
+                        keep_fnames: true,
+                    },
+                },
             });
 
             this.configuration.optimization!.minimizer!.push(terser);
