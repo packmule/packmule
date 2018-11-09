@@ -1,6 +1,6 @@
 import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
-import * as SpritePlugin from 'external-svg-sprite-loader/lib/SvgStorePlugin';
+import * as SpritePlugin from 'external-svg-sprite-loader';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface VectorSpritePackOptions {
@@ -50,7 +50,7 @@ export default class VectorSpritePack implements Pack {
         };
 
         const generation: webpack.Loader = {
-            loader: 'external-svg-sprite-loader',
+            loader: SpritePlugin.loader,
             options: {
                 name: `${this.options.path}${this.options.name}.svg`,
                 iconName: '[name]',
