@@ -31,6 +31,9 @@ Options are shared with and used by packs. Packs can choose which options to use
 
 ## Packs
 `packmule` plugins are called `packs` and each `pack` handles generation for a specific `webpack` configuration part.
+Several `packs` expose API methods to include or exclude files from processing using
+[`file globbing`](https://en.wikipedia.org/wiki/Glob_(programming)) or
+[`regular expression`](https://en.wikipedia.org/wiki/Regular_expression) patterns.
 
 * **[AliasPack](packs/alias.md)** - Configure webpack aliases.
 * **[AssetMapPack](packs/asset-map.md)** - Create an asset map file for use with hashed file names.
