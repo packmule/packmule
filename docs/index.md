@@ -28,6 +28,7 @@ Options are shared with and used by packs. Packs can choose which options to use
 | **lint** | `boolean` | `false` | Enables code linting. |
 | **debug** | `boolean` | `false` | Enables debugging. |
 | **cache** | `boolean` | `true` | Enables caching. |
+| **hash** | `boolean` | `false` | Enable filename hashing. |
 
 ## Packs
 `packmule` plugins are called `packs` and each `pack` handles generation for a specific `webpack` configuration part.
