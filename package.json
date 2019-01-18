@@ -25,6 +25,7 @@
     "@types/webpack-bundle-analyzer": "^2.13.0",
     "@types/webpack-dev-middleware": "^2.0.2",
     "@types/webpack-hot-middleware": "^2.16.4",
+    "@types/webpack-manifest-plugin": "^2.0.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.0",
     "compression-webpack-plugin": "^2.0.0",
@@ -72,7 +73,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
-    "@types/webpack-manifest-plugin": "^2.0.0",
     "autoprefixer": "^9.4.5",
     "browser-sync": "^2.26.3",
     "node-sass": "^4.11.0",
