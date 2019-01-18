@@ -63,11 +63,6 @@ export default class ImageOptimizationPack implements Pack {
         if (options.optimize) {
             const optimization: webpack.Loader = {
                 loader: 'image-webpack-loader',
-                options: {
-                    mozjpeg: {
-                        enabled: false,
-                    },
-                },
             };
 
             Array.isArray(rule.use) && rule.use.push(optimization);
