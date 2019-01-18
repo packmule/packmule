@@ -1,7 +1,7 @@
 {
   "name": "@pixelart/packmule",
   "version": "0.1.0",
-  "description": "",
+  "description": "Stubborn configuration generator for webpack.",
   "license": "MIT",
   "author": {
     "name": "Thomas Deinhamer",
