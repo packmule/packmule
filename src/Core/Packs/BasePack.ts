@@ -8,9 +8,6 @@ export default class DefaultPack implements Pack {
         resolve: {
             extensions: ['.json'],
         },
-        plugins: [
-            new webpack.ProgressPlugin(),
-        ],
     };
 
     public generate(options: Options): webpack.Configuration {
