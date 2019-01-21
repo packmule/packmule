@@ -1,4 +1,6 @@
 import * as webpack from 'webpack';
+import * as sass from 'sass';
+import * as fibers from 'fibers';
 import * as ExtractPlugin from 'mini-css-extract-plugin';
 import * as OptimizePlugin from 'optimize-css-assets-webpack-plugin';
 import * as LintPlugin from 'stylelint-webpack-plugin';
@@ -23,7 +25,14 @@ export default class SassPack implements Pack {
         let loaders: webpack.Loader[] | webpack.Loader = [
             { loader: 'css-loader', options: { sourceMap: options.debug } },
             { loader: 'postcss-loader', options: { sourceMap: options.debug } },
-            { loader: 'sass-loader', options: { sourceMap: options.debug } },
+            {
+                loader: 'sass-loader',
+                options: {
+                    implementation: sass,
+                    fiber: fibers,
+                    sourceMap: options.debug,
+                },
+            },
         ];
 
         if (options.lint) {
