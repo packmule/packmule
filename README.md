@@ -9,7 +9,7 @@ import Packmule, {
     OutputPack,
     SassPack,
     TypeScriptPack,
-    UglifyPack,
+    CompressionPack,
 } from '@pixelart/packmule';
 
 const packmule = new Packmule();
@@ -19,7 +19,7 @@ packmule.register(new SassPack());
 packmule.register(new TypeScriptPack());
 
 if (env.production) {
-    packmule.register(new UglifyPack());
+    packmule.register(new CompressionPack());
 }
 
 return packmule.generate();
