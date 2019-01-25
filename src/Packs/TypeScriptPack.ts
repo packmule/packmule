@@ -66,24 +66,6 @@ export default class TypeScriptPack implements Pack {
 
         this.configuration.module!.rules.push(rule);
 
-        if (options.lint) {
-            const linter: webpack.RuleSetRule = {
-                test: /\.tsx?$/,
-                include: this.options.include,
-                enforce: 'pre',
-                use: [
-                    {
-                        loader: 'tslint-loader',
-                        options: {
-                            tsConfigFile: 'assets/tsconfig.json',
-                        },
-                    },
-                ],
-            };
-
-            this.configuration.module!.rules.push(linter);
-        }
-
         return this.configuration;
     }
 }
