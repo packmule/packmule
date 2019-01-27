@@ -58,6 +58,7 @@ Several `packs` expose API methods to include or exclude files from processing u
 * **[ServiceWorkerPack](packs/service-worker.md)** - Generate a simple service worker using `workbox`.
 * **[TypeScriptPack](packs/typescript.md)** - Compile TS to JS including Babel support.
 * **[VectorSpritePack](packs/vector-sprite.md)** - Generate a SVG-based vector-sprite.
+* **[VuePack](packs/vue.md)** - Handle `vue` single-file-component files.
 
 ## Utilities
 
