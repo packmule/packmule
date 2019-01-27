@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Stubborn configuration generator for webpack.",
   "license": "UNLICENSED",
-  "private":true,
+  "private": true,
   "author": {
     "name": "Thomas Deinhamer",
     "email": "t.deinhamer@pixelart.at",
