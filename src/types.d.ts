@@ -11,3 +11,4 @@ declare module 'webpack-notifier';
 declare module 'webpack-merge';
 declare module 'mini-css-extract-plugin';
 declare module 'compression-webpack-plugin';
+declare module 'vue-loader/lib/plugin';
