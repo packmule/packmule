@@ -7,7 +7,16 @@ import * as LintPlugin from 'stylelint-webpack-plugin';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 
+interface SassPackOptions {
+    importers?: Function[],
+}
+
 export default class SassPack implements Pack {
+    private options: SassPackOptions;
+    private defaults: SassPackOptions = {
+        importers: [],
+    };
+
     private configuration: webpack.Configuration= {
         resolve: {
             extensions: ['.scss', '.sass'],
@@ -21,6 +30,15 @@ export default class SassPack implements Pack {
         plugins: [],
     };
 
+    constructor() {
+        this.options = this.defaults;
+    }
+
+    public importer(importer: Function): this {
+        this.options.importers!.push(importer);
+        return this;
+    }
+
     public generate(options: Options): webpack.Configuration {
         let loaders: webpack.Loader[] | webpack.Loader = [
             { loader: 'css-loader', options: { sourceMap: options.debug } },
@@ -31,6 +49,7 @@ export default class SassPack implements Pack {
                     implementation: sass,
                     fiber: fibers,
                     sourceMap: options.debug,
+                    importer: this.options.importers,
                 },
             },
         ];
