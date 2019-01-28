@@ -10,6 +10,7 @@ be configured via a `stylelint.json` file.
 ```ts
 SassPack()
     .include(glob: string)
+    .importer(importer: Function)
 ```
 
 ## Options
@@ -27,8 +28,9 @@ Configure compiling SCSS to CSS.
 
 ```ts
 import Packmule, { SassPack } from '@pixelart/packmule';
+import * as MagicImporter from 'node-sass-magic-importer';
 
 const packmule = new Packmule();
-packmule.register(new SassPack());
+packmule.register(new SassPack().importer(MagicImporter()));
 return packmule.generate();
 ```
