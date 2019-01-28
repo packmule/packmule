@@ -1,5 +1,8 @@
 import * as micromatch from 'micromatch';
 import * as webpack from 'webpack';
+import * as mozjpeg from 'imagemin-mozjpeg'
+import * as pngquant from 'imagemin-pngquant'
+import ImagePlugin from 'imagemin-webpack-plugin';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 import Options from '../Core/Options';
 
@@ -15,12 +18,11 @@ export default class ImageOptimizationPack implements Pack {
         extensions: ['svg', 'gif', 'png', 'jpg', 'jpeg'],
     };
 
-    private configuration: webpack.Configuration & {
-        module: webpack.Module;
-    } = {
+    private configuration: webpack.Configuration = {
         module: {
             rules: [],
         },
+        plugins: [],
     };
 
     constructor() {
@@ -47,7 +49,7 @@ export default class ImageOptimizationPack implements Pack {
         const rule: webpack.RuleSetRule = {
             test: expression,
             include: this.options.include,
-            use: [] as any[],
+            use: [],
         };
 
         const extraction: webpack.Loader = {
@@ -58,17 +60,23 @@ export default class ImageOptimizationPack implements Pack {
             },
         };
 
+        const optimization = new ImagePlugin({
+            disable: !options.optimize,
+            jpegtran: null,
+            optipng: null,
+            plugins: [
+                mozjpeg({
+                    quality: 80,
+                }),
+                pngquant({
+                    speed: 3,
+                }),
+            ],
+        });
+
         Array.isArray(rule.use) && rule.use.push(extraction);
-
-        if (options.optimize) {
-            const optimization: webpack.Loader = {
-                loader: 'image-webpack-loader',
-            };
-
-            Array.isArray(rule.use) && rule.use.push(optimization);
-        }
-
-        this.configuration.module.rules.push(rule);
+        this.configuration.module!.rules.push(rule);
+        this.configuration.plugins!.push(optimization);
 
         return this.configuration;
     }

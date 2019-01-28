@@ -12,3 +12,6 @@ declare module 'webpack-merge';
 declare module 'mini-css-extract-plugin';
 declare module 'compression-webpack-plugin';
 declare module 'vue-loader/lib/plugin';
+declare module 'imagemin-webpack-plugin';
+declare module 'imagemin-mozjpeg';
+declare module 'imagemin-pngquant';
