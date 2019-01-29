@@ -1,2 +1,0 @@
-# Image Manipulation Pack
-> TBD

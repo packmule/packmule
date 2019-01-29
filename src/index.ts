@@ -8,7 +8,6 @@ export { default as CompressionPack } from './Packs/CompressionPack';
 export { default as CopyPack } from './Packs/CopyPack';
 export { default as EntryPack } from './Packs/EntryPack';
 export { default as HotModuleReplacementPack } from './Packs/HotModuleReplacementPack';
-export { default as ImageManipulationPack } from './Packs/ImageManipulationPack';
 export { default as ImageOptimizationPack } from './Packs/ImageOptimizationPack';
 export { default as JavaScriptPack } from './Packs/JavaScriptPack';
 export { default as LogPack } from './Packs/LogPack';

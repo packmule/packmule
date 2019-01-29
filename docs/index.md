@@ -44,7 +44,6 @@ Several `packs` expose API methods to include or exclude files from processing u
 * **[CopyPack](packs/copy.md)** - Copy files.
 * **[EntryPack](packs/entry.md)** - Define the entrypoints for webpack.
 * **[HotModuleReplacementPack](packs/hot-module-replacement.md)** - Include the `hot module replacement` plugin for development.
-* **[ImageManipulationPack](packs/image-manipulation.md)** - Manipulate images using `sharp` and optimizes them using `imagemin`.
 * **[ImageOptimizationPack](packs/image-optimization.md)** - Optimize images using `imagemin`.
 * **[JavaScriptPack](packs/javascript.md)** - Processe JS including Babel support.
 * **[LogPack](packs/log.md)** - Configure console logging.

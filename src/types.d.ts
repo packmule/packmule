@@ -4,8 +4,6 @@ declare module 'terser-webpack-plugin';
 declare module 'clean-webpack-plugin';
 declare module 'stylelint-webpack-plugin';
 declare module 'external-svg-sprite-loader';
-declare module 'multi-loader';
-declare module 'webpack-combine-loaders';
 declare module 'workbox-webpack-plugin';
 declare module 'webpack-notifier';
 declare module 'webpack-merge';
