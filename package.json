@@ -2,7 +2,7 @@
   "name": "@packmule/packmule",
   "version": "0.0.0",
   "description": "Stubborn configuration generator for webpack.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
   "author": {
     "name": "Thomas Deinhamer",
