@@ -19,7 +19,7 @@ EntryPack(path: string, name?: string)
 Set single entry point and generate an `app` bundle.
 
 ```ts
-import Packmule, { EntryPack } from '@pixelart/packmule';
+import Packmule, { EntryPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new EntryPack('assets/entry.ts', 'app'));
@@ -31,7 +31,7 @@ return packmule.generate();
 Set multiple entrypoints and generate a `one` and a `two` bundle.
 
 ```ts
-import Packmule, { EntryPack } from '@pixelart/packmule';
+import Packmule, { EntryPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new EntryPack('assets/one.ts'));

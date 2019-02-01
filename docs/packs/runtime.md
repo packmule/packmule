@@ -13,7 +13,7 @@ RuntimePack();
 Enables the `webpack` runtime with a custom name.
 
 ```ts
-import Packmule, { RuntimePack } from '@pixelart/packmule';
+import Packmule, { RuntimePack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new RuntimePack('bootstrap'));

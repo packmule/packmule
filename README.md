@@ -10,7 +10,7 @@ import Packmule, {
     SassPack,
     TypeScriptPack,
     CompressionPack,
-} from '@pixelart/packmule';
+} from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new EntryPack('main.ts'));

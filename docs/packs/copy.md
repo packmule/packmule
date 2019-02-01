@@ -15,7 +15,7 @@ CopyPack()
 Copy JSON files.
 
 ```ts
-import Packmule, { CopyPack } from '@pixelart/packmule';
+import Packmule, { CopyPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new CopyPack().include('**/data/*.json').to('data/'));

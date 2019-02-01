@@ -1,5 +1,5 @@
 {
-  "name": "@pixelart/packmule",
+  "name": "@packmule/packmule",
   "version": "0.0.0",
   "description": "Stubborn configuration generator for webpack.",
   "license": "UNLICENSED",

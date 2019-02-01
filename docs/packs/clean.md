@@ -19,7 +19,7 @@ webpack output directory prior building to get rid of old files.
 Clears the contents of the `web/static/` directory before building.
 
 ```ts
-import Packmule, { CleanPack } from '@pixelart/packmule';
+import Packmule, { CleanPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new CleanPack('web/static/'));

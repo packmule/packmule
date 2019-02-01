@@ -13,7 +13,7 @@ ManifestPack(options: ManifestPlugin.ManifestOptions)
 Generate a basic web app manifest using the [`webpack-pwa-manifest`](https://www.npmjs.com/package/webpack-pwa-manifest) plugin internally.
 
 ```ts
-import Packmule, { ManifestPack } from '@pixelart/packmule';
+import Packmule, { ManifestPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new ManifestPack({

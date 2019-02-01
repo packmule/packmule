@@ -17,7 +17,7 @@ OutputPack(path: string, web: string = '/')
 Configure the output options for the bundle.
 
 ```ts
-import Packmule, { OutputPack } from '@pixelart/packmule';
+import Packmule, { OutputPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new OutputPack('public/', '/'));

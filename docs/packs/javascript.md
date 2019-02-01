@@ -20,7 +20,7 @@ JavaScriptPack()
 Process JavaScript code.
 
 ```ts
-import Packmule, { JavaScriptPack } from '@pixelart/packmule';
+import Packmule, { JavaScriptPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new JavaScriptPack());
