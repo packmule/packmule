@@ -11,7 +11,6 @@ export default class LogPack implements Pack {
             cachedAssets: true,
             children: false,
             chunks: false,
-            // chunkGroups: false,
             chunkModules: false,
             chunkOrigins: false,
             chunksSort: 'field',
