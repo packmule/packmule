@@ -1,7 +1,7 @@
-import * as micromatch from 'micromatch';
-import * as webpack from 'webpack';
-import * as CompressionPlugin from 'compression-webpack-plugin';
-import * as iltorb from 'iltorb';
+import webpack from 'webpack';
+import micromatch from 'micromatch';
+import iltorb from 'iltorb';
+import CompressionPlugin from 'compression-webpack-plugin';
 import Options from '../Core/Options';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 

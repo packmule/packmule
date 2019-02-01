@@ -1,5 +1,5 @@
-import * as webpack from 'webpack';
-import * as micromatch from 'micromatch';
+import webpack from 'webpack';
+import micromatch from 'micromatch';
 import Pack from '../Core/Pack';
 
 interface MeasurePackOptions {

@@ -1,7 +1,7 @@
-import * as micromatch from 'micromatch';
-import * as webpack from 'webpack';
-import * as mozjpeg from 'imagemin-mozjpeg'
-import * as pngquant from 'imagemin-pngquant'
+import webpack from 'webpack';
+import micromatch from 'micromatch';
+import mozjpeg from 'imagemin-mozjpeg'
+import pngquant from 'imagemin-pngquant'
 import ImagePlugin from 'imagemin-webpack-plugin';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 import Options from '../Core/Options';

@@ -1,4 +1,4 @@
-import * as webpack from 'webpack';
+import webpack from 'webpack';
 import Options from './Options';
 
 export type PackIncludeOption = string | RegExp | ((path: string) => true);

@@ -1,6 +1,6 @@
-import * as webpack from 'webpack';
-import * as merge from 'webpack-merge';
-import * as dir from 'pkg-dir';
+import webpack from 'webpack';
+import merge from 'webpack-merge';
+import dir from 'pkg-dir';
 import Pack from './Pack';
 import Options from './Options';
 import BasePack from './Packs/BasePack';

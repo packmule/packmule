@@ -1,5 +1,5 @@
-import * as micromatch from 'micromatch';
-import * as webpack from 'webpack';
+import micromatch from 'micromatch';
+import webpack from 'webpack';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface ChunkPackOptions {

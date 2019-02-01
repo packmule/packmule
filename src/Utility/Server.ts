@@ -1,7 +1,7 @@
-import * as webpack from 'webpack';
-import * as webpackDevMiddleware from 'webpack-dev-middleware';
-import * as webpackHotMiddleware from 'webpack-hot-middleware';
-import * as browsersync from 'browser-sync';
+import webpack from 'webpack';
+import browsersync from 'browser-sync';
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
 
 export default class Server {
     private webpackConfiguration: webpack.Configuration;

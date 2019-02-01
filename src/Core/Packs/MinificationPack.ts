@@ -1,5 +1,5 @@
-import * as webpack from 'webpack';
-import * as TerserPlugin from 'terser-webpack-plugin';
+import webpack from 'webpack';
+import TerserPlugin from 'terser-webpack-plugin';
 import Pack from '../Pack';
 import Options from '../Options';
 

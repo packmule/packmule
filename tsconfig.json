@@ -6,15 +6,16 @@
         "newLine": "lf",
         "outDir": "module/",
         "declaration": true,
+        "strict": true,
         "removeComments": true,
-        "strictNullChecks": true,
-        "alwaysStrict": true,
         "allowUnreachableCode": true,
-        "noImplicitAny": true,
         "noUnusedParameters": false,
         "noUnusedLocals": true,
         "noEmitOnError": true,
-        "noImplicitThis": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+        "forceConsistentCasingInFileNames": true,
+        "stripInternal": true,
+        "esModuleInterop": true,
+        "noImplicitReturns": true
     }
 }

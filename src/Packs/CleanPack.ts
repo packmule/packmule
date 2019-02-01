@@ -1,5 +1,5 @@
-import * as webpack from 'webpack';
-import * as CleanPlugin from 'clean-webpack-plugin';
+import webpack from 'webpack';
+import CleanPlugin from 'clean-webpack-plugin';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 

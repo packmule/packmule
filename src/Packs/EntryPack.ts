@@ -1,5 +1,5 @@
 import { resolve, basename, extname } from 'path';
-import * as webpack from 'webpack';
+import webpack from 'webpack';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 

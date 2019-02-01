@@ -1,5 +1,5 @@
-import * as micromatch from 'micromatch';
-import * as webpack from 'webpack';
+import webpack from 'webpack';
+import micromatch from 'micromatch';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 import Options from '../Core/Options';
 

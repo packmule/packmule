@@ -1,6 +1,6 @@
-import * as webpack from 'webpack';
-import * as micromatch from 'micromatch';
-import * as VuePlugin from 'vue-loader/lib/plugin';
+import webpack from 'webpack';
+import micromatch from 'micromatch';
+import VuePlugin from 'vue-loader/lib/plugin';
 import Pack, {PackIncludeOption} from '../Core/Pack';
 import Options from '../Core/Options';
 

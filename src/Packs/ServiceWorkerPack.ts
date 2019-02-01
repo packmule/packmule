@@ -1,6 +1,6 @@
-import * as webpack from 'webpack';
-import * as WorkboxPlugin from 'workbox-webpack-plugin';
-import * as micromatch from 'micromatch';
+import webpack from 'webpack';
+import micromatch from 'micromatch';
+import WorkboxPlugin from 'workbox-webpack-plugin';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface ServiceWorkerPackOptions {

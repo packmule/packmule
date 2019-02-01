@@ -1,5 +1,5 @@
 import * as webpack from 'webpack';
-import * as BarPlugin from 'webpackbar';
+import BarPlugin from 'webpackbar';
 import Pack from '../Pack';
 import Options from '../Options';
 

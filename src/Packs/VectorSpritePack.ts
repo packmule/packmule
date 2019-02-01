@@ -1,6 +1,6 @@
-import * as micromatch from 'micromatch';
-import * as webpack from 'webpack';
-import * as SpritePlugin from 'external-svg-sprite-loader';
+import webpack from 'webpack';
+import micromatch from 'micromatch';
+import SpritePlugin from 'external-svg-sprite-loader';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface VectorSpritePackOptions {

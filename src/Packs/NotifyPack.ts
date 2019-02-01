@@ -1,5 +1,5 @@
-import * as webpack from 'webpack';
-import * as NotifierPlugin from 'webpack-notifier';
+import webpack from 'webpack';
+import NotifierPlugin from 'webpack-notifier';
 import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 

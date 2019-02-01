@@ -1,5 +1,5 @@
-import * as webpack from 'webpack';
-import * as ManifestPlugin from 'webpack-pwa-manifest';
+import webpack from 'webpack';
+import ManifestPlugin from 'webpack-pwa-manifest';
 import Pack from '../Core/Pack';
 
 export default class ManifestPack implements Pack {
