@@ -21,8 +21,9 @@ export default class Server {
 
         const dev = webpackDevMiddleware(compiler, {
             publicPath: this.webpackConfiguration.output!.publicPath || '/',
-            lazy: false,
             stats: this.webpackConfiguration.stats,
+            writeToDisk: true,
+            lazy: false,
         });
 
         const hmr = webpackHotMiddleware(compiler);
