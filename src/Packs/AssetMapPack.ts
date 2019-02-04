@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import ManifestPlugin from 'webpack-manifest-plugin';
+import ManifestPlugin from 'webpack-assets-manifest';
 import Pack from '../Core/Pack';
 
 export default class AssetMapPack implements Pack {
@@ -9,7 +9,9 @@ export default class AssetMapPack implements Pack {
 
     public generate(): webpack.Configuration {
         const manifest = new ManifestPlugin({
-            writeToFileEmit: true,
+            entrypoints: true,
+            sortManifest: false,
+            writeToDisk: true,
         });
 
         this.configuration.plugins!.push(manifest);
