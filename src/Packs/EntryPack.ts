@@ -14,7 +14,7 @@ export default class EntryPack implements Pack {
         name: 'bundle',
     };
 
-    private configuration: webpack.Configuration &{
+    private configuration: webpack.Configuration & {
         entry: {
             [key: string]: string[];
         };
