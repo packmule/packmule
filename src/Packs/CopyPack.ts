@@ -12,9 +12,7 @@ export default class CopyPack implements Pack {
     private options: CopyPackOptions;
     private defaults: CopyPackOptions = {};
 
-    private configuration: webpack.Configuration & {
-        module: webpack.Module;
-    } = {
+    private configuration: webpack.Configuration = {
         module: {
             rules: [],
         },
@@ -55,7 +53,7 @@ export default class CopyPack implements Pack {
 
         Array.isArray(rule.use) && rule.use.push(extraction);
 
-        this.configuration.module.rules.push(rule);
+        this.configuration.module!.rules.push(rule);
 
         return this.configuration;
     }
