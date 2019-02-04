@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
+import Options from '../Core/Options';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface CopyPackOptions {
@@ -36,7 +37,7 @@ export default class CopyPack implements Pack {
         return this;
     }
 
-    public generate(): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /.+/,
             type: 'javascript/auto',
@@ -47,7 +48,7 @@ export default class CopyPack implements Pack {
         const extraction: webpack.Loader = {
             loader: 'file-loader',
             options:  {
-                name: '[name].[ext]',
+                name: options.hash ? '[name].[hash:8].[ext]' : '[name].[ext]',
                 outputPath: this.options.path,
             },
         };
