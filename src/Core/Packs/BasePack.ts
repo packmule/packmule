@@ -3,9 +3,8 @@ import BarPlugin from 'webpackbar';
 import Pack from '../Pack';
 import Options from '../Options';
 
-export default class DefaultPack implements Pack {
+export default class BasePack implements Pack {
     private configuration: webpack.Configuration = {
-        mode: 'none',
         resolve: {
             extensions: ['.json'],
         },
@@ -13,14 +12,11 @@ export default class DefaultPack implements Pack {
     };
 
     public generate(options: Options): webpack.Configuration {
+        this.configuration.mode = options.mode;
         this.configuration.context = options.root;
         this.configuration.cache = options.cache;
 
         this.configuration.plugins!.push(new BarPlugin());
-
-        if (options.debug) {
-            this.configuration.devtool = 'cheap-source-map';
-        }
 
         return this.configuration;
     }

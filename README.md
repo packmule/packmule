@@ -14,13 +14,13 @@ import Packmule, {
     CompressionPack,
 } from '@packmule/packmule';
 
-const packmule = new Packmule();
+const packmule = new Packmule(env.mode);
 packmule.register(new EntryPack('main.ts'));
 packmule.register(new OutputPack('public/', '/'));
 packmule.register(new SassPack());
 packmule.register(new TypeScriptPack());
 
-if (env.production) {
+if (env.mode === 'production') {
     packmule.register(new CompressionPack());
 }
 

@@ -20,6 +20,7 @@ Options are shared with and used by packs. Packs can choose which options to use
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
+| **mode** | `string` | `'none'` | Sets the mode for webpack. |
 | **root** | `string` | `dir.sync(process.cwd())` | Sets the project root directory. |
 | **optimize** | `boolean` | `false` | Enables optimization steps. |
 | **extract** | `boolean` | `false` | Enables file extraction. |

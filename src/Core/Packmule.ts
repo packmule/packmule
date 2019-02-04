@@ -9,8 +9,10 @@ import MinificationPack from './Packs/MinificationPack';
 
 export default class Packmule {
     private packs: Pack[] = [];
-    private options: Options = {};
+    private readonly options: Options;
+
     private defaults: Options = {
+        mode: 'none',
         root: dir.sync(process.cwd()),
         optimize: false,
         extract: false,
@@ -18,12 +20,31 @@ export default class Packmule {
         watch: false,
         lint: false,
         debug: false,
-        cache: true,
+        cache: false,
         hash: false,
     };
 
-    public constructor(options: Options = {}) {
-        this.options = {...this.defaults, ...options};
+    private presets: any = {
+        none: {},
+        production: {
+            mode: 'production',
+            optimize: true,
+            extract: true,
+            hash: true,
+        },
+        development: {
+            mode: 'development',
+            notify: true,
+            watch: true,
+            lint: true,
+            debug: true,
+            cache: true,
+        },
+    };
+
+    public constructor(mode?: 'development' | 'production' | 'none', options?: Options) {
+        this.options = { ...this.defaults, ...this.presets[mode || 'none'], ...options };
+
         this.register(new BasePack());
         this.register(new OptimizationPack());
         this.register(new MinificationPack());
