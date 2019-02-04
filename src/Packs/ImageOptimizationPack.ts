@@ -55,7 +55,7 @@ export default class ImageOptimizationPack implements Pack {
         const extraction: webpack.Loader = {
             loader: 'file-loader',
             options: {
-                name: '[name].[ext]',
+                name: options.hash ? '[name].[hash:8].[ext]' : '[name].[ext]',
                 outputPath: this.options.path || undefined,
             },
         };
