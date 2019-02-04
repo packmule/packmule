@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import micromatch from 'micromatch';
 import SpritePlugin from 'external-svg-sprite-loader';
 import Pack, { PackIncludeOption } from '../Core/Pack';
+import Options from '../Core/Options';
 
 interface VectorSpritePackOptions {
     name?: string;
@@ -42,7 +43,7 @@ export default class VectorSpritePack implements Pack {
         return this;
     }
 
-    public generate(): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.svg$/,
             include: this.options.include,
@@ -52,7 +53,7 @@ export default class VectorSpritePack implements Pack {
         const generation: webpack.Loader = {
             loader: SpritePlugin.loader,
             options: {
-                name: `${this.options.path}${this.options.name}.svg`,
+                name: `${this.options.path}${this.options.name}${options.hash ? '.[hash:8]' : ''}.svg`,
                 iconName: '[name]',
             },
         };
