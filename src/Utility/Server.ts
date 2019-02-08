@@ -4,8 +4,8 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
 export default class Server {
-    private webpackConfiguration: webpack.Configuration;
-    private browsersyncOptions: browsersync.Options;
+    private readonly webpackConfiguration: webpack.Configuration;
+    private readonly browsersyncOptions: browsersync.Options;
 
     public constructor(
         webpackConfiguration: webpack.Configuration,
