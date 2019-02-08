@@ -10,6 +10,7 @@ export default class AssetMapPack implements Pack {
     public generate(): webpack.Configuration {
         const manifest = new ManifestPlugin({
             entrypoints: true,
+            publicPath: true,
             sortManifest: false,
             writeToDisk: true,
         });
