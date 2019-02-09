@@ -25,7 +25,7 @@ export default class CleanPack implements Pack {
     public generate(options: Options): webpack.Configuration {
         const settings = {
             root: options.root,
-            verbose: options.debug,
+            verbose: options.debug && !options.watch,
         };
 
         const clean = new CleanPlugin([this.options.path], settings);
