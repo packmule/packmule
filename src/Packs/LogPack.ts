@@ -38,7 +38,7 @@ export default class LogPack implements Pack {
     };
 
     public generate(options: Options): webpack.Configuration {
-        (this.configuration.stats as any).assets = options.watch;
+        (this.configuration.stats as any).assets = !options.watch;
         return this.configuration;
     }
 }
