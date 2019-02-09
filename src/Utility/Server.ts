@@ -22,7 +22,7 @@ export default class Server {
         const dev = webpackDevMiddleware(compiler, {
             publicPath: this.webpackConfiguration.output!.publicPath || '/',
             stats: this.webpackConfiguration.stats,
-            logLevel: 'warn',
+            logLevel: 'silent',
             writeToDisk: true,
             lazy: false,
         });
