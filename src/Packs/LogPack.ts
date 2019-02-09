@@ -5,7 +5,7 @@ import Options from '../Core/Options';
 export default class LogPack implements Pack {
     private configuration: webpack.Configuration = {
         stats: {
-            assetsSort: 'field',
+            assetsSort: 'id',
             builtAt: false,
             cached: true,
             cachedAssets: true,
@@ -13,7 +13,7 @@ export default class LogPack implements Pack {
             chunks: false,
             chunkModules: false,
             chunkOrigins: false,
-            chunksSort: 'field',
+            chunksSort: 'id',
             colors: true,
             depth: false,
             entrypoints: false,
@@ -23,7 +23,7 @@ export default class LogPack implements Pack {
             hash: true,
             maxModules: 25,
             modules: false,
-            modulesSort: 'field',
+            modulesSort: 'id',
             moduleTrace: false,
             performance: true,
             providedExports: false,
