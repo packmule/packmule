@@ -48,7 +48,7 @@ export default class HotModuleReplacementPack implements Pack {
             configuration.entry[entry].push(`${middleware}?${query}`);
 
             if (this.options.polyfill) {
-                configuration.entry[entry].push('eventsource/eventsource-polyfill');
+                configuration.entry[entry].push('eventsource/lib/eventsource-polyfill');
                 configuration.entry[entry].push('promise-polyfill/src/polyfill');
             }
         }
