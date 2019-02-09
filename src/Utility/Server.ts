@@ -27,7 +27,9 @@ export default class Server {
             lazy: false,
         });
 
-        const hmr = webpackHotMiddleware(compiler);
+        const hmr = webpackHotMiddleware(compiler, {
+            log: false,
+        });
 
         return server.init({...this.browsersyncOptions, ...{
             middleware: [
