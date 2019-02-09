@@ -1,10 +1,10 @@
 import webpack from 'webpack';
 import Pack from '../Core/Pack';
+import Options from '../Core/Options';
 
 export default class LogPack implements Pack {
     private configuration: webpack.Configuration = {
         stats: {
-            assets: true,
             assetsSort: 'field',
             builtAt: false,
             cached: true,
@@ -37,7 +37,8 @@ export default class LogPack implements Pack {
         },
     };
 
-    public generate(): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
+        (this.configuration.stats as any).assets = options.watch;
         return this.configuration;
     }
 }
