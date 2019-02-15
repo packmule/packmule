@@ -10,9 +10,9 @@
     "url": "https://www.pixelart.at/"
   },
   "scripts": {
-    "start": "tsc --watch",
-    "build": "tsc",
-    "postinstall": "tsc"
+    "start": "node_modules/.bin/tsc --watch",
+    "build": "node_modules/.bin/tsc",
+    "postinstall": "node_modules/.bin/tsc"
   },
   "main": "module/",
   "typings": "module/",
