@@ -11,7 +11,7 @@
 Generate a chunk file for all node dependencies.
 
 ```ts
-import Packmule, { ChunkPack } from '@packmule/packmule';
+import Packmule, { ChunkPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 packmule.register(new ChunkPack('vendor').include('**/node_modules/**'));

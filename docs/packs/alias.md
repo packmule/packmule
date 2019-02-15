@@ -13,7 +13,7 @@ AliasPack(name: string, target: string)
 Set an alias for a directory.
 
 ```ts
-import Packmule, { AliasPack } from '@packmule/packmule';
+import Packmule, { AliasPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 packmule.register(new AliasPack('Utility', 'src/common/utility/'));

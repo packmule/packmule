@@ -24,7 +24,7 @@ CompressionPack({
 Generate compressed files.
 
 ```ts
-import Packmule, { CompressionPack } from '@packmule/packmule';
+import Packmule, { CompressionPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 

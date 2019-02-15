@@ -21,7 +21,7 @@ TypeScriptPack()
 Configure TS to JS transpiling.
 
 ```ts
-import Packmule, { TypeScriptPack } from '@packmule/packmule';
+import Packmule, { TypeScriptPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 packmule.register(new TypeScriptPack());

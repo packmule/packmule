@@ -19,7 +19,7 @@ NotifyPack()
 Enable desktop notifications.
 
 ```ts
-import Packmule, { NotifyPack } from '@packmule/packmule';
+import Packmule, { NotifyPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 

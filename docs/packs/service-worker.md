@@ -15,7 +15,7 @@ ServiceWorkerPack()
 Generate a simple service-worker and pre-cache common files.
 
 ```ts
-import Packmule, { ServiceWorkerPack } from '@packmule/packmule';
+import Packmule, { ServiceWorkerPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 packmule.register(new ServiceWorkerPack());

@@ -11,7 +11,7 @@ The `AssetMapPack` is best used in combination with the packmule `hash` option.
 **Example**
 
 ```ts
-import Packmule, { AssetMapPack } from '@packmule/packmule';
+import Packmule, { AssetMapPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 packmule.register(new AssetMapPack());

@@ -13,7 +13,7 @@ VuePack()
 Compile `vue` files and embedded languages like TypeScript and Sass.
 
 ```ts
-import Packmule, { VuePack, SassPack, TypeScriptPack } from '@packmule/packmule';
+import Packmule, { VuePack, SassPack, TypeScriptPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 packmule.register(new VuePack());

@@ -13,7 +13,7 @@ HotModuleReplacementPack(options?: {})
 Enable the HMR functionality for development.
 
 ```ts
-import Packmule, { HotModuleReplacementPack } from '@packmule/packmule';
+import Packmule, { HotModuleReplacementPack } from '@pixelart/packmule';
 
 const packmule = new Packmule();
 

@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-npm install --save-dev @packmule/packmule
+npm install --save-dev @pixelart/packmule
 ```
 
 ## API
@@ -69,7 +69,7 @@ and uses the `webpack-dev-middleware` and `webpack-hot-middleware` to watch and
 reload the web application on demand.
 
 ```ts
-import { Server } from '@packmule/packmule';
+import { Server } from '@pixelart/packmule';
 import configuration from './webpack.config.ts';
 import * as options from './.browsersyncrc.json';
 
