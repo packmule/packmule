@@ -64,7 +64,7 @@ Several `packs` expose API methods to include or exclude files from processing u
 
 ### Development Server
 
-Packmule comes with a development-server which wraps the `browser-sync` server
+`packmule` comes with a development-server which wraps the `browser-sync` server
 and uses the `webpack-dev-middleware` and `webpack-hot-middleware` to watch and
 reload the web application on demand.
 

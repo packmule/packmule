@@ -6,7 +6,7 @@
 
 ## Usage
 
-The `AssetMapPack` is best used in combination with the Packmule `hash` option.
+The `AssetMapPack` is best used in combination with the packmule `hash` option.
 
 **Example**
 
