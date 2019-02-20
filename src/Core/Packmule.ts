@@ -35,7 +35,6 @@ export default class Packmule {
         development: {
             mode: 'development',
             notify: true,
-            watch: true,
             lint: true,
             debug: true,
             cache: true,
