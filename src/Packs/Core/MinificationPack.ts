@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import TerserPlugin from 'terser-webpack-plugin';
-import Pack from '../Pack';
-import Options from '../Options';
+import Pack from '../../Core/Pack';
+import Options from '../../Core/Options';
 
 export default class MinificationPack implements Pack {
     private configuration: webpack.Configuration = {

@@ -3,9 +3,9 @@ import merge from 'webpack-merge';
 import dir from 'pkg-dir';
 import Pack from './Pack';
 import Options from './Options';
-import BasePack from './Packs/BasePack';
-import OptimizationPack from './Packs/OptimizationPack';
-import MinificationPack from './Packs/MinificationPack';
+import BasePack from '../Packs/Core/BasePack';
+import OptimizationPack from '../Packs/Core/OptimizationPack';
+import MinificationPack from '../Packs/Core/MinificationPack';
 
 export default class Packmule {
     private packs: Pack[] = [];

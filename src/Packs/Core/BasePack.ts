@@ -1,7 +1,7 @@
 import * as webpack from 'webpack';
 import BarPlugin from 'webpackbar';
-import Pack from '../Pack';
-import Options from '../Options';
+import Pack from '../../Core/Pack';
+import Options from '../../Core/Options';
 
 export default class BasePack implements Pack {
     private configuration: webpack.Configuration = {

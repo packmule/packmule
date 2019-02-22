@@ -1,6 +1,6 @@
 import webpack from 'webpack';
-import Pack from '../Pack';
-import Options from '../Options';
+import Pack from '../../Core/Pack';
+import Options from '../../Core/Options';
 
 export default class OptimizationPack implements Pack {
     private configuration: webpack.Configuration = {
