@@ -9,6 +9,8 @@ export default class OptimizationPack implements Pack {
                 minSize: 0,
                 minChunks: 1,
                 cacheGroups: false,
+                maxInitialRequests: Infinity,
+                maxAsyncRequests: Infinity,
             },
         },
     };
