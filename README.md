@@ -19,7 +19,7 @@ Run the following command within your project directory to install `packmule`.
 npm install --save-dev @pixelart/packmule
 ```
 
-## Usage
+## Example
 
 ```ts
 import Packmule, {
@@ -30,18 +30,103 @@ import Packmule, {
     CompressionPack,
 } from '@pixelart/packmule';
 
-const packmule = new Packmule(env.mode);
+const packmule = new Packmule(mode);
 packmule.register(new EntryPack('main.ts'));
 packmule.register(new OutputPack('public/', '/'));
 packmule.register(new SassPack());
 packmule.register(new TypeScriptPack());
 
-if (env.mode === 'production') {
+if (mode === 'production') {
     packmule.register(new CompressionPack());
 }
 
 return packmule.generate();
 ```
+
+`packmule` will generate the following configuration for `webpack` on the fly, running `webpack --mode production`; it's simplified and shortened to make it more readable.
+
+<details>
+  <summary>Generated webpack configuration</summary>
+
+```ts
+{
+    mode: 'production',
+    cache: false,
+    entry: {
+        main: ['source/main.ts'],
+    },
+    output: {
+        path: '/public',
+        publicPath: '/',
+        filename: '[name].[contenthash:8].js',
+        chunkFilename: 'chunks/[name].[contenthash:8].js',
+    },
+    resolve: {
+        extensions: ['.json', '.scss', '.sass', '.ts', '.tsx'],
+    },
+    plugins: [
+        HashedModuleIdsPlugin,
+        MiniCssExtractPlugin,
+        CompressionPlugin,
+    ],
+    optimization: {
+        splitChunks: {
+            minSize: 0,
+            minChunks: 1,
+        },
+        minimizer: [
+            TerserPlugin,
+            OptimizeCssAssetsWebpackPlugin,
+        ],
+    },
+    module: {
+        rules: [
+            {
+                test: /\.s[ac]ss$/,
+                use: ['node_modules/mini-css-extract-plugin/dist/loader.js',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: false,
+                        },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: false,
+                        },
+                    },
+                    {
+                        loader: 'sass-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.tsx?$/,
+                use: [{
+                        loader: 'babel-loader',
+                        options: {
+                            cacheDirectory: false,
+                        },
+                    },
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            logLevel: 'warn',
+                            transpileOnly: true,
+                            onlyCompileBundledFiles: true,
+                            compilerOptions: {
+                                sourceMap: false,
+                            },
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+}
+```
+</details>
 
 [**Documentation**](docs/index.md)
 
