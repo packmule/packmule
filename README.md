@@ -12,6 +12,13 @@
 * Add your own `pack` to generate custom `webpack` configuration.
 * Use the bundled `raw` pack to add custom `webpack` configuration directly.
 
+## Installation
+
+Run the following command within your project directory to install `packmule`.
+```
+npm install --save-dev @pixelart/packmule
+```
+
 ## Usage
 
 ```ts
