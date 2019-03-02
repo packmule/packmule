@@ -1,4 +1,4 @@
-import * as webpack from 'webpack';
+import webpack from 'webpack';
 import BarPlugin from 'webpackbar';
 import Pack from '../../Core/Pack';
 import Options from '../../Core/Options';
