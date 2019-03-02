@@ -9,7 +9,7 @@ npm install --save-dev @pixelart/packmule
 ## API
 
 ```ts
-Packmule(options: Options)
+Packmule(mode?: 'development' | 'production' | 'none', options?: Options)
     .register(pack: Pack)
     .generate();
 ```
