@@ -62,6 +62,7 @@ export default class ImageOptimizationPack implements Pack {
 
         const optimization = new ImagePlugin({
             disable: !options.optimize,
+            test: this.options.include,
             jpegtran: null,
             optipng: null,
             plugins: [
