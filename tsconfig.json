@@ -5,6 +5,8 @@
         "target": "es2015",
         "newLine": "lf",
         "outDir": "module/",
+        "incremental": true,
+        "tsBuildInfoFile": "tsconfig.tsbuildinfo",
         "declaration": true,
         "strict": true,
         "removeComments": true,
