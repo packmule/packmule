@@ -44,11 +44,19 @@ export default class SassPack implements Pack {
             { loader: 'css-loader', options: { sourceMap: options.debug } },
             { loader: 'postcss-loader', options: { sourceMap: options.debug } },
             {
+                loader: 'resolve-url-loader',
+                options: {
+                    engine: 'postcss',
+                    sourceMap: options.debug,
+                    debug: options.debug,
+                },
+            },
+            {
                 loader: 'sass-loader',
                 options: {
                     implementation: sass,
                     fiber: fibers,
-                    sourceMap: options.debug,
+                    sourceMap: true,
                     importer: this.options.importers,
                 },
             },
