@@ -43,6 +43,7 @@ export default class SassPack implements Pack {
         let loaders: webpack.Loader[] | webpack.Loader = [
             { loader: 'css-loader', options: { sourceMap: options.debug } },
             { loader: 'postcss-loader', options: { sourceMap: options.debug } },
+            { loader: 'resolve-url-loader' },
             {
                 loader: 'sass-loader',
                 options: {
