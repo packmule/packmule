@@ -5,18 +5,18 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 
 export default class Server {
     private readonly webpackConfiguration: webpack.Configuration;
-    private readonly browsersyncOptions: browsersync.Options;
+    private readonly browsersyncOptions: browsersync.Options[];
 
     public constructor(
         webpackConfiguration: webpack.Configuration,
-        browsersyncOptions: browsersync.Options = {},
+        browsersyncOptions: browsersync.Options | browsersync.Options[] = {},
     ) {
         this.webpackConfiguration = webpackConfiguration;
-        this.browsersyncOptions = browsersyncOptions;
+        this.browsersyncOptions = Array.isArray(browsersyncOptions) ? browsersyncOptions : [browsersyncOptions];
     }
 
-    public launch(): browsersync.BrowserSyncInstance {
-        const server = browsersync.create();
+    public launch(): browsersync.BrowserSyncInstance | browsersync.BrowserSyncInstance[] {
+        const instances: browsersync.BrowserSyncInstance[]  = [];
         const compiler = webpack(this.webpackConfiguration);
 
         const dev = webpackDevMiddleware(compiler, {
@@ -31,11 +31,17 @@ export default class Server {
             log: false,
         });
 
-        return server.init({...this.browsersyncOptions, ...{
-            middleware: [
-                dev,
-                hmr,
-            ],
-        }});
+        this.browsersyncOptions.forEach((options) => {
+            const server = browsersync.create().init({...options, ...{
+                middleware: [
+                    dev,
+                    hmr,
+                ],
+            }});
+
+            instances.push(server);
+        });
+
+        return instances.length === 1 ? instances[0] : instances;
     }
 }

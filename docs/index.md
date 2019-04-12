@@ -71,7 +71,7 @@ reload the web application on demand.
 ```ts
 import { Server } from '@pixelart/packmule';
 import configuration from './webpack.config.ts';
-import * as options from './.browsersyncrc.json';
+import options from './.browsersyncrc.json';
 
 const server = new Server(configuration({
     development: true,
@@ -80,3 +80,6 @@ const server = new Server(configuration({
 
 server.launch();
 ```
+
+`options` can be a `browser-sync` configuration object or an
+array of configuration objects, to launch multiple servers.
