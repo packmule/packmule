@@ -15,7 +15,7 @@ export default class Server {
         this.browsersyncOptions = Array.isArray(browsersyncOptions) ? browsersyncOptions : [browsersyncOptions];
     }
 
-    public launch(name?: string): browsersync.BrowserSyncInstance | browsersync.BrowserSyncInstance[] {
+    public launch(): browsersync.BrowserSyncInstance | browsersync.BrowserSyncInstance[] {
         const instances: browsersync.BrowserSyncInstance[]  = [];
         const compiler = webpack(this.webpackConfiguration);
 
@@ -32,7 +32,7 @@ export default class Server {
         });
 
         this.browsersyncOptions.forEach((options) => {
-            const server = browsersync.create(name).init({...options, ...{
+            const server = browsersync.create().init({...options, ...{
                 middleware: [
                     dev,
                     hmr,
