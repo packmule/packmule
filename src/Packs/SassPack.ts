@@ -8,7 +8,7 @@ import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 
 interface SassPackOptions {
-    importers?: Function[],
+    importers?: Function[];
 }
 
 export default class SassPack implements Pack {

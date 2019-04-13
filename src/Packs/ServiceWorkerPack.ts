@@ -5,7 +5,7 @@ import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface ServiceWorkerPackOptions {
     path?: string;
-    include?: PackIncludeOption,
+    include?: PackIncludeOption;
 }
 
 export default class ServiceWorkerPack implements Pack {
