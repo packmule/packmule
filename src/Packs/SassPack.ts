@@ -48,7 +48,6 @@ export default class SassPack implements Pack {
                 options: {
                     engine: 'postcss',
                     sourceMap: options.debug,
-                    debug: options.debug,
                 },
             },
             {
