@@ -13,3 +13,4 @@ declare module 'vue-loader/lib/plugin';
 declare module 'imagemin-webpack-plugin';
 declare module 'imagemin-mozjpeg';
 declare module 'imagemin-pngquant';
+declare module 'eslint-formatter-pretty';
