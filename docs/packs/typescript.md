@@ -3,6 +3,7 @@
 
 Internally the `TypeScript Pack` uses `Babel` to transpile the code if needed.
 To configure `Babel` settings in your project, a `.babelrc.json` file can be used.
+Linting code via `ESLint` can be utilized by creating an `.eslintrc` file.
 
 ## API
 ```ts
@@ -12,6 +13,7 @@ TypeScriptPack()
 
 ## Options
 * **cache** - *Controls cache utilization of the `babel-loader`.*
+* **lint** - *Controls source-code linting via `eslint-loader`.*
 * **debug** - *Controls generation of source maps for the generated JS.*
 
 ## Usage
