@@ -55,6 +55,7 @@ export default class JavaScriptPack implements Pack {
             const linting: webpack.Loader = {
                 loader: 'eslint-loader',
                 options: {
+                    fix: options.fix,
                     cache: options.cache,
                     formatter: formatter,
                 },

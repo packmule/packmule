@@ -63,6 +63,7 @@ export default class SassPack implements Pack {
 
         if (options.lint) {
             const lint = new LintPlugin({
+                fix: options.fix,
                 emitErrors: false,
                 failOnError: false,
                 lintDirtyModulesOnly: true,

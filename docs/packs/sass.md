@@ -17,6 +17,7 @@ SassPack()
 * **optimize** - *Enables or disables minification of the generated CSS.*
 * **debug** - *Controls generation of source maps for the generated CSS.*
 * **lint** - *Defines whether code linting via `stylelint` is enabled or not.*
+* **fix** - *Defines whether code fixing via `stylelint` is enabled or not.*
 * **extract** - *Used to determine if actual CSS files are being created.*
 * **hash** - *Configures whether file name hashing is enabled or not.*
 

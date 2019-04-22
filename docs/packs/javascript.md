@@ -14,6 +14,7 @@ JavaScriptPack()
 ## Options
 * **cache** - *Controls cache utilization of the `babel-loader`.*
 * **lint** - *Controls source-code linting via `eslint-loader`.*
+* **fix** - *Controls source-code fixing via `eslint-loader`.*
 
 ## Usage
 

@@ -27,6 +27,7 @@ Options are shared with and used by packs. Packs can choose which options to use
 | **notify** | `boolean` | `false` | Enables desktop notifications. |
 | **watch** | `boolean` | `false` | Enables file watching. |
 | **lint** | `boolean` | `false` | Enables code linting. |
+| **fix** | `boolean` | `false` | Enables code fixing. |
 | **debug** | `boolean` | `false` | Enables debugging. |
 | **cache** | `boolean` | `true` | Enables caching. |
 | **hash** | `boolean` | `false` | Enable filename hashing. |
