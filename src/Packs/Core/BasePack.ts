@@ -6,7 +6,7 @@ import Options from '../../Core/Options';
 export default class BasePack implements Pack {
     private configuration: webpack.Configuration = {
         resolve: {
-            extensions: ['.json'],
+            extensions: ['.js', '.json'],
         },
         plugins: [],
     };
