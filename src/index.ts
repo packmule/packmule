@@ -1,4 +1,5 @@
 export { default as default } from './Core/Packmule';
+export { default as Packmule } from './Core/Packmule';
 
 export { default as AliasPack } from './Packs/AliasPack';
 export { default as AssetMapPack } from './Packs/AssetMapPack';
