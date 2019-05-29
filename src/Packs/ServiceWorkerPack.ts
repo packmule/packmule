@@ -36,12 +36,14 @@ export default class ServiceWorkerPack implements Pack {
         return this;
     }
 
-    public cache(urlPattern: RegExp, handler: string, options?: any): void {
+    public cache(urlPattern: RegExp, handler: string, options?: any): this {
         this.caches.push({
             urlPattern,
             handler,
             options,
         });
+
+        return this;
     }
 
     public generate(): webpack.Configuration {
