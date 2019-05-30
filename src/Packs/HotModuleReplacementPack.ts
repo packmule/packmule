@@ -11,7 +11,7 @@ export interface HotModuleReplacementPackOptions {
 export default class HotModuleReplacementPack implements Pack {
     private options: HotModuleReplacementPackOptions;
     private defaults: HotModuleReplacementPackOptions = {
-        overlay: true,
+        overlay: false,
         info: true,
         reload: true,
         polyfill: true,
