@@ -42,7 +42,7 @@
     "eventsource": "^1.0.7",
     "external-svg-sprite-loader": "^4.0.2",
     "fibers": "^4.0.1",
-    "file-loader": "^3.0.1",
+    "file-loader": "^4.0.0",
     "iltorb": "^2.4.3",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0",
