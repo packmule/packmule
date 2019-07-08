@@ -1,0 +1,35 @@
+{
+  "name": "@packmule/notification-pack",
+  "description": "Packmule pack to dispatch build-time desktop notifications.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": "github:packmule/packmule",
+  "bugs": "https://github.com/packmule/packmule/issues",
+  "main": "module/",
+  "typings": "module/",
+  "keywords": [
+    "webpack",
+    "packmule",
+    "packmule-pack"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "t.deinhamer@pixelart.at",
+    "url": "https://www.pixelart.at/"
+  },
+  "files": [
+    "module/"
+  ],
+  "dependencies": {
+    "webpack-notifier": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/webpack-notifier": "^1.5.3"
+  },
+  "peerDependencies": {
+    "@packmule/core": "^2.0.0"
+  }
+}

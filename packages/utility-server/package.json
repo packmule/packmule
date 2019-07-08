@@ -1,0 +1,36 @@
+{
+  "name": "@packmule/server",
+  "description": "Simple packmule development server.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "main": "module/",
+  "typings": "module/",
+  "keywords": [],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "t.deinhamer@pixelart.at",
+    "url": "https://www.pixelart.at/"
+  },
+  "files": [
+    "module/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0"
+  },
+  "devDependencies": {
+    "@types/browser-sync": "^2.26.0",
+    "@types/webpack-dev-middleware": "^2.0.3",
+    "@types/webpack-hot-middleware": "^2.16.5"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0"
+  }
+}

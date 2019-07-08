@@ -14,121 +14,58 @@
 
 ## Installation
 
-Run the following command within your project directory to install `packmule`.
-```
-npm install --save-dev @pixelart/packmule
+Run the following command within your project directory to install the
+[default edition](packages/edition-default/) of `packmule` which includes
+the [`@packmule/core`](packages/core/) package and most relevant packs.
+
+```sh
+npm install --save-dev @packmule/default
 ```
 
 ## Example
 
 ```ts
-import Packmule, {
-    EntryPack,
-    OutputPack,
-    SassPack,
-    TypeScriptPack,
-    CompressionPack,
-} from '@pixelart/packmule';
+import Packmule from '@packmule/core';
+import EntryPack from '@packmule/entry-pack';
+import OutputPack from '@packmule/output-pack';
+import TypescriptPack from '@packmule/typescript-pack';
 
 const packmule = new Packmule(mode);
 packmule.register(new EntryPack('main.ts'));
 packmule.register(new OutputPack('public/', '/'));
-packmule.register(new SassPack());
-packmule.register(new TypeScriptPack());
-
-if (mode === 'production') {
-    packmule.register(new CompressionPack());
-}
+packmule.register(new TypescriptPack());
 
 return packmule.generate();
 ```
 
-`packmule` will generate the following configuration for `webpack` on the fly, running `webpack --mode production`; it's simplified and shortened to make it more readable.
+## Packs
+`packmule` plugins are called packs and each one handles generation of a specific `webpack` configuration part.
+Several packs expose API methods to include or exclude files from processing using
+[`file globbing`](https://en.wikipedia.org/wiki/Glob_(programming)) or
+[`regular expression`](https://en.wikipedia.org/wiki/Regular_expression) patterns.
 
-<details>
-  <summary>Generated webpack configuration</summary>
-
-```ts
-{
-    mode: 'production',
-    cache: false,
-    entry: {
-        main: ['source/main.ts'],
-    },
-    output: {
-        path: '/public',
-        publicPath: '/',
-        filename: '[name].[contenthash:8].js',
-        chunkFilename: 'chunks/[name].[contenthash:8].js',
-    },
-    resolve: {
-        extensions: ['.json', '.scss', '.sass', '.ts', '.tsx'],
-    },
-    plugins: [
-        HashedModuleIdsPlugin,
-        MiniCssExtractPlugin,
-        CompressionPlugin,
-    ],
-    optimization: {
-        splitChunks: {
-            minSize: 0,
-            minChunks: 1,
-        },
-        minimizer: [
-            TerserPlugin,
-            OptimizeCssAssetsWebpackPlugin,
-        ],
-    },
-    module: {
-        rules: [
-            {
-                test: /\.s[ac]ss$/,
-                use: ['node_modules/mini-css-extract-plugin/dist/loader.js',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: false,
-                        },
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: false,
-                        },
-                    },
-                    {
-                        loader: 'sass-loader',
-                    },
-                ],
-            },
-            {
-                test: /\.tsx?$/,
-                use: [{
-                        loader: 'babel-loader',
-                        options: {
-                            cacheDirectory: false,
-                        },
-                    },
-                    {
-                        loader: 'ts-loader',
-                        options: {
-                            logLevel: 'warn',
-                            transpileOnly: true,
-                            onlyCompileBundledFiles: true,
-                            compilerOptions: {
-                                sourceMap: false,
-                            },
-                        },
-                    },
-                ],
-            },
-        ],
-    },
-}
-```
-</details>
-
-[**Documentation**](docs/index.md)
+* **[AliasPack](packages/pack-alias/)** - Configure webpack aliases.
+* **[AssetsPack](packages/pack-assets/)** - Create an asset map file for use with hashed file names.
+* **[ChunkPack](packages/pack-chunk/)** - Wrap the webpack chunk-plugin.
+* **[CleanPack](packages/pack-clean/)** - Delete everything within a given directory.
+* **[CompressionPack](packages/pack-compression/)** - Generate `gzip` and `brotli` versions of configured assets.
+* **[CopyPack](packages/pack-copy/)** - Copy files.
+* **[EntryPack](packages/pack-entry/)** - Define the entrypoints for webpack.
+* **[HotModuleReplacementPack](packages/pack-hmr/)** - Include the `hot module replacement` plugin for development.
+* **[ImageOptimizationPack](packages/pack-image-optimization/)** - Optimize images using `imagemin`.
+* **[JavaScriptPack](packages/pack-javascript/)** - Processe JS including Babel support.
+* **[LogPack](packages/pack-log/)** - Configure console logging.
+* **[ManifestPack](packages/pack-manifest/)** - Generate a web app manifest.
+* **[NotificationPack](packages/pack-notification/)** - Enable desktop notifications for development builds.
+* **[OutputPack](packages/pack-output/)** - Define the output options for webpack.
+* **[PerformancePack](packages/pack-performance/)** - Configure entry and asset sizes.
+* **[RawPack](packages/pack-raw/)** - Merge raw webpack configuration directly.
+* **[RuntimePack](packages/pack-runtime/)** - Configure the webpack runtime chunk.
+* **[SassPack](packages/pack-sass/)** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
+* **[ServiceWorkerPack](packages/pack-service-worker/)** - Generate a simple service worker using `workbox`.
+* **[TypeScriptPack](packages/pack-typescript/)** - Compile TS to JS including Babel support.
+* **[SpritePack](packages/pack-sprite/)** - Generate a SVG-based vector-sprite.
+* **[VuePack](packages/pack-vue/)** - Handle `vue` single-file-component files.
 
 ## License
 

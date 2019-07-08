@@ -1,0 +1,29 @@
+{
+  "name": "@packmule/entry-pack",
+  "description": "Packmule pack to configure Webpack entry files.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": "github:packmule/packmule",
+  "bugs": "https://github.com/packmule/packmule/issues",
+  "main": "module/",
+  "typings": "module/",
+  "keywords": [
+    "webpack",
+    "packmule",
+    "packmule-pack"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "t.deinhamer@pixelart.at",
+    "url": "https://www.pixelart.at/"
+  },
+  "files": [
+    "module/"
+  ],
+  "peerDependencies": {
+    "@packmule/core": "^2.0.0"
+  }
+}
