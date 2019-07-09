@@ -63,6 +63,7 @@ Several packs expose API methods to include or exclude files from processing usi
 * **[RuntimePack](packages/pack-runtime/)** - Configure the webpack runtime chunk.
 * **[SassPack](packages/pack-sass/)** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
 * **[ServiceWorkerPack](packages/pack-service-worker/)** - Generate a simple service worker using `workbox`.
+* **[SveltePack](packages/pack-svelte/)** - Handle `svelte` single-file-component files.
 * **[TypeScriptPack](packages/pack-typescript/)** - Compile TS to JS including Babel support.
 * **[SpritePack](packages/pack-sprite/)** - Generate a SVG-based vector-sprite.
 * **[VuePack](packages/pack-vue/)** - Handle `vue` single-file-component files.

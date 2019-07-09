@@ -1,15 +1,14 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
-import Pack, {PackIncludeOption} from '../Core/Pack';
-import Options from '../Core/Options';
+import { Options, Pack, PackIncludeOption } from '@packmule/core';
 
-interface SveltePackOptions {
+interface PackOptions {
     include?: PackIncludeOption;
 }
 
 export default class SveltePack implements Pack {
-    private options: SveltePackOptions;
-    private defaults: SveltePackOptions = {
+    private options: PackOptions;
+    private defaults: PackOptions = {
         include: () => true,
     };
 

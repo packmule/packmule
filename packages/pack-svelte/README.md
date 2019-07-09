@@ -13,7 +13,10 @@ SveltePack()
 Compile `svelte` files and embedded languages like TypeScript and Sass.
 
 ```ts
-import Packmule, { SveltePack, SassPack, TypeScriptPack } from '@pixelart/packmule';
+import Packmule from '@packmule/core';
+import SveltePack from '@packmule/svelte-pack';
+import SassPack from '@packmule/sass-pack';
+import TypescriptPack from '@packmule/typescript-pack';
 
 const packmule = new Packmule();
 packmule.register(new SveltePack());
