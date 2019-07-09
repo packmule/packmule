@@ -1,23 +1,77 @@
 {
-    "compilerOptions": {
-        "moduleResolution": "node",
-        "module": "commonjs",
-        "target": "es2015",
-        "newLine": "lf",
-        "outDir": "module/",
-        "incremental": true,
-        "tsBuildInfoFile": "tsconfig.tsbuildinfo",
-        "declaration": true,
-        "strict": true,
-        "removeComments": true,
-        "allowUnreachableCode": true,
-        "noUnusedParameters": false,
-        "noUnusedLocals": true,
-        "noEmitOnError": true,
-        "noFallthroughCasesInSwitch": true,
-        "forceConsistentCasingInFileNames": true,
-        "stripInternal": true,
-        "esModuleInterop": true,
-        "noImplicitReturns": true
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/core/"
+    },
+    {
+      "path": "./packages/pack-alias/"
+    },
+    {
+      "path": "./packages/pack-assets/"
+    },
+    {
+      "path": "./packages/pack-chunk/"
+    },
+    {
+      "path": "./packages/pack-clean/"
+    },
+    {
+      "path": "./packages/pack-compression/"
+    },
+    {
+      "path": "./packages/pack-copy/"
+    },
+    {
+      "path": "./packages/pack-entry/"
+    },
+    {
+      "path": "./packages/pack-hmr/"
+    },
+    {
+      "path": "./packages/pack-image-optimization/"
+    },
+    {
+      "path": "./packages/pack-javascript/"
+    },
+    {
+      "path": "./packages/pack-log/"
+    },
+    {
+      "path": "./packages/pack-manifest/"
+    },
+    {
+      "path": "./packages/pack-notification/"
+    },
+    {
+      "path": "./packages/pack-output/"
+    },
+    {
+      "path": "./packages/pack-performance/"
+    },
+    {
+      "path": "./packages/pack-raw/"
+    },
+    {
+      "path": "./packages/pack-runtime/"
+    },
+    {
+      "path": "./packages/pack-sass/"
+    },
+    {
+      "path": "./packages/pack-service-worker/"
+    },
+    {
+      "path": "./packages/pack-sprite/"
+    },
+    {
+      "path": "./packages/pack-typescript/"
+    },
+    {
+      "path": "./packages/pack-vue/"
+    },
+    {
+      "path": "./packages/utility-server/"
     }
+  ]
 }

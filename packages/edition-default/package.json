@@ -1,0 +1,39 @@
+{
+  "name": "@packmule/default",
+  "description": "Default edition for packmule.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": "github:packmule/packmule",
+  "bugs": "https://github.com/packmule/packmule/issues",
+  "keywords": [
+    "packmule",
+    "edition",
+    "default"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "t.deinhamer@pixelart.at",
+    "url": "https://www.pixelart.at/"
+  },
+  "dependencies": {
+    "@packmule/core": "^2.0.0",
+    "@packmule/server": "^2.0.0",
+    "@packmule/alias-pack": "^2.0.0",
+    "@packmule/assets-pack":"^2.0.0",
+    "@packmule/chunk-pack": "^2.0.0",
+    "@packmule/clean-pack":"^2.0.0",
+    "@packmule/compression-pack": "^2.0.0",
+    "@packmule/copy-pack":"^2.0.0",
+    "@packmule/entry-pack": "^2.0.0",
+    "@packmule/hmr-pack":"^2.0.0",
+    "@packmule/log-pack": "^2.0.0",
+    "@packmule/manifest-pack":"^2.0.0",
+    "@packmule/notification-pack": "^2.0.0",
+    "@packmule/output-pack":"^2.0.0",
+    "@packmule/performance-pack": "^2.0.0",
+    "@packmule/runtime-pack": "^2.0.0"
+  }
+}
