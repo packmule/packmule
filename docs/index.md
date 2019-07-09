@@ -27,6 +27,7 @@ Options are shared with and used by packs. Packs can choose which options to use
 | **notify** | `boolean` | `false` | Enables desktop notifications. |
 | **watch** | `boolean` | `false` | Enables file watching. |
 | **lint** | `boolean` | `false` | Enables code linting. |
+| **fix** | `boolean` | `false` | Enables code fixing. |
 | **debug** | `boolean` | `false` | Enables debugging. |
 | **cache** | `boolean` | `true` | Enables caching. |
 | **hash** | `boolean` | `false` | Enable filename hashing. |
@@ -56,6 +57,7 @@ Several `packs` expose API methods to include or exclude files from processing u
 * **[RuntimePack](packs/runtime.md)** - Configure the webpack runtime chunk.
 * **[SassPack](packs/sass.md)** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
 * **[ServiceWorkerPack](packs/service-worker.md)** - Generate a simple service worker using `workbox`.
+* **[SveltePack](packs/svelte.md)** - Handle `svelte` single-file-component files.
 * **[TypeScriptPack](packs/typescript.md)** - Compile TS to JS including Babel support.
 * **[VectorSpritePack](packs/vector-sprite.md)** - Generate a SVG-based vector-sprite.
 * **[VuePack](packs/vue.md)** - Handle `vue` single-file-component files.

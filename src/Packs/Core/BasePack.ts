@@ -6,7 +6,7 @@ import Options from '../../Core/Options';
 export default class BasePack implements Pack {
     private configuration: webpack.Configuration = {
         resolve: {
-            extensions: ['.json'],
+            extensions: ['.js', '.json'],
         },
         plugins: [],
     };
@@ -17,7 +17,9 @@ export default class BasePack implements Pack {
         this.configuration.cache = options.cache;
         this.configuration.watch = options.watch;
 
-        this.configuration.plugins!.push(new BarPlugin());
+        if (!process.argv.includes('--json')) {
+            this.configuration.plugins!.push(new BarPlugin());
+        }
 
         if (options.optimize) {
             this.configuration.plugins!.push(new webpack.HashedModuleIdsPlugin());

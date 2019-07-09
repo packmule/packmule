@@ -1,7 +1,6 @@
 declare module '*.json';
 declare module 'pkg-dir';
 declare module 'terser-webpack-plugin';
-declare module 'clean-webpack-plugin';
 declare module 'stylelint-webpack-plugin';
 declare module 'external-svg-sprite-loader';
 declare module 'workbox-webpack-plugin';
@@ -13,3 +12,4 @@ declare module 'vue-loader/lib/plugin';
 declare module 'imagemin-webpack-plugin';
 declare module 'imagemin-mozjpeg';
 declare module 'imagemin-pngquant';
+declare module 'eslint-formatter-pretty';

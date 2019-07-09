@@ -3,6 +3,7 @@
 
 Internally the `JavaScript Pack` uses `Babel` to transpile the code if needed.
 To configure `Babel` settings in your project, a `.babelrc.json` file can be used.
+Linting code via `ESLint` can be utilized by creating an `.eslintrc` file.
 
 ## API
 ```ts
@@ -12,6 +13,8 @@ JavaScriptPack()
 
 ## Options
 * **cache** - *Controls cache utilization of the `babel-loader`.*
+* **lint** - *Controls source-code linting via `eslint-loader`.*
+* **fix** - *Controls source-code fixing via `eslint-loader`.*
 
 ## Usage
 

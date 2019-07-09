@@ -6,6 +6,7 @@ export default interface Options {
     notify?: boolean;
     watch?: boolean;
     lint?: boolean;
+    fix?: boolean;
     debug?: boolean;
     cache?: boolean;
     hash?: boolean;

@@ -1,4 +1,5 @@
 export { default as default } from './Core/Packmule';
+export { default as Packmule } from './Core/Packmule';
 
 export { default as AliasPack } from './Packs/AliasPack';
 export { default as AssetMapPack } from './Packs/AssetMapPack';
@@ -19,6 +20,7 @@ export { default as RawPack } from './Packs/RawPack';
 export { default as RuntimePack } from './Packs/RuntimePack';
 export { default as SassPack } from './Packs/SassPack';
 export { default as ServiceWorkerPack } from './Packs/ServiceWorkerPack';
+export { default as SveltePack } from './Packs/SveltePack';
 export { default as TypeScriptPack } from './Packs/TypeScriptPack';
 export { default as VectorSpritePack } from './Packs/VectorSpritePack';
 export { default as VuePack } from './Packs/VuePack';

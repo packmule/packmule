@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
+import formatter from 'eslint-formatter-pretty';
 import Pack, { PackIncludeOption } from '../Core/Pack';
 import Options from '../Core/Options';
 
@@ -64,6 +65,21 @@ export default class TypeScriptPack implements Pack {
         if (Array.isArray(rule.use)) {
             rule.use.push(transpilation);
             rule.use.push(compilation);
+        }
+
+        if (options.lint) {
+            const linting: webpack.Loader = {
+                loader: 'eslint-loader',
+                options: {
+                    fix: options.fix,
+                    cache: options.cache,
+                    formatter: formatter,
+                },
+            };
+
+            if (Array.isArray(rule.use)) {
+                rule.use.push(linting);
+            }
         }
 
         this.configuration.module!.rules.push(rule);

@@ -9,7 +9,7 @@ import Options from '../Core/Options';
 
 interface SassPackOptions {
     modules?: boolean;
-    importers?: Function[],
+    importers?: Function[];
 }
 
 export default class SassPack implements Pack {
@@ -61,7 +61,6 @@ export default class SassPack implements Pack {
                 options: {
                     engine: 'postcss',
                     sourceMap: options.debug,
-                    debug: options.debug,
                 },
             },
             {
@@ -77,6 +76,7 @@ export default class SassPack implements Pack {
 
         if (options.lint) {
             const lint = new LintPlugin({
+                fix: options.fix,
                 emitErrors: false,
                 failOnError: false,
                 lintDirtyModulesOnly: true,

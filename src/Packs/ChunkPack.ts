@@ -4,8 +4,8 @@ import Pack, { PackIncludeOption } from '../Core/Pack';
 
 interface ChunkPackOptions {
     name?: string;
-    include?: PackIncludeOption,
-    chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.compilation.Chunk) => boolean),
+    include?: PackIncludeOption;
+    chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.compilation.Chunk) => boolean);
 }
 
 export default class ChunkPack implements Pack {
