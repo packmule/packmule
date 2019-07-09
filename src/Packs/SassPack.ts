@@ -8,12 +8,14 @@ import Pack from '../Core/Pack';
 import Options from '../Core/Options';
 
 interface SassPackOptions {
+    modules?: boolean;
     importers?: Function[];
 }
 
 export default class SassPack implements Pack {
     private options: SassPackOptions;
     private defaults: SassPackOptions = {
+        modules: false,
         importers: [],
     };
 
@@ -39,9 +41,20 @@ export default class SassPack implements Pack {
         return this;
     }
 
+    public modules(): this {
+        this.options.modules = true;
+        return this;
+    }
+
     public generate(options: Options): webpack.Configuration {
         let loaders: webpack.Loader[] | webpack.Loader = [
-            { loader: 'css-loader', options: { sourceMap: options.debug } },
+            {
+                loader: 'css-loader',
+                options: {
+                    modules: this.options.modules,
+                    sourceMap: options.debug,
+                },
+            },
             { loader: 'postcss-loader', options: { sourceMap: options.debug } },
             {
                 loader: 'resolve-url-loader',
