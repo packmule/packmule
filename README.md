@@ -74,4 +74,4 @@ Several packs expose API methods to include or exclude files from processing usi
 
 ---
 
-<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
