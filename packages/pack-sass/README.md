@@ -6,11 +6,17 @@ To configure `PostCSS` settings in your project, a `.postcssrc.json`
 file can be used. `stylelint` is used to lint Sass code, which can
 be configured via a `stylelint.json` file.
 
+## Setup
+```bash
+npm install --save-dev @packmule/sass-pack sass stylelint
+```
+
 ## API
 ```ts
 SassPack()
     .include(glob: string)
     .importer(importer: Function)
+    .modules()
 ```
 
 ## Options

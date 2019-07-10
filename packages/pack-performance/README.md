@@ -1,9 +1,14 @@
 # Performance Pack
 > Configure [entry size](https://webpack.js.org/configuration/performance/#performance-maxentrypointsize) and [asset sizes](https://webpack.js.org/configuration/performance/#performance-maxassetsize).
 
+## Setup
+```bash
+npm install --save-dev @packmule/performance-pack
+```
+
 ## API
 ```ts
-TypeScriptPack({
+PerformancePack({
    entrySize: number;
    assetSize: number;
 })

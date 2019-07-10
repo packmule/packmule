@@ -5,8 +5,13 @@
 to clear a directory before building. It is advised to clear the
 webpack output directory prior building to get rid of old files.
 
+## Setup
+```bash
+npm install --save-dev @packmule/clean-pack
+```
+
 ## API
-`CleanPack(path: string)`
+`CleanPack()`
 
 ## Options
 * **root** - *Defines the `root` option of `clean-webpack-plugin`.*
@@ -16,13 +21,13 @@ webpack output directory prior building to get rid of old files.
 
 **Example** 
 
-Clears the contents of the `web/static/` directory before building.
+Clears the contents of the webpack `output` directory prior building.
 
 ```ts
 import Packmule from '@packmule/core';
 import CleanPack from '@packmule/clean-pack';
 
 const packmule = new Packmule();
-packmule.register(new CleanPack('web/static/'));
+packmule.register(new CleanPack());
 return packmule.generate();
 ```

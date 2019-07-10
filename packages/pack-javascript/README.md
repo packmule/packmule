@@ -5,6 +5,11 @@ Internally the `JavaScript Pack` uses `Babel` to transpile the code if needed.
 To configure `Babel` settings in your project, a `.babelrc.json` file can be used.
 Linting code via `ESLint` can be utilized by creating an `.eslintrc` file.
 
+## Setup
+```bash
+npm install --save-dev @packmule/javascript-pack @babel/core eslint
+```
+
 ## API
 ```ts
 JavaScriptPack()

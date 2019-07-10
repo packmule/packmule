@@ -1,6 +1,11 @@
 # Raw Pack
 > Merge raw `webpack` configuration.
 
+## Setup
+```bash
+npm install --save-dev @packmule/raw-pack
+```
+
 ## API
 ```ts
 RawPack(configuration: webpack.Configuration)

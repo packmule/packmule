@@ -1,6 +1,11 @@
 # Sprite Pack
 > Generate a SVG-based vector-sprite.
 
+## Setup
+```bash
+npm install --save-dev @packmule/sprite-pack
+```
+
 ## API
 ```ts
 SpritePack(name: string)

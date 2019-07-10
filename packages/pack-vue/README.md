@@ -1,6 +1,11 @@
 # Vue Pack
 > Packmule pack to bundle Vue single-file-components.
 
+## Setup
+```bash
+npm install --save-dev @packmule/vue-pack vue vue-template-compiler
+```
+
 ## API
 ```ts
 VuePack()

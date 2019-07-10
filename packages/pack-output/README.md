@@ -1,6 +1,11 @@
 # Output Pack
 > Define the [output options](https://webpack.js.org/configuration/output/) for `webpack`.
 
+## Setup
+```bash
+npm install --save-dev @packmule/output-pack
+```
+
 ## API
 ```ts
 OutputPack(path: string, web: string = '/')

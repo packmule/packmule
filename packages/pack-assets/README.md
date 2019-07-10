@@ -1,6 +1,11 @@
 # Assets Pack
 > Create an asset map file for use with hashed file names.
 
+## Setup
+```bash
+npm install --save-dev @packmule/alias-assets
+```
+
 ## API
 `AssetsPack()`
 

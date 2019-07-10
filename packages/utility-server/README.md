@@ -5,6 +5,24 @@
 and uses the `webpack-dev-middleware` and `webpack-hot-middleware` to watch and
 reload the web application on demand.
 
+## Setup
+```bash
+npm install --save-dev @packmule/server
+```
+
+## API
+```ts
+Server(
+  webpackConfiguration: webpack.Configuration;
+  browsersyncOptions: browsersync.Options | browsersync.Options[];
+)
+.launch()
+```
+
+## Usage
+
+**Example**
+
 ```ts
 import Server from '@packmule/server';
 import configuration from './webpack.config.ts';

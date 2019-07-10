@@ -3,6 +3,11 @@
 
 `Image Optimization Pack` uses `image-webpack-loader` to optimize images.
 
+## Setup
+```bash
+npm install --save-dev @packmule/image-optimization-pack
+```
+
 ## API
 ```ts
 ImageOptimizationPack()

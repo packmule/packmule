@@ -1,6 +1,11 @@
 # ServiceWorker Pack
 > Configure simple service-worker generation.
 
+## Setup
+```bash
+npm install --save-dev @packmule/service-worker-pack
+```
+
 ## API
 ```ts
 ServiceWorkerPack()

@@ -1,6 +1,11 @@
 # Alias Pack
 > Packmule pack to configure Webpack [module aliases](https://webpack.js.org/configuration/resolve/#resolve-alias).
 
+## Setup
+```bash
+npm install --save-dev @packmule/alias-pack
+```
+
 ## API
 ```ts
 AliasPack(name: string, target: string)

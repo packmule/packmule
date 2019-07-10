@@ -1,6 +1,11 @@
 # Manifest Pack
 > Generate a [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 
+## Setup
+```bash
+npm install --save-dev @packmule/manifest-pack
+```
+
 ## API
 ```ts
 ManifestPack(options: ManifestPlugin.ManifestOptions)

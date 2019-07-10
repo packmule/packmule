@@ -4,6 +4,11 @@
 `Entry Pack` configures the actual [entry point](https://webpack.js.org/concepts/#entry)
 for the bundle and can be used multiple times to define multiple entry points.
 
+## Setup
+```bash
+npm install --save-dev @packmule/entry-pack
+```
+
 ## API
 ```ts
 EntryPack(path: string, name?: string)

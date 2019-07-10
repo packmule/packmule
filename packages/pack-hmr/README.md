@@ -1,6 +1,11 @@
 # Hot Module Replacement Pack
 > Include the `hot module replacement` plugin for development.
 
+## Setup
+```bash
+npm install --save-dev @packmule/hmr-pack
+```
+
 ## API
 ```ts
 HotModuleReplacementPack(options?: {})

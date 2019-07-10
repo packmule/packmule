@@ -4,6 +4,11 @@
 `Compression Pack` uses `compression-webpack-plugin` and libraries
 like `iltorb` to create compressed `gzip` and `brotli` files.
 
+## Setup
+```bash
+npm install --save-dev @packmule/compression-pack
+```
+
 ## API
 ```ts
 CompressionPack({

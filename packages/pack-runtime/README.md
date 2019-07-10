@@ -1,6 +1,11 @@
 # Runtime Pack
 > Configure the [`webpack` runtime](https://webpack.js.org/configuration/optimization/#optimization-runtimechunk).
 
+## Setup
+```bash
+npm install --save-dev @packmule/runtime-pack
+```
+
 ## API
 ```ts
 RuntimePack();

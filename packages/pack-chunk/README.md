@@ -1,6 +1,11 @@
 # Chunk Pack
 > Split code into chunks using the [split-chunks plugin](https://webpack.js.org/plugins/split-chunks-plugin/).
 
+## Setup
+```bash
+npm install --save-dev @packmule/chunk-pack
+```
+
 ## API
 `ChunkPack(name: string)`
 
