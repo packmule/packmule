@@ -54,7 +54,12 @@ export default class SassPack implements Pack {
                     sourceMap: options.debug,
                 },
             },
-            { loader: 'postcss-loader', options: { sourceMap: options.debug } },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: options.debug,
+                },
+            },
             {
                 loader: 'resolve-url-loader',
                 options: {
