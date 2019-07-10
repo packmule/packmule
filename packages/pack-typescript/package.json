@@ -34,6 +34,11 @@
     "@types/micromatch": "^3.1.0"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "^2.0.0",
+    "@babel/core": "*",
+    "typescript": "*"
+  },
+  "optionalDependencies": {
+    "eslint": "*"
   }
 }
