@@ -1,4 +1,1 @@
-export {
-    default,
-    default as RuntimePack,
-} from './common/pack';
+export { default, default as RuntimePack } from './common/pack';

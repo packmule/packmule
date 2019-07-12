@@ -36,11 +36,13 @@ export default class HotModuleReplacementPack implements Pack {
         return this.configuration;
     }
 
-    public process(configuration: webpack.Configuration & {
-        entry: {
-            [key: string]: string[];
-        };
-    }): webpack.Configuration {
+    public process(
+        configuration: webpack.Configuration & {
+            entry: {
+                [key: string]: string[];
+            };
+        },
+    ): webpack.Configuration {
         const middleware = 'webpack-hot-middleware/client';
         const query = `overlay=${this.options.overlay}&noInfo=${!this.options.info}&reload=${this.options.reload}`;
 

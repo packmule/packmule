@@ -1,4 +1,1 @@
-export {
-    default,
-    default as JavascriptPack,
-} from './common/pack';
+export { default, default as JavascriptPack } from './common/pack';

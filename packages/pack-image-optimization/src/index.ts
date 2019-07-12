@@ -1,4 +1,1 @@
-export {
-    default,
-    default as ImageOptimizationPack,
-} from './common/pack';
+export { default, default as ImageOptimizationPack } from './common/pack';

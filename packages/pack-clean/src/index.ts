@@ -1,4 +1,1 @@
-export {
-    default,
-    default as CleanPack,
-} from './common/pack';
+export { default, default as CleanPack } from './common/pack';
