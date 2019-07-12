@@ -1,4 +1,1 @@
-export {
-    default,
-    default as NotificationPack,
-} from './common/pack';
+export { default, default as NotificationPack } from './common/pack';

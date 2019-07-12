@@ -22,9 +22,7 @@ export default class CopyPack implements Pack {
     }
 
     public include(include: PackIncludeOption): this {
-        this.options.include = typeof include === 'string'
-            ? micromatch.makeRe(include, { dot: true })
-            : include;
+        this.options.include = typeof include === 'string' ? micromatch.makeRe(include, { dot: true }) : include;
 
         return this;
     }
@@ -44,7 +42,7 @@ export default class CopyPack implements Pack {
 
         const extraction: webpack.Loader = {
             loader: 'file-loader',
-            options:  {
+            options: {
                 name: options.hash ? '[name].[hash:8].[ext]' : '[name].[ext]',
                 outputPath: this.options.path,
             },

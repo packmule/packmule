@@ -1,4 +1,1 @@
-export {
-    default,
-    default as Server,
-} from './common/server'
+export { default, default as Server } from './common/server';

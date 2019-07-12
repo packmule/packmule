@@ -1,4 +1,1 @@
-export {
-    default,
-    default as ChunkPack,
-} from './common/pack';
+export { default, default as ChunkPack } from './common/pack';

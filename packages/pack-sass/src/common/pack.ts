@@ -18,7 +18,7 @@ export default class SassPack implements Pack {
         importers: [],
     };
 
-    private configuration: webpack.Configuration= {
+    private configuration: webpack.Configuration = {
         resolve: {
             extensions: ['.scss', '.sass'],
         },
@@ -97,10 +97,7 @@ export default class SassPack implements Pack {
 
             this.configuration.plugins!.push(extraction);
 
-            loaders = [
-                ExtractPlugin.loader,
-                ...loaders,
-            ];
+            loaders = [ExtractPlugin.loader, ...loaders];
         } else {
             loaders = [
                 {

@@ -1,4 +1,1 @@
-export {
-    default,
-    default as CompressionPack,
-} from './common/pack';
+export { default, default as CompressionPack } from './common/pack';

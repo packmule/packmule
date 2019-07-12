@@ -25,14 +25,12 @@ export default class VectorSpritePack implements Pack {
     public constructor(name: string) {
         this.options = {
             ...this.defaults,
-            ...{ name }
+            ...{ name },
         };
     }
 
     public include(include: PackIncludeOption): this {
-        this.options.include = typeof include === 'string'
-            ? micromatch.makeRe(include, { dot: true })
-            : include;
+        this.options.include = typeof include === 'string' ? micromatch.makeRe(include, { dot: true }) : include;
 
         return this;
     }
