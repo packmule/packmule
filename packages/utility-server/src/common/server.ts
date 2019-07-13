@@ -46,7 +46,7 @@ export default class Server {
         return instances.length === 1 ? instances[0] : instances;
     }
 
-    public tunnel(key: string): Promise<void> {
+    public tunnel(key?: string): Promise<void> {
         const client = new browserstack.Local();
 
         return new Promise((resolve, reject) => {
