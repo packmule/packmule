@@ -1,4 +1,5 @@
 # JavaScript Pack
+
 > Transpile JavaScript using Babel.
 
 Internally the `JavaScript Pack` uses `Babel` to transpile the code if needed.
@@ -6,20 +7,23 @@ To configure `Babel` settings in your project, a `.babelrc.json` file can be use
 Linting code via `ESLint` can be utilized by creating an `.eslintrc` file.
 
 ## Setup
+
 ```bash
 npm install --save-dev @packmule/javascript-pack @babel/core eslint
 ```
 
 ## API
+
 ```ts
 JavaScriptPack()
     .include(glob: string)
 ```
 
 ## Options
-* **cache** - *Controls cache utilization of the `babel-loader`.*
-* **lint** - *Controls source-code linting via `eslint-loader`.*
-* **fix** - *Controls source-code fixing via `eslint-loader`.*
+
+-   **cache** - _Controls cache utilization of the `babel-loader`._
+-   **lint** - _Controls source-code linting via `eslint-loader`._
+-   **fix** - _Controls source-code fixing via `eslint-loader`._
 
 ## Usage
 

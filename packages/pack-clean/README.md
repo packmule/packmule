@@ -1,4 +1,5 @@
 # Clean Pack
+
 > Clear a directory prior to building the bundle.
 
 `Clean Pack` uses [`clean-webpack-plugin`](https://github.com/johnagan/clean-webpack-plugin)
@@ -6,20 +7,23 @@ to clear a directory before building. It is advised to clear the
 webpack output directory prior building to get rid of old files.
 
 ## Setup
+
 ```bash
 npm install --save-dev @packmule/clean-pack
 ```
 
 ## API
+
 `CleanPack()`
 
 ## Options
-* **root** - *Defines the `root` option of `clean-webpack-plugin`.*
-* **debug** - *Controls the `verbose` option of `clean-webpack-plugin`.*
+
+-   **root** - _Defines the `root` option of `clean-webpack-plugin`._
+-   **debug** - _Controls the `verbose` option of `clean-webpack-plugin`._
 
 ## Usage
 
-**Example** 
+**Example**
 
 Clears the contents of the webpack `output` directory prior building.
 

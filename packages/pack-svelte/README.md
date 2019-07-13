@@ -1,14 +1,17 @@
 # Svelte Pack
+
 > Handle `svelte` single-file-component files.
 
 ## Setup
+
 ```bash
 npm install --save-dev @packmule/svelte-pack svelte
 ```
 
 ## API
+
 ```ts
-SveltePack()
+SveltePack();
 ```
 
 ## Usage

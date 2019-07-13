@@ -1,14 +1,17 @@
 # Log Pack
+
 > Configure sane logging for `webpack`.
 
 ## Setup
+
 ```bash
 npm install --save-dev @packmule/log-pack
 ```
 
 ## API
+
 ```ts
-LogPack()
+LogPack();
 ```
 
 ## Usage

@@ -1,12 +1,15 @@
 # Copy Pack
+
 > Simply copy files.
 
 ## Setup
+
 ```bash
 npm install --save-dev @packmule/copy-pack
 ```
 
 ## API
+
 ```ts
 CopyPack()
     .include(glob: string)

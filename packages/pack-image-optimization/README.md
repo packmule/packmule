@@ -1,14 +1,17 @@
 # Image Optimization Pack
+
 > Optimize images using `imagemin`.
 
 `Image Optimization Pack` uses `image-webpack-loader` to optimize images.
 
 ## Setup
+
 ```bash
 npm install --save-dev @packmule/image-optimization-pack
 ```
 
 ## API
+
 ```ts
 ImageOptimizationPack()
     .include(glob: string)
@@ -16,7 +19,8 @@ ImageOptimizationPack()
 ```
 
 ## Options
-* **optimize** - *Controls whether `image-webpack-loader` optimizes images or not.*
+
+-   **optimize** - _Controls whether `image-webpack-loader` optimizes images or not._
 
 ## Usage
 
