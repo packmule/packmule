@@ -33,3 +33,11 @@ Options are shared with and used by packs. Packs can choose which options to use
 | **debug**    | `boolean` | `false`                   | Enables debugging.               |
 | **cache**    | `boolean` | `true`                    | Enables caching.                 |
 | **hash**     | `boolean` | `false`                   | Enable filename hashing.         |
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

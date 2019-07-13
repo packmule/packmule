@@ -44,3 +44,11 @@ server.launch();
 
 `options` can be a `browser-sync` configuration object or an
 array of configuration objects, to launch multiple servers.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
