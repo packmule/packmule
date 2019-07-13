@@ -14,7 +14,7 @@
     "watch:clean": "run-p clean:builds clean:caches",
     "watch:compile": "tsc --build --watch",
     "format": "run-s format:*",
-    "format:fix": "prettier --write ./packages/*/src/**/*.ts"
+    "format:fix": "prettier --write packages/**"
   },
   "devDependencies": {
     "@types/node": "^12.0.8",
