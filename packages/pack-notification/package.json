@@ -27,6 +27,7 @@
     "webpack-notifier": "^1.8.0"
   },
   "devDependencies": {
+    "@packmule/core": "^2.0.0",
     "@types/webpack-notifier": "^1.5.3"
   },
   "peerDependencies": {

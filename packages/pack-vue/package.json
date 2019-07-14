@@ -28,6 +28,7 @@
     "vue-loader": "^15.7.0"
   },
   "devDependencies": {
+    "@packmule/core": "^2.0.0",
     "@types/micromatch": "^3.1.0"
   },
   "peerDependencies": {
