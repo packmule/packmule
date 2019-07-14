@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "prepare": "lerna bootstrap",
+    "prepare": "lerna bootstrap --hoist",
     "reset": "run-s clean prepare build",
     "clean": "run-p clean:*",
     "clean:modules": "del-cli \"./packages/*/node_modules/\"",
