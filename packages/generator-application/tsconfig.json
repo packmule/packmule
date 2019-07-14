@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.settings.json",
+  "references": [
+    {
+      "path": "../core/"
+    }
+  ],
+  "compilerOptions": {
+    "rootDir": "./src/",
+    "outDir": "./generators/"
+  },
+  "exclude": [
+    "node_modules/",
+    "**/templates/"
+  ]
+}

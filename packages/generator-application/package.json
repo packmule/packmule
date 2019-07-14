@@ -1,0 +1,32 @@
+{
+  "name": "@packmule/generator-application",
+  "description": "Yeoman generator for creating web applications.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": "github:packmule/packmule",
+  "bugs": "https://github.com/packmule/packmule/issues",
+  "keywords": [
+    "packmule",
+    "yeoman-generator"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "t.deinhamer@pixelart.at",
+    "url": "https://www.pixelart.at/"
+  },
+  "scripts": {
+    "build:post": "cpy */templates/**/* ../generators/ --cwd=src --parents"
+  },
+  "files": [
+    "generators"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/yeoman-generator": "^3.1.3"
+  }
+}

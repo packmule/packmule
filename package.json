@@ -10,6 +10,7 @@
     "build": "run-s build:*",
     "build:clean": "run-p clean:builds clean:caches",
     "build:compile": "tsc --build",
+    "build:post": "lerna run build:post",
     "watch": "run-s watch:*",
     "watch:clean": "run-p clean:builds clean:caches",
     "watch:compile": "tsc --build --watch",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@types/node": "^12.0.8",
     "@types/webpack": "^4.4.32",
+    "cpy-cli": "^2.0.0",
     "del-cli": "^2.0.0",
     "husky": "^3.0.0",
     "lerna": "^3.15.0",

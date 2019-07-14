@@ -1,0 +1,29 @@
+{
+  "name": "<%= package.name %>",
+  "description": "<%= package.description %>",
+  "version": "0.0.0",
+  "license": "",
+  <% if (!package.publish) { %>"private": true,<% } %>
+  "main": "module/",
+  "typings": "module/",
+  "keywords": [
+    "webpack",
+    "packmule",
+    "packmule-pack"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "module/"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@packmule/core": "^2.0.0",
+    "webpack": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@packmule/core": "^2.0.0"
+  }
+}

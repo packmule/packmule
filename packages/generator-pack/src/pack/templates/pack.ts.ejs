@@ -1,0 +1,29 @@
+import webpack from 'webpack';
+import { Options, Pack } from '@packmule/core';
+
+interface <%= module.name %>Options {
+    feature?: boolean;
+}
+
+export default class <%= module.name %> implements Pack {
+    private options: <%= module.name %>Options;
+    private defaults: <%= module.name %>Options = {
+        feature: false,
+    };
+
+    private configuration: webpack.Configuration = {};
+
+    public constructor(options?: <%= module.name %>Options) {
+        this.options = {
+            ...this.defaults,
+            ...options,
+        };
+    }
+
+    public generate(options: Options): webpack.Configuration {
+        if (this.options.feature) {
+        }
+
+        return this.configuration;
+    }
+}

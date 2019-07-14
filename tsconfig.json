@@ -5,6 +5,12 @@
       "path": "./packages/core/"
     },
     {
+      "path": "./packages/generator-application/"
+    },
+    {
+      "path": "./packages/generator-pack/"
+    },
+    {
       "path": "./packages/pack-alias/"
     },
     {

@@ -1,5 +1,6 @@
 node_modules/
 module/
+generators/
 package.json
 tsconfig.json
 *.tsbuildinfo
