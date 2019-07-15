@@ -15,7 +15,6 @@ export default class BasePack implements Pack {
         this.configuration.mode = options.mode;
         this.configuration.context = options.root;
         this.configuration.cache = options.cache;
-        this.configuration.watch = options.watch;
 
         if (!process.argv.includes('--json')) {
             this.configuration.plugins!.push(new BarPlugin());
