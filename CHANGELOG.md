@@ -10,6 +10,7 @@
 * Add `svelte` pack.
 
 ### changed
+* Change the package namespace from `@pixelart` to `@packmule`.
 * Convert project to a monorepo structure and move packs to separate packages.
 * Accept multiple configurations on the development server.
 * Disable verbose output on the `clean-webpack-plugin` used by the clean pack.
