@@ -23,6 +23,9 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "compression-webpack-plugin": "^3.0.0",
     "iltorb": "^2.4.3",

@@ -23,6 +23,9 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "css-loader": "^3.0.0",
     "fibers": "^4.0.1",

@@ -23,6 +23,9 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "pkg-dir": "^4.2.0",
     "terser-webpack-plugin": "^1.3.0",

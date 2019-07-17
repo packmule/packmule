@@ -18,6 +18,9 @@
     "email": "t.deinhamer@pixelart.at",
     "url": "https://www.pixelart.at/"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@packmule/core": "^2.0.0",
     "@packmule/server": "^2.0.0",
