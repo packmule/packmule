@@ -6,9 +6,9 @@
   "repository": "github:packmule/packmule",
   "bugs": "https://github.com/packmule/packmule/issues",
   "keywords": [
+    "webpack",
     "packmule",
-    "edition",
-    "default"
+    "packmule-edition"
   ],
   "engines": {
     "node": ">=10.0.0"
