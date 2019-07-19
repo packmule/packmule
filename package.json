@@ -14,17 +14,20 @@
     "watch:clean": "run-p clean:builds clean:caches",
     "watch:compile": "tsc --build --watch",
     "format": "run-s format:*",
-    "format:fix": "prettier --write packages/**"
+    "format:fix": "prettier --write packages/**",
+    "test": "ava"
   },
   "devDependencies": {
     "@types/node": "^12.0.8",
     "@types/webpack": "^4.4.32",
+    "ava": "^2.2.0",
     "del-cli": "^2.0.0",
     "husky": "^3.0.0",
     "lerna": "^3.15.0",
     "lint-staged": "^9.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "1.18.2",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.1"
   }
 }
