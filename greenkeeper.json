@@ -1,0 +1,46 @@
+{
+  "groups": {
+    "project": {
+      "packages": [
+        "package.json"
+      ]
+    },
+    "core": {
+      "packages": [
+        "packages/core/package.json"
+      ]
+    },
+    "utility": {
+      "packages": [
+        "packages/utility-server/package.json"
+      ]
+    },
+    "pack": {
+      "packages": [
+        "packages/pack-alias/package.json",
+        "packages/pack-assets/package.json",
+        "packages/pack-chunk/package.json",
+        "packages/pack-clean/package.json",
+        "packages/pack-compression/package.json",
+        "packages/pack-copy/package.json",
+        "packages/pack-entry/package.json",
+        "packages/pack-hmr/package.json",
+        "packages/pack-image-optimization/package.json",
+        "packages/pack-javascript/package.json",
+        "packages/pack-log/package.json",
+        "packages/pack-manifest/package.json",
+        "packages/pack-notification/package.json",
+        "packages/pack-output/package.json",
+        "packages/pack-performance/package.json",
+        "packages/pack-raw/package.json",
+        "packages/pack-runtime/package.json",
+        "packages/pack-sass/package.json",
+        "packages/pack-service-worker/package.json",
+        "packages/pack-sprite/package.json",
+        "packages/pack-svelte/package.json",
+        "packages/pack-typescript/package.json",
+        "packages/pack-vue/package.json"
+      ]
+    }
+  }
+}
