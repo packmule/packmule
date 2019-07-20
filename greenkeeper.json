@@ -10,12 +10,6 @@
         "packages/core/package.json"
       ]
     },
-    "edition": {
-      "packages": [
-        "packages/edition-complete/package.json",
-        "packages/edition-default/package.json"
-      ]
-    },
     "utility": {
       "packages": [
         "packages/utility-server/package.json"
