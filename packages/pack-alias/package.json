@@ -23,6 +23,9 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@packmule/core": "^2.0.0"
   },

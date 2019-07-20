@@ -1,6 +1,6 @@
 {
-  "name": "@packmule/default",
-  "description": "Default edition for packmule.",
+  "name": "@packmule/complete",
+  "description": "Complete edition for packmule.",
   "version": "2.0.0",
   "license": "MIT",
   "repository": "github:packmule/packmule",
@@ -31,13 +31,21 @@
     "@packmule/compression-pack": "^2.0.0",
     "@packmule/copy-pack":"^2.0.0",
     "@packmule/entry-pack": "^2.0.0",
-    "@packmule/environment-pack": "^2.0.0",
     "@packmule/hmr-pack":"^2.0.0",
+    "@packmule/image-optimization-pack": "^2.0.0",
+    "@packmule/javascript-pack":"^2.0.0",
     "@packmule/log-pack": "^2.0.0",
     "@packmule/manifest-pack":"^2.0.0",
     "@packmule/notification-pack": "^2.0.0",
     "@packmule/output-pack":"^2.0.0",
     "@packmule/performance-pack": "^2.0.0",
-    "@packmule/runtime-pack": "^2.0.0"
+    "@packmule/raw-pack":"^2.0.0",
+    "@packmule/runtime-pack": "^2.0.0",
+    "@packmule/sass-pack":"^2.0.0",
+    "@packmule/service-worker-pack": "^2.0.0",
+    "@packmule/sprite-pack":"^2.0.0",
+    "@packmule/svelte-pack": "^2.0.0",
+    "@packmule/typescript-pack":"^2.0.0",
+    "@packmule/vue-pack": "^2.0.0"
   }
 }
