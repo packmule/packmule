@@ -27,6 +27,9 @@
       "path": "./packages/pack-entry/"
     },
     {
+      "path": "./packages/pack-environment/"
+    },
+    {
       "path": "./packages/pack-hmr/"
     },
     {

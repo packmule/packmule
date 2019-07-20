@@ -31,6 +31,7 @@
     "@packmule/compression-pack": "^2.0.0",
     "@packmule/copy-pack":"^2.0.0",
     "@packmule/entry-pack": "^2.0.0",
+    "@packmule/environment-pack": "^2.0.0",
     "@packmule/hmr-pack":"^2.0.0",
     "@packmule/log-pack": "^2.0.0",
     "@packmule/manifest-pack":"^2.0.0",
