@@ -1,7 +1,5 @@
 # packmule 📦 🐴
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/packmule/packmule.svg)](https://greenkeeper.io/)
-
 > Stubborn configuration generator for webpack.
 
 `packmule` is an opinionated, plugin-based configuration-generator for [`webpack`](https://webpack.js.org/).
