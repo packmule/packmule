@@ -24,6 +24,7 @@
         "packages/pack-compression/package.json",
         "packages/pack-copy/package.json",
         "packages/pack-entry/package.json",
+        "packages/pack-environment/package.json",
         "packages/pack-hmr/package.json",
         "packages/pack-image-optimization/package.json",
         "packages/pack-javascript/package.json",
