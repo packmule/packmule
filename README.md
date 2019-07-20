@@ -1,5 +1,4 @@
 # packmule 📦 🐴
-
 > Stubborn configuration generator for webpack.
 
 `packmule` is an opinionated, plugin-based configuration-generator for [`webpack`](https://webpack.js.org/).
