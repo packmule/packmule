@@ -28,6 +28,7 @@
         "packages/pack-hmr/package.json",
         "packages/pack-image-optimization/package.json",
         "packages/pack-javascript/package.json",
+        "packages/pack-less/package.json",
         "packages/pack-log/package.json",
         "packages/pack-manifest/package.json",
         "packages/pack-notification/package.json",
