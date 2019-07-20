@@ -7,7 +7,7 @@ test('packmule instantiation', (t) => {
     t.truthy(packmule);
 });
 
-test('directory context is set', (t) => {
+test('directory context is set by default', (t) => {
     const packmule = new Packmule();
     const configuration = packmule.generate();
 
@@ -28,17 +28,9 @@ test('webpack cache is false by default', (t) => {
     t.false(configuration.cache);
 });
 
-test('default webpack mode is none', (t) => {
+test('webpack mode is none by default', (t) => {
     const packmule = new Packmule();
     const configuration = packmule.generate();
 
     t.assert(configuration.mode === 'none');
-});
-
-test('default resolvable file extensions are set', (t) => {
-    const packmule = new Packmule();
-    const configuration = packmule.generate();
-
-    t.assert(configuration.resolve!.extensions!.includes('.js'));
-    t.assert(configuration.resolve!.extensions!.includes('.json'));
 });
