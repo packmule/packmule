@@ -7,6 +7,6 @@ export default {
         'ts-node/register/transpile-only',
     ],
     files: [
-        'packages/*/test/*',
+        'packages/*/test/**',
     ],
 }
