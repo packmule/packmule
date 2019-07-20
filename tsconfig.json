@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.base.json",
   "files": [],
   "references": [
     {
@@ -24,6 +25,9 @@
     },
     {
       "path": "./packages/pack-entry/"
+    },
+    {
+      "path": "./packages/pack-environment/"
     },
     {
       "path": "./packages/pack-hmr/"

@@ -23,6 +23,9 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "micromatch": "^4.0.2",
     "vue-loader": "^15.7.0"

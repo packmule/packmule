@@ -1,6 +1,10 @@
 # packmule 📦 🐴
 > Stubborn configuration generator for webpack.
 
+[![buddy](https://app.buddy.works/thasmo/packmule/pipelines/pipeline/200091/badge.svg?token=5a39de8b0d0fb361f7cea311de636c0c0c069a6d7c31064d4674d75608d64165 "buddy pipeline")](https://app.buddy.works/thasmo/packmule/pipelines/pipeline/200091)
+
+---
+
 `packmule` is an opinionated, plugin-based configuration-generator for [`webpack`](https://webpack.js.org/).
 
 **Biased Features**

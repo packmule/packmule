@@ -23,11 +23,14 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "css-loader": "^3.0.0",
     "fibers": "^4.0.1",
     "micromatch": "^4.0.2",
-    "mini-css-extract-plugin": "^0.7.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "resolve-url-loader": "^3.1.0",

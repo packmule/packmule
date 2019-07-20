@@ -23,6 +23,9 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "micromatch": "^4.0.2",
     "workbox-webpack-plugin": "^4.3.1"

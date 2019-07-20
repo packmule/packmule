@@ -1,6 +1,6 @@
 {
-  "name": "@packmule/output-pack",
-  "description": "Packmule pack to configure the Webpack output directory.",
+  "name": "@packmule/environment-pack",
+  "description": "Packmule pack to set environment variables.",
   "version": "2.0.0",
   "license": "MIT",
   "repository": "github:packmule/packmule",
@@ -26,8 +26,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "dotenv-webpack": "^1.7.0"
+  },
   "devDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "^2.0.0",
+    "@types/dotenv-webpack": "^1.7.0"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0"
