@@ -77,7 +77,7 @@ Several packs expose API methods to include or exclude files from processing usi
 
 [MIT license](LICENSE)
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule?ref=badge_large)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule.svg?type=large)](https://app.fossa.com/reports/9ce2a605-8806-43ca-8aae-6f0aa5a2bc5f)
 
 ---
 
