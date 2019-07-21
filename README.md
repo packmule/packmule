@@ -2,6 +2,7 @@
 > Stubborn configuration generator for webpack.
 
 [![buddy](https://app.buddy.works/thasmo/packmule/pipelines/pipeline/200091/badge.svg?token=5a39de8b0d0fb361f7cea311de636c0c0c069a6d7c31064d4674d75608d64165 "buddy pipeline")](https://app.buddy.works/thasmo/packmule/pipelines/pipeline/200091)
+[![fossa](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule.svg?type=shield "fossa")](https://app.fossa.io/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule?ref=badge_shield)
 
 ---
 
@@ -74,7 +75,9 @@ Several packs expose API methods to include or exclude files from processing usi
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT license](LICENSE)
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule?ref=badge_large)
 
 ---
 
