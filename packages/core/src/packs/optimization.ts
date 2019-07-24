@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import Pack from '../common/pack';
-import Options from '../common/options';
 
 export default class OptimizationPack implements Pack {
     private configuration: webpack.Configuration = {
@@ -18,7 +17,7 @@ export default class OptimizationPack implements Pack {
         },
     };
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(): webpack.Configuration {
         return this.configuration;
     }
 }

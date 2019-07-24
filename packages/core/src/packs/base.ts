@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import BarPlugin from 'webpackbar';
 import Pack from '../common/pack';
+import Hints from '../common/hints';
 import Options from '../common/options';
 
 export default class BasePack implements Pack {
@@ -11,16 +12,16 @@ export default class BasePack implements Pack {
         plugins: [],
     };
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         this.configuration.mode = options.mode;
         this.configuration.context = options.root;
-        this.configuration.cache = options.cache;
+        this.configuration.cache = hints.cache;
 
         if (!process.argv.includes('--json')) {
             this.configuration.plugins!.push(new BarPlugin());
         }
 
-        if (options.optimize) {
+        if (hints.optimize) {
             this.configuration.plugins!.push(new webpack.HashedModuleIdsPlugin());
         }
 

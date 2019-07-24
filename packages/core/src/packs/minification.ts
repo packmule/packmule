@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import TerserPlugin from 'terser-webpack-plugin';
 import Pack from '../common/pack';
+import Hints from '../common/hints';
 import Options from '../common/options';
 
 export default class MinificationPack implements Pack {
@@ -10,12 +11,12 @@ export default class MinificationPack implements Pack {
         },
     };
 
-    public generate(options: Options): webpack.Configuration {
-        if (options.optimize) {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
+        if (hints.optimize) {
             const terser = new TerserPlugin({
                 parallel: true,
-                cache: options.cache,
-                sourceMap: options.debug,
+                cache: hints.cache,
+                sourceMap: hints.map,
                 terserOptions: {
                     mangle: {
                         keep_fnames: true,
