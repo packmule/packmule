@@ -29,7 +29,7 @@
   "dependencies": {
     "babel-loader": "^8.0.6",
     "eslint-formatter-pretty": "^2.1.1",
-    "eslint-loader": "^2.2.1",
+    "eslint-loader": "^3.0.0",
     "micromatch": "^4.0.2",
     "ts-loader": "^6.0.4"
   },
