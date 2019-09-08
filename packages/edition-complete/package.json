@@ -35,6 +35,7 @@
     "@packmule/hmr-pack":"^2.0.0",
     "@packmule/image-optimization-pack": "^2.0.0",
     "@packmule/javascript-pack":"^2.0.0",
+    "@packmule/less-pack": "^2.0.0",
     "@packmule/log-pack": "^2.0.0",
     "@packmule/manifest-pack":"^2.0.0",
     "@packmule/notification-pack": "^2.0.0",

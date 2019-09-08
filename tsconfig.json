@@ -39,6 +39,9 @@
       "path": "./packages/pack-javascript/"
     },
     {
+      "path": "./packages/pack-less/"
+    },
+    {
       "path": "./packages/pack-log/"
     },
     {
