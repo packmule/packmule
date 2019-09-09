@@ -56,7 +56,7 @@ Several packs expose API methods to include or exclude files from processing usi
 * **[EnvironmentPack](packages/pack-environment/)** - Populate `process.env` via `.env` files and at runtime.
 * **[HotModuleReplacementPack](packages/pack-hmr/)** - Include the `hot module replacement` plugin for development.
 * **[ImageOptimizationPack](packages/pack-image-optimization/)** - Optimize images using `imagemin`.
-* **[JavaScriptPack](packages/pack-javascript/)** - Processe JS including Babel support.
+* **[JavaScriptPack](packages/pack-javascript/)** - Process JS including Babel support.
 * **[LessPack](packages/pack-less/)** - Compile `less` to `CSS`.
 * **[LogPack](packages/pack-log/)** - Configure console logging.
 * **[ManifestPack](packages/pack-manifest/)** - Generate a web app manifest.
