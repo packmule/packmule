@@ -1,9 +1,6 @@
 # packmule 📦 🐴
 > Stubborn configuration generator for webpack.
 
-[![buddy](https://app.buddy.works/thasmo/packmule/pipelines/pipeline/200091/badge.svg?token=5a39de8b0d0fb361f7cea311de636c0c0c069a6d7c31064d4674d75608d64165 "buddy pipeline")](https://app.buddy.works/thasmo/packmule/pipelines/pipeline/200091)
-[![fossa](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule.svg?type=shield "fossa")](https://app.fossa.io/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule?ref=badge_shield)
-
 ---
 
 `packmule` is an opinionated, plugin-based configuration-generator for [`webpack`](https://webpack.js.org/).
@@ -56,9 +53,11 @@ Several packs expose API methods to include or exclude files from processing usi
 * **[CompressionPack](packages/pack-compression/)** - Generate `gzip` and `brotli` versions of configured assets.
 * **[CopyPack](packages/pack-copy/)** - Copy files.
 * **[EntryPack](packages/pack-entry/)** - Define the entrypoints for webpack.
+* **[EnvironmentPack](packages/pack-environment/)** - Populate `process.env` via `.env` files and at runtime.
 * **[HotModuleReplacementPack](packages/pack-hmr/)** - Include the `hot module replacement` plugin for development.
 * **[ImageOptimizationPack](packages/pack-image-optimization/)** - Optimize images using `imagemin`.
-* **[JavaScriptPack](packages/pack-javascript/)** - Processe JS including Babel support.
+* **[JavaScriptPack](packages/pack-javascript/)** - Process JS including Babel support.
+* **[LessPack](packages/pack-less/)** - Compile `less` to `CSS`.
 * **[LogPack](packages/pack-log/)** - Configure console logging.
 * **[ManifestPack](packages/pack-manifest/)** - Generate a web app manifest.
 * **[NotificationPack](packages/pack-notification/)** - Enable desktop notifications for development builds.
@@ -68,16 +67,14 @@ Several packs expose API methods to include or exclude files from processing usi
 * **[RuntimePack](packages/pack-runtime/)** - Configure the webpack runtime chunk.
 * **[SassPack](packages/pack-sass/)** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
 * **[ServiceWorkerPack](packages/pack-service-worker/)** - Generate a simple service worker using `workbox`.
+* **[SpritePack](packages/pack-sprite/)** - Generate a SVG-based vector-sprite.
 * **[SveltePack](packages/pack-svelte/)** - Handle `svelte` single-file-component files.
 * **[TypeScriptPack](packages/pack-typescript/)** - Compile TS to JS including Babel support.
-* **[SpritePack](packages/pack-sprite/)** - Generate a SVG-based vector-sprite.
 * **[VuePack](packages/pack-vue/)** - Handle `vue` single-file-component files.
 
 ## License
 
 [MIT license](LICENSE)
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpackmule%2Fpackmule.svg?type=large)](https://app.fossa.com/reports/9ce2a605-8806-43ca-8aae-6f0aa5a2bc5f)
 
 ---
 
