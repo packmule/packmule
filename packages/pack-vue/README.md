@@ -1,9 +1,17 @@
 # Vue Pack
+
 > Packmule pack to bundle Vue single-file-components.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/vue-pack vue vue-template-compiler
+```
+
 ## API
+
 ```ts
-VuePack()
+VuePack();
 ```
 
 ## Usage
@@ -24,3 +32,11 @@ packmule.register(new SassPack());
 packmule.register(new TypeScriptPack());
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

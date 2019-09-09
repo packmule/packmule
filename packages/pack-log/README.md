@@ -1,9 +1,17 @@
 # Log Pack
+
 > Configure sane logging for `webpack`.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/log-pack
+```
+
 ## API
+
 ```ts
-LogPack()
+LogPack();
 ```
 
 ## Usage
@@ -20,3 +28,11 @@ const packmule = new Packmule();
 packmule.register(new LogPack());
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

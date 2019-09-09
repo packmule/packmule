@@ -1,16 +1,25 @@
-# Notify Pack
+# Notification Pack
+
 > Enable desktop notifications for build messages.
 
-`Notify Pack` uses `webpack-notifier` to
+`Notification Pack` uses `webpack-notifier` to
 show desktop notification for build errors.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/notification-pack
+```
+
 ## API
+
 ```ts
-NotifyPack()
+NotifyPack();
 ```
 
 ## Options
-* **notify** - *Controls whether the pack is actually enabled or not.*
+
+-   **notify** - _Controls whether the pack is actually enabled or not._
 
 ## Usage
 
@@ -30,3 +39,11 @@ if (env.server) {
 
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

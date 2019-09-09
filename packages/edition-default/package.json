@@ -6,9 +6,9 @@
   "repository": "github:packmule/packmule",
   "bugs": "https://github.com/packmule/packmule/issues",
   "keywords": [
+    "webpack",
     "packmule",
-    "edition",
-    "default"
+    "packmule-edition"
   ],
   "engines": {
     "node": ">=10.0.0"
@@ -17,6 +17,9 @@
     "name": "Thomas Deinhamer",
     "email": "t.deinhamer@pixelart.at",
     "url": "https://www.pixelart.at/"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@packmule/core": "^2.0.0",
@@ -28,6 +31,7 @@
     "@packmule/compression-pack": "^2.0.0",
     "@packmule/copy-pack":"^2.0.0",
     "@packmule/entry-pack": "^2.0.0",
+    "@packmule/environment-pack": "^2.0.0",
     "@packmule/hmr-pack":"^2.0.0",
     "@packmule/log-pack": "^2.0.0",
     "@packmule/manifest-pack":"^2.0.0",

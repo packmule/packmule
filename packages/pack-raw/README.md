@@ -1,7 +1,15 @@
 # Raw Pack
+
 > Merge raw `webpack` configuration.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/raw-pack
+```
+
 ## API
+
 ```ts
 RawPack(configuration: webpack.Configuration)
 ```
@@ -24,3 +32,11 @@ packmule.register(new RawPack({
 
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

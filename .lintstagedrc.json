@@ -1,0 +1,6 @@
+{
+  "packages/**": [
+    "prettier --write",
+    "git add"
+  ]
+}

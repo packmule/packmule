@@ -23,10 +23,14 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "clean-webpack-plugin": "^3.0.0"
   },
   "devDependencies": {
+    "@packmule/core": "^2.0.0",
     "@types/clean-webpack-plugin": "^0.1.3"
   },
   "peerDependencies": {

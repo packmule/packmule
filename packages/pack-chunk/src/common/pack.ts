@@ -17,7 +17,10 @@ export default class ChunkPack implements Pack {
 
     private configuration: webpack.Configuration = {};
 
-    public constructor(name: string, chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.compilation.Chunk) => boolean)) {
+    public constructor(
+        name: string,
+        chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.compilation.Chunk) => boolean),
+    ) {
         this.options = this.defaults;
         this.options.name = name;
 
@@ -27,9 +30,7 @@ export default class ChunkPack implements Pack {
     }
 
     public include(include: PackIncludeOption): this {
-        this.options.include = typeof include === 'string'
-            ? micromatch.makeRe(include, { dot: true })
-            : include;
+        this.options.include = typeof include === 'string' ? micromatch.makeRe(include, { dot: true }) : include;
 
         return this;
     }
@@ -46,7 +47,7 @@ export default class ChunkPack implements Pack {
                         },
                     },
                 },
-            }
+            },
         };
 
         return this.configuration;

@@ -1,9 +1,17 @@
 # Svelte Pack
+
 > Handle `svelte` single-file-component files.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/svelte-pack svelte
+```
+
 ## API
+
 ```ts
-SveltePack()
+SveltePack();
 ```
 
 ## Usage
@@ -24,3 +32,11 @@ packmule.register(new SassPack());
 packmule.register(new TypeScriptPack());
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

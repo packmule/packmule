@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
-import mozjpeg from 'imagemin-mozjpeg'
-import pngquant from 'imagemin-pngquant'
+import mozjpeg from 'imagemin-mozjpeg';
+import pngquant from 'imagemin-pngquant';
 import ImagePlugin from 'imagemin-webpack-plugin';
 import { Options, Pack, PackIncludeOption } from '@packmule/core';
 
@@ -29,9 +29,7 @@ export default class ImageOptimizationPack implements Pack {
     }
 
     public include(include: PackIncludeOption): this {
-        this.options.include = typeof include === 'string'
-            ? micromatch.makeRe(include, { dot: true })
-            : include;
+        this.options.include = typeof include === 'string' ? micromatch.makeRe(include, { dot: true }) : include;
 
         return this;
     }

@@ -6,6 +6,7 @@ import Options from './options';
 import BasePack from '../packs/base';
 import OptimizationPack from '../packs/optimization';
 import MinificationPack from '../packs/minification';
+import WatchPack from '../packs/watch';
 
 export default class Packmule {
     private packs: Pack[] = [];
@@ -49,6 +50,7 @@ export default class Packmule {
         this.register(new BasePack());
         this.register(new OptimizationPack());
         this.register(new MinificationPack());
+        this.register(new WatchPack());
     }
 
     public register(pack: Pack): this {

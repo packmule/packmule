@@ -23,8 +23,14 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "webpack-pwa-manifest": "^4.0.0"
+  },
+  "devDependencies": {
+    "@packmule/core": "^2.0.0"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0"

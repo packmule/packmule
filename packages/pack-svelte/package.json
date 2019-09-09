@@ -23,13 +23,18 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "micromatch": "^4.0.2"
   },
   "devDependencies": {
+    "@packmule/core": "^2.0.0",
     "@types/micromatch": "^3.1.0"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "^2.0.0",
+    "svelte": "*"
   }
 }

@@ -1,7 +1,15 @@
 # ServiceWorker Pack
+
 > Configure simple service-worker generation.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/service-worker-pack
+```
+
 ## API
+
 ```ts
 ServiceWorkerPack()
     .include(glob: string)
@@ -22,3 +30,11 @@ const packmule = new Packmule();
 packmule.register(new ServiceWorkerPack());
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

@@ -23,10 +23,14 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "webpack-assets-manifest": "^3.1.1"
   },
   "devDependencies": {
+    "@packmule/core": "^2.0.0",
     "@types/webpack-assets-manifest": "^3.0.0"
   },
   "peerDependencies": {

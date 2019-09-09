@@ -1,14 +1,23 @@
 # Output Pack
+
 > Define the [output options](https://webpack.js.org/configuration/output/) for `webpack`.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/output-pack
+```
+
 ## API
+
 ```ts
 OutputPack(path: string, web: string = '/')
 ```
 
 ## Options
-* **root** - *Used to build an absolute path of the configured output path.*
-* **hash** - *Configures whether file name hashing is enabled or not.*
+
+-   **root** - _Used to build an absolute path of the configured output path._
+-   **hash** - _Configures whether file name hashing is enabled or not._
 
 ## Usage
 
@@ -24,3 +33,11 @@ const packmule = new Packmule();
 packmule.register(new OutputPack('public/', '/'));
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

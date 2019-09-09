@@ -1,6 +1,8 @@
 # packmule 📦 🐴
 > Stubborn configuration generator for webpack.
 
+---
+
 `packmule` is an opinionated, plugin-based configuration-generator for [`webpack`](https://webpack.js.org/).
 
 **Biased Features**
@@ -51,9 +53,11 @@ Several packs expose API methods to include or exclude files from processing usi
 * **[CompressionPack](packages/pack-compression/)** - Generate `gzip` and `brotli` versions of configured assets.
 * **[CopyPack](packages/pack-copy/)** - Copy files.
 * **[EntryPack](packages/pack-entry/)** - Define the entrypoints for webpack.
+* **[EnvironmentPack](packages/pack-environment/)** - Populate `process.env` via `.env` files and at runtime.
 * **[HotModuleReplacementPack](packages/pack-hmr/)** - Include the `hot module replacement` plugin for development.
 * **[ImageOptimizationPack](packages/pack-image-optimization/)** - Optimize images using `imagemin`.
-* **[JavaScriptPack](packages/pack-javascript/)** - Processe JS including Babel support.
+* **[JavaScriptPack](packages/pack-javascript/)** - Process JS including Babel support.
+* **[LessPack](packages/pack-less/)** - Compile `less` to `CSS`.
 * **[LogPack](packages/pack-log/)** - Configure console logging.
 * **[ManifestPack](packages/pack-manifest/)** - Generate a web app manifest.
 * **[NotificationPack](packages/pack-notification/)** - Enable desktop notifications for development builds.
@@ -63,15 +67,15 @@ Several packs expose API methods to include or exclude files from processing usi
 * **[RuntimePack](packages/pack-runtime/)** - Configure the webpack runtime chunk.
 * **[SassPack](packages/pack-sass/)** - Compile and optimize Sass/SCSS to CSS including PostCSS processing.
 * **[ServiceWorkerPack](packages/pack-service-worker/)** - Generate a simple service worker using `workbox`.
+* **[SpritePack](packages/pack-sprite/)** - Generate a SVG-based vector-sprite.
 * **[SveltePack](packages/pack-svelte/)** - Handle `svelte` single-file-component files.
 * **[TypeScriptPack](packages/pack-typescript/)** - Compile TS to JS including Babel support.
-* **[SpritePack](packages/pack-sprite/)** - Generate a SVG-based vector-sprite.
 * **[VuePack](packages/pack-vue/)** - Handle `vue` single-file-component files.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT license](LICENSE)
 
 ---
 
-<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

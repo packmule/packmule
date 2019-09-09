@@ -1,7 +1,15 @@
 # Hot Module Replacement Pack
+
 > Include the `hot module replacement` plugin for development.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/hmr-pack
+```
+
 ## API
+
 ```ts
 HotModuleReplacementPack(options?: {})
 ```
@@ -24,3 +32,11 @@ if (env.development && env.server) {
 
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

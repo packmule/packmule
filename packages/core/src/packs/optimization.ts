@@ -12,6 +12,7 @@ export default class OptimizationPack implements Pack {
                 maxAsyncRequests: Infinity,
                 cacheGroups: {
                     default: false,
+                    vendors: false,
                 },
             },
         },

@@ -23,6 +23,9 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "file-loader": "^4.0.0",
     "imagemin-mozjpeg": "^8.0.0",
@@ -31,6 +34,7 @@
     "micromatch": "^4.0.2"
   },
   "devDependencies": {
+    "@packmule/core": "^2.0.0",
     "@types/imagemin-pngquant": "^7.0.0",
     "@types/micromatch": "^3.1.0"
   },

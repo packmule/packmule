@@ -5,7 +5,7 @@ import { Pack } from '@packmule/core';
 export default class ManifestPack implements Pack {
     private options: ManifestPlugin.ManifestOptions;
 
-    private configuration: webpack.Configuration= {
+    private configuration: webpack.Configuration = {
         plugins: [],
     };
 
@@ -13,7 +13,7 @@ export default class ManifestPack implements Pack {
         this.options = options;
     }
 
-    public generate (): webpack.Configuration {
+    public generate(): webpack.Configuration {
         const manifest = new ManifestPlugin(this.options);
 
         this.configuration.plugins!.push(manifest);

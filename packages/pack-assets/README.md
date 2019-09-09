@@ -1,7 +1,15 @@
 # Assets Pack
+
 > Create an asset map file for use with hashed file names.
 
+## Setup
+
+```bash
+npm install --save-dev @packmule/alias-assets
+```
+
 ## API
+
 `AssetsPack()`
 
 ## Usage
@@ -18,3 +26,11 @@ const packmule = new Packmule();
 packmule.register(new AssetsPack());
 return packmule.generate();
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

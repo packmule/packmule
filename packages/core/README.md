@@ -1,4 +1,5 @@
 # packmule core
+
 > Stubborn configuration generator for Webpack.
 
 ## Installation
@@ -19,16 +20,24 @@ Packmule(mode?: 'development' | 'production' | 'none', options?: Options)
 
 Options are shared with and used by packs. Packs can choose which options to use.
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| **mode** | `string` | `'none'` | Sets the mode for webpack. |
-| **root** | `string` | `dir.sync(process.cwd())` | Sets the project root directory. |
-| **optimize** | `boolean` | `false` | Enables optimization steps. |
-| **extract** | `boolean` | `false` | Enables file extraction. |
-| **notify** | `boolean` | `false` | Enables desktop notifications. |
-| **watch** | `boolean` | `false` | Enables file watching. |
-| **lint** | `boolean` | `false` | Enables code linting. |
-| **fix** | `boolean` | `false` | Enables code fixing. |
-| **debug** | `boolean` | `false` | Enables debugging. |
-| **cache** | `boolean` | `true` | Enables caching. |
-| **hash** | `boolean` | `false` | Enable filename hashing. |
+| Option       | Type      | Default                   | Description                      |
+| ------------ | --------- | ------------------------- | -------------------------------- |
+| **mode**     | `string`  | `'none'`                  | Sets the mode for webpack.       |
+| **root**     | `string`  | `dir.sync(process.cwd())` | Sets the project root directory. |
+| **optimize** | `boolean` | `false`                   | Enables optimization steps.      |
+| **extract**  | `boolean` | `false`                   | Enables file extraction.         |
+| **notify**   | `boolean` | `false`                   | Enables desktop notifications.   |
+| **watch**    | `boolean` | `false`                   | Enables file watching.           |
+| **lint**     | `boolean` | `false`                   | Enables code linting.            |
+| **fix**      | `boolean` | `false`                   | Enables code fixing.             |
+| **debug**    | `boolean` | `false`                   | Enables debugging.               |
+| **cache**    | `boolean` | `true`                    | Enables caching.                 |
+| **hash**     | `boolean` | `false`                   | Enable filename hashing.         |
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)

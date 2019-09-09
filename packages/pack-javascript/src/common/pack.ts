@@ -27,9 +27,7 @@ export default class JavaScriptPack implements Pack {
     }
 
     public include(include: PackIncludeOption): this {
-        this.options.include = typeof include === 'string'
-            ? micromatch.makeRe(include, { dot: true })
-            : include;
+        this.options.include = typeof include === 'string' ? micromatch.makeRe(include, { dot: true }) : include;
 
         return this;
     }

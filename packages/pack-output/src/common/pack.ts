@@ -27,7 +27,9 @@ export default class OutputPack implements Pack {
             this.configuration.output.path = resolve(options.root!, this.options.path!);
             this.configuration.output.publicPath = this.options.web;
             this.configuration.output.filename = options.hash ? '[name].[contenthash:8].js' : '[name].js';
-            this.configuration.output.chunkFilename = options.hash ? 'chunks/[name].[contenthash:8].js' : 'chunks/[name].js';
+            this.configuration.output.chunkFilename = options.hash
+                ? 'chunks/[name].[contenthash:8].js'
+                : 'chunks/[name].js';
         }
 
         return this.configuration;

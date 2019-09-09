@@ -1,24 +1,6 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "target": "es2015",
-    "newLine": "lf",
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "strict": true,
-    "removeComments": true,
-    "allowUnreachableCode": true,
-    "noUnusedParameters": false,
-    "noUnusedLocals": true,
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true,
-    "stripInternal": true,
-    "esModuleInterop": true,
-    "noImplicitReturns": true,
     "baseUrl": "./",
     "paths": {
       "@packmule/*": [

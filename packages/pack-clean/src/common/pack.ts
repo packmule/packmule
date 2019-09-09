@@ -7,8 +7,6 @@ export default class CleanPack implements Pack {
         plugins: [],
     };
 
-    public constructor(path?: string) {}
-
     public generate(options: Options): webpack.Configuration {
         const clean = new CleanWebpackPlugin();
         this.configuration.plugins!.push(clean);

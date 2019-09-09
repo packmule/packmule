@@ -23,6 +23,9 @@
   "files": [
     "module/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "babel-loader": "^8.0.6",
     "eslint-formatter-pretty": "^2.1.1",
@@ -30,9 +33,14 @@
     "micromatch": "^4.0.2"
   },
   "devDependencies": {
+    "@packmule/core": "^2.0.0",
     "@types/micromatch": "^3.1.0"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "^2.0.0",
+    "@babel/core": "*"
+  },
+  "optionalDependencies": {
+    "eslint": "*"
   }
 }

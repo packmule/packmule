@@ -1,4 +1,1 @@
-export {
-    default,
-    default as VuePack,
-} from './common/pack';
+export { default, default as VuePack } from './common/pack';
