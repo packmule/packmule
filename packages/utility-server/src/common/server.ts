@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import browsersync from 'browser-sync';
+import { Local as Browserstack } from 'browserstack-local';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
@@ -43,5 +44,22 @@ export default class Server {
         });
 
         return instances.length === 1 ? instances[0] : instances;
+    }
+
+    public tunnel(key?: string): Promise<Browserstack> {
+        const client = new Browserstack();
+
+        return new Promise((resolve, reject) => {
+            client.start(
+                {
+                    key,
+                    force: true,
+                    forceLocal: true,
+                },
+                (error?: any) => {
+                    error ? reject() : resolve(client);
+                },
+            );
+        });
     }
 }
