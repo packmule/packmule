@@ -1,0 +1,23 @@
+name: Publish nightly packages
+
+on:
+  schedule:
+    - cron:  '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+          registry-url: https://registry.npmjs.org/
+      - run: |
+          npm install --global npm
+          npm install
+          npm test
+          npm run publish:nightly
+        env:
+          CI: true
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
