@@ -18,6 +18,7 @@ CompressionPack({
     extensions: ['html', 'json', 'xml', 'js', 'css', 'svg', 'ttf', 'otf'],
     gzip: true,
     brotli: true,
+    ratio: 1,
 });
 ```
 

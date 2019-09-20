@@ -8,6 +8,7 @@ export interface PackOptions {
     extensions?: string[];
     gzip?: boolean;
     brotli?: boolean;
+    ratio?: number;
     include?: PackIncludeOption;
 }
 
@@ -17,6 +18,7 @@ export default class CompressionPack implements Pack {
         extensions: ['html', 'json', 'xml', 'js', 'css', 'svg', 'ttf', 'otf'],
         gzip: true,
         brotli: true,
+        ratio: 1,
     };
 
     private configuration: webpack.Configuration = {
@@ -47,6 +49,7 @@ export default class CompressionPack implements Pack {
                     include: this.options.include,
                     cache: options.cache,
                     filename: '[path].gz[query]',
+                    minRatio: this.options.ratio,
                 });
 
                 this.configuration.plugins!.push(gzip);
@@ -58,6 +61,7 @@ export default class CompressionPack implements Pack {
                     include: this.options.include,
                     cache: options.cache,
                     filename: '[path].br[query]',
+                    minRatio: this.options.ratio,
                     algorithm(input: any, compressionOptions: any, callback: any) {
                         return iltorb.compress(input, compressionOptions, callback);
                     },
