@@ -22,7 +22,7 @@ export default class Packmule {
         debug: false,
     };
 
-    public constructor(mode?: 'development' | 'production' | 'none', options?: Options) {
+    public constructor(mode: 'development' | 'production' | 'none' = 'none', options?: Options) {
         this.options = { ...this.defaults, ...{ mode }, ...options };
         this.hints = presets[this.options.mode!];
 
