@@ -9,7 +9,7 @@ test('pack instantiation', (t) => {
 
 test('resolvable file extension is set', (t) => {
     const pack = new Pack();
-    const configuration = pack.generate({});
+    const configuration = pack.generate({}, {});
 
     t.true(configuration.resolve!.extensions!.includes('.less'));
 });
