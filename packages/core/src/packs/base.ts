@@ -20,10 +20,6 @@ export default class BasePack implements Pack {
             this.configuration.plugins!.push(new BarPlugin());
         }
 
-        if (options.optimize) {
-            this.configuration.plugins!.push(new webpack.HashedModuleIdsPlugin());
-        }
-
         return this.configuration;
     }
 }

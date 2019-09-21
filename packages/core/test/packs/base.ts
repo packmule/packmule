@@ -57,14 +57,3 @@ test('webpackbar plugin is disabled for json output', (t) => {
 
     t.false(result);
 });
-
-test('hashed module plugin is set for the optimize option', (t) => {
-    const pack = new Pack();
-    const configuration = pack.generate({
-        optimize: true,
-    });
-
-    const result = configuration.plugins!.some((plugin) => plugin instanceof webpack.HashedModuleIdsPlugin);
-
-    t.true(result);
-});
