@@ -21,10 +21,13 @@ TypeScriptPack()
 
 ## Options
 
+-   **debug** - _Controls generation of source maps for the generated JS._
+
+## Hints
+
 -   **cache** - _Controls cache utilization of the `babel-loader`._
 -   **lint** - _Controls source-code linting via `eslint-loader`._
 -   **fix** - _Controls source-code fixing via `eslint-loader`._
--   **debug** - _Controls generation of source maps for the generated JS._
 
 ## Usage
 
