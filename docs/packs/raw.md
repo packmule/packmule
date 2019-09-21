@@ -13,7 +13,7 @@ RawPack(configuration: webpack.Configuration)
 Merge custom Webpack configuration.
 
 ```ts
-import Packmule, { RawPack } from '@pixelart/packmule';
+import Packmule, { RawPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 

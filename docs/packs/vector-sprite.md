@@ -15,7 +15,7 @@ VectorSpritePack(name: string)
 Generate a vector sprite.
 
 ```ts
-import Packmule, { VectorSpritePack } from '@pixelart/packmule';
+import Packmule, { VectorSpritePack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new VectorSpritePack('common').to('sprites/').include('**/assets/base/icons/common/*.svg'));

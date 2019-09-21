@@ -20,7 +20,7 @@ ImageOptimizationPack()
 Optimize images.
 
 ```ts
-import Packmule, { ImageOptimizationPack } from '@pixelart/packmule';
+import Packmule, { ImageOptimizationPack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 packmule.register(new ImageOptimizationPack().include('assets/images/**').to('images/'));

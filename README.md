@@ -16,7 +16,7 @@
 
 Run the following command within your project directory to install `packmule`.
 ```
-npm install --save-dev @pixelart/packmule
+npm install --save-dev @packmule/packmule
 ```
 
 ## Example
@@ -28,7 +28,7 @@ import Packmule, {
     SassPack,
     TypeScriptPack,
     CompressionPack,
-} from '@pixelart/packmule';
+} from '@packmule/packmule';
 
 const packmule = new Packmule(mode);
 packmule.register(new EntryPack('main.ts'));

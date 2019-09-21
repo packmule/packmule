@@ -16,7 +16,7 @@ TypeScriptPack({
 Configure entry and asset sizes.
 
 ```ts
-import Packmule, { MeasurePack } from '@pixelart/packmule';
+import Packmule, { MeasurePack } from '@packmule/packmule';
 
 const packmule = new Packmule();
 

@@ -27,7 +27,7 @@ SassPack()
 Configure compiling SCSS to CSS.
 
 ```ts
-import Packmule, { SassPack } from '@pixelart/packmule';
+import Packmule, { SassPack } from '@packmule/packmule';
 import * as MagicImporter from 'node-sass-magic-importer';
 
 const packmule = new Packmule();
