@@ -32,6 +32,6 @@
     "@types/webpack-hot-middleware": "^2.16.5"
   },
   "peerDependencies": {
-    "webpack": "^4.0.0"
+    "webpack": "^5.0.0"
   }
 }

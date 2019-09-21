@@ -39,6 +39,6 @@
     "@types/webpackbar": "^2.6.0"
   },
   "peerDependencies": {
-    "webpack": "^4.0.0"
+    "webpack": "^5.0.0"
   }
 }
