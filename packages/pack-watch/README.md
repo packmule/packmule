@@ -1,6 +1,6 @@
 # Watch Pack
 
-> Packmule pack to bundle file watching.
+> Packmule pack to handle file watching.
 
 ## Setup
 
