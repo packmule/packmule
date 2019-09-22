@@ -71,6 +71,7 @@ Several packs expose API methods to include or exclude files from processing usi
 * **[SveltePack](packages/pack-svelte/)** - Handle `svelte` single-file-component files.
 * **[TypeScriptPack](packages/pack-typescript/)** - Compile TS to JS including Babel support.
 * **[VuePack](packages/pack-vue/)** - Handle `vue` single-file-component files.
+* **[WatchPack](packages/pack-watch/)** - Handle file watching.
 
 ## License
 

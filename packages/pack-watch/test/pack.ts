@@ -1,5 +1,5 @@
 import test from 'ava';
-import Pack from '../../src/packs/watch';
+import Pack from '../src/';
 
 test('pack instantiation', (t) => {
     const pack = new Pack();
