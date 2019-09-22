@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
 import SpritePlugin from 'external-svg-sprite-loader';
-import { Options, Pack, PackIncludeOption } from '@packmule/core';
+import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     name?: string;
@@ -40,7 +40,7 @@ export default class VectorSpritePack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.svg$/,
             include: this.options.include,
@@ -50,7 +50,7 @@ export default class VectorSpritePack implements Pack {
         const generation: webpack.Loader = {
             loader: SpritePlugin.loader,
             options: {
-                name: `${this.options.path}${this.options.name}${options.hash ? '.[hash:8]' : ''}.svg`,
+                name: `${this.options.path}${this.options.name}${hints.hash ? '.[hash:8]' : ''}.svg`,
                 iconName: '[name]',
             },
         };

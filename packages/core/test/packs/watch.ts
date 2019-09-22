@@ -9,7 +9,7 @@ test('pack instantiation', (t) => {
 
 test('watch is disabled by default', (t) => {
     const pack = new Pack();
-    const configuration = pack.generate({});
+    const configuration = pack.generate({}, {});
 
     t.falsy(configuration.watch);
 });

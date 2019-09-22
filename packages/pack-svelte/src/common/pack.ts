@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
-import { Options, Pack, PackIncludeOption } from '@packmule/core';
+import { Options, Hints, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     include?: PackIncludeOption;
@@ -32,7 +32,7 @@ export default class SveltePack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.svelte$/,
             include: this.options.include,
@@ -42,8 +42,8 @@ export default class SveltePack implements Pack {
         const compilation: webpack.Loader = {
             loader: 'svelte-loader',
             options: {
-                emitCss: options.extract,
-                hotReload: options.watch,
+                emitCss: hints.extract,
+                hotReload: hints.watch,
             },
         };
 

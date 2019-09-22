@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import ExtractPlugin from 'mini-css-extract-plugin';
 import OptimizePlugin from 'optimize-css-assets-webpack-plugin';
 import LintPlugin from 'stylelint-webpack-plugin';
-import { Options, Pack } from '@packmule/core';
+import { Hints, Options, Pack } from '@packmule/core';
 
 interface PackOptions {
     modules?: boolean;
@@ -36,7 +36,7 @@ export default class LessPack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         let loaders: webpack.Loader[] | webpack.Loader = [
             {
                 loader: 'css-loader',
@@ -67,9 +67,9 @@ export default class LessPack implements Pack {
             },
         ];
 
-        if (options.lint) {
+        if (hints.lint) {
             const lint = new LintPlugin({
-                fix: options.fix,
+                fix: hints.fix,
                 emitErrors: false,
                 failOnError: false,
                 lintDirtyModulesOnly: true,
@@ -78,10 +78,10 @@ export default class LessPack implements Pack {
             this.configuration.plugins!.push(lint);
         }
 
-        if (options.extract) {
+        if (hints.extract) {
             const extraction = new ExtractPlugin({
-                filename: options.hash ? '[name].[contenthash:8].css' : '[name].css',
-                chunkFilename: options.hash ? 'chunks/[name].[contenthash:8].css' : 'chunks/[name].css',
+                filename: hints.hash ? '[name].[contenthash:8].css' : '[name].css',
+                chunkFilename: hints.hash ? 'chunks/[name].[contenthash:8].css' : 'chunks/[name].css',
             });
 
             this.configuration.plugins!.push(extraction);
@@ -99,7 +99,7 @@ export default class LessPack implements Pack {
             ];
         }
 
-        if (options.optimize) {
+        if (hints.optimize) {
             const optimization = new OptimizePlugin();
             this.configuration.optimization!.minimizer!.push(optimization);
         }

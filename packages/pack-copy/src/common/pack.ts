@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
-import { Options, Pack, PackIncludeOption } from '@packmule/core';
+import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     path?: string;
@@ -32,7 +32,7 @@ export default class CopyPack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /.+/,
             type: 'javascript/auto',
@@ -43,7 +43,7 @@ export default class CopyPack implements Pack {
         const extraction: webpack.Loader = {
             loader: 'file-loader',
             options: {
-                name: options.hash ? '[name].[hash:8].[ext]' : '[name].[ext]',
+                name: hints.hash ? '[name].[hash:8].[ext]' : '[name].[ext]',
                 outputPath: this.options.path,
             },
         };

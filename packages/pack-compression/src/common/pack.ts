@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import micromatch from 'micromatch';
 import iltorb from 'iltorb';
 import CompressionPlugin from 'compression-webpack-plugin';
-import { Options, Pack, PackIncludeOption } from '@packmule/core';
+import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 export interface PackOptions {
     extensions?: string[];
@@ -38,16 +38,16 @@ export default class CompressionPack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const pattern = '(' + this.options.extensions!.map((extension: string) => `\\.${extension}`).join('|') + ')$';
         const expression = new RegExp(pattern, 'i');
 
-        if (options.optimize) {
+        if (hints.optimize) {
             if (this.options.gzip) {
                 const gzip = new CompressionPlugin({
                     test: expression,
                     include: this.options.include,
-                    cache: options.cache,
+                    cache: hints.cache,
                     filename: '[path].gz[query]',
                     minRatio: this.options.ratio,
                 });
@@ -59,7 +59,7 @@ export default class CompressionPack implements Pack {
                 const brotli = new CompressionPlugin({
                     test: expression,
                     include: this.options.include,
-                    cache: options.cache,
+                    cache: hints.cache,
                     filename: '[path].br[query]',
                     minRatio: this.options.ratio,
                     algorithm(input: any, compressionOptions: any, callback: any) {

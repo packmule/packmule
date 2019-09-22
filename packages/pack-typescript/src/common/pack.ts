@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
 import formatter from 'eslint-formatter-pretty';
-import { Options, Pack, PackIncludeOption } from '@packmule/core';
+import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     include?: PackIncludeOption;
@@ -32,7 +32,7 @@ export default class TypeScriptPack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.tsx?$/,
             include: this.options.include,
@@ -42,7 +42,7 @@ export default class TypeScriptPack implements Pack {
         const transpilation: webpack.Loader = {
             loader: 'babel-loader',
             options: {
-                cacheDirectory: options.cache,
+                cacheDirectory: hints.cache,
             },
         };
 
@@ -64,12 +64,12 @@ export default class TypeScriptPack implements Pack {
             rule.use.push(compilation);
         }
 
-        if (options.lint) {
+        if (hints.lint) {
             const linting: webpack.Loader = {
                 loader: 'eslint-loader',
                 options: {
-                    fix: options.fix,
-                    cache: options.cache,
+                    fix: hints.fix,
+                    cache: hints.cache,
                     formatter: formatter,
                 },
             };

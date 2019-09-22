@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import NotifierPlugin from 'webpack-notifier';
-import { Options, Pack } from '@packmule/core';
+import { Hints, Options, Pack } from '@packmule/core';
 
 export interface PackOptions {
     alwaysNotify?: boolean;
@@ -25,8 +25,8 @@ export default class NotificationPack implements Pack {
         };
     }
 
-    public generate(options: Options): webpack.Configuration {
-        if (options.notify) {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
+        if (hints.notify) {
             this.configuration.plugins!.push(new NotifierPlugin(this.options));
         }
 

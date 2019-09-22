@@ -22,7 +22,7 @@ SassPack()
     .modules()
 ```
 
-## Options
+## Hints
 
 -   **optimize** - _Enables or disables minification of the generated CSS._
 -   **debug** - _Controls generation of source maps for the generated CSS._

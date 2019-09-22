@@ -18,7 +18,7 @@ ImageOptimizationPack()
     .to(path: string)
 ```
 
-## Options
+## Hints
 
 -   **optimize** - _Controls whether `image-webpack-loader` optimizes images or not._
 

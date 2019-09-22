@@ -22,7 +22,7 @@ CompressionPack({
 });
 ```
 
-## Options
+## Hints
 
 -   **optimize** - _Controls whether the pack is actually enabled or not._
 -   **cache** - _Controls cache utilization for the compression libraries._

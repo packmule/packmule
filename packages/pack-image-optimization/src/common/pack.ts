@@ -3,7 +3,7 @@ import micromatch from 'micromatch';
 import mozjpeg from 'imagemin-mozjpeg';
 import pngquant from 'imagemin-pngquant';
 import ImagePlugin from 'imagemin-webpack-plugin';
-import { Options, Pack, PackIncludeOption } from '@packmule/core';
+import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     extensions: string[];
@@ -39,7 +39,7 @@ export default class ImageOptimizationPack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const pattern = '(' + this.options.extensions.map((extension: string) => `\\.${extension}`).join('|') + ')$';
         const expression = new RegExp(pattern, 'i');
 
@@ -52,29 +52,32 @@ export default class ImageOptimizationPack implements Pack {
         const extraction: webpack.Loader = {
             loader: 'file-loader',
             options: {
-                name: options.hash ? '[name].[hash:8].[ext]' : '[name].[ext]',
+                name: hints.hash ? '[name].[hash:8].[ext]' : '[name].[ext]',
                 outputPath: this.options.path || undefined,
             },
         };
 
-        const optimization = new ImagePlugin({
-            disable: !options.optimize,
-            test: this.options.include,
-            jpegtran: null,
-            optipng: null,
-            plugins: [
-                mozjpeg({
-                    quality: 80,
-                }),
-                pngquant({
-                    speed: 3,
-                }),
-            ],
-        });
-
         Array.isArray(rule.use) && rule.use.push(extraction);
         this.configuration.module!.rules.push(rule);
-        this.configuration.plugins!.push(optimization);
+
+        if (hints.optimize) {
+            const optimization = new ImagePlugin({
+                test: this.options.include,
+                jpegtran: null,
+                optipng: null,
+                plugins: [
+                    mozjpeg({
+                        quality: 80,
+                    }),
+                    pngquant({
+                        speed: 3,
+                        strip: true,
+                    }),
+                ],
+            });
+
+            this.configuration.plugins!.push(optimization);
+        }
 
         return this.configuration;
     }

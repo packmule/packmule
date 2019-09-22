@@ -1,6 +1,6 @@
 import { resolve } from 'path';
 import webpack from 'webpack';
-import { Options, Pack } from '@packmule/core';
+import { Hints, Options, Pack } from '@packmule/core';
 
 interface PackOptions {
     path?: string;
@@ -22,12 +22,12 @@ export default class OutputPack implements Pack {
         };
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         if (this.configuration.output) {
             this.configuration.output.path = resolve(options.root!, this.options.path!);
             this.configuration.output.publicPath = this.options.web;
-            this.configuration.output.filename = options.hash ? '[name].[contenthash:8].js' : '[name].js';
-            this.configuration.output.chunkFilename = options.hash
+            this.configuration.output.filename = hints.hash ? '[name].[contenthash:8].js' : '[name].js';
+            this.configuration.output.chunkFilename = hints.hash
                 ? 'chunks/[name].[contenthash:8].js'
                 : 'chunks/[name].js';
         }

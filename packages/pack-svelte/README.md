@@ -14,6 +14,10 @@ npm install --save-dev @packmule/svelte-pack svelte
 SveltePack();
 ```
 
+## Hints
+
+-   **extract** - _Used to determine if actual CSS files are being created._
+
 ## Usage
 
 **Example**

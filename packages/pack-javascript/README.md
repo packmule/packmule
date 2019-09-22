@@ -19,7 +19,7 @@ JavaScriptPack()
     .include(glob: string)
 ```
 
-## Options
+## Hints
 
 -   **cache** - _Controls cache utilization of the `babel-loader`._
 -   **lint** - _Controls source-code linting via `eslint-loader`._

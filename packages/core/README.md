@@ -18,21 +18,27 @@ Packmule(mode?: 'development' | 'production' | 'none', options?: Options)
 
 ### Options
 
-Options are shared with and used by packs. Packs can choose which options to use.
+| Option    | Type      | Default  | Description                      |
+| --------- | --------- | -------- | -------------------------------- |
+| **mode**  | `string`  | `'none'` | Sets the mode for webpack.       |
+| **root**  | `string`  | `cwd`    | Sets the project root directory. |
+| **debug** | `boolean` | `false`  | Enables debugging.               |
 
-| Option       | Type      | Default                   | Description                      |
-| ------------ | --------- | ------------------------- | -------------------------------- |
-| **mode**     | `string`  | `'none'`                  | Sets the mode for webpack.       |
-| **root**     | `string`  | `dir.sync(process.cwd())` | Sets the project root directory. |
-| **optimize** | `boolean` | `false`                   | Enables optimization steps.      |
-| **extract**  | `boolean` | `false`                   | Enables file extraction.         |
-| **notify**   | `boolean` | `false`                   | Enables desktop notifications.   |
-| **watch**    | `boolean` | `false`                   | Enables file watching.           |
-| **lint**     | `boolean` | `false`                   | Enables code linting.            |
-| **fix**      | `boolean` | `false`                   | Enables code fixing.             |
-| **debug**    | `boolean` | `false`                   | Enables debugging.               |
-| **cache**    | `boolean` | `true`                    | Enables caching.                 |
-| **hash**     | `boolean` | `false`                   | Enable filename hashing.         |
+### Hints
+
+Hints are passed to and used by packs to indicate which internal tasks to run.
+Packs can choose which hints to use i.e. packs often use a small subset of available hints.
+
+| Hint         | Type      | Default | Description                    |
+| ------------ | --------- | ------- | ------------------------------ |
+| **optimize** | `boolean` | `false` | Enables optimization steps.    |
+| **extract**  | `boolean` | `false` | Enables file extraction.       |
+| **notify**   | `boolean` | `false` | Enables desktop notifications. |
+| **lint**     | `boolean` | `false` | Enables code linting.          |
+| **fix**      | `boolean` | `false` | Enables code fixing.           |
+| **cache**    | `boolean` | `true`  | Enables caching.               |
+| **hash**     | `boolean` | `false` | Enables filename hashing.      |
+| **watch**    | `boolean` | `false` | Enables file watching.         |
 
 ## License
 

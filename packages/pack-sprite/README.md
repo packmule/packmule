@@ -16,6 +16,10 @@ SpritePack(name: string)
     .to(path: string)
 ```
 
+## Hints
+
+-   **hash** - _Configures whether file name hashing is enabled or not._
+
 ## Usage
 
 **Example**

@@ -11,28 +11,28 @@ test('pack instantiation', (t) => {
 
 test('directory context is not set by default', (t) => {
     const pack = new Pack();
-    const configuration = pack.generate({});
+    const configuration = pack.generate({}, {});
 
     t.falsy(configuration.context);
 });
 
 test('webpack cache is false by default', (t) => {
     const pack = new Pack();
-    const configuration = pack.generate({});
+    const configuration = pack.generate({}, {});
 
     t.falsy(configuration.cache);
 });
 
 test('default webpack mode is not set by default', (t) => {
     const pack = new Pack();
-    const configuration = pack.generate({});
+    const configuration = pack.generate({}, {});
 
     t.falsy(configuration.mode);
 });
 
 test('resolvable file extensions are set by default', (t) => {
     const pack = new Pack();
-    const configuration = pack.generate({});
+    const configuration = pack.generate({}, {});
 
     t.assert(configuration.resolve!.extensions!.includes('.js'));
     t.assert(configuration.resolve!.extensions!.includes('.json'));
@@ -40,7 +40,7 @@ test('resolvable file extensions are set by default', (t) => {
 
 test('webpackbar plugin is enabled by default', (t) => {
     const pack = new Pack();
-    const configuration = pack.generate({});
+    const configuration = pack.generate({}, {});
 
     const result = configuration.plugins!.some((plugin) => plugin instanceof BarPlugin);
 
@@ -51,7 +51,7 @@ test('webpackbar plugin is disabled for json output', (t) => {
     process.argv.push('--json');
 
     const pack = new Pack();
-    const configuration = pack.generate({});
+    const configuration = pack.generate({}, {});
 
     const result = configuration.plugins!.some((plugin) => plugin instanceof BarPlugin);
 
@@ -60,9 +60,12 @@ test('webpackbar plugin is disabled for json output', (t) => {
 
 test('hashed module plugin is set for the optimize option', (t) => {
     const pack = new Pack();
-    const configuration = pack.generate({
-        optimize: true,
-    });
+    const configuration = pack.generate(
+        {},
+        {
+            optimize: true,
+        },
+    );
 
     const result = configuration.plugins!.some((plugin) => plugin instanceof webpack.HashedModuleIdsPlugin);
 

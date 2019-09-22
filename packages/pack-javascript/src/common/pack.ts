@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
 import formatter from 'eslint-formatter-pretty';
-import { Options, Pack, PackIncludeOption } from '@packmule/core';
+import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     include?: PackIncludeOption;
@@ -32,7 +32,7 @@ export default class JavaScriptPack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /\.js$/,
             include: this.options.include,
@@ -42,18 +42,18 @@ export default class JavaScriptPack implements Pack {
         const transpilation: webpack.Loader = {
             loader: 'babel-loader',
             options: {
-                cacheDirectory: options.cache,
+                cacheDirectory: hints.cache,
             },
         };
 
         Array.isArray(rule.use) && rule.use.push(transpilation);
 
-        if (options.lint) {
+        if (hints.lint) {
             const linting: webpack.Loader = {
                 loader: 'eslint-loader',
                 options: {
-                    fix: options.fix,
-                    cache: options.cache,
+                    fix: hints.fix,
+                    cache: hints.cache,
                     formatter: formatter,
                 },
             };

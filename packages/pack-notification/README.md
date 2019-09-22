@@ -17,7 +17,7 @@ npm install --save-dev @packmule/notification-pack
 NotifyPack();
 ```
 
-## Options
+## Hints
 
 -   **notify** - _Controls whether the pack is actually enabled or not._
 
