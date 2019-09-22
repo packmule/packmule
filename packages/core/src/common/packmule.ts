@@ -18,7 +18,6 @@ export default class Packmule {
     private defaults: Options = {
         mode: 'none',
         root: dir.sync(process.cwd()),
-        watch: false,
         debug: false,
     };
 

@@ -7,4 +7,5 @@ export default interface Hints {
     map?: boolean;
     cache?: boolean;
     hash?: boolean;
+    watch?: boolean;
 }

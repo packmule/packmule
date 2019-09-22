@@ -22,7 +22,6 @@ Packmule(mode?: 'development' | 'production' | 'none', options?: Options)
 | --------- | --------- | -------- | -------------------------------- |
 | **mode**  | `string`  | `'none'` | Sets the mode for webpack.       |
 | **root**  | `string`  | `cwd`    | Sets the project root directory. |
-| **watch** | `boolean` | `false`  | Enables file watching.           |
 | **debug** | `boolean` | `false`  | Enables debugging.               |
 
 ### Hints
@@ -35,11 +34,11 @@ Packs can choose which hints to use i.e. packs often use a small subset of avail
 | **optimize** | `boolean` | `false` | Enables optimization steps.    |
 | **extract**  | `boolean` | `false` | Enables file extraction.       |
 | **notify**   | `boolean` | `false` | Enables desktop notifications. |
-| **watch**    | `boolean` | `false` | Enables file watching.         |
 | **lint**     | `boolean` | `false` | Enables code linting.          |
 | **fix**      | `boolean` | `false` | Enables code fixing.           |
 | **cache**    | `boolean` | `true`  | Enables caching.               |
-| **hash**     | `boolean` | `false` | Enable filename hashing.       |
+| **hash**     | `boolean` | `false` | Enables filename hashing.      |
+| **watch**    | `boolean` | `false` | Enables file watching.         |
 
 ## License
 

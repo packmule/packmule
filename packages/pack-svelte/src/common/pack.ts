@@ -43,7 +43,7 @@ export default class SveltePack implements Pack {
             loader: 'svelte-loader',
             options: {
                 emitCss: hints.extract,
-                hotReload: options.watch,
+                hotReload: hints.watch,
             },
         };
 

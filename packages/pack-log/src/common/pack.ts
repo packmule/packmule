@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import { Options, Pack } from '@packmule/core';
+import { Options, Hints, Pack } from '@packmule/core';
 
 export default class LogPack implements Pack {
     private configuration: webpack.Configuration = {
@@ -36,8 +36,8 @@ export default class LogPack implements Pack {
         },
     };
 
-    public generate(options: Options): webpack.Configuration {
-        (this.configuration.stats as any).assets = !options.watch;
+    public generate(options: Options, hints: Hints): webpack.Configuration {
+        (this.configuration.stats as any).assets = !hints.watch;
         return this.configuration;
     }
 }
