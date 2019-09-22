@@ -8,7 +8,6 @@ import Options from './options';
 import BasePack from '../packs/base';
 import OptimizationPack from '../packs/optimization';
 import MinificationPack from '../packs/minification';
-import WatchPack from '../packs/watch';
 
 export default class Packmule {
     private packs: Map<Pack, Hints | undefined> = new Map();
@@ -28,7 +27,6 @@ export default class Packmule {
         this.add(new BasePack());
         this.add(new OptimizationPack());
         this.add(new MinificationPack());
-        this.add(new WatchPack());
     }
 
     public add(pack: Pack, hints?: Hints): this {

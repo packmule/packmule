@@ -78,6 +78,9 @@
       "path": "./packages/pack-vue/"
     },
     {
+      "path": "./packages/pack-watch/"
+    },
+    {
       "path": "./packages/utility-server/"
     }
   ]
