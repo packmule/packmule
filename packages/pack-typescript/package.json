@@ -38,8 +38,8 @@
     "@types/micromatch": "^3.1.0"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0",
     "@babel/core": "*",
+    "@packmule/core": "^2.0.0",
     "typescript": "*"
   },
   "optionalDependencies": {

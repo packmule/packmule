@@ -45,13 +45,12 @@
     "@types/mini-css-extract-plugin": "^0.2.1",
     "@types/optimize-css-assets-webpack-plugin": "^1.3.4",
     "@types/sass": "^1.16.0",
-    "@types/stylelint-webpack-plugin": "^0.1.3"
+    "@types/stylelint-webpack-plugin": "^0.1.3",
+    "sass": "^1.22.12",
+    "stylelint": "^11.0.0"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0",
     "sass": "*"
-  },
-  "optionalDependencies": {
-    "stylelint": "*"
   }
 }
