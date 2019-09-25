@@ -14,14 +14,8 @@ export default class MinificationPack implements Pack {
     public generate(options: Options, hints: Hints): webpack.Configuration {
         if (hints.optimize) {
             const terser = new TerserPlugin({
-                parallel: true,
                 cache: hints.cache,
                 sourceMap: hints.map,
-                terserOptions: {
-                    mangle: {
-                        keep_fnames: true,
-                    },
-                },
             });
 
             this.configuration.optimization!.minimizer!.push(terser);

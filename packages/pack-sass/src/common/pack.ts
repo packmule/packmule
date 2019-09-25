@@ -71,9 +71,11 @@ export default class SassPack implements Pack {
                 loader: 'sass-loader',
                 options: {
                     implementation: sass,
-                    fiber: fibers,
                     sourceMap: true,
-                    importer: this.options.importers,
+                    sassOptions: {
+                        fiber: fibers,
+                        importer: this.options.importers,
+                    },
                 },
             },
         ];

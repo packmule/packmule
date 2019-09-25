@@ -22,12 +22,12 @@
   },
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "browserstack-local": "^1.4.0",
-    "webpack-dev-middleware": "^3.7.0",
+    "browserstack-local": "^1.4.2",
+    "webpack-dev-middleware": "^3.7.1",
     "webpack-hot-middleware": "^2.25.0"
   },
   "devDependencies": {
-    "@types/browser-sync": "^2.26.0",
+    "@types/browser-sync": "^2.26.1",
     "@types/webpack-dev-middleware": "^2.0.3",
     "@types/webpack-hot-middleware": "^2.16.5"
   },
