@@ -1,8 +1,10 @@
 import webpack from 'webpack';
+import BarPlugin from 'webpackbar';
 import { Options, Hints, Pack } from '@packmule/core';
 
 export default class LogPack implements Pack {
     private configuration: webpack.Configuration = {
+        plugins: [],
         stats: {
             assetsSort: 'id',
             builtAt: false,
@@ -38,6 +40,11 @@ export default class LogPack implements Pack {
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
         (this.configuration.stats as any).assets = !hints.watch;
+
+        if (!process.argv.includes('--json')) {
+            this.configuration.plugins!.push(new BarPlugin());
+        }
+
         return this.configuration;
     }
 }

@@ -26,8 +26,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "webpackbar": "^4.0.0"
+  },
   "devDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "^2.0.0",
+    "@types/webpackbar": "^2.6.0"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0"
