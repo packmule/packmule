@@ -29,13 +29,11 @@
   "dependencies": {
     "pkg-dir": "^4.2.0",
     "terser-webpack-plugin": "^2.1.0",
-    "webpack-merge": "^4.2.2",
-    "webpackbar": "^4.0.0"
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "@types/terser-webpack-plugin": "^1.2.1",
-    "@types/webpack-merge": "^4.1.5",
-    "@types/webpackbar": "^2.6.0"
+    "@types/webpack-merge": "^4.1.5"
   },
   "peerDependencies": {
     "webpack": "^4.0.0"
