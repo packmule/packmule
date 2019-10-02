@@ -82,10 +82,9 @@ export default class SassPack implements Pack {
 
         if (hints.lint) {
             const lint = new LintPlugin({
-                fix: hints.fix,
-                emitErrors: false,
-                failOnError: false,
+                context: options.root,
                 lintDirtyModulesOnly: true,
+                files: '**/*.s(a|c)ss',
             });
 
             this.configuration.plugins!.push(lint);
