@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
 import iltorb from 'iltorb';
+import { gzip as zopfli } from '@gfx/zopfli';
 import CompressionPlugin from 'compression-webpack-plugin';
 import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
@@ -50,6 +51,7 @@ export default class CompressionPack implements Pack {
                     cache: hints.cache,
                     filename: '[path].gz[query]',
                     minRatio: this.options.ratio,
+                    algorithm: zopfli,
                 });
 
                 this.configuration.plugins!.push(gzip);
