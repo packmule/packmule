@@ -72,6 +72,7 @@ export default class LessPack implements Pack {
                 context: options.root,
                 lintDirtyModulesOnly: true,
                 files: '**/*.{less}',
+                quiet: !options.debug,
             });
 
             this.configuration.plugins!.push(lint);

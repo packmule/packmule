@@ -85,6 +85,7 @@ export default class SassPack implements Pack {
                 context: options.root,
                 lintDirtyModulesOnly: true,
                 files: '**/*.{css,scss,sass}',
+                quiet: !options.debug,
             });
 
             this.configuration.plugins!.push(lint);
