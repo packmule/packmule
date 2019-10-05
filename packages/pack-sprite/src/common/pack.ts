@@ -50,7 +50,7 @@ export default class VectorSpritePack implements Pack {
         const generation: webpack.Loader = {
             loader: SpritePlugin.loader,
             options: {
-                name: `${this.options.path}${this.options.name}${hints.hash ? '.[hash:8]' : ''}.svg`,
+                name: `${this.options.path}${this.options.name}${hints.hash ? '.[contenthash:8]' : ''}.svg`,
                 iconName: '[name]',
             },
         };
