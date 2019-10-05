@@ -20,7 +20,7 @@ export default class SassPack implements Pack {
 
     private configuration: webpack.Configuration = {
         resolve: {
-            extensions: ['.scss', '.sass'],
+            extensions: ['.css', '.scss', '.sass'],
         },
         module: {
             rules: [],
@@ -84,7 +84,7 @@ export default class SassPack implements Pack {
             const lint = new LintPlugin({
                 context: options.root,
                 lintDirtyModulesOnly: true,
-                files: '**/*.s(a|c)ss',
+                files: '**/*.{css,scss,sass}',
             });
 
             this.configuration.plugins!.push(lint);
@@ -117,7 +117,7 @@ export default class SassPack implements Pack {
         }
 
         const rule: webpack.RuleSetRule = {
-            test: /\.s[ac]ss$/,
+            test: /\.(css|scss|sass)$/,
             use: loaders,
         };
 

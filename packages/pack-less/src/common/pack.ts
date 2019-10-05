@@ -16,7 +16,7 @@ export default class LessPack implements Pack {
 
     private configuration: webpack.Configuration = {
         resolve: {
-            extensions: ['.less'],
+            extensions: ['.css', '.less'],
         },
         module: {
             rules: [],
@@ -71,7 +71,7 @@ export default class LessPack implements Pack {
             const lint = new LintPlugin({
                 context: options.root,
                 lintDirtyModulesOnly: true,
-                files: '**/*.less',
+                files: '**/*.{less}',
             });
 
             this.configuration.plugins!.push(lint);
@@ -104,7 +104,7 @@ export default class LessPack implements Pack {
         }
 
         const rule: webpack.RuleSetRule = {
-            test: /\.less$/,
+            test: /\.(css|less)$/,
             use: loaders,
         };
 
