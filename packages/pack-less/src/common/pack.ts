@@ -91,9 +91,6 @@ export default class LessPack implements Pack {
             loaders = [
                 {
                     loader: 'style-loader',
-                    options: {
-                        sourceMap: options.debug,
-                    },
                 },
                 ...loaders,
             ];

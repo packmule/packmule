@@ -104,9 +104,6 @@ export default class SassPack implements Pack {
             loaders = [
                 {
                     loader: 'style-loader',
-                    options: {
-                        sourceMap: options.debug,
-                    },
                 },
                 ...loaders,
             ];
