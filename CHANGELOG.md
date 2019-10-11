@@ -15,6 +15,7 @@
 * Add `environment` pack.
 * Add `less` pack.
 * Add `watch` pack.
+* Add `cache` pack.
 
 ### changed
 * Split packmule `options` into `options` and `hints`.
