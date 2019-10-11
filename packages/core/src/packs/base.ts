@@ -13,10 +13,6 @@ export default class BasePack implements Pack {
         this.configuration.context = options.root;
         this.configuration.cache = hints.cache;
 
-        if (hints.optimize) {
-            this.configuration.plugins!.push(new webpack.HashedModuleIdsPlugin());
-        }
-
         return this.configuration;
     }
 }

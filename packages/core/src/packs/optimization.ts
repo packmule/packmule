@@ -1,5 +1,7 @@
 import webpack from 'webpack';
 import Pack from '../common/pack';
+import Options from '../common/options';
+import Hints from '../common/hints';
 
 export default class OptimizationPack implements Pack {
     private configuration: webpack.Configuration = {
@@ -17,7 +19,11 @@ export default class OptimizationPack implements Pack {
         },
     };
 
-    public generate(): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
+        if (hints.optimize) {
+            this.configuration.optimization.moduleIds = 'hashed';
+        }
+
         return this.configuration;
     }
 }
