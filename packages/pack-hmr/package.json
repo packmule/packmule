@@ -26,6 +26,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "eventsource": "^1.0.7",
+    "promise-polyfill": "^8.1.3"
+  },
   "devDependencies": {
     "@packmule/core": "^2.0.0"
   },
