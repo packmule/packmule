@@ -11,7 +11,6 @@ export default class BasePack implements Pack {
     public generate(options: Options, hints: Hints): webpack.Configuration {
         this.configuration.mode = options.mode;
         this.configuration.context = options.root;
-        this.configuration.cache = hints.cache;
 
         return this.configuration;
     }
