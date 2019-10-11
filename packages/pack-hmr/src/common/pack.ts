@@ -5,7 +5,6 @@ export interface PackOptions {
     overlay?: boolean;
     info?: boolean;
     reload?: boolean;
-    polyfill?: boolean;
 }
 
 export default class HotModuleReplacementPack implements Pack {
@@ -14,7 +13,6 @@ export default class HotModuleReplacementPack implements Pack {
         overlay: false,
         info: true,
         reload: true,
-        polyfill: true,
     };
 
     private configuration: webpack.Configuration = {
@@ -48,11 +46,6 @@ export default class HotModuleReplacementPack implements Pack {
 
         for (const entry in configuration.entry as {}) {
             configuration.entry[entry].push(`${middleware}?${query}`);
-
-            if (this.options.polyfill) {
-                configuration.entry[entry].unshift('eventsource/lib/eventsource-polyfill');
-                configuration.entry[entry].unshift('promise-polyfill/src/polyfill');
-            }
         }
 
         return configuration;
