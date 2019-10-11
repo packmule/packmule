@@ -6,10 +6,3 @@ test('pack instantiation', (t) => {
 
     t.truthy(pack);
 });
-
-test('default split chunk options are set by default', (t) => {
-    const pack = new Pack();
-    const configuration = pack.generate();
-
-    t.truthy(configuration.optimization!.splitChunks);
-});
