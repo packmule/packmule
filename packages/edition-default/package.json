@@ -38,6 +38,7 @@
     "@packmule/output-pack": "^2.0.0",
     "@packmule/performance-pack": "^2.0.0",
     "@packmule/runtime-pack": "^2.0.0",
+    "@packmule/watch-pack": "^2.0.0",
     "@packmule/server": "^2.0.0"
   }
 }
