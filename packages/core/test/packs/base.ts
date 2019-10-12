@@ -14,13 +14,6 @@ test('directory context is not set by default', (t) => {
     t.falsy(configuration.context);
 });
 
-test('webpack cache is false by default', (t) => {
-    const pack = new Pack();
-    const configuration = pack.generate({}, {});
-
-    t.falsy(configuration.cache);
-});
-
 test('default webpack mode is not set by default', (t) => {
     const pack = new Pack();
     const configuration = pack.generate({}, {});
