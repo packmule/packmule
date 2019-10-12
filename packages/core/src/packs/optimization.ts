@@ -20,10 +20,6 @@ export default class OptimizationPack implements Pack {
     };
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
-        if (hints.optimize) {
-            this.configuration.optimization!.moduleIds = 'hashed';
-        }
-
         return this.configuration;
     }
 }
