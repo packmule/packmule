@@ -2,7 +2,16 @@ import webpack from 'webpack';
 import BarPlugin from 'webpackbar';
 import { Options, Hints, Pack } from '@packmule/core';
 
+export interface PackOptions {
+    name?: string;
+}
+
 export default class LogPack implements Pack {
+    private options: PackOptions;
+    private defaults: PackOptions = {
+        name: 'packmule',
+    };
+
     private configuration: webpack.Configuration = {
         plugins: [],
         stats: {
@@ -38,11 +47,22 @@ export default class LogPack implements Pack {
         },
     };
 
+    public constructor(name?: string) {
+        this.options = {
+            ...this.defaults,
+            ...{ name },
+        };
+    }
+
     public generate(options: Options, hints: Hints): webpack.Configuration {
         (this.configuration.stats as any).assets = !hints.watch;
 
         if (!process.argv.includes('--json')) {
-            this.configuration.plugins!.push(new BarPlugin());
+            this.configuration.plugins!.push(
+                new BarPlugin({
+                    name: this.options.name,
+                }),
+            );
         }
 
         return this.configuration;
