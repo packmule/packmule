@@ -3,7 +3,7 @@ import ManifestPlugin from 'webpack-pwa-manifest';
 import { Pack } from '@packmule/core';
 
 export default class ManifestPack implements Pack {
-    private options: ManifestPlugin.ManifestOptions;
+    private readonly options: ManifestPlugin.ManifestOptions;
 
     private configuration: webpack.Configuration = {
         plugins: [],

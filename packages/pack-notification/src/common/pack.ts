@@ -2,13 +2,13 @@ import webpack from 'webpack';
 import NotifierPlugin from 'webpack-notifier';
 import { Hints, Options, Pack } from '@packmule/core';
 
-export interface PackOptions {
+interface PackOptions {
     alwaysNotify?: boolean;
     excludeWarnings?: boolean;
 }
 
 export default class NotificationPack implements Pack {
-    private options: PackOptions;
+    private readonly options: PackOptions;
     private defaults: PackOptions = {
         alwaysNotify: false,
         excludeWarnings: true,
