@@ -5,7 +5,7 @@ import { gzip as zopfli } from '@gfx/zopfli';
 import CompressionPlugin from 'compression-webpack-plugin';
 import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
-export interface PackOptions {
+interface PackOptions {
     extensions?: string[];
     gzip?: boolean;
     brotli?: boolean;

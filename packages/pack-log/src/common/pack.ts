@@ -3,7 +3,7 @@ import BarPlugin from 'webpackbar';
 import colorize from 'string-to-color';
 import { Options, Hints, Pack } from '@packmule/core';
 
-export interface PackOptions {
+interface PackOptions {
     name?: string;
 }
 

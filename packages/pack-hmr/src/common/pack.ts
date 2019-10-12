@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import { Pack } from '@packmule/core';
 
-export interface PackOptions {
+interface PackOptions {
     overlay?: boolean;
     info?: boolean;
     reload?: boolean;
