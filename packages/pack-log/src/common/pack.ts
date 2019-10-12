@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import BarPlugin from 'webpackbar';
+import colorize from 'string-to-color';
 import { Options, Hints, Pack } from '@packmule/core';
 
 export interface PackOptions {
@@ -61,6 +62,7 @@ export default class LogPack implements Pack {
             this.configuration.plugins!.push(
                 new BarPlugin({
                     name: this.options.name,
+                    color: colorize(this.options.name),
                 }),
             );
         }

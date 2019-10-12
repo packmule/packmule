@@ -27,6 +27,7 @@
     "access": "public"
   },
   "dependencies": {
+    "string-to-color": "^2.1.1",
     "webpackbar": "^4.0.0"
   },
   "devDependencies": {
