@@ -72,6 +72,9 @@
       "path": "./packages/pack-sprite/"
     },
     {
+      "path": "./packages/pack-svelte/"
+    },
+    {
       "path": "./packages/pack-typescript/"
     },
     {
