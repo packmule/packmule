@@ -49,10 +49,11 @@ export default class LogPack implements Pack {
     };
 
     public constructor(name?: string) {
-        this.options = {
-            ...this.defaults,
-            ...{ name },
-        };
+        this.options = this.defaults;
+
+        if (name) {
+            this.options.name = name;
+        }
     }
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
