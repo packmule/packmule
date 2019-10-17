@@ -42,20 +42,20 @@ export default class LessPack implements Pack {
                 loader: 'css-loader',
                 options: {
                     modules: this.options.modules,
-                    sourceMap: options.debug,
+                    sourceMap: hints.map,
                 },
             },
             {
                 loader: 'postcss-loader',
                 options: {
-                    sourceMap: options.debug,
+                    sourceMap: hints.map,
                 },
             },
             {
                 loader: 'resolve-url-loader',
                 options: {
                     engine: 'postcss',
-                    sourceMap: options.debug,
+                    sourceMap: hints.map,
                 },
             },
             {

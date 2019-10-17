@@ -54,7 +54,7 @@ export default class TypeScriptPack implements Pack {
                 onlyCompileBundledFiles: true,
                 appendTsSuffixTo: [/\.vue$/],
                 compilerOptions: {
-                    sourceMap: options.debug,
+                    sourceMap: hints.map,
                 },
             },
         };
