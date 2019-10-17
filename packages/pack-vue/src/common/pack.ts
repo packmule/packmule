@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
 import VuePlugin from 'vue-loader/lib/plugin';
-import { Options, Pack, PackIncludeOption } from '@packmule/core';
+import { Options, Hints, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     include?: PackIncludeOption;
@@ -33,7 +33,7 @@ export default class VuePack implements Pack {
         return this;
     }
 
-    public generate(options: Options): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const plugin = new VuePlugin();
 
         const rule: webpack.RuleSetRule = {
@@ -45,8 +45,7 @@ export default class VuePack implements Pack {
         const compilation: webpack.Loader = {
             loader: 'vue-loader',
             options: {
-                prettify: options.debug,
-                exposeFilename: options.debug,
+                exposeFilename: !hints.optimize,
             },
         };
 
