@@ -15,7 +15,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: |
           npm install --global npm
-          npm install
+          npm install --ignore-scripts
+          npm run setup
           npm run build
           npm test
           npm run publish:nightly
