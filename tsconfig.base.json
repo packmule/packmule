@@ -22,6 +22,7 @@
     "noImplicitReturns": true
   },
   "exclude": [
-    "packages/*/test/"
+    "packages/*/test/",
+    "packages/*/module/"
   ]
 }
