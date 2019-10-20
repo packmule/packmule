@@ -1,5 +1,8 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "scripts": {
     "prepare": "run-s clean setup build test",
     "clean": "run-p clean:*",
