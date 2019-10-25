@@ -6,6 +6,12 @@
 in your project, a `.postcssrc.json` file can be used. `stylelint` is used
 to lint styles, which can be configured via a `stylelint.json` file.
 
+-   [Setup](#setup)
+-   [API](#api)
+-   [Usage](#usage)
+-   [Internals](#internals)
+-   [License](#license)
+
 ## Setup
 
 `Sass Pack` is included in the [`complete`][edition-complete] edition.
