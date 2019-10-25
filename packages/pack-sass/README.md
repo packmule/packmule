@@ -58,7 +58,7 @@ _Enable [CSS modules][css-modules] to be used. By default modules are disabled._
 
 **Basic Usage**
 
-Register the pack to be used by `packmule` to compile Sass to CSS.
+Add the pack to be used by `packmule` to compile Sass to CSS.
 
 ```ts
 import Packmule from '@packmule/core';
@@ -67,7 +67,7 @@ import SassPack from '@packmule/sass-pack';
 const packmule = new Packmule();
 const pack = new SassPack();
 
-packmule.register(pack);
+packmule.add(pack);
 
 return packmule.generate();
 ```
@@ -84,7 +84,7 @@ import MagicImporter from 'node-sass-magic-importer';
 const packmule = new Packmule();
 const pack = new SassPack().importer(MagicImporter());
 
-packmule.register(pack);
+packmule.add(pack);
 
 return packmule.generate();
 ```
@@ -100,7 +100,7 @@ import SassPack from '@packmule/sass-pack';
 const packmule = new Packmule();
 const pack = new SassPack().modules();
 
-packmule.register(pack);
+packmule.add(pack);
 
 return packmule.generate();
 ```
@@ -131,7 +131,7 @@ import SassPack from '@packmule/sass-pack';
 const packmule = new Packmule();
 const pack = new SassPack();
 
-packmule.register(pack, {
+packmule.add(pack, {
     map: false,
     fix: false,
 });
