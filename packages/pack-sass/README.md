@@ -1,41 +1,74 @@
-# Sass Pack
+# Sass Pack [![npm-latest]][npm] [![npm-nightly]][npm]
 
 > Compile `Sass` to `CSS`.
 
-`Sass Pack` uses `PostCSS` to transform code as needed.
-To configure `PostCSS` settings in your project, a `.postcssrc.json`
-file can be used. `stylelint` is used to lint Sass code, which can
-be configured via a `stylelint.json` file.
+`Sass Pack` compiles Sass and SCSS to CSS. To configure `PostCSS` settings
+in your project, a `.postcssrc.json` file can be used. `stylelint` is used
+to lint styles, which can be configured via a `stylelint.json` file.
 
 ## Setup
+
+`Sass Pack` is included in the [`default`][edition-default] and [`complete`][edition-complete] editions.
+
+**Current Release**
 
 ```bash
 npm install --save-dev @packmule/sass-pack sass stylelint
 ```
 
+**Nightly Build**
+
+```bash
+npm install --save-dev @packmule/sass-pack@nightly sass stylelint
+```
+
 ## API
 
-```ts
-SassPack()
-    .include(glob: string)
-    .importer(importer: Function)
-    .modules()
-```
+### Methods
+
+**include(glob: string)**  
+Configure files to be processed. If not used, all files will be compiled.
+
+**importer(importer: Function)**  
+Register a custom [Sass importer][sass-importer].
+
+**modules()**  
+Enable [CSS modules][css-modules] to be used. By default modules are disabled.
 
 ## Hints
 
--   **optimize** - _Enables or disables minification of the generated CSS._
--   **debug** - _Controls generation of source maps for the generated CSS._
--   **lint** - _Defines whether code linting via `stylelint` is enabled or not._
--   **fix** - _Defines whether code fixing via `stylelint` is enabled or not._
--   **extract** - _Used to determine if actual CSS files are being created._
--   **hash** - _Configures whether file name hashing is enabled or not._
+> View the `packmule` [hints documentation][packmule-hints] for more information.
+
+-   **optimize** - _Enable or disable minification of the generated CSS._
+-   **map** - _Control generation of source maps for the generated CSS._
+-   **lint** - _Define whether code linting via `stylelint` is enabled or not._
+-   **fix** - _Define whether code fixing via `stylelint` is enabled or not._
+-   **extract** - _Use to determine if actual CSS files are being created._
+-   **hash** - _Configure whether file name hashing is enabled or not._
 
 ## Usage
 
-**Example**
+> View the `packmule` [API documentation][packmule-api] for general usage patterns.
 
-Configure compiling SCSS to CSS.
+**Basic Usage**
+
+Register the pack to be used by `packmule` to compile Sass to CSS.
+
+```ts
+import Packmule from '@packmule/core';
+import SassPack from '@packmule/sass-pack';
+
+const packmule = new Packmule();
+const pack = new SassPack();
+
+packmule.register(pack);
+
+return packmule.generate();
+```
+
+**Sass Importer**
+
+Register a custom [Sass importer][sass-importer].
 
 ```ts
 import Packmule from '@packmule/core';
@@ -43,9 +76,69 @@ import SassPack from '@packmule/sass-pack';
 import MagicImporter from 'node-sass-magic-importer';
 
 const packmule = new Packmule();
-packmule.register(new SassPack().importer(MagicImporter()));
+const pack = new SassPack().importer(MagicImporter());
+
+packmule.register(pack);
+
 return packmule.generate();
 ```
+
+**CSS Modules**
+
+Enable [CSS modules][css-modules].
+
+```ts
+import Packmule from '@packmule/core';
+import SassPack from '@packmule/sass-pack';
+
+const packmule = new Packmule();
+const pack = new SassPack().modules();
+
+packmule.register(pack);
+
+return packmule.generate();
+```
+
+**Direct Generation**
+
+Use `packmule.generate()` to directly generate the pack configuration.
+This is useful for debugging and manipulating the configuration.
+
+```ts
+import Packmule from '@packmule/core';
+import SassPack from '@packmule/sass-pack';
+
+const packmule = new Packmule();
+const pack = new SassPack();
+
+const configuration = packmule.generate(pack);
+```
+
+## Internals
+
+<details>
+    <summary>Dependencies</summary>
+    
+    This dependencies are used primarily by the pack internally.
+    
+    * `sass-loader`
+    * `css-loader`
+    * `style-loader`
+    * `postcss-loader`
+    * `resolve-url-loader`
+    * `mini-css-extract-plugin`
+    * `optimize-css-assets-webpack-plugin`
+    * `stylelint-webpack-plugin`
+</details>
+
+<details>
+    <summary>Peer Dependencies</summary>
+    
+    These peer dependencies are needed to use the pack.
+    
+    * `sass`
+    * `stylelint`
+</details>
 
 ## License
 
@@ -54,3 +147,13 @@ return packmule.generate();
 ---
 
 [<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+
+[packmule-hints]: https://www.npmjs.com/package/@packmule/core#hints
+[packmule-api]: https://www.npmjs.com/package/@packmule/core#api
+[npm]: https://www.npmjs.com/package/@packmule/sass-pack
+[npm-latest]: https://img.shields.io/npm/v/@packmule/sass-pack/latest?color=%230AC2FF&label=release&style=for-the-badge
+[npm-nightly]: https://img.shields.io/npm/v/@packmule/sass-pack/nightly?color=%23111111&label=nightly&style=for-the-badge
+[edition-default]: https://www.npmjs.com/package/@packmule/default
+[edition-complete]: https://www.npmjs.com/package/@packmule/complete
+[sass-importer]: https://sass-lang.com/documentation/js-api#importer
+[css-modules]: https://github.com/css-modules/css-modules
