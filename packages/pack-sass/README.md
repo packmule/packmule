@@ -8,7 +8,7 @@ to lint styles, which can be configured via a `stylelint.json` file.
 
 ## Setup
 
-`Sass Pack` is included in the [`default`][edition-default] and [`complete`][edition-complete] editions.
+`Sass Pack` is included in the [`complete`][edition-complete] edition.
 
 **Current Release**
 
@@ -27,15 +27,15 @@ npm install --save-dev @packmule/sass-pack@nightly sass stylelint
 ### Methods
 
 **include(glob: string)**  
-Configure files to be processed. If not used, all files will be compiled.
+_Configure files to be processed. If not used, all files will be compiled._
 
 **importer(importer: Function)**  
-Register a custom [Sass importer][sass-importer].
+_Register a custom [Sass importer][sass-importer]._
 
 **modules()**  
-Enable [CSS modules][css-modules] to be used. By default modules are disabled.
+_Enable [CSS modules][css-modules] to be used. By default modules are disabled._
 
-## Hints
+### Hints
 
 > View the `packmule` [hints documentation][packmule-hints] for more information.
 
@@ -117,27 +117,27 @@ const configuration = packmule.generate(pack);
 ## Internals
 
 <details>
-    <summary>Dependencies</summary>
-    
-    This dependencies are used primarily by the pack internally.
-    
-    * `sass-loader`
-    * `css-loader`
-    * `style-loader`
-    * `postcss-loader`
-    * `resolve-url-loader`
-    * `mini-css-extract-plugin`
-    * `optimize-css-assets-webpack-plugin`
-    * `stylelint-webpack-plugin`
+  <summary>Dependencies</summary>
+  
+  This dependencies are used primarily by the pack internally.
+  
+  * `sass-loader`
+  * `css-loader`
+  * `style-loader`
+  * `postcss-loader`
+  * `resolve-url-loader`
+  * `mini-css-extract-plugin`
+  * `optimize-css-assets-webpack-plugin`
+  * `stylelint-webpack-plugin`
 </details>
 
 <details>
-    <summary>Peer Dependencies</summary>
-    
-    These peer dependencies are needed to use the pack.
-    
-    * `sass`
-    * `stylelint`
+  <summary>Peer Dependencies</summary>
+  
+  These peer dependencies are needed to use the pack.
+  
+  * `sass`
+  * `stylelint`
 </details>
 
 ## License
