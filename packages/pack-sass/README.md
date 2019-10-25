@@ -114,6 +114,25 @@ const pack = new SassPack();
 const configuration = packmule.generate(pack);
 ```
 
+**Specific Hints**
+
+Set different/explicit `hints` for the Sass pack.
+
+```ts
+import Packmule from '@packmule/core';
+import SassPack from '@packmule/sass-pack';
+
+const packmule = new Packmule();
+const pack = new SassPack();
+
+packmule.register(pack, {
+    map: false,
+    fix: false,
+});
+
+return packmule.generate();
+```
+
 ## Internals
 
 <details>
