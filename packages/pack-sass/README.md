@@ -129,10 +129,6 @@ const configuration = packmule.generate(pack);
   * `mini-css-extract-plugin`
   * `optimize-css-assets-webpack-plugin`
   * `stylelint-webpack-plugin`
-</details>
-
-<details>
-  <summary>Peer Dependencies</summary>
   
   These peer dependencies are needed to use the pack.
   
