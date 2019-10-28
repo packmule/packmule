@@ -12,6 +12,9 @@
       "path": "./packages/pack-assets/"
     },
     {
+      "path": "./packages/pack-cache/"
+    },
+    {
       "path": "./packages/pack-chunk/"
     },
     {
