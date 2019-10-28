@@ -1,16 +1,27 @@
 import webpack from 'webpack';
 import { Hints, Options, Pack } from '@packmule/core';
 
-type PackArgument = webpack.Configuration | ((options: Options, hints: Hints) => webpack.Configuration);
+type GenerateArgument = (options: Options, hints: Hints) => webpack.Configuration;
+type ProcessArgument = (configuration: webpack.Configuration) => webpack.Configuration;
+
+interface PackOptions {
+    generate?: GenerateArgument;
+    process?: ProcessArgument;
+}
 
 export default class RawPack implements Pack {
-    private readonly configuration: PackArgument;
+    private options: PackOptions;
 
-    public constructor(configuration: PackArgument) {
-        this.configuration = configuration;
+    public constructor(generate: GenerateArgument, process?: ProcessArgument) {
+        this.options.generate = generate;
+        this.options.process = process;
     }
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
-        return this.configuration instanceof Function ? this.configuration(options, hints) : this.configuration;
+        return this.options.generate!(options, hints);
+    }
+
+    public process(configuration: webpack.Configuration): webpack.Configuration {
+        return this.options.process ? this.options.process(configuration) : configuration;
     }
 }
