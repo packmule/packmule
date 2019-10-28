@@ -48,7 +48,7 @@ Several packs expose API methods to include or exclude files from processing usi
 
 * **[AliasPack](packages/pack-alias/)** - Configure webpack aliases.
 * **[AssetsPack](packages/pack-assets/)** - Create an asset map file for use with hashed file names.
-* **[CachePack](packages/pack-cache/)** - Configure the Webpack cache.
+* **[CachePack](packages/pack-cache/)** - Configure the webpack cache.
 * **[ChunkPack](packages/pack-chunk/)** - Wrap the webpack chunk-plugin.
 * **[CleanPack](packages/pack-clean/)** - Delete everything within a given directory.
 * **[CompressionPack](packages/pack-compression/)** - Generate `gzip` and `brotli` versions of configured assets.
