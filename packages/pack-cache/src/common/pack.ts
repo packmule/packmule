@@ -7,7 +7,7 @@ export default class CachePack implements Pack {
     };
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
-        if (hints.watch && hints.cache) {
+        if (hints.cache) {
             this.configuration.cache = {
                 type: 'filesystem',
             };
