@@ -19,7 +19,6 @@ test('cache type is filesystem', (t) => {
     const configuration = pack.generate(
         {},
         {
-            watch: true,
             cache: true,
         },
     );
