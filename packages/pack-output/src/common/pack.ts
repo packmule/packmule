@@ -12,7 +12,9 @@ export default class OutputPack implements Pack {
     private defaults: PackOptions = {};
 
     private configuration: webpack.Configuration = {
-        output: {},
+        output: {
+            pathinfo: false,
+        },
     };
 
     public constructor(path: string, web: string = '/') {
