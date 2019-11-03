@@ -50,7 +50,7 @@ export default class TypeScriptPack implements Pack {
             loader: 'ts-loader',
             options: {
                 logLevel: 'warn',
-                transpileOnly: !options.debug,
+                transpileOnly: hints.watch || !hints.lint,
                 onlyCompileBundledFiles: true,
                 experimentalWatchApi: true,
                 appendTsSuffixTo: [/\.vue$/],
