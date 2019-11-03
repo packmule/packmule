@@ -52,6 +52,7 @@ export default class TypeScriptPack implements Pack {
                 logLevel: 'warn',
                 transpileOnly: !options.debug,
                 onlyCompileBundledFiles: true,
+                experimentalWatchApi: true,
                 appendTsSuffixTo: [/\.vue$/],
                 compilerOptions: {
                     sourceMap: hints.map,
