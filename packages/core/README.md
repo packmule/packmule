@@ -2,19 +2,39 @@
 
 > Stubborn configuration generator for Webpack.
 
-## Installation
+## Setup
 
-```sh
+Either install `@packmule/core` and needed packs individually
+or install one of the available packmule editions which bundle
+various packages/packs for faster usage.
+
+**Current Release**
+
+```bash
 npm install --save-dev @packmule/core
+```
+
+**Nightly Build**
+
+```bash
+npm install --save-dev @packmule/core@nightly
 ```
 
 ## API
 
-```ts
-Packmule(mode?: 'development' | 'production' | 'none', options?: Options)
-    .register(pack: Pack)
-    .generate();
-```
+### Methods
+
+**Packmule(mode?: 'development' | 'production' | 'none', options?: `Options`, hints?: `Hints`)**  
+_Instantiate a new packmule object._
+
+**add(pack: `Pack`, hints?: `Hints`)**  
+_Add a pack for configuration generation._
+
+**remove(pack: `Pack`)**  
+_Remove a pack from configuration generation._
+
+**generate(pack?: `Pack`, hints?: `Hints`)**  
+_Generate the final webpack configuration or optionally the configuration for a specific pack instance._
 
 ### Options
 
