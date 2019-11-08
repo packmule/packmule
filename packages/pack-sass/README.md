@@ -1,16 +1,19 @@
-# Sass Pack [![npm-latest]][npm] [![npm-nightly]][npm]
+# Sass Pack [![npm-latest]][npm]
 
 > Compile `Sass` to `CSS`.
 
-`Sass Pack` compiles Sass and SCSS to CSS. To configure `PostCSS` settings
-in your project, a `.postcssrc.json` file can be used. `stylelint` is used
-to lint styles, which can be configured via a `stylelint.json` file.
+-   `sass` compiles `Sass` and `SCSS` files to `CSS` files.
+-   `resolve-url-loader` resolves relative URLs.
+-   `postcss-loader` transforms `CSS` further.
+-   `stylelint-webpack-plugin` lints source files.
+-   `mini-css-extract-plugin` generates `CSS` files.
+-   `optimize-css-assets-webpack-plugin` minifies `CSS` files.
 
--   [Setup](#setup)
--   [API](#api)
--   [Usage](#usage)
--   [Internals](#internals)
--   [License](#license)
+*   [Setup](#setup)
+*   [API](#api)
+*   [Usage](#usage)
+*   [Internals](#internals)
+*   [License](#license)
 
 ## Setup
 
@@ -173,7 +176,6 @@ return packmule.generate();
 [packmule-api]: https://www.npmjs.com/package/@packmule/core#api
 [npm]: https://www.npmjs.com/package/@packmule/sass-pack
 [npm-latest]: https://img.shields.io/npm/v/@packmule/sass-pack/latest?color=%230AC2FF&label=release&style=for-the-badge
-[npm-nightly]: https://img.shields.io/npm/v/@packmule/sass-pack/nightly?color=%23111111&label=nightly&style=for-the-badge
 [edition-default]: https://www.npmjs.com/package/@packmule/default
 [edition-complete]: https://www.npmjs.com/package/@packmule/complete
 [sass-importer]: https://sass-lang.com/documentation/js-api#importer
