@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/fibers": "0.0.30",
+    "@types/fibers": "^3.1.0",
     "@types/micromatch": "^3.1.0",
     "@types/mini-css-extract-plugin": "^0.8.0",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
