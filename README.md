@@ -1,8 +1,6 @@
 # packmule 📦 🐴
 > configuration generator for webpack
 
----
-
 `packmule` is an opinionated, plugin-based configuration-generator for [`webpack`](https://webpack.js.org/).
 
 * Various `webpack` options are pre-configured to work with HTTP/2 at an optimum by default.
@@ -61,7 +59,7 @@ npm install --save-dev @packmule/<package>@nightly
 
 ## Editions
 
-`packmule` provides two `edition` packages which install a pre-defined
+`packmule` provides `editions` which install a pre-defined
 set of `packmule` packages including various `packs` and utilities.
 
 It's recommended to install `packmule` packages individually
@@ -72,8 +70,8 @@ but editions provide an easy way to get started quickly.
 
 ## Packs
 
-`packmule` plugins are called packs and each one handles generation of a specific `webpack` configuration part.
-Several packs expose API methods to include or exclude files from processing using
+`packmule` plugins are called `packs` and each one handles generation of a specific `webpack` configuration part.
+Several `packs` expose API methods to include or exclude files from processing using
 [`file globbing`](https://en.wikipedia.org/wiki/Glob_(programming)) or
 [`regular expression`](https://en.wikipedia.org/wiki/Regular_expression) patterns.
 
@@ -81,10 +79,10 @@ Several packs expose API methods to include or exclude files from processing usi
 * **[Assets Pack](packages/pack-assets/)** - Create an asset map file for use with hashed file names.
 * **[Cache Pack](packages/pack-cache/)** - Configure the webpack cache.
 * **[Chunk Pack](packages/pack-chunk/)** - Wrap the webpack chunk-plugin.
-* **[Clean Pack](packages/pack-clean/)** - Delete everything within a given directory.
+* **[Clean Pack](packages/pack-clean/)** - Clear the public directory prior to building the bundle.
 * **[Compression Pack](packages/pack-compression/)** - Generate `gzip` and `brotli` versions of configured assets.
 * **[Copy Pack](packages/pack-copy/)** - Copy files.
-* **[Entry Pack](packages/pack-entry/)** - Define the entrypoints for webpack.
+* **[Entry Pack](packages/pack-entry/)** - Define entrypoints for webpack.
 * **[Environment Pack](packages/pack-environment/)** - Populate `process.env` via `.env` files and at runtime.
 * **[Hot Module Replacement Pack](packages/pack-hmr/)** - Include the `hot module replacement` plugin for development.
 * **[Image Optimization Pack](packages/pack-image-optimization/)** - Optimize images using `imagemin`.

@@ -1,6 +1,6 @@
 # Clean Pack
 
-> Clear a directory prior to building the bundle.
+> Clear the public directory prior to building the bundle.
 
 `Clean Pack` uses [`clean-webpack-plugin`](https://github.com/johnagan/clean-webpack-plugin)
 to clear a directory before building. It is advised to clear the
