@@ -56,6 +56,7 @@ Packs can choose which hints to use i.e. packs often use a small subset of avail
 | **notify**   | `boolean` | `false` | Enables desktop notifications. |
 | **lint**     | `boolean` | `false` | Enables code linting.          |
 | **fix**      | `boolean` | `false` | Enables code fixing.           |
+| **map**      | `boolean` | `false` | Enables source maps.           |
 | **cache**    | `boolean` | `true`  | Enables caching.               |
 | **hash**     | `boolean` | `false` | Enables filename hashing.      |
 | **watch**    | `boolean` | `false` | Enables file watching.         |
