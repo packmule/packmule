@@ -63,7 +63,7 @@ _Enable [CSS modules][css-modules] to be used. By default modules are disabled._
 
 Add the pack to be used by `packmule` to compile Sass to CSS.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import SassPack from '@packmule/sass-pack';
 
@@ -79,7 +79,7 @@ return packmule.generate();
 
 Register a custom [Sass importer][sass-importer].
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import SassPack from '@packmule/sass-pack';
 import MagicImporter from 'node-sass-magic-importer';
@@ -96,7 +96,7 @@ return packmule.generate();
 
 Enable [CSS modules][css-modules].
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import SassPack from '@packmule/sass-pack';
 
@@ -113,7 +113,7 @@ return packmule.generate();
 Use `packmule.generate()` to directly generate the pack configuration.
 This is useful for debugging and manipulating the configuration.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import SassPack from '@packmule/sass-pack';
 
@@ -127,7 +127,7 @@ const configuration = packmule.generate(pack);
 
 Set different/explicit `hints` for the Sass pack.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import SassPack from '@packmule/sass-pack';
 
