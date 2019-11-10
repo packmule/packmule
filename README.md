@@ -99,6 +99,7 @@ Several `packs` expose API methods to include or exclude files from processing u
 * **[Service Worker Pack](packages/pack-service-worker/)** - Generate a simple service worker using `workbox`.
 * **[Sprite Pack](packages/pack-sprite/)** - Generate a SVG-based vector-sprite.
 * **[Svelte Pack](packages/pack-svelte/)** - Handle `svelte` single-file-component files.
+* **[Target Pack](packages/pack-target/)** - Set the target environment for the bundle.
 * **[TypeScript Pack](packages/pack-typescript/)** - Compile TS to JS including Babel support.
 * **[Vue Pack](packages/pack-vue/)** - Handle `vue` single-file-component files.
 * **[Watch Pack](packages/pack-watch/)** - Handle file watching.
