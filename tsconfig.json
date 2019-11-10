@@ -78,6 +78,9 @@
       "path": "./packages/pack-svelte/"
     },
     {
+      "path": "./packages/pack-target/"
+    },
+    {
       "path": "./packages/pack-typescript/"
     },
     {
