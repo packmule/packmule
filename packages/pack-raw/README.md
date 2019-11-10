@@ -25,6 +25,9 @@ npm install --save-dev @packmule/raw-pack@nightly
 **RawPack(generate, process?)**  
 _Instantiate a new raw pack._
 
+**plugin(plugin: webpack.Plugin)**  
+_Add a `webpack` plugin._
+
 ### Hints
 
 > View the `packmule` [hints documentation][packmule-hints] for more information.
@@ -73,6 +76,27 @@ const pack = new RawPack((options, hints) => {
 packmule.add(pack, {
     cache: false,
 });
+
+return packmule.generate();
+```
+
+**Register Plugin**
+
+Register a `webpack` plugin.
+
+```typescript
+import webpack from 'webpack';
+import Packmule from '@packmule/core';
+import RawPack from '@packmule/raw-pack';
+
+const plugin = new webpack.ProvidePlugin({
+    $: 'jquery',
+});
+
+const packmule = new Packmule();
+const pack = new RawPack().plugin(plugin);
+
+packmule.add(pack);
 
 return packmule.generate();
 ```

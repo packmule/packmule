@@ -26,6 +26,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "webpack-merge": "^4.2.2"
+  },
   "devDependencies": {
     "@packmule/core": "^2.0.0"
   },
