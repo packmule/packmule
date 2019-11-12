@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
 import formatter from 'eslint-formatter-pretty';
+import LintPlugin from 'eslint-webpack-plugin';
 import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
@@ -20,6 +21,7 @@ export default class JavaScriptPack implements Pack {
         module: {
             rules: [],
         },
+        plugins: [],
     };
 
     constructor() {
@@ -48,22 +50,19 @@ export default class JavaScriptPack implements Pack {
 
         Array.isArray(rule.use) && rule.use.push(transpilation);
 
-        if (hints.lint) {
-            const linting: webpack.Loader = {
-                loader: 'eslint-loader',
-                options: {
-                    fix: hints.fix,
-                    cache: hints.cache,
-                    formatter: formatter,
-                },
-            };
-
-            if (Array.isArray(rule.use)) {
-                rule.use.push(linting);
-            }
-        }
-
         this.configuration.module!.rules.push(rule);
+
+        if (hints.lint) {
+            const lint = new LintPlugin({
+                context: options.root,
+                cache: hints.cache,
+                fix: hints.fix,
+                lintDirtyModulesOnly: hints.watch,
+                formatter: formatter,
+            });
+
+            this.configuration.plugins!.push(lint);
+        }
 
         return this.configuration;
     }

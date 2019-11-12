@@ -22,8 +22,8 @@ JavaScriptPack()
 ## Hints
 
 -   **cache** - _Controls cache utilization of the `babel-loader`._
--   **lint** - _Controls source-code linting via `eslint-loader`._
--   **fix** - _Controls source-code fixing via `eslint-loader`._
+-   **lint** - _Controls source-code linting via `eslint-webpack-plugin`._
+-   **fix** - _Controls source-code fixing via `eslint-webpack-plugin`._
 
 ## Usage
 
