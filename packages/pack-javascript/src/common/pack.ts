@@ -55,6 +55,7 @@ export default class JavaScriptPack implements Pack {
         if (hints.lint) {
             const lint = new LintPlugin({
                 context: options.root,
+                extensions: ['.js'],
                 cache: hints.cache,
                 fix: hints.fix,
                 lintDirtyModulesOnly: hints.watch,

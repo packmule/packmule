@@ -72,6 +72,7 @@ export default class TypeScriptPack implements Pack {
         if (hints.lint) {
             const lint = new LintPlugin({
                 context: options.root,
+                extensions: ['.ts', '.tsx'],
                 cache: hints.cache,
                 fix: hints.fix,
                 lintDirtyModulesOnly: hints.watch,
