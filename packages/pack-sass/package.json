@@ -29,7 +29,6 @@
   "dependencies": {
     "css-loader": "^3.2.0",
     "fibers": "^4.0.1",
-    "micromatch": "^4.0.2",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
@@ -41,7 +40,6 @@
   "devDependencies": {
     "@packmule/core": "^2.0.0",
     "@types/fibers": "^3.1.0",
-    "@types/micromatch": "^3.1.0",
     "@types/mini-css-extract-plugin": "^0.8.0",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "@types/sass": "^1.16.0",
