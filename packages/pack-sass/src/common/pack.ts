@@ -84,7 +84,7 @@ export default class SassPack implements Pack {
             const lint = new LintPlugin({
                 context: options.root,
                 lintDirtyModulesOnly: true,
-                files: '**/*.{css,scss,sass}',
+                files: ['**/*.{css,scss,sass}'],
                 quiet: !options.debug,
             });
 
