@@ -6,7 +6,7 @@
   "scripts": {
     "prepare": "run-s clean setup build test",
     "clean": "run-p clean:*",
-    "clean:builds": "del-cli packages/*/module/ packages/*/generators/",
+    "clean:builds": "del-cli packages/*/module packages/*/generators",
     "clean:caches": "del-cli packages/*/*.tsbuildinfo",
     "setup": "run-s setup:*",
     "setup:bootstrap": "lerna bootstrap --hoist",
