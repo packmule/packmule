@@ -41,7 +41,7 @@
     "@types/mini-css-extract-plugin": "^0.8.0",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "less": "^3.10.3",
-    "stylelint": "^11.1.1"
+    "stylelint": "^12.0.0"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0",
