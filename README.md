@@ -76,6 +76,7 @@ Several `packs` expose API methods to include or exclude files from processing u
 [`regular expression`](https://en.wikipedia.org/wiki/Regular_expression) patterns.
 
 * **[Alias Pack](packages/pack-alias/)** - Configure webpack aliases.
+* **[Analyzer Pack](packages/pack-analyzer/)** - Analyze the bundle size.
 * **[Assets Pack](packages/pack-assets/)** - Create an asset map file for use with hashed file names.
 * **[Cache Pack](packages/pack-cache/)** - Configure the webpack cache.
 * **[Chunk Pack](packages/pack-chunk/)** - Wrap the webpack chunk-plugin.
