@@ -9,6 +9,9 @@
       "path": "./packages/pack-alias/"
     },
     {
+      "path": "./packages/pack-analyzer/"
+    },
+    {
       "path": "./packages/pack-assets/"
     },
     {

@@ -1,0 +1,39 @@
+{
+  "name": "@packmule/analyzer-pack",
+  "description": "Packmule pack to analyze the generated bundle size.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": "github:packmule/packmule",
+  "bugs": "https://github.com/packmule/packmule/issues",
+  "main": "module/",
+  "typings": "module/",
+  "keywords": [
+    "webpack",
+    "packmule",
+    "packmule-pack"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "t.deinhamer@pixelart.at",
+    "url": "https://www.pixelart.at/"
+  },
+  "files": [
+    "module/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "webpack-bundle-analyzer": "^3.6.0"
+  },
+  "devDependencies": {
+    "@packmule/core": "^2.0.0",
+    "@types/webpack-bundle-analyzer": "^2.13.3"
+  },
+  "peerDependencies": {
+    "@packmule/core": "^2.0.0"
+  }
+}

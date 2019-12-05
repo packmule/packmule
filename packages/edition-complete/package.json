@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@packmule/alias-pack": "^2.0.0",
+    "@packmule/analyzer-pack": "^2.0.0",
     "@packmule/assets-pack": "^2.0.0",
     "@packmule/cache-pack": "^2.0.0",
     "@packmule/chunk-pack": "^2.0.0",
