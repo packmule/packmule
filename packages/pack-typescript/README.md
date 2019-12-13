@@ -37,11 +37,9 @@ npm install --save-dev @packmule/typescript-pack@nightly typescript @babel/core
 **include(glob: string)**  
 _Configure files to be processed. If not used, all files will be processed._
 
-## Options
+### Hints
 
--   **debug** - _Controls generation of source maps for the generated JS._
-
-## Hints
+> View the `packmule` [hints documentation][packmule-hints] for more information.
 
 -   **cache** - _Controls cache utilization of the `babel-loader`._
 -   **lint** - _Controls source-code linting via `eslint-webpack-plugin`._
