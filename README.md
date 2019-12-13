@@ -13,13 +13,13 @@
 import Packmule from '@packmule/core';
 import EntryPack from '@packmule/entry-pack';
 import OutputPack from '@packmule/output-pack';
-import TypescriptPack from '@packmule/typescript-pack';
+import TypeScriptPack from '@packmule/typescript-pack';
 
 const packmule = new Packmule('production');
 
 packmule.add(new EntryPack('main.ts'));
 packmule.add(new OutputPack('public/', '/'));
-packmule.add(new TypescriptPack());
+packmule.add(new TypeScriptPack());
 
 return packmule.generate();
 ```

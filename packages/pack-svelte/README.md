@@ -45,7 +45,7 @@ Compile `svelte` files and embedded languages like TypeScript and Sass.
 import Packmule from '@packmule/core';
 import SveltePack from '@packmule/svelte-pack';
 import SassPack from '@packmule/sass-pack';
-import TypescriptPack from '@packmule/typescript-pack';
+import TypeScriptPack from '@packmule/typescript-pack';
 
 const packmule = new Packmule();
 packmule.add(new SveltePack());
