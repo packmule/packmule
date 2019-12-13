@@ -1,19 +1,36 @@
-# Entry Pack
+# Entry Pack [![npm-latest]][npm]
 
 > Define an [entry point](https://webpack.js.org/configuration/entry-context/#entry) for webpack.
 
 `Entry Pack` configures the actual [entry point](https://webpack.js.org/concepts/#entry)
 for the bundle and can be used multiple times to define multiple entry points.
 
+## Overview
+
+-   [Setup](#setup)
+-   [API](#api)
+-   [Usage](#usage)
+-   [License](#license)
+
 ## Setup
+
+`Entry Pack` is included in the [`complete`][edition-complete] and [`default`][edition-default] editions.
+
+**Current Release**
 
 ```bash
 npm install --save-dev @packmule/entry-pack
 ```
 
+**Nightly Build**
+
+```bash
+npm install --save-dev @packmule/entry-pack@nightly
+```
+
 ## API
 
-```ts
+```typescript
 EntryPack(path: string, name?: string)
 ```
 
@@ -27,7 +44,7 @@ EntryPack(path: string, name?: string)
 
 Set single entry point and generate an `app` bundle.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import EntryPack from '@packmule/entry-pack';
 
@@ -40,7 +57,7 @@ return packmule.generate();
 
 Set multiple entrypoints and generate a `one` and a `two` bundle.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import EntryPack from '@packmule/entry-pack';
 
@@ -57,3 +74,10 @@ return packmule.generate();
 ---
 
 [<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+
+[packmule-hints]: https://www.npmjs.com/package/@packmule/core#hints
+[packmule-api]: https://www.npmjs.com/package/@packmule/core#api
+[npm]: https://www.npmjs.com/package/@packmule/entry-pack
+[npm-latest]: https://img.shields.io/npm/v/@packmule/entry-pack/latest?color=%230AC2FF&label=release&style=for-the-badge
+[edition-default]: https://www.npmjs.com/package/@packmule/default
+[edition-complete]: https://www.npmjs.com/package/@packmule/complete

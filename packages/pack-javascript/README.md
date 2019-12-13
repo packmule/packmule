@@ -1,4 +1,4 @@
-# JavaScript Pack
+# JavaScript Pack [![npm-latest]][npm]
 
 > Transpile JavaScript using Babel.
 
@@ -6,20 +6,37 @@ Internally the `JavaScript Pack` uses `Babel` to transpile the code if needed.
 To configure `Babel` settings in your project, a `.babelrc.json` file can be used.
 Linting code via `ESLint` can be utilized by creating an `.eslintrc` file.
 
+## Overview
+
+-   [Setup](#setup)
+-   [API](#api)
+-   [Usage](#usage)
+-   [License](#license)
+
 ## Setup
+
+`JavaScript Pack` is included in the [`complete`][edition-complete] edition.
+
+**Current Release**
 
 ```bash
 npm install --save-dev @packmule/javascript-pack @babel/core eslint
 ```
 
+**Nightly Build**
+
+```bash
+npm install --save-dev @packmule/javascript-pack@nightly @babel/core eslint
+```
+
 ## API
 
-```ts
+```typescript
 JavaScriptPack()
     .include(glob: string)
 ```
 
-## Hints
+### Hints
 
 -   **cache** - _Controls cache utilization of the `babel-loader`._
 -   **lint** - _Controls source-code linting via `eslint-webpack-plugin`._
@@ -31,7 +48,7 @@ JavaScriptPack()
 
 Process JavaScript code.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import JavascriptPack from '@packmule/javascript-pack';
 
@@ -47,3 +64,10 @@ return packmule.generate();
 ---
 
 [<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+
+[packmule-hints]: https://www.npmjs.com/package/@packmule/core#hints
+[packmule-api]: https://www.npmjs.com/package/@packmule/core#api
+[npm]: https://www.npmjs.com/package/@packmule/javascript-pack
+[npm-latest]: https://img.shields.io/npm/v/@packmule/javascript-pack/latest?color=%230AC2FF&label=release&style=for-the-badge
+[edition-default]: https://www.npmjs.com/package/@packmule/default
+[edition-complete]: https://www.npmjs.com/package/@packmule/complete

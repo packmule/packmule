@@ -1,22 +1,39 @@
-# Sprite Pack
+# Sprite Pack [![npm-latest]][npm]
 
 > Generate a SVG-based vector-sprite.
 
+## Overview
+
+-   [Setup](#setup)
+-   [API](#api)
+-   [Usage](#usage)
+-   [License](#license)
+
 ## Setup
+
+`Sprite Pack` is included in the [`complete`][edition-complete] edition.
+
+**Current Release**
 
 ```bash
 npm install --save-dev @packmule/sprite-pack
 ```
 
+**Nightly Build**
+
+```bash
+npm install --save-dev @packmule/sprite-pack@nightly
+```
+
 ## API
 
-```ts
+```typescript
 SpritePack(name: string)
     .include(glob: string)
     .to(path: string)
 ```
 
-## Hints
+### Hints
 
 -   **hash** - _Configures whether file name hashing is enabled or not._
 
@@ -26,7 +43,7 @@ SpritePack(name: string)
 
 Generate a vector sprite.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import SpritePack from '@packmule/sprite-pack';
 
@@ -42,3 +59,10 @@ return packmule.generate();
 ---
 
 [<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+
+[packmule-hints]: https://www.npmjs.com/package/@packmule/core#hints
+[packmule-api]: https://www.npmjs.com/package/@packmule/core#api
+[npm]: https://www.npmjs.com/package/@packmule/sprite-pack
+[npm-latest]: https://img.shields.io/npm/v/@packmule/sprite-pack/latest?color=%230AC2FF&label=release&style=for-the-badge
+[edition-default]: https://www.npmjs.com/package/@packmule/default
+[edition-complete]: https://www.npmjs.com/package/@packmule/complete

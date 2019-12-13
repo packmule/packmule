@@ -1,16 +1,33 @@
-# Environment Pack
+# Environment Pack [![npm-latest]][npm]
 
 > Populate `process.env` via `.env` files and at runtime.
 
+## Overview
+
+-   [Setup](#setup)
+-   [API](#api)
+-   [Usage](#usage)
+-   [License](#license)
+
 ## Setup
+
+`Environment Pack` is included in the [`complete`][edition-complete] and [`default`][edition-default] editions.
+
+**Current Release**
 
 ```bash
 npm install --save-dev @packmule/environment-pack
 ```
 
+**Nightly Build**
+
+```bash
+npm install --save-dev @packmule/environment-pack@nightly
+```
+
 ## API
 
-```ts
+```typescript
 EnvironmentPack(path?: string)
   .set(key: string, value: any)
 ```
@@ -21,7 +38,7 @@ EnvironmentPack(path?: string)
 
 Use a `.env` file per environment and set the build timestamp at build time.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import EnvironmentPack from '@packmule/environment-pack';
 
@@ -39,3 +56,10 @@ return packmule.generate();
 ---
 
 [<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+
+[packmule-hints]: https://www.npmjs.com/package/@packmule/core#hints
+[packmule-api]: https://www.npmjs.com/package/@packmule/core#api
+[npm]: https://www.npmjs.com/package/@packmule/environment-pack
+[npm-latest]: https://img.shields.io/npm/v/@packmule/environment-pack/latest?color=%230AC2FF&label=release&style=for-the-badge
+[edition-default]: https://www.npmjs.com/package/@packmule/default
+[edition-complete]: https://www.npmjs.com/package/@packmule/complete

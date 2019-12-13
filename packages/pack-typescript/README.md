@@ -55,7 +55,7 @@ _Configure files to be processed. If not used, all files will be processed._
 
 Configure `TypeScript` to `JavaScript` compilation.
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import TypeScriptPack from '@packmule/typescript-pack';
 

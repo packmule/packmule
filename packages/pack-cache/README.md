@@ -1,16 +1,33 @@
-# Cache Pack
+# Cache Pack [![npm-latest]][npm]
 
-> Packmule pack to configure the Webpack [cache](https://webpack.js.org/configuration/other-options/#cache).
+> Configure the Webpack [cache](https://webpack.js.org/configuration/other-options/#cache).
+
+## Overview
+
+-   [Setup](#setup)
+-   [API](#api)
+-   [Usage](#usage)
+-   [License](#license)
 
 ## Setup
+
+`Cache Pack` is included in the [`complete`][edition-complete] and [`default`][edition-default] editions.
+
+**Current Release**
 
 ```bash
 npm install --save-dev @packmule/cache-pack
 ```
 
+**Nightly Build**
+
+```bash
+npm install --save-dev @packmule/cache-pack@nightly
+```
+
 ## API
 
-```ts
+```typescript
 CachePack();
 ```
 
@@ -18,7 +35,7 @@ CachePack();
 
 **Example**
 
-```ts
+```typescript
 import Packmule from '@packmule/core';
 import CachePack from '@packmule/cache-pack';
 
@@ -34,3 +51,10 @@ return packmule.generate();
 ---
 
 [<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+
+[packmule-hints]: https://www.npmjs.com/package/@packmule/core#hints
+[packmule-api]: https://www.npmjs.com/package/@packmule/core#api
+[npm]: https://www.npmjs.com/package/@packmule/cache-pack
+[npm-latest]: https://img.shields.io/npm/v/@packmule/cache-pack/latest?color=%230AC2FF&label=release&style=for-the-badge
+[edition-default]: https://www.npmjs.com/package/@packmule/default
+[edition-complete]: https://www.npmjs.com/package/@packmule/complete

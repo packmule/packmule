@@ -14,7 +14,7 @@ npm install --save-dev @packmule/server
 
 ## API
 
-```ts
+```typescript
 Server(
   webpackConfiguration: webpack.Configuration;
   browsersyncOptions: browsersync.Options | browsersync.Options[];
@@ -26,7 +26,7 @@ Server(
 
 **Example**
 
-```ts
+```typescript
 import Server from '@packmule/server';
 import configuration from './webpack.config.ts';
 import options from './.browsersyncrc.json';
