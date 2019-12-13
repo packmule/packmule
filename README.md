@@ -1,13 +1,14 @@
-# packmule 📦 🐴
+# packmule
 > configuration generator for webpack
 
 `packmule` is an opinionated, plugin-based configuration-generator for [`webpack`](https://webpack.js.org/).
 
-* Various `webpack` options are pre-configured to work with HTTP/2 at an optimum by default.
-* Plugins, called `packs`, have been developed and tested for specific use cases.
-* Replace any `pack` with your own custom `pack`.
-* Develop your own custom `packs` to generate custom `webpack` configuration.
-* Use the `raw` pack to add custom `webpack` configuration directly.
+---
+
+* 🏇 Small, light-weight API.
+* 🧰 Plugins for many use cases.
+* 🔧 Build your own plugin for custom use cases.
+* ⚡ Optimized webpack settings for HTTP/2.
 
 ```typescript
 import Packmule from '@packmule/core';
