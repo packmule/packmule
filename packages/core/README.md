@@ -55,17 +55,36 @@ _Generate the final webpack configuration or optionally the configuration for a 
 Hints are passed to and used by packs to indicate which internal tasks to run.
 Packs can choose which hints to use i.e. packs often use a small subset of available hints.
 
-| Hint         | Type      | Default | Description                    |
-| ------------ | --------- | ------- | ------------------------------ |
-| **optimize** | `boolean` | `false` | Enables optimization steps.    |
-| **extract**  | `boolean` | `false` | Enables file extraction.       |
-| **notify**   | `boolean` | `false` | Enables desktop notifications. |
-| **lint**     | `boolean` | `false` | Enables code linting.          |
-| **fix**      | `boolean` | `false` | Enables code fixing.           |
-| **map**      | `boolean` | `false` | Enables source maps.           |
-| **cache**    | `boolean` | `true`  | Enables caching.               |
-| **hash**     | `boolean` | `false` | Enables filename hashing.      |
-| **watch**    | `boolean` | `false` | Enables file watching.         |
+| Hint         | Description                    |
+| ------------ | ------------------------------ |
+| **optimize** | Enables optimization steps.    |
+| **extract**  | Enables file extraction.       |
+| **notify**   | Enables desktop notifications. |
+| **lint**     | Enables code linting.          |
+| **fix**      | Enables code fixing.           |
+| **map**      | Enables source maps.           |
+| **cache**    | Enables caching.               |
+| **hash**     | Enables filename hashing.      |
+| **watch**    | Enables file watching.         |
+
+### Presets
+
+Each mode (none, development, production) has an internal hints preset, e.g.
+for `production` mode the options `optimize`, `extract` and `hash` are enabled
+while all other hints are disabled. Hints can be overridden by passing them
+to the constructor directly.
+
+| Hint         | none    | development | production |
+| ------------ | ------- | ----------- | ---------- |
+| **optimize** | `false` | `false`     | `true`     |
+| **extract**  | `false` | `false`     | `true`     |
+| **notify**   | `false` | `true`      | `false`    |
+| **lint**     | `false` | `true`      | `false`    |
+| **fix**      | `false` | `true`      | `false`    |
+| **map**      | `false` | `true`      | `false`    |
+| **cache**    | `false` | `true`      | `false`    |
+| **hash**     | `false` | `false`     | `true`     |
+| **watch**    | `false` | `false`     | `false`    |
 
 ## License
 
