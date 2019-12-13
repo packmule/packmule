@@ -36,7 +36,7 @@ import Packmule from '@packmule/core';
 import JavascriptPack from '@packmule/javascript-pack';
 
 const packmule = new Packmule();
-packmule.register(new JavaScriptPack());
+packmule.add(new JavaScriptPack());
 return packmule.generate();
 ```
 

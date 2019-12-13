@@ -33,7 +33,7 @@ import Packmule from '@packmule/core';
 import ImageOptimizationPack from '@packmule/image-optimization-pack';
 
 const packmule = new Packmule();
-packmule.register(new ImageOptimizationPack().include('assets/images/**').to('images/'));
+packmule.add(new ImageOptimizationPack().include('assets/images/**').to('images/'));
 return packmule.generate();
 ```
 

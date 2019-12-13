@@ -33,7 +33,7 @@ import Packmule from '@packmule/core';
 import OutputPack from '@packmule/output-pack';
 
 const packmule = new Packmule();
-packmule.register(new OutputPack('public/', '/'));
+packmule.add(new OutputPack('public/', '/'));
 return packmule.generate();
 ```
 

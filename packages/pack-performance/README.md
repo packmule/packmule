@@ -29,7 +29,7 @@ import PerformancePack from '@packmule/performance-pack';
 
 const packmule = new Packmule();
 
-packmule.register(
+packmule.add(
     new PerformancePack({
         entrySize: 256000,
         assetSize: 102400,

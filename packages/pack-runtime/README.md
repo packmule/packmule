@@ -25,7 +25,7 @@ import Packmule from '@packmule/core';
 import RuntimePack from '@packmule/runtime-pack';
 
 const packmule = new Packmule();
-packmule.register(new RuntimePack('bootstrap'));
+packmule.add(new RuntimePack('bootstrap'));
 return packmule.generate();
 ```
 

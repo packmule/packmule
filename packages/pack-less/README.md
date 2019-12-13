@@ -36,7 +36,7 @@ import Packmule from '@packmule/core';
 import LessPack from '@packmule/less-pack';
 
 const packmule = new Packmule();
-packmule.register(new LessPack());
+packmule.add(new LessPack());
 return packmule.generate();
 ```
 

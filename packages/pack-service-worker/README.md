@@ -27,7 +27,7 @@ import Packmule from '@packmule/core';
 import ServiceWorkerPack from '@packmule/service-worker-pack';
 
 const packmule = new Packmule();
-packmule.register(new ServiceWorkerPack());
+packmule.add(new ServiceWorkerPack());
 return packmule.generate();
 ```
 

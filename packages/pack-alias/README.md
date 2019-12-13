@@ -25,7 +25,7 @@ import Packmule from '@packmule/core';
 import AliasPack from '@packmule/alias-pack';
 
 const packmule = new Packmule();
-packmule.register(new AliasPack('Utility', 'src/common/utility/'));
+packmule.add(new AliasPack('Utility', 'src/common/utility/'));
 return packmule.generate();
 ```
 

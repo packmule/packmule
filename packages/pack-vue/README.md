@@ -27,9 +27,9 @@ import SassPack from '@packmule/sass-pack';
 import TypeScriptPack from '@packmule/typescript-pack';
 
 const packmule = new Packmule();
-packmule.register(new VuePack());
-packmule.register(new SassPack());
-packmule.register(new TypeScriptPack());
+packmule.add(new VuePack());
+packmule.add(new SassPack());
+packmule.add(new TypeScriptPack());
 return packmule.generate();
 ```
 

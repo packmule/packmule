@@ -23,7 +23,7 @@ import Packmule from '@packmule/core';
 import AssetsPack from '@packmule/assets-pack';
 
 const packmule = new Packmule();
-packmule.register(new AssetsPack());
+packmule.add(new AssetsPack());
 return packmule.generate();
 ```
 

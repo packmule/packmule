@@ -24,7 +24,7 @@ import Packmule from '@packmule/core';
 import WatchPack from '@packmule/watch-pack';
 
 const packmule = new Packmule();
-packmule.register(new WatchPack());
+packmule.add(new WatchPack());
 return packmule.generate();
 ```
 

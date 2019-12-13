@@ -31,7 +31,7 @@ import Packmule from '@packmule/core';
 import SpritePack from '@packmule/sprite-pack';
 
 const packmule = new Packmule();
-packmule.register(new SpritePack('common').to('sprites/').include('**/assets/base/icons/common/*.svg'));
+packmule.add(new SpritePack('common').to('sprites/').include('**/assets/base/icons/common/*.svg'));
 return packmule.generate();
 ```
 

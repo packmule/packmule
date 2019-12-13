@@ -25,7 +25,7 @@ import Packmule from '@packmule/core';
 import ManifestPack from '@packmule/manifest-pack';
 
 const packmule = new Packmule();
-packmule.register(
+packmule.add(
     new ManifestPack({
         name: 'Web Application',
         short_name: 'App',

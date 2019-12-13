@@ -32,7 +32,7 @@ import Packmule from '@packmule/core';
 import EntryPack from '@packmule/entry-pack';
 
 const packmule = new Packmule();
-packmule.register(new EntryPack('assets/entry.ts', 'app'));
+packmule.add(new EntryPack('assets/entry.ts', 'app'));
 return packmule.generate();
 ```
 
@@ -45,8 +45,8 @@ import Packmule from '@packmule/core';
 import EntryPack from '@packmule/entry-pack';
 
 const packmule = new Packmule();
-packmule.register(new EntryPack('assets/one.ts'));
-packmule.register(new EntryPack('assets/two.ts'));
+packmule.add(new EntryPack('assets/one.ts'));
+packmule.add(new EntryPack('assets/two.ts'));
 return packmule.generate();
 ```
 

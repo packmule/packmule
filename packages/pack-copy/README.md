@@ -31,7 +31,7 @@ import Packmule from '@packmule/core';
 import CopyPack from '@packmule/copy-pack';
 
 const packmule = new Packmule();
-packmule.register(new CopyPack().include('**/data/*.json').to('data/'));
+packmule.add(new CopyPack().include('**/data/*.json').to('data/'));
 return packmule.generate();
 ```
 

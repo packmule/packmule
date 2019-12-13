@@ -40,7 +40,7 @@ import CompressionPack from '@packmule/compression-pack';
 const packmule = new Packmule();
 
 if (env.production) {
-    packmule.register(new CompressionPack());
+    packmule.add(new CompressionPack());
 }
 
 return packmule.generate();

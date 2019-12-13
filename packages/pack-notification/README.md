@@ -34,7 +34,7 @@ import NotificationPack from '@packmule/notifiction-pack';
 const packmule = new Packmule();
 
 if (env.server) {
-    packmule.register(new NotificationPack());
+    packmule.add(new NotificationPack());
 }
 
 return packmule.generate();

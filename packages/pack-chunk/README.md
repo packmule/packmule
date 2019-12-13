@@ -23,7 +23,7 @@ import Packmule from '@packmule/core';
 import ChunkPack from '@packmule/chunk-pack';
 
 const packmule = new Packmule();
-packmule.register(new ChunkPack('vendor').include('**/node_modules/**'));
+packmule.add(new ChunkPack('vendor').include('**/node_modules/**'));
 return packmule.generate();
 ```
 

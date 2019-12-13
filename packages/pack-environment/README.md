@@ -28,7 +28,7 @@ import EnvironmentPack from '@packmule/environment-pack';
 const pack = new EnvironmentPack(`.env.${environment}`).set('TIMESTAMP', +new Date());
 
 const packmule = new Packmule();
-packmule.register(pack);
+packmule.add(pack);
 return packmule.generate();
 ```
 

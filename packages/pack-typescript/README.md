@@ -60,7 +60,7 @@ import Packmule from '@packmule/core';
 import TypeScriptPack from '@packmule/typescript-pack';
 
 const packmule = new Packmule();
-packmule.register(new TypeScriptPack());
+packmule.add(new TypeScriptPack());
 return packmule.generate();
 ```
 

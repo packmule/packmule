@@ -27,7 +27,7 @@ import HotModuleReplacementPack from '@packmule/hmr-pack';
 const packmule = new Packmule();
 
 if (env.development && env.server) {
-    packmule.register(new HotModuleReplacementPack());
+    packmule.add(new HotModuleReplacementPack());
 }
 
 return packmule.generate();

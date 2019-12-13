@@ -25,7 +25,7 @@ import Packmule from '@packmule/core';
 import LogPack from '@packmule/log-pack';
 
 const packmule = new Packmule();
-packmule.register(new LogPack());
+packmule.add(new LogPack());
 return packmule.generate();
 ```
 

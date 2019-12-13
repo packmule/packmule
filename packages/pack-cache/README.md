@@ -23,7 +23,7 @@ import Packmule from '@packmule/core';
 import CachePack from '@packmule/cache-pack';
 
 const packmule = new Packmule();
-packmule.register(new CachePack());
+packmule.add(new CachePack());
 return packmule.generate();
 ```
 

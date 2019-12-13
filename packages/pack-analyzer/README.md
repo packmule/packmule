@@ -21,7 +21,7 @@ import Packmule from '@packmule/core';
 import AssetsPack from '@packmule/analyzer-pack';
 
 const packmule = new Packmule();
-packmule.register(new AnalyzerPack());
+packmule.add(new AnalyzerPack());
 return packmule.generate();
 ```
 

@@ -32,7 +32,7 @@ import Packmule from '@packmule/core';
 import CleanPack from '@packmule/clean-pack';
 
 const packmule = new Packmule();
-packmule.register(new CleanPack());
+packmule.add(new CleanPack());
 return packmule.generate();
 ```
 

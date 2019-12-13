@@ -31,7 +31,7 @@ import Packmule from '@packmule/core';
 import TargetPack from '@packmule/target-pack';
 
 const packmule = new Packmule();
-packmule.register(new TargetPack('node'));
+packmule.add(new TargetPack('node'));
 
 return packmule.generate();
 ```
@@ -45,7 +45,7 @@ import Packmule from '@packmule/core';
 import TargetPack from '@packmule/target-pack';
 
 const packmule = new Packmule();
-packmule.register(
+packmule.add(
     new TargetPack((compiler) => {
         compiler.apply(new webpack.JsonpTemplatePlugin(options.output), new webpack.LoaderTargetPlugin('web'));
     }),
