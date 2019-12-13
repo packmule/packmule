@@ -1,6 +1,12 @@
-# packmule core
+# packmule core [![npm-latest]][npm]
 
 > Stubborn configuration generator for Webpack.
+
+## Overview
+
+-   [Setup](#setup)
+-   [API](#api)
+-   [License](#license)
 
 ## Setup
 
@@ -68,3 +74,6 @@ Packs can choose which hints to use i.e. packs often use a small subset of avail
 ---
 
 [<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+
+[npm]: https://www.npmjs.com/package/@packmule/core
+[npm-latest]: https://img.shields.io/npm/v/@packmule/core/latest?color=%230AC2FF&label=release&style=for-the-badge
