@@ -1,11 +1,10 @@
 # packmule
-> configuration generator for webpack
 
-`packmule` is an opinionated, plugin-based configuration-generator for [`webpack`](https://webpack.js.org/).
+`packmule` is an opinionated, plugin-based configuration generator for [`webpack`](https://webpack.js.org/).
 
 ---
 
-* 🏇 Small, light-weight API.
+* 🏇 Small and simple API.
 * 🧰 Plugins for many use cases.
 * 🔧 Build your own plugin for custom use cases.
 * ⚡ Optimized webpack settings for HTTP/2.
@@ -69,7 +68,7 @@ but editions provide an easy way to get started quickly.
 * **[Default Edition](packages/edition-default/)** - A basic set of `packs` and utilities.
 * **[Complete Edition](packages/edition-complete/)** - The full set of `packs` and utilities.
 
-## Packs
+## Plugins
 
 `packmule` plugins are called `packs` and each one handles generation of a specific `webpack` configuration part.
 Several `packs` expose API methods to include or exclude files from processing using
