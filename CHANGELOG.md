@@ -3,6 +3,7 @@
 ## [next]
 
 ### added
+* Add `plugin` method to the `raw` pack.
 * Add `hints` configuration options.
 * Add minimum compression ratio `option` to the compression pack.
 * Add `edition` packages to ease setup of basic packmule projects.
@@ -16,6 +17,8 @@
 * Add `less` pack.
 * Add `watch` pack.
 * Add `cache` pack.
+* Add `target` pack.
+* Add `analyzer` pack.
 
 ### changed
 * Split packmule `options` into `options` and `hints`.
@@ -26,6 +29,9 @@
 * Disable the overlay on the `HMR` client by default.
 * Disable the default `vendors` chunk configuration on webpack.
 * Remove `watch` configuration from the core and introduce a separate `watch` pack.
+* Disable bundle chunks in watch mode for faster builds.
+* Pass `options` and `hints` to the packs `process` function.
+* Use `eslint-webpack-plugin` instead of `eslint-loader`.
 
 ### removed
 * Remove constructor on the clean pack.
@@ -44,4 +50,3 @@
 
 [next]: https://github.com/packmule/packmule/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/packmule/packmule/releases/tag/v1.0.0
-
