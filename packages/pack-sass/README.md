@@ -9,11 +9,13 @@
 -   `mini-css-extract-plugin` generates `CSS` files.
 -   `optimize-css-assets-webpack-plugin` minifies `CSS` files.
 
-*   [Setup](#setup)
-*   [API](#api)
-*   [Usage](#usage)
-*   [Internals](#internals)
-*   [License](#license)
+## Overview
+
+-   [Setup](#setup)
+-   [API](#api)
+-   [Usage](#usage)
+-   [Internals](#internals)
+-   [License](#license)
 
 ## Setup
 

@@ -1,6 +1,14 @@
-# Raw Pack
+# Raw Pack [![npm-latest]][npm]
 
 > Merge raw `webpack` configuration.
+
+## Overview
+
+-   [Setup](#setup)
+-   [API](#api)
+-   [Usage](#usage)
+-   [Internals](#internals)
+-   [License](#license)
 
 ## Setup
 
@@ -123,6 +131,16 @@ packmule.add(pack);
 return packmule.generate();
 ```
 
+## Internals
+
+<details>
+  <summary>Dependencies</summary>
+  
+  This dependencies are used primarily by the pack internally.
+  
+  * `webpack-merge`
+</details>
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
@@ -133,5 +151,7 @@ return packmule.generate();
 
 [packmule-hints]: https://www.npmjs.com/package/@packmule/core#hints
 [packmule-api]: https://www.npmjs.com/package/@packmule/core#api
+[npm]: https://www.npmjs.com/package/@packmule/raw-pack
+[npm-latest]: https://img.shields.io/npm/v/@packmule/raw-pack/latest?color=%230AC2FF&label=release&style=for-the-badge
 [edition-default]: https://www.npmjs.com/package/@packmule/default
 [edition-complete]: https://www.npmjs.com/package/@packmule/complete
