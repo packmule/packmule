@@ -21,7 +21,7 @@
     "publish:nightly": "lerna publish --yes --canary --preid=nightly --dist-tag=nightly --force-publish=*"
   },
   "devDependencies": {
-    "@types/node": "^12.7.12",
+    "@types/node": "^13.1.0",
     "@types/webpack": "^4.39.3",
     "ava": "^2.4.0",
     "del-cli": "^3.0.0",
