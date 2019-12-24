@@ -80,6 +80,7 @@ export default class LessPack implements Pack {
 
         if (hints.extract) {
             const extraction = new ExtractPlugin({
+                esModule: true,
                 filename: hints.hash ? '[name].[contenthash:8].css' : '[name].css',
                 chunkFilename: hints.hash ? 'chunks/[name].[contenthash:8].css' : 'chunks/[name].css',
             });
