@@ -71,7 +71,7 @@ export default class LessPack implements Pack {
             const lint = new LintPlugin({
                 context: options.root,
                 lintDirtyModulesOnly: true,
-                files: ['**/*.{less}'],
+                files: ['**/*.{css,less}'],
                 fix: hints.fix,
                 quiet: !options.debug,
             });
