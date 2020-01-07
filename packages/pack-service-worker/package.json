@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/micromatch": "^3.1.0",
+    "@types/micromatch": "^4.0.0",
     "@types/workbox-webpack-plugin": "^4.1.0"
   },
   "peerDependencies": {
