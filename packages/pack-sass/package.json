@@ -45,7 +45,7 @@
     "@types/sass": "^1.16.0",
     "@types/stylelint-webpack-plugin": "^0.1.5",
     "sass": "^1.23.0",
-    "stylelint": "^12.0.0"
+    "stylelint": "^13.0.0"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0",
