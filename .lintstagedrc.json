@@ -1,6 +1,5 @@
 {
   "packages/**": [
-    "prettier --write",
-    "git add"
+    "prettier --write"
   ]
 }
