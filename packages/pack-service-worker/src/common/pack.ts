@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
 import WorkboxPlugin from 'workbox-webpack-plugin';
-import { Pack, PackIncludeOption } from '@packmule/core';
+import { Pack, PackIncludeOption, Options, Hints } from '@packmule/core';
 
 interface PackOptions {
     path?: string;
@@ -44,11 +44,14 @@ export default class ServiceWorkerPack implements Pack {
         return this;
     }
 
-    public generate(): webpack.Configuration {
+    public generate(options: Options, hints: Hints): webpack.Configuration {
         const configuration: any = {
+            mode: options.mode,
+            sourcemap: hints.map,
             clientsClaim: true,
             skipWaiting: true,
-            importWorkboxFrom: 'local',
+            cleanupOutdatedCaches: true,
+            inlineWorkboxRuntime: false,
             include: this.options.include,
             runtimeCaching: this.caches,
         };
