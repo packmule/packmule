@@ -9,9 +9,6 @@ interface PackOptions {
 
 export default class Entry implements Pack {
     private options: PackOptions;
-    private defaults: PackOptions = {
-        name: 'bundle',
-    };
 
     private configuration: webpack.Configuration & {
         entry: {
@@ -23,11 +20,8 @@ export default class Entry implements Pack {
 
     public constructor(path: string, name?: string) {
         this.options = {
-            ...this.defaults,
-            ...{
-                path,
-                name: name || basename(path, extname(path)),
-            },
+            path,
+            name: name || basename(path, extname(path)),
         };
     }
 
