@@ -47,6 +47,7 @@ Several `packs` expose API methods to include or exclude files from processing u
 * **[HotModuleReplacementPack](packs/hot-module-replacement.md)** - Include the `hot module replacement` plugin for development.
 * **[ImageOptimizationPack](packs/image-optimization.md)** - Optimize images using `imagemin`.
 * **[JavaScriptPack](packs/javascript.md)** - Processe JS including Babel support.
+* **[LessPack](packs/less.md)** - Compile and optimize less to CSS including PostCSS processing.
 * **[LogPack](packs/log.md)** - Configure console logging.
 * **[ManifestPack](packs/manifest.md)** - Generate a web app manifest.
 * **[MeasurePack](packs/measure.md)** - Configure entry and asset sizes.
