@@ -54,6 +54,9 @@
       "path": "./packages/pack-manifest/"
     },
     {
+      "path": "./packages/pack-name/"
+    },
+    {
       "path": "./packages/pack-notification/"
     },
     {
