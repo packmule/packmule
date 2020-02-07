@@ -39,6 +39,7 @@
     "@packmule/less-pack": "^2.0.0",
     "@packmule/log-pack": "^2.0.0",
     "@packmule/manifest-pack": "^2.0.0",
+    "@packmule/name-pack": "^2.0.0",
     "@packmule/notification-pack": "^2.0.0",
     "@packmule/output-pack": "^2.0.0",
     "@packmule/performance-pack": "^2.0.0",

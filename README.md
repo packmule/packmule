@@ -91,6 +91,7 @@ Several `packs` expose API methods to include or exclude files from processing u
 * **[Less Pack](packages/pack-less/)** - Compile `less` to `CSS`.
 * **[Log Pack](packages/pack-log/)** - Configure console logging.
 * **[Manifest Pack](packages/pack-manifest/)** - Generate a web app manifest.
+* **[Name Pack](packages/pack-name/)** - Configure the Webpack configuration name.
 * **[Notification Pack](packages/pack-notification/)** - Enable desktop notifications for development builds.
 * **[Output Pack](packages/pack-output/)** - Define the output options for webpack.
 * **[Performance Pack](packages/pack-performance/)** - Configure entry and asset sizes.

@@ -1,0 +1,35 @@
+{
+  "name": "@packmule/name-pack",
+  "description": "Packmule pack to configure the Webpack configuration name.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": "github:packmule/packmule",
+  "bugs": "https://github.com/packmule/packmule/issues",
+  "main": "module/",
+  "typings": "module/",
+  "keywords": [
+    "webpack",
+    "packmule",
+    "packmule-pack"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "t.deinhamer@pixelart.at",
+    "url": "https://www.pixelart.at/"
+  },
+  "files": [
+    "module/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@packmule/core": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@packmule/core": "^2.0.0"
+  }
+}
