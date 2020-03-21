@@ -64,6 +64,9 @@ export default class CompressionPack implements Pack {
                     filename: '[path].br[query]',
                     minRatio: this.options.ratio,
                     algorithm: 'brotliCompress',
+                    compressionOptions: {
+                        level: 11,
+                    },
                 });
 
                 this.configuration.plugins!.push(brotli);
