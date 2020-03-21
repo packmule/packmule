@@ -29,12 +29,10 @@
   "dependencies": {
     "@gfx/zopfli": "^1.0.14",
     "compression-webpack-plugin": "^3.0.0",
-    "iltorb": "^2.4.3",
     "micromatch": "^4.0.2"
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/iltorb": "^2.3.0",
     "@types/micromatch": "^4.0.0"
   },
   "peerDependencies": {
