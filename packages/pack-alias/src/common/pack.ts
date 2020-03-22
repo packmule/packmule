@@ -1,5 +1,6 @@
+import path from 'path';
 import webpack from 'webpack';
-import { Pack } from '@packmule/core';
+import { Options, Pack } from '@packmule/core';
 
 interface PackOptions {
     name: string;
@@ -26,10 +27,8 @@ export default class AliasPack implements Pack {
         };
     }
 
-    public generate(): webpack.Configuration {
-        if (this.options.name) {
-            this.configuration.resolve!.alias![this.options.name] = this.options.target;
-        }
+    public generate(options: Options): webpack.Configuration {
+        this.configuration.resolve!.alias![this.options.name] = path.resolve(options.root!, this.options.target);
 
         return this.configuration;
     }
