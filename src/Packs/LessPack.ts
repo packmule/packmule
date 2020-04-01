@@ -61,7 +61,10 @@ export default class LessPack implements Pack {
             this.configuration.plugins!.push(extraction);
 
             loaders = [
-                ExtractPlugin.loader,
+                {
+                    loader: ExtractPlugin.loader,
+                    esModule: true,
+                },
                 ...loaders,
             ];
         } else {
