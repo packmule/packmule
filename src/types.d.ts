@@ -1,5 +1,4 @@
 declare module '*.json';
-declare module 'pkg-dir';
 declare module 'terser-webpack-plugin';
 declare module 'stylelint-webpack-plugin';
 declare module 'external-svg-sprite-loader';
