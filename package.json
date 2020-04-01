@@ -52,7 +52,7 @@
     "pkg-dir": "^4.2.0",
     "postcss-loader": "^3.0.0",
     "promise-polyfill": "^8.1.0",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^8.0.2",
     "script-loader": "^0.7.2",
     "style-loader": "^0.23.1",
     "stylelint-scss": "^3.5.4",
