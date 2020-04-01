@@ -93,7 +93,7 @@ export default class SassPack implements Pack {
                 {
                     loader: 'style-loader',
                     options: {
-                        sourceMap: options.debug,
+                        esModule: true,
                     },
                 },
                 ...loaders,
