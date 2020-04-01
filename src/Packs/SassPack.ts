@@ -41,8 +41,19 @@ export default class SassPack implements Pack {
 
     public generate(options: Options): webpack.Configuration {
         let loaders: webpack.Loader[] | webpack.Loader = [
-            { loader: 'css-loader', options: { sourceMap: options.debug } },
-            { loader: 'postcss-loader', options: { sourceMap: options.debug } },
+            {
+                loader: 'css-loader',
+                options: {
+                    esModule: true,
+                    sourceMap: options.debug,
+                },
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    sourceMap: options.debug,
+                },
+            },
             {
                 loader: 'sass-loader',
                 options: {
