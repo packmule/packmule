@@ -67,7 +67,7 @@
     "webpack-merge": "^4.2.1",
     "webpack-notifier": "^1.7.0",
     "webpack-pwa-manifest": "^4.0.0",
-    "webpackbar": "^3.1.5",
+    "webpackbar": "^4.0.0",
     "workbox-sw": "^3.6.3",
     "workbox-webpack-plugin": "^3.6.3"
   },
@@ -84,7 +84,7 @@
     "@types/webpack-bundle-analyzer": "^2.13.0",
     "@types/webpack-dev-middleware": "^2.0.2",
     "@types/webpack-hot-middleware": "^2.16.4",
-    "@types/webpackbar": "^2.6.0",
+    "@types/webpackbar": "^4.0.0",
     "typescript": "^3.3.3333"
   },
   "peerDependencies": {
