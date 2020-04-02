@@ -93,15 +93,15 @@
     "typescript": "^3.3.3333"
   },
   "peerDependencies": {
-    "@babel/core": "^7.0.0",
-    "autoprefixer": "^9.0.0",
-    "browser-sync": "^2.0.0",
-    "less": "^3.0.0",
-    "sass": "^1.0.0",
-    "stylelint": "^9.0.0",
-    "typescript": "^3.0.0",
-    "vue": "2.0.0",
-    "vue-template-compiler": "2.0.0",
-    "webpack": "^4.0.0"
+    "@babel/core": ">= 7",
+    "autoprefixer": ">= 9",
+    "browser-sync": ">= 2",
+    "less": ">= 3",
+    "sass": ">= 1",
+    "stylelint": ">= 9",
+    "typescript": ">= 3",
+    "vue": ">= 2",
+    "vue-template-compiler": ">= 2",
+    "webpack": ">= 4"
   }
 }
