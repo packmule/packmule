@@ -1,12 +1,5 @@
 declare module '*.json';
-declare module 'terser-webpack-plugin';
-declare module 'stylelint-webpack-plugin';
 declare module 'external-svg-sprite-loader';
-declare module 'webpack-notifier';
-declare module 'webpack-merge';
-declare module 'mini-css-extract-plugin';
 declare module 'compression-webpack-plugin';
 declare module 'vue-loader/lib/plugin';
 declare module 'imagemin-webpack-plugin';
-declare module 'imagemin-mozjpeg';
-declare module 'imagemin-pngquant';
