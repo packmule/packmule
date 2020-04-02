@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import micromatch from 'micromatch';
 import WorkboxPlugin from 'workbox-webpack-plugin';
 import Pack, { PackIncludeOption } from '../Core/Pack';
+import Options from '../Core/Options';
 
 interface ServiceWorkerPackOptions {
     path?: string;
@@ -35,11 +36,14 @@ export default class ServiceWorkerPack implements Pack {
         return this;
     }
 
-    public generate(): webpack.Configuration {
+    public generate(options: Options): webpack.Configuration {
         const configuration: any = {
+            mode: options.mode,
+            sourcemap: options.debug,
             clientsClaim: true,
             skipWaiting: true,
-            importWorkboxFrom: 'local',
+            cleanupOutdatedCaches: true,
+            inlineWorkboxRuntime: false,
             include: this.options.include,
         };
 

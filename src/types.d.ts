@@ -2,7 +2,6 @@ declare module '*.json';
 declare module 'terser-webpack-plugin';
 declare module 'stylelint-webpack-plugin';
 declare module 'external-svg-sprite-loader';
-declare module 'workbox-webpack-plugin';
 declare module 'webpack-notifier';
 declare module 'webpack-merge';
 declare module 'mini-css-extract-plugin';
