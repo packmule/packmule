@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
-import iltorb from 'iltorb';
 import CompressionPlugin from 'compression-webpack-plugin';
 import Options from '../Core/Options';
 import Pack, { PackIncludeOption } from '../Core/Pack';
@@ -61,8 +60,9 @@ export default class CompressionPack implements Pack {
                     include: this.options.include,
                     cache: options.cache,
                     filename: '[path].br[query]',
-                    algorithm(input: any, compressionOptions: any, callback: any) {
-                        return iltorb.compress(input, compressionOptions, callback);
+                    algorithm: 'brotliCompress',
+                    compressionOptions: {
+                        level: 11,
                     },
                 });
 
