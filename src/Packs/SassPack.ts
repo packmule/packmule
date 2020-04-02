@@ -84,7 +84,9 @@ export default class SassPack implements Pack {
             loaders = [
                 {
                     loader: ExtractPlugin.loader,
-                    esModule: true,
+                    options: {
+                        esModule: true,
+                    }
                 },
                 ...loaders,
             ];
