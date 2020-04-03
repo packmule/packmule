@@ -21,7 +21,7 @@ const presets: {
         lint: false,
         fix: false,
         map: false,
-        cache: false,
+        cache: true,
         hash: true,
         watch: false,
     },
