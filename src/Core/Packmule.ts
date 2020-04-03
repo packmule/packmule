@@ -31,6 +31,7 @@ export default class Packmule {
             optimize: true,
             extract: true,
             hash: true,
+            cache: true,
         },
         development: {
             mode: 'development',
