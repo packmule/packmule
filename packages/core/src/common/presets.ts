@@ -13,6 +13,7 @@ const presets: {
         cache: false,
         hash: false,
         watch: false,
+        vary: {},
     },
     production: {
         optimize: true,
@@ -24,6 +25,7 @@ const presets: {
         cache: true,
         hash: true,
         watch: false,
+        vary: {},
     },
     development: {
         optimize: false,
@@ -35,6 +37,7 @@ const presets: {
         cache: true,
         hash: false,
         watch: false,
+        vary: {},
     },
 };
 
