@@ -52,7 +52,7 @@ export default class ServiceWorkerPack implements Pack {
             skipWaiting: true,
             cleanupOutdatedCaches: true,
             inlineWorkboxRuntime: false,
-            include: this.options.include,
+            include: [this.options.include],
             runtimeCaching: this.caches,
         };
 

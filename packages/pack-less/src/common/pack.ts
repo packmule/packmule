@@ -41,6 +41,7 @@ export default class LessPack implements Pack {
             {
                 loader: 'css-loader',
                 options: {
+                    esModule: true,
                     modules: this.options.modules,
                     sourceMap: hints.map,
                 },
@@ -88,11 +89,22 @@ export default class LessPack implements Pack {
 
             this.configuration.plugins!.push(extraction);
 
-            loaders = [ExtractPlugin.loader, ...loaders];
+            loaders = [
+                {
+                    loader: ExtractPlugin.loader,
+                    options: {
+                        esModule: true,
+                    },
+                },
+                ...loaders,
+            ];
         } else {
             loaders = [
                 {
                     loader: 'style-loader',
+                    options: {
+                        esModule: true,
+                    },
                 },
                 ...loaders,
             ];
