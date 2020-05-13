@@ -63,7 +63,6 @@ export default class LessPack implements Pack {
                 loader: 'less-loader',
                 options: {
                     sourceMap: true,
-                    relativeUrls: false,
                 },
             },
         ];
