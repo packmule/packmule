@@ -27,7 +27,7 @@
     "access": "public"
   },
   "dependencies": {
-    "external-svg-sprite-loader": "^5.0.1",
+    "external-svg-sprite-loader": "^6.0.0",
     "micromatch": "^4.0.2"
   },
   "devDependencies": {
