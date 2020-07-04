@@ -15,7 +15,7 @@ interface PackOptions {
 }
 
 export default class RawPack implements Pack {
-    private options: PackOptions;
+    private options: PackOptions = {};
 
     private configuration: webpack.Configuration = {
         plugins: [],
