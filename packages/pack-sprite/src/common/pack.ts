@@ -12,6 +12,7 @@ interface PackOptions {
 export default class VectorSpritePack implements Pack {
     private options: PackOptions;
     private defaults: PackOptions = {
+        path: '/',
         include: () => true,
     };
 
