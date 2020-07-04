@@ -1,6 +1,4 @@
 import webpack from 'webpack';
-import sass from 'sass';
-import fibers from 'fibers';
 import ExtractPlugin from 'mini-css-extract-plugin';
 import OptimizePlugin from 'optimize-css-assets-webpack-plugin';
 import LintPlugin from 'stylelint-webpack-plugin';
@@ -71,10 +69,8 @@ export default class SassPack implements Pack {
             {
                 loader: 'sass-loader',
                 options: {
-                    implementation: sass,
                     sourceMap: true,
                     sassOptions: {
-                        fiber: fibers,
                         importer: this.options.importers,
                     },
                 },
