@@ -26,6 +26,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "webpack-hot-middleware": "^2.25.0"
+  },
   "devDependencies": {
     "@packmule/core": "^2.0.0"
   },
