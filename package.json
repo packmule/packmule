@@ -18,7 +18,8 @@
     "format:fix": "prettier --write packages/**",
     "test": "ava",
     "test:watch": "ava --watch",
-    "publish:nightly": "lerna publish --yes --canary --preid=nightly --dist-tag=nightly --force-publish=*"
+    "publish:nightly": "lerna publish --yes --canary --preid=nightly --dist-tag=nightly --force-publish=*",
+    "publish:next": "lerna publish --yes --canary --preid=next --dist-tag=next --force-publish=*"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
