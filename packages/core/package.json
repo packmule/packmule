@@ -29,7 +29,7 @@
   "dependencies": {
     "pkg-dir": "^4.2.0",
     "terser-webpack-plugin": "^3.0.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^5.0.7"
   },
   "devDependencies": {
     "@types/terser-webpack-plugin": "^3.0.0",

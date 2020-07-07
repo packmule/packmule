@@ -27,7 +27,7 @@
     "access": "public"
   },
   "dependencies": {
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^5.0.7"
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0"
