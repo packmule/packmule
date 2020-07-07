@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import merge from 'webpack-merge';
+import { merge } from 'webpack-merge';
 import dir from 'pkg-dir';
 import presets from './presets';
 import Pack from './pack';
@@ -59,7 +59,7 @@ export default class Packmule {
                 );
         });
 
-        let configuration = merge(...parts);
+        let configuration = merge(parts);
 
         this.packs.forEach((hints, pack) => {
             pack.process &&

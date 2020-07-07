@@ -1,5 +1,5 @@
-import merge from 'webpack-merge';
 import webpack from 'webpack';
+import { merge } from 'webpack-merge';
 import { Hints, Options, Pack } from '@packmule/core';
 
 type GenerateArgument = (options: Options, hints: Hints) => webpack.Configuration;
