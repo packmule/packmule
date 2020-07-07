@@ -1,0 +1,36 @@
+{
+  "name": "packmule",
+  "description": "Stubborn configuration generator for webpack.",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": "github:packmule/packmule",
+  "bugs": "https://github.com/packmule/packmule/issues",
+  "main": "module/",
+  "typings": "module/",
+  "keywords": [
+    "webpack",
+    "packmule",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "author": {
+    "name": "Thomas Deinhamer",
+    "email": "t.deinhamer@pixelart.at",
+    "url": "https://www.pixelart.at/"
+  },
+  "files": [
+    "module/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "packmule": "module/index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "minimist": "^1.2.5"
+  }
+}
