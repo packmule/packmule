@@ -31,7 +31,7 @@
     "eslint-formatter-pretty": "^4.0.0",
     "eslint-webpack-plugin": "1.0.0",
     "micromatch": "^4.0.2",
-    "ts-loader": "^7.0.0"
+    "ts-loader": "^8.0.0"
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
