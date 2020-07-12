@@ -1,4 +1,11 @@
-node_modules/
 module/
+
 *.log
 *.tsbuildinfo
+
+/yarn.lock
+/.pnp.*
+/.yarn/*
+!/.yarn/releases
+!/.yarn/plugins
+!/.yarn/sdks
