@@ -30,9 +30,11 @@
     "webpack-pwa-manifest": "^4.0.0"
   },
   "devDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "^2.0.0",
+    "webpack": "5.0.0-beta.22"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "^2.0.0",
+    "webpack": "^5.0.0"
   }
 }

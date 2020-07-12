@@ -27,6 +27,7 @@
     "access": "public"
   },
   "dependencies": {
+    "webpack": "5.0.0-beta.22",
     "webpack-bundle-analyzer": "^3.6.0"
   },
   "devDependencies": {
@@ -34,6 +35,7 @@
     "@types/webpack-bundle-analyzer": "^3.8.0"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "^2.0.0",
+    "webpack": "^5.0.0"
   }
 }

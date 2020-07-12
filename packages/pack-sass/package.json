@@ -45,10 +45,12 @@
     "@types/sass": "^1.16.0",
     "@types/stylelint": "^9.10.1",
     "sass": "^1.23.0",
-    "stylelint": "^13.0.0"
+    "stylelint": "^13.0.0",
+    "webpack": "5.0.0-beta.22"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0",
-    "sass": "*"
+    "sass": "*",
+    "webpack": "^5.0.0"
   }
 }
