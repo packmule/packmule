@@ -55,7 +55,7 @@ return packmule.generate();
 
 ---
 
-[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+[<img src="https://avatars.githubusercontent.com/u/4364197?s=64">](https://www.pixelart.at/)
 
 [packmule-hints]: https://www.npmjs.com/package/@packmule/core#hints
 [packmule-api]: https://www.npmjs.com/package/@packmule/core#api

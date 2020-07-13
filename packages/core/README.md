@@ -92,7 +92,7 @@ to the constructor directly.
 
 ---
 
-[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+[<img src="https://avatars.githubusercontent.com/u/4364197?s=64">](https://www.pixelart.at/)
 
 [npm]: https://www.npmjs.com/package/@packmule/core
 [npm-latest]: https://img.shields.io/npm/v/@packmule/core/latest?color=%230AC2FF&label=release&style=for-the-badge

@@ -116,4 +116,4 @@ Several `packs` expose API methods to include or exclude files from processing u
 
 ---
 
-[<img src="https://www.pixelart.at/fileadmin/images/logo-new/logo.svg" width="150">](https://www.pixelart.at/)
+[<img src="https://avatars.githubusercontent.com/u/4364197?s=64">](https://www.pixelart.at/)
