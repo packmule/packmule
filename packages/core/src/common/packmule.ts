@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import { merge } from 'webpack-merge';
 import dir from 'pkg-dir';
+import parallel from 'parallel-webpack';
 import presets from './presets';
 import Pack from './pack';
 import Hints from './hints';
@@ -10,9 +11,10 @@ import OptimizationPack from '../packs/optimization';
 import MinificationPack from '../packs/minification';
 
 export default class Packmule {
-    private packs: Map<Pack, Hints | undefined> = new Map();
+    private readonly packs: Map<Pack, Hints | undefined> = new Map();
     private readonly options: Options;
     private readonly hints: Hints;
+    private readonly variants: any;
 
     private defaults: Options = {
         mode: 'none',
@@ -39,14 +41,20 @@ export default class Packmule {
         return this;
     }
 
-    public generate(pack?: Pack, hints?: Hints): webpack.Configuration {
-        if (pack && pack.generate) {
-            return pack.generate(this.options, {
-                ...this.hints,
-                ...hints,
-            });
-        }
+    public vary(name: string, values: any[]): this {
+        this.variants[name] = values;
+        return this;
+    }
 
+    public generate(): webpack.Configuration | webpack.Configuration[] {
+        if (this.variants) {
+            return parallel.createVariants({}, this.variants, this.process);
+        } else {
+            return this.process();
+        }
+    }
+
+    private process(vary?: any): webpack.Configuration {
         const parts: webpack.Configuration[] = [];
 
         this.packs.forEach((hints, pack) => {
@@ -55,6 +63,7 @@ export default class Packmule {
                     pack.generate(this.options, {
                         ...this.hints,
                         ...hints,
+                        ...{ vary },
                     }),
                 );
         });
@@ -66,6 +75,7 @@ export default class Packmule {
                 (configuration = pack.process(configuration, this.options, {
                     ...this.hints,
                     ...hints,
+                    ...{ vary },
                 }));
         });
 
