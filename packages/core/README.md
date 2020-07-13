@@ -66,6 +66,7 @@ Packs can choose which hints to use i.e. packs often use a small subset of avail
 | **cache**    | Enables caching.               |
 | **hash**     | Enables filename hashing.      |
 | **watch**    | Enables file watching.         |
+| **target**   | Define bundle target.          |
 
 ### Presets
 
@@ -74,17 +75,18 @@ for `production` mode the options `optimize`, `extract` and `hash` are enabled
 while all other hints are disabled. Hints can be overridden by passing them
 to the constructor directly.
 
-| Hint         | none    | development | production |
-| ------------ | ------- | ----------- | ---------- |
-| **optimize** | `false` | `false`     | `true`     |
-| **extract**  | `false` | `false`     | `true`     |
-| **notify**   | `false` | `true`      | `false`    |
-| **lint**     | `false` | `true`      | `false`    |
-| **fix**      | `false` | `true`      | `false`    |
-| **map**      | `false` | `true`      | `false`    |
-| **cache**    | `false` | `true`      | `false`    |
-| **hash**     | `false` | `false`     | `true`     |
-| **watch**    | `false` | `false`     | `false`    |
+| Hint         | none        | development   | production   |
+| ------------ | ----------- | ------------- | ------------ |
+| **optimize** | `false`     | `false`       | `true`       |
+| **extract**  | `false`     | `false`       | `true`       |
+| **notify**   | `false`     | `true`        | `false`      |
+| **lint**     | `false`     | `true`        | `false`      |
+| **fix**      | `false`     | `true`        | `false`      |
+| **map**      | `false`     | `true`        | `false`      |
+| **cache**    | `false`     | `true`        | `false`      |
+| **hash**     | `false`     | `false`       | `true`       |
+| **watch**    | `false`     | `false`       | `false`      |
+| **target**   | `undefined` | `development` | `production` |
 
 ## License
 
