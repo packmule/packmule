@@ -44,6 +44,7 @@ export default class TypeScriptPack implements Pack {
         const transpilation: webpack.Loader = {
             loader: 'babel-loader',
             options: {
+                envName: hints.target,
                 cacheDirectory: hints.cache,
             },
         };
