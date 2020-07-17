@@ -1,5 +1,5 @@
 import webpack from 'webpack';
-import TerserPlugin from 'terser-webpack-plugin';
+import OptimizationPlugin from 'esbuild-webpack-plugin';
 import Pack from '../common/pack';
 import Hints from '../common/hints';
 import Options from '../common/options';
@@ -13,12 +13,11 @@ export default class MinificationPack implements Pack {
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
         if (hints.optimize) {
-            const terser = new TerserPlugin({
-                cache: hints.cache,
-                sourceMap: hints.map,
+            const optimization = new OptimizationPlugin({
+                minify: true,
             });
 
-            this.configuration.optimization!.minimizer!.push(terser);
+            this.configuration.optimization!.minimizer!.push(optimization);
         }
 
         return this.configuration;
