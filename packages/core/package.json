@@ -35,6 +35,6 @@
     "@types/webpack-merge": "^4.1.5"
   },
   "peerDependencies": {
-    "webpack": "^4.0.0"
+    "webpack": "^5.0.0-beta"
   }
 }
