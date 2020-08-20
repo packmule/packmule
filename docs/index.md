@@ -11,7 +11,7 @@ npm install --save-dev @packmule/packmule
 ```ts
 Packmule(mode?: 'development' | 'production' | 'none', options?: Options)
     .register(pack: Pack)
-    .generate();
+    .generate(pack?: Pack);
 ```
 
 ### Options
