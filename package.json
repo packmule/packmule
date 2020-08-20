@@ -38,7 +38,7 @@
     "compression-webpack-plugin": "^4.0.0",
     "css-loader": "^4.2.1",
     "eventsource": "^1.0.7",
-    "external-svg-sprite-loader": "^5.0.1",
+    "external-svg-sprite-loader": "^6.0.1",
     "fibers": "^4.0.2",
     "file-loader": "^6.0.0",
     "imagemin-mozjpeg": "^9.0.0",
