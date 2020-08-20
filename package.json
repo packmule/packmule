@@ -79,6 +79,7 @@
     "@types/node": "^10.12.27",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "@types/sass": "^1.16.0",
+    "@types/stylelint": "^9.10.1",
     "@types/stylelint-webpack-plugin": "^2.1.0",
     "@types/terser-webpack-plugin": "^4.1.0",
     "@types/webpack": "^4.4.25",
@@ -89,6 +90,7 @@
     "@types/webpack-notifier": "^1.5.3",
     "@types/webpackbar": "^4.0.0",
     "@types/workbox-webpack-plugin": "^5.0.0",
+    "stylelint": "^13.6.1",
     "typescript": "^3.3.3333"
   },
   "peerDependencies": {
