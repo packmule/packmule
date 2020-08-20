@@ -55,7 +55,11 @@ export default class Packmule {
         return this;
     }
 
-    public generate(): webpack.Configuration {
+    public generate(pack?: Pack): webpack.Configuration {
+        if (pack && pack.generate) {
+            return pack.generate(this.options);
+        }
+
         const parts: webpack.Configuration[] = [];
 
         this.packs.forEach((pack: Pack) => {
