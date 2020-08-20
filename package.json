@@ -79,7 +79,7 @@
     "@types/node": "^10.12.27",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "@types/sass": "^1.16.0",
-    "@types/stylelint-webpack-plugin": "^0.1.5",
+    "@types/stylelint-webpack-plugin": "^2.1.0",
     "@types/terser-webpack-plugin": "^4.1.0",
     "@types/webpack": "^4.4.25",
     "@types/webpack-assets-manifest": "^3.0.0",
