@@ -42,7 +42,6 @@ export default class SassPack implements Pack {
             {
                 loader: 'css-loader',
                 options: {
-                    esModule: true,
                     sourceMap: options.debug,
                 },
             },
