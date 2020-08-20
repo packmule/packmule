@@ -66,7 +66,7 @@ export default class Packmule {
             pack.generate && parts.push(pack.generate(this.options));
         });
 
-        let configuration = merge(...parts);
+        let configuration = merge(parts);
 
         this.packs.forEach((pack: Pack) => {
             pack.process && (configuration = pack.process(configuration));
