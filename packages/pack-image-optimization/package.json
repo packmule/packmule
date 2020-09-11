@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/imagemin-pngquant": "^7.0.0",
+    "@types/imagemin-pngquant": "^8.0.0",
     "@types/micromatch": "^4.0.0"
   },
   "peerDependencies": {
