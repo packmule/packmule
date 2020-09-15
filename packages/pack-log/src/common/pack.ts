@@ -32,7 +32,6 @@ export default class LogPack implements Pack {
             errors: true,
             errorDetails: true,
             hash: true,
-            maxModules: Infinity,
             modules: false,
             modulesSort: 'id',
             moduleTrace: false,
