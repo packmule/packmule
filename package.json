@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
-    "@types/webpack": "^4.39.3",
     "ava": "^3.0.0",
     "del-cli": "^3.0.0",
     "husky": "^4.2.1",
