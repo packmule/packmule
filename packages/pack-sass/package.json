@@ -49,6 +49,7 @@
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0",
-    "sass": "*"
+    "sass": "*",
+    "postcss": "*"
   }
 }
