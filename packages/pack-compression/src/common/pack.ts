@@ -47,7 +47,7 @@ export default class CompressionPack implements Pack {
                 const gzip = new CompressionPlugin({
                     test: expression,
                     include: this.options.include,
-                    filename: '[path].gz[query]',
+                    filename: '[path][base].gz[query]',
                     minRatio: this.options.ratio,
                     algorithm: zopfli,
                 });
@@ -59,7 +59,7 @@ export default class CompressionPack implements Pack {
                 const brotli = new CompressionPlugin({
                     test: expression,
                     include: this.options.include,
-                    filename: '[path].br[query]',
+                    filename: '[path][base].br[query]',
                     minRatio: this.options.ratio,
                     algorithm: 'brotliCompress',
                     compressionOptions: {
