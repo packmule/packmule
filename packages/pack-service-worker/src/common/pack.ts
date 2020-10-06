@@ -61,7 +61,7 @@ export default class ServiceWorkerPack implements Pack {
         if (this.options.include) {
             configuration.include = [this.options.include];
         } else {
-            configuration.exclude = /.+/;
+            configuration.exclude = [/.+/];
         }
 
         this.configuration.plugins!.push(new WorkboxPlugin.GenerateSW(configuration));
