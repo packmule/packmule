@@ -11,9 +11,7 @@ interface PackOptions {
 export default class ServiceWorkerPack implements Pack {
     private caches: any[] = [];
     private options: PackOptions;
-    private defaults: PackOptions = {
-        include: () => true,
-    };
+    private defaults: PackOptions = {};
 
     private configuration: webpack.Configuration = {
         plugins: [],
@@ -52,12 +50,18 @@ export default class ServiceWorkerPack implements Pack {
             skipWaiting: true,
             cleanupOutdatedCaches: true,
             inlineWorkboxRuntime: false,
-            include: [this.options.include],
             runtimeCaching: this.caches,
+            dontCacheBustURLsMatching: /.+/,
         };
 
         if (this.options.path) {
             configuration.swDest = this.options.path;
+        }
+
+        if (this.options.include) {
+            configuration.include = [this.options.include];
+        } else {
+            configuration.exclude = /.+/;
         }
 
         this.configuration.plugins!.push(new WorkboxPlugin.GenerateSW(configuration));
