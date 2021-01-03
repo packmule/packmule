@@ -13,10 +13,7 @@ export default class MinificationPack implements Pack {
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
         if (hints.optimize) {
-            const optimization = new OptimizationPlugin({
-                minify: true,
-            });
-
+            const optimization = new OptimizationPlugin();
             this.configuration.optimization!.minimizer!.push(optimization);
         }
 
