@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "esbuild-webpack-plugin": "^1.0.3",
-    "pkg-dir": "^4.2.0",
+    "pkg-dir": "^5.0.0",
     "webpack-merge": "^5.0.7"
   },
   "devDependencies": {
