@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/mini-css-extract-plugin": "^0.9.1",
+    "@types/mini-css-extract-plugin": "^1.2.2",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "@types/stylelint": "^9.10.1",
     "less": "^4.0.0",
