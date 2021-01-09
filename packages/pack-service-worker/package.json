@@ -28,12 +28,11 @@
   },
   "dependencies": {
     "micromatch": "^4.0.2",
-    "workbox-webpack-plugin": "^5.0.0"
+    "workbox-webpack-plugin": "^6.0.2"
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/micromatch": "^4.0.0",
-    "@types/workbox-webpack-plugin": "^5.0.0"
+    "@types/micromatch": "^4.0.0"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0"
