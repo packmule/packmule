@@ -96,7 +96,6 @@
   },
   "peerDependencies": {
     "@babel/core": ">= 7",
-    "autoprefixer": ">= 9",
     "browser-sync": ">= 2",
     "less": ">= 3",
     "postcss": ">= 7",
