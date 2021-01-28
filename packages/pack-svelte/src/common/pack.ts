@@ -39,7 +39,7 @@ export default class SveltePack implements Pack {
             use: [],
         };
 
-        const compilation: webpack.Loader = {
+        const compilation: webpack.RuleSetRule = {
             loader: 'svelte-loader',
             options: {
                 emitCss: hints.extract,
@@ -49,7 +49,7 @@ export default class SveltePack implements Pack {
 
         Array.isArray(rule.use) && rule.use.push(compilation);
 
-        this.configuration.module!.rules.push(rule);
+        this.configuration.module!.rules!.push(rule);
 
         return this.configuration;
     }

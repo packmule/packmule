@@ -26,7 +26,7 @@ export default class RawPack implements Pack {
         this.options.process = process;
     }
 
-    public plugin(plugin: webpack.Plugin): this {
+    public plugin(plugin: webpack.WebpackPluginInstance): this {
         this.configuration.plugins!.push(plugin);
         return this;
     }

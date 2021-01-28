@@ -41,7 +41,7 @@ export default class JavaScriptPack implements Pack {
             use: [],
         };
 
-        const transpilation: webpack.Loader = {
+        const transpilation: webpack.RuleSetRule = {
             loader: 'babel-loader',
             options: {
                 cacheDirectory: hints.cache,
@@ -50,7 +50,7 @@ export default class JavaScriptPack implements Pack {
 
         Array.isArray(rule.use) && rule.use.push(transpilation);
 
-        this.configuration.module!.rules.push(rule);
+        this.configuration.module!.rules!.push(rule);
 
         if (hints.lint) {
             const lint = new LintPlugin({

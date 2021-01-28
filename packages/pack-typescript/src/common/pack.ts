@@ -41,14 +41,14 @@ export default class TypeScriptPack implements Pack {
             use: [],
         };
 
-        const transpilation: webpack.Loader = {
+        const transpilation: webpack.RuleSetRule = {
             loader: 'babel-loader',
             options: {
                 cacheDirectory: hints.cache,
             },
         };
 
-        const compilation: webpack.Loader = {
+        const compilation: webpack.RuleSetRule = {
             loader: 'ts-loader',
             options: {
                 logLevel: 'warn',
@@ -67,7 +67,7 @@ export default class TypeScriptPack implements Pack {
             rule.use.push(compilation);
         }
 
-        this.configuration.module!.rules.push(rule);
+        this.configuration.module!.rules!.push(rule);
 
         if (hints.lint) {
             const lint = new LintPlugin({

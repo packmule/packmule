@@ -40,7 +40,7 @@ export default class CopyPack implements Pack {
             use: [] as any[],
         };
 
-        const extraction: webpack.Loader = {
+        const extraction: webpack.RuleSetRule = {
             loader: 'file-loader',
             options: {
                 name: hints.hash ? '[name].[contenthash:8].[ext]' : '[name].[ext]',
@@ -50,7 +50,7 @@ export default class CopyPack implements Pack {
 
         Array.isArray(rule.use) && rule.use.push(extraction);
 
-        this.configuration.module!.rules.push(rule);
+        this.configuration.module!.rules!.push(rule);
 
         return this.configuration;
     }

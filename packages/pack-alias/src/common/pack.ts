@@ -9,10 +9,7 @@ interface PackOptions {
 
 export default class AliasPack implements Pack {
     private options: PackOptions;
-    private defaults: PackOptions = {
-        name: '',
-        target: '',
-    };
+    private defaults: PackOptions;
 
     private configuration: webpack.Configuration = {
         resolve: {

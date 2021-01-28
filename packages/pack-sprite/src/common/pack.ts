@@ -48,7 +48,7 @@ export default class VectorSpritePack implements Pack {
             use: [],
         };
 
-        const generation: webpack.Loader = {
+        const generation: webpack.RuleSetRule = {
             loader: SpritePlugin.loader,
             options: {
                 name: `${this.options.path}${this.options.name}${hints.hash ? '.[contenthash:8]' : ''}.svg`,
@@ -61,7 +61,7 @@ export default class VectorSpritePack implements Pack {
         const sprite = new SpritePlugin();
         this.configuration.plugins!.push(sprite);
 
-        this.configuration.module!.rules.push(rule);
+        this.configuration.module!.rules!.push(rule);
 
         return this.configuration;
     }

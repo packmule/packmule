@@ -5,7 +5,7 @@ import { Pack, PackIncludeOption } from '@packmule/core';
 interface PackOptions {
     name?: string;
     include?: PackIncludeOption;
-    chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.compilation.Chunk) => boolean);
+    chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.Chunk) => boolean);
 }
 
 export default class ChunkPack implements Pack {
@@ -17,10 +17,7 @@ export default class ChunkPack implements Pack {
 
     private configuration: webpack.Configuration = {};
 
-    public constructor(
-        name: string,
-        chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.compilation.Chunk) => boolean),
-    ) {
+    public constructor(name: string, chunks?: 'initial' | 'async' | 'all' | ((chunk: webpack.Chunk) => boolean)) {
         this.options = this.defaults;
         this.options.name = name;
 

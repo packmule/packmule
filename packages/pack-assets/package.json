@@ -30,8 +30,7 @@
     "webpack-assets-manifest": "^5.0.0"
   },
   "devDependencies": {
-    "@packmule/core": "^2.0.0",
-    "@types/webpack-assets-manifest": "^3.0.0"
+    "@packmule/core": "^2.0.0"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0"

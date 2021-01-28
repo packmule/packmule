@@ -64,7 +64,7 @@ import TargetPack from '@packmule/target-pack';
 const packmule = new Packmule();
 packmule.add(
     new TargetPack((compiler) => {
-        compiler.apply(new webpack.JsonpTemplatePlugin(options.output), new webpack.LoaderTargetPlugin('web'));
+        compiler.apply(new webpack.JsonpTemplatePlugin(options.output), new webpack.RuleSetRuleTargetPlugin('web'));
     }),
 );
 

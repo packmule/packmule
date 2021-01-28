@@ -25,7 +25,7 @@ export default class AssetsPack implements Pack {
     }
 
     public generate(): webpack.Configuration {
-        const manifest = new ManifestPlugin({
+        const manifest: webpack.WebpackPluginInstance = new ManifestPlugin({
             output: this.options.name,
             entrypoints: true,
             publicPath: true,

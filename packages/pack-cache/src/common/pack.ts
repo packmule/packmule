@@ -3,7 +3,7 @@ import { Hints, Options, Pack } from '@packmule/core';
 
 interface PackOptions {
     dependencies?: {
-        [key: string]: string;
+        [key: string]: string[];
     };
 }
 
@@ -22,7 +22,7 @@ export default class CachePack implements Pack {
     }
 
     public add(path: string): void {
-        this.options.dependencies!.path = path;
+        this.options.dependencies!.config.push(path);
     }
 
     public remove(path: string): void {

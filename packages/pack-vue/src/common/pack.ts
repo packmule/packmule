@@ -42,7 +42,7 @@ export default class VuePack implements Pack {
             use: [],
         };
 
-        const compilation: webpack.Loader = {
+        const compilation: webpack.RuleSetRule = {
             loader: 'vue-loader',
             options: {
                 exposeFilename: !hints.optimize,
@@ -51,7 +51,7 @@ export default class VuePack implements Pack {
 
         Array.isArray(rule.use) && rule.use.push(compilation);
 
-        this.configuration.module!.rules.push(rule);
+        this.configuration.module!.rules!.push(rule);
         this.configuration.plugins!.push(plugin);
 
         return this.configuration;

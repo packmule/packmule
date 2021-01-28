@@ -49,7 +49,7 @@ export default class ImageOptimizationPack implements Pack {
             use: [],
         };
 
-        const extraction: webpack.Loader = {
+        const extraction: webpack.RuleSetRule = {
             loader: 'file-loader',
             options: {
                 name: hints.hash ? '[name].[contenthash:8].[ext]' : '[name].[ext]',
@@ -58,10 +58,10 @@ export default class ImageOptimizationPack implements Pack {
         };
 
         Array.isArray(rule.use) && rule.use.push(extraction);
-        this.configuration.module!.rules.push(rule);
+        this.configuration.module!.rules!.push(rule);
 
         if (hints.optimize) {
-            const optimization = new ImagePlugin({
+            const optimization: webpack.WebpackPluginInstance = new ImagePlugin({
                 test: this.options.include,
                 jpegtran: null,
                 optipng: null,
