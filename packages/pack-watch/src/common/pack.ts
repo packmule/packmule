@@ -3,7 +3,7 @@ import micromatch from 'micromatch';
 import { Options, Hints, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
-    exclude?: PackIncludeOption;
+    exclude?: Exclude<PackIncludeOption, (path: string) => true>;
 }
 
 export default class WatchPack implements Pack {
@@ -20,14 +20,14 @@ export default class WatchPack implements Pack {
         this.options = this.defaults;
     }
 
-    public exclude(exclude: PackIncludeOption): this {
+    public exclude(exclude: Exclude<PackIncludeOption, (path: string) => true>): this {
         this.options.exclude = typeof exclude === 'string' ? micromatch.makeRe(exclude, { dot: true }) : exclude;
 
         return this;
     }
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
-        this.configuration.watch = Boolean(hints.watch);
+        this.configuration.watch = hints.watch;
         this.configuration.watchOptions!.ignored = this.options.exclude;
 
         return this.configuration;
