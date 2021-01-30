@@ -12,9 +12,7 @@ export default class AliasPack implements Pack {
     private defaults: PackOptions;
 
     private configuration: webpack.Configuration = {
-        resolve: {
-            alias: {},
-        },
+        resolve: {},
     };
 
     public constructor(name: string, target: string) {
@@ -25,7 +23,9 @@ export default class AliasPack implements Pack {
     }
 
     public generate(options: Options): webpack.Configuration {
-        this.configuration.resolve!.alias![this.options.name] = path.resolve(options.root!, this.options.target);
+        this.configuration.resolve!.alias = {
+            [this.options.name]: path.resolve(options.root!, this.options.target),
+        };
 
         return this.configuration;
     }
