@@ -27,7 +27,7 @@
     "access": "public"
   },
   "dependencies": {
-    "esbuild-webpack-plugin": "^1.0.3",
+    "esbuild-loader": "^2.8.0",
     "pkg-dir": "^5.0.0",
     "webpack-merge": "^5.0.7"
   },

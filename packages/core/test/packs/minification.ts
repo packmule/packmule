@@ -1,5 +1,5 @@
 import test from 'ava';
-import OptimizationPlugin from 'esbuild-webpack-plugin';
+import { ESBuildMinifyPlugin } from 'esbuild-loader';
 import Pack from '../../src/packs/minification';
 
 test('pack instantiation', (t) => {
@@ -24,7 +24,7 @@ test('minification is enabled for the optimize option', (t) => {
         },
     );
 
-    const result = configuration.optimization!.minimizer!.some((minimizer) => minimizer instanceof OptimizationPlugin);
+    const result = configuration.optimization!.minimizer!.some((minimizer) => minimizer instanceof ESBuildMinifyPlugin);
 
     t.true(result);
 });

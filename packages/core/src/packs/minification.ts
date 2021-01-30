@@ -1,11 +1,12 @@
 import webpack from 'webpack';
-import OptimizationPlugin from 'esbuild-webpack-plugin';
+import { ESBuildPlugin, ESBuildMinifyPlugin } from 'esbuild-loader';
 import Pack from '../common/pack';
 import Hints from '../common/hints';
 import Options from '../common/options';
 
 export default class MinificationPack implements Pack {
     private configuration: webpack.Configuration = {
+        plugins: [],
         optimization: {
             minimizer: [],
         },
@@ -13,7 +14,10 @@ export default class MinificationPack implements Pack {
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
         if (hints.optimize) {
-            const optimization = new OptimizationPlugin();
+            const plugin = new ESBuildPlugin();
+            this.configuration.plugins!.push(plugin);
+
+            const optimization = new ESBuildMinifyPlugin();
             this.configuration.optimization!.minimizer!.push(optimization);
         }
 
