@@ -61,7 +61,7 @@ export default class ImageOptimizationPack implements Pack {
         this.configuration.module!.rules!.push(rule);
 
         if (hints.optimize) {
-            const optimization: webpack.WebpackPluginInstance = new ImagePlugin({
+            const optimization = new ImagePlugin({
                 test: this.options.include,
                 jpegtran: null,
                 optipng: null,
@@ -76,7 +76,7 @@ export default class ImageOptimizationPack implements Pack {
                 ],
             });
 
-            this.configuration.plugins!.push(optimization);
+            this.configuration.plugins!.push(optimization as webpack.WebpackPluginInstance);
         }
 
         return this.configuration;

@@ -14,8 +14,8 @@ export default class ManifestPack implements Pack {
     }
 
     public generate(): webpack.Configuration {
-        const manifest: webpack.WebpackPluginInstance = new ManifestPlugin(this.options);
-        this.configuration.plugins!.push(manifest);
+        const manifest = new ManifestPlugin(this.options);
+        this.configuration.plugins!.push(manifest as webpack.WebpackPluginInstance);
 
         return this.configuration;
     }

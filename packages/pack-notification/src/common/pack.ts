@@ -27,8 +27,8 @@ export default class NotificationPack implements Pack {
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
         if (hints.notify) {
-            const plugin: webpack.WebpackPluginInstance = new NotifierPlugin(this.options);
-            this.configuration.plugins!.push(plugin);
+            const plugin = new NotifierPlugin(this.options);
+            this.configuration.plugins!.push(plugin as webpack.WebpackPluginInstance);
         }
 
         return this.configuration;
