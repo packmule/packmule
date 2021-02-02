@@ -17,7 +17,10 @@ export default class MinificationPack implements Pack {
             const plugin = new ESBuildPlugin();
             this.configuration.plugins!.push(plugin);
 
-            const optimization = new ESBuildMinifyPlugin();
+            const optimization = new ESBuildMinifyPlugin({
+                target: 'es5',
+            });
+
             this.configuration.optimization!.minimizer!.push(optimization);
         }
 
