@@ -32,7 +32,8 @@
     "file-loader": "^6.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.0",
-    "imagemin-webpack-plugin": "^2.4.2",
+    "imagemin-webp": "^6.0.0",
+    "image-minimizer-webpack-plugin": "^2.2.0",
     "micromatch": "^4.0.2"
   },
   "devDependencies": {

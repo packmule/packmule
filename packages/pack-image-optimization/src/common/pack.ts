@@ -1,8 +1,6 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
-import mozjpeg from 'imagemin-mozjpeg';
-import pngquant from 'imagemin-pngquant';
-import ImagePlugin from 'imagemin-webpack-plugin';
+import ImagePlugin from 'image-minimizer-webpack-plugin';
 import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
@@ -62,21 +60,25 @@ export default class ImageOptimizationPack implements Pack {
 
         if (hints.optimize) {
             const optimization = new ImagePlugin({
-                test: this.options.include,
-                jpegtran: null,
-                optipng: null,
-                plugins: [
-                    mozjpeg({
-                        quality: 80,
-                    }),
-                    pngquant({
-                        speed: 3,
-                        strip: true,
-                    }),
-                ],
+                test: expression,
+                minimizerOptions: {
+                    plugins: [
+                        ['mozjpeg', { quality: 80 }],
+                        ['pngquant', { speed: 3, strip: true }],
+                    ],
+                },
             });
 
-            this.configuration.plugins!.push(optimization as webpack.WebpackPluginInstance);
+            const transformation = new ImagePlugin({
+                test: expression,
+                filename: '[path][name].webp',
+                minimizerOptions: {
+                    plugins: [['imagemin-webp']],
+                },
+            });
+
+            this.configuration.plugins!.push(optimization);
+            this.configuration.plugins!.push(transformation);
         }
 
         return this.configuration;

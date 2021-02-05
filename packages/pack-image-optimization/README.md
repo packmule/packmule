@@ -37,7 +37,7 @@ ImageOptimizationPack()
 
 ### Hints
 
--   **optimize** - _Controls whether `image-webpack-loader` optimizes images or not._
+-   **optimize** - _Controls whether `image-minimizer-webpack-plugin` optimizes images or not._
 
 ## Usage
 
