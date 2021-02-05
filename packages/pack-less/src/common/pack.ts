@@ -37,7 +37,7 @@ export default class LessPack implements Pack {
     }
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
-        let loaders: webpack.RuleSetRule[] | webpack.RuleSetRule = [
+        let loaders: webpack.RuleSetRule[] = [
             {
                 loader: 'css-loader',
                 options: {
