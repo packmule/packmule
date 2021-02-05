@@ -1,11 +1,15 @@
 export default {
-    extensions: [
-        'ts',
+    nonSemVerExperiments: {
+        configurableModuleFormat: true,
+    },
+    nodeArguments: [
+        '--loader=ts-node/esm',
+        '--experimental-specifier-resolution=node',
     ],
-    require: [
-        'ts-node/register/transpile-only',
-    ],
+    extensions: {
+        ts: 'module',
+    },
     files: [
-        'packages/*/test/**',
+        'packages/*/test/**/*.ts',
     ],
 }

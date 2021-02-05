@@ -10,9 +10,6 @@
     "packmule",
     "packmule-edition"
   ],
-  "engines": {
-    "node": ">=12"
-  },
   "author": {
     "name": "Thomas Deinhamer",
     "email": "t.deinhamer@pixelart.at",

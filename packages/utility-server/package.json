@@ -3,11 +3,15 @@
   "description": "Simple packmule development server.",
   "version": "2.0.0",
   "license": "MIT",
+  "repository": "github:packmule/packmule",
+  "bugs": "https://github.com/packmule/packmule/issues",
+  "type": "module",
   "main": "module/",
   "typings": "module/",
   "keywords": [],
   "engines": {
-    "node": ">=12"
+    "node": ">=14",
+    "npm": ">=7"
   },
   "author": {
     "name": "Thomas Deinhamer",

@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "module": "commonjs",
-    "target": "es2015",
+    "module": "es2020",
+    "target": "es2020",
+    "lib": ["es2020"],
     "newLine": "lf",
     "composite": true,
     "declaration": true,
