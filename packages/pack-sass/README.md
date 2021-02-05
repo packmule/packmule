@@ -7,7 +7,7 @@
 -   `postcss-loader` transforms `CSS` further.
 -   `stylelint-webpack-plugin` lints source files.
 -   `mini-css-extract-plugin` generates `CSS` files.
--   `optimize-css-assets-webpack-plugin` minifies `CSS` files.
+-   `css-minimizer-webpack-plugin` minifies `CSS` files.
 
 ## Overview
 

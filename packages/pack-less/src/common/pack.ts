@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import ExtractPlugin from 'mini-css-extract-plugin';
-import OptimizePlugin from 'optimize-css-assets-webpack-plugin';
+import OptimizePlugin from 'css-minimizer-webpack-plugin';
 import LintPlugin from 'stylelint-webpack-plugin';
 import { Hints, Options, Pack } from '@packmule/core';
 
