@@ -1,15 +1,17 @@
 {
   "private": true,
   "engines": {
-    "node": ">=12"
+    "node": ">=12",
+    "npm": ">=7"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "prepare": "run-s clean setup build test",
+    "prepare": "run-s clean build test",
     "clean": "run-p clean:*",
     "clean:builds": "del-cli packages/*/module packages/*/generators",
     "clean:caches": "del-cli packages/*/*.tsbuildinfo",
-    "setup": "run-s setup:*",
-    "setup:bootstrap": "lerna bootstrap --hoist",
     "build": "run-s build:*",
     "build:compile": "tsc --build",
     "watch": "run-s clean watch:*",
