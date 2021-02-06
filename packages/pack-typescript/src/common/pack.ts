@@ -44,6 +44,7 @@ export default class TypeScriptPack implements Pack {
         const transpilation: webpack.RuleSetRule = {
             loader: 'babel-loader',
             options: {
+                envName: hints.target,
                 cacheDirectory: hints.cache,
             },
         };
