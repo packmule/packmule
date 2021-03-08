@@ -29,7 +29,7 @@
     "access": "public"
   },
   "dependencies": {
-    "dotenv-webpack": "^6.0.0"
+    "dotenv-webpack": "^7.0.1"
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
