@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/dotenv-webpack": "^5.0.0"
+    "@types/dotenv-webpack": "^7.0.1"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0"
