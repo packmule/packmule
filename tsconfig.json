@@ -16,6 +16,7 @@
         "forceConsistentCasingInFileNames": true,
         "stripInternal": true,
         "esModuleInterop": true,
-        "noImplicitReturns": true
+        "noImplicitReturns": true,
+        "skipLibCheck": true
     }
 }
