@@ -76,7 +76,7 @@
     "@types/imagemin-pngquant": "^8.0.0",
     "@types/imagemin-svgo": "^8.0.1",
     "@types/micromatch": "^4.0.1",
-    "@types/mini-css-extract-plugin": "^1.2.2",
+    "@types/mini-css-extract-plugin": "1.2.2",
     "@types/node": "^10.12.27",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.2",
     "@types/sass": "^1.16.0",
