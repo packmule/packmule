@@ -17,7 +17,7 @@ export default class SassPack implements Pack {
 
     private configuration: webpack.Configuration= {
         resolve: {
-            extensions: ['.scss', '.sass'],
+            extensions: ['.css', '.scss', '.sass'],
         },
         module: {
             rules: [],
@@ -107,7 +107,7 @@ export default class SassPack implements Pack {
         }
 
         const rule: webpack.RuleSetRule = {
-            test: /\.s[ac]ss$/,
+            test: /\.(css|scss|sass)$/,
             use: loaders,
         };
 
