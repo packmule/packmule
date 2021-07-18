@@ -1,5 +1,6 @@
 import test from 'ava';
 import webpack from 'webpack';
+import DotenvPlugin from 'dotenv-webpack';
 import Pack from '../src/';
 
 test('pack instantiation', (t) => {
@@ -13,7 +14,7 @@ test('plugins are set by default', (t) => {
     const configuration = pack.generate({});
 
     [
-        configuration.plugins!.some((plugin) => plugin instanceof webpack.DefinePlugin),
+        configuration.plugins!.some((plugin) => plugin instanceof DotenvPlugin),
         configuration.plugins!.some((plugin) => plugin instanceof webpack.EnvironmentPlugin),
     ].forEach((result) => t.true(result));
 });

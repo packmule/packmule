@@ -29,11 +29,11 @@
     "access": "public"
   },
   "dependencies": {
-    "dotenv-webpack": "^6.0.0"
+    "dotenv-webpack": "^7.0.3"
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/dotenv-webpack": "^5.0.0"
+    "@types/dotenv-webpack": "^7.0.3"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0"
