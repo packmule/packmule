@@ -29,11 +29,11 @@
     "access": "public"
   },
   "dependencies": {
-    "webpack-bundle-analyzer": "^4.3.0"
+    "webpack-bundle-analyzer": "^4.4.2"
   },
   "devDependencies": {
     "@packmule/core": "^2.0.0",
-    "@types/webpack-bundle-analyzer": "^3.9.0"
+    "@types/webpack-bundle-analyzer": "^4.4.1"
   },
   "peerDependencies": {
     "@packmule/core": "^2.0.0"
