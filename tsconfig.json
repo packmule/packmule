@@ -21,9 +21,6 @@
       "path": "./packages/pack-chunk/"
     },
     {
-      "path": "./packages/pack-clean/"
-    },
-    {
       "path": "./packages/pack-compression/"
     },
     {

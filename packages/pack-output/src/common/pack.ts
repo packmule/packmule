@@ -5,6 +5,7 @@ import { Hints, Options, Pack } from '@packmule/core';
 interface PackOptions {
     path?: string;
     web?: string;
+    clean?: boolean;
 }
 
 export default class OutputPack implements Pack {
@@ -17,15 +18,16 @@ export default class OutputPack implements Pack {
         },
     };
 
-    public constructor(path: string, web: string = '/') {
+    public constructor(path: string, web: string = '/', clean: boolean = true) {
         this.options = {
             ...this.defaults,
-            ...{ path, web },
+            ...{ path, web, clean },
         };
     }
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
         if (this.configuration.output) {
+            this.configuration.output.clean = this.options.clean;
             this.configuration.output.path = resolve(options.root!, this.options.path!);
             this.configuration.output.publicPath = this.options.web;
             this.configuration.output.filename = hints.hash ? '[name].[contenthash:8].js' : '[name].js';

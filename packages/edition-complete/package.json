@@ -24,7 +24,6 @@
     "@packmule/assets-pack": "^2.0.0",
     "@packmule/cache-pack": "^2.0.0",
     "@packmule/chunk-pack": "^2.0.0",
-    "@packmule/clean-pack": "^2.0.0",
     "@packmule/compression-pack": "^2.0.0",
     "@packmule/copy-pack": "^2.0.0",
     "@packmule/core": "^2.0.0",

@@ -80,7 +80,6 @@ Several `packs` expose API methods to include or exclude files from processing u
 * **[Assets Pack](packages/pack-assets/)** - Create an asset map file for use with hashed file names.
 * **[Cache Pack](packages/pack-cache/)** - Configure the webpack cache.
 * **[Chunk Pack](packages/pack-chunk/)** - Wrap the webpack chunk-plugin.
-* **[Clean Pack](packages/pack-clean/)** - Clear the public directory prior to building the bundle.
 * **[Compression Pack](packages/pack-compression/)** - Generate `gzip` and `brotli` versions of configured assets.
 * **[Copy Pack](packages/pack-copy/)** - Copy files.
 * **[Entry Pack](packages/pack-entry/)** - Define entrypoints for webpack.
