@@ -48,7 +48,6 @@ export default class SassPack implements Pack {
             {
                 loader: 'css-loader',
                 options: {
-                    esModule: true,
                     modules: this.options.modules,
                     sourceMap: hints.map,
                 },
@@ -110,9 +109,6 @@ export default class SassPack implements Pack {
             loaders = [
                 {
                     loader: 'style-loader',
-                    options: {
-                        esModule: true,
-                    },
                 },
                 ...loaders,
             ];
