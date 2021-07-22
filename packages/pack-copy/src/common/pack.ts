@@ -35,20 +35,12 @@ export default class CopyPack implements Pack {
     public generate(options: Options, hints: Hints): webpack.Configuration {
         const rule: webpack.RuleSetRule = {
             test: /.+/,
-            type: 'javascript/auto',
+            type: 'asset/resource',
             include: this.options.include,
-            use: [] as any[],
-        };
-
-        const extraction: webpack.RuleSetRule = {
-            loader: 'file-loader',
-            options: {
-                name: hints.hash ? '[name].[contenthash:8].[ext]' : '[name].[ext]',
-                outputPath: this.options.path,
+            generator: {
+                filename: this.options.path + '/' + (hints.hash ? '[name].[contenthash:8].[ext]' : '[name].[ext]'),
             },
         };
-
-        Array.isArray(rule.use) && rule.use.push(extraction);
 
         this.configuration.module!.rules!.push(rule);
 

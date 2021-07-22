@@ -29,7 +29,6 @@
     "access": "public"
   },
   "dependencies": {
-    "file-loader": "^6.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.0",
     "imagemin-webp": "^6.0.0",

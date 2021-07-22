@@ -29,7 +29,6 @@
     "access": "public"
   },
   "dependencies": {
-    "file-loader": "^6.0.0",
     "micromatch": "^4.0.2"
   },
   "devDependencies": {

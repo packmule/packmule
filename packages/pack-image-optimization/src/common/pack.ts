@@ -44,18 +44,9 @@ export default class ImageOptimizationPack implements Pack {
         const rule: webpack.RuleSetRule = {
             test: expression,
             include: this.options.include,
-            use: [],
+            type: 'asset/resource',
         };
 
-        const extraction: webpack.RuleSetRule = {
-            loader: 'file-loader',
-            options: {
-                name: hints.hash ? '[name].[contenthash:8].[ext]' : '[name].[ext]',
-                outputPath: this.options.path || undefined,
-            },
-        };
-
-        Array.isArray(rule.use) && rule.use.push(extraction);
         this.configuration.module!.rules!.push(rule);
 
         if (hints.optimize) {
