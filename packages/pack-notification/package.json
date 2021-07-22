@@ -32,9 +32,9 @@
     "webpack-notifier": "^1.8.0"
   },
   "devDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "*"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "*"
   }
 }

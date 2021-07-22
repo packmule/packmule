@@ -32,10 +32,10 @@
     "webpack-bundle-analyzer": "^4.4.2"
   },
   "devDependencies": {
-    "@packmule/core": "^2.0.0",
+    "@packmule/core": "*",
     "@types/webpack-bundle-analyzer": "^4.4.1"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "*"
   }
 }

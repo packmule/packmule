@@ -36,12 +36,12 @@
     "ts-loader": "^9.2.3"
   },
   "devDependencies": {
-    "@packmule/core": "^2.0.0",
+    "@packmule/core": "*",
     "@types/micromatch": "^4.0.0"
   },
   "peerDependencies": {
     "@babel/core": "*",
-    "@packmule/core": "^2.0.0",
+    "@packmule/core": "*",
     "typescript": "*"
   },
   "optionalDependencies": {

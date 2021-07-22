@@ -32,9 +32,9 @@
     "webpack-merge": "^5.0.7"
   },
   "devDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "*"
   },
   "peerDependencies": {
-    "@packmule/core": "^2.0.0"
+    "@packmule/core": "*"
   }
 }
