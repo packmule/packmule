@@ -5,6 +5,7 @@ import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     extensions: string[];
+    webp?: boolean;
     path?: string;
     include?: PackIncludeOption;
 }
@@ -13,6 +14,7 @@ export default class ImageOptimizationPack implements Pack {
     private options: PackOptions;
     private defaults: PackOptions = {
         extensions: ['svg', 'gif', 'png', 'jpg', 'jpeg'],
+        webp: false,
     };
 
     private configuration: webpack.Configuration = {
@@ -60,16 +62,19 @@ export default class ImageOptimizationPack implements Pack {
                 },
             });
 
-            const transformation = new ImagePlugin({
-                test: expression,
-                filename: '[path][name].webp',
-                minimizerOptions: {
-                    plugins: [['imagemin-webp']],
-                },
-            });
-
             this.configuration.plugins!.push(optimization);
-            this.configuration.plugins!.push(transformation);
+
+            if (this.options.webp) {
+                const transformation = new ImagePlugin({
+                    test: expression,
+                    filename: '[path][name].webp',
+                    minimizerOptions: {
+                        plugins: [['imagemin-webp']],
+                    },
+                });
+
+                this.configuration.plugins!.push(transformation);
+            }
         }
 
         return this.configuration;
