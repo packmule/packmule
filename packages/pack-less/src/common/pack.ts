@@ -55,7 +55,6 @@ export default class LessPack implements Pack {
             {
                 loader: 'resolve-url-loader',
                 options: {
-                    engine: 'postcss',
                     sourceMap: hints.map,
                 },
             },
