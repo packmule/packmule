@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": "github:packmule/packmule",
   "bugs": "https://github.com/packmule/packmule/issues",
-  "type": "module",
+  "type": "commonjs",
   "main": "module/",
   "typings": "module/",
   "keywords": [],
