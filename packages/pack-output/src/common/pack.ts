@@ -35,8 +35,8 @@ export default class OutputPack implements Pack {
                 ? 'chunks/[name].[contenthash:8].js'
                 : 'chunks/[name].js';
             this.configuration.output.assetModuleFilename = hints.hash
-                ? 'assets/[name].[contenthash:8].[ext]'
-                : 'assets/[name].[ext]';
+                ? 'assets/[name].[contenthash:8][ext]'
+                : 'assets/[name][ext]';
         }
 
         return this.configuration;

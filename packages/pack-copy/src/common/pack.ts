@@ -38,7 +38,7 @@ export default class CopyPack implements Pack {
             type: 'asset/resource',
             include: this.options.include,
             generator: {
-                filename: this.options.path + '/' + (hints.hash ? '[name].[contenthash:8].[ext]' : '[name].[ext]'),
+                filename: this.options.path + '/' + (hints.hash ? '[name].[contenthash:8][ext]' : '[name][ext]'),
             },
         };
 
