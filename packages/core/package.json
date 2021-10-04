@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "esbuild-loader": "^2.8.0",
-    "pkg-dir": "^5.0.0",
+    "pkg-dir": "^6.0.0",
     "webpack-merge": "^5.0.7"
   },
   "peerDependencies": {
