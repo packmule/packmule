@@ -1,1 +1,1 @@
-export { default, default as SassPack } from './common/pack';
+export { default, default as SassPack } from './common/pack.js';

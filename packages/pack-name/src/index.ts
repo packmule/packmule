@@ -1,1 +1,1 @@
-export { default, default as NamePack } from './common/pack';
+export { default, default as NamePack } from './common/pack.js';

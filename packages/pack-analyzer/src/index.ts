@@ -1,1 +1,1 @@
-export { default, default as AnalyzerPack } from './common/pack';
+export { default, default as AnalyzerPack } from './common/pack.js';

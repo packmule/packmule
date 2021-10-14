@@ -1,1 +1,1 @@
-export { default, default as CachePack } from './common/pack';
+export { default, default as CachePack } from './common/pack.js';

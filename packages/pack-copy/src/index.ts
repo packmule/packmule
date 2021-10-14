@@ -1,1 +1,1 @@
-export { default, default as CopyPack } from './common/pack';
+export { default, default as CopyPack } from './common/pack.js';

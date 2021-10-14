@@ -5,9 +5,9 @@
   "license": "MIT",
   "repository": "github:packmule/packmule",
   "bugs": "https://github.com/packmule/packmule/issues",
-  "type": "commonjs",
-  "main": "module/",
-  "typings": "module/",
+  "type": "module",
+  "exports": "./module/index.js",
+  "types": "module/",
   "keywords": [],
   "engines": {
     "node": "12||14||16",

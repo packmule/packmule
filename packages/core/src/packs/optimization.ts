@@ -1,7 +1,7 @@
 import webpack from 'webpack';
-import Pack from '../common/pack';
-import Options from '../common/options';
-import Hints from '../common/hints';
+import Pack from '../common/pack.js';
+import Options from '../common/options.js';
+import Hints from '../common/hints.js';
 
 export default class OptimizationPack implements Pack {
     private configuration: webpack.Configuration = {};

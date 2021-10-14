@@ -1,13 +1,13 @@
 import webpack from 'webpack';
 import { merge } from 'webpack-merge';
 import dir from 'pkg-dir';
-import presets from './presets';
-import Pack from './pack';
-import Hints from './hints';
-import Options from './options';
-import BasePack from '../packs/base';
-import OptimizationPack from '../packs/optimization';
-import MinificationPack from '../packs/minification';
+import presets from './presets.js';
+import Pack from './pack.js';
+import Hints from './hints.js';
+import Options from './options.js';
+import BasePack from '../packs/base.js';
+import OptimizationPack from '../packs/optimization.js';
+import MinificationPack from '../packs/minification.js';
 
 export default class Packmule {
     private packs: Map<Pack, Hints | undefined> = new Map();

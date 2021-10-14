@@ -1,6 +1,6 @@
 import test from 'ava';
 import BarPlugin from 'webpackbar';
-import Pack from '../src/';
+import Pack from '../src/index.js';
 
 test('webpackbar plugin is enabled by default', (t) => {
     const pack = new Pack();

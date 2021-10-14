@@ -1,1 +1,1 @@
-export { default, default as EnvironmentPack } from './common/pack';
+export { default, default as EnvironmentPack } from './common/pack.js';

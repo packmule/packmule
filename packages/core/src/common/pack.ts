@@ -1,6 +1,6 @@
 import webpack from 'webpack';
-import Hints from './hints';
-import Options from './options';
+import Hints from './hints.js';
+import Options from './options.js';
 
 export default interface Pack {
     include?(include: PackIncludeOption): this;
