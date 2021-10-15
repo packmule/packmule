@@ -44,7 +44,7 @@ export default class LessPack implements Pack {
 
         if (options.lint) {
             const lint = new LintPlugin({
-                emitErrors: false,
+                emitError: false,
                 failOnError: false,
                 lintDirtyModulesOnly: true,
             });
