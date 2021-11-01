@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import { merge } from 'webpack-merge';
-import dir from 'pkg-dir';
+import { packageDirectorySync } from 'pkg-dir';
 import presets from './presets.js';
 import Pack from './pack.js';
 import Hints from './hints.js';
@@ -16,7 +16,7 @@ export default class Packmule {
 
     private defaults: Options = {
         mode: 'none',
-        root: dir.sync(process.cwd()),
+        root: packageDirectorySync(),
         debug: false,
     };
 
