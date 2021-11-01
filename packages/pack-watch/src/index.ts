@@ -1,1 +1,1 @@
-export { default, default as WatchPack } from './common/pack';
+export { default, default as WatchPack } from './common/pack.js';

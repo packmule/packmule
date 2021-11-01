@@ -1,8 +1,8 @@
 import webpack from 'webpack';
 import { ESBuildMinifyPlugin } from 'esbuild-loader';
-import Pack from '../common/pack';
-import Hints from '../common/hints';
-import Options from '../common/options';
+import Pack from '../common/pack.js';
+import Hints from '../common/hints.js';
+import Options from '../common/options.js';
 
 export default class MinificationPack implements Pack {
     private configuration: webpack.Configuration = {

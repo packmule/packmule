@@ -1,7 +1,7 @@
 import test from 'ava';
 import webpack from 'webpack';
 import DotenvPlugin from 'dotenv-webpack';
-import Pack from '../src/';
+import Pack from '../src/index.js';
 
 test('pack instantiation', (t) => {
     const pack = new Pack();

@@ -1,5 +1,5 @@
 import test from 'ava';
-import Pack from '../src/';
+import Pack from '../src/index.js';
 
 test('pack instantiation', (t) => {
     const pack = new Pack();

@@ -1,6 +1,6 @@
 import test from 'ava';
 import { ESBuildMinifyPlugin } from 'esbuild-loader';
-import Pack from '../../src/packs/minification';
+import Pack from '../../src/packs/minification.js';
 
 test('pack instantiation', (t) => {
     const pack = new Pack();

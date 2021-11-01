@@ -1,1 +1,1 @@
-export { default, default as SpritePack } from './common/pack';
+export { default, default as SpritePack } from './common/pack.js';

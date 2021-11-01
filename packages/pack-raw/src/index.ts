@@ -1,1 +1,1 @@
-export { default, default as RawPack } from './common/pack';
+export { default, default as RawPack } from './common/pack.js';

@@ -1,1 +1,1 @@
-export { default, default as LogPack } from './common/pack';
+export { default, default as LogPack } from './common/pack.js';

@@ -1,4 +1,4 @@
-import Hints from './hints';
+import Hints from './hints.js';
 
 const presets: {
     [index: string]: Hints;

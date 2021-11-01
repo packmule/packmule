@@ -1,1 +1,1 @@
-export { default, default as ManifestPack } from './common/pack';
+export { default, default as ManifestPack } from './common/pack.js';

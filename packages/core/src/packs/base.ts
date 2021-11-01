@@ -1,7 +1,7 @@
 import webpack from 'webpack';
-import Pack from '../common/pack';
-import Hints from '../common/hints';
-import Options from '../common/options';
+import Pack from '../common/pack.js';
+import Hints from '../common/hints.js';
+import Options from '../common/options.js';
 
 export default class BasePack implements Pack {
     private configuration: webpack.Configuration = {

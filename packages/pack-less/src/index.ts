@@ -1,1 +1,1 @@
-export { default, default as LessPack } from './common/pack';
+export { default, default as LessPack } from './common/pack.js';

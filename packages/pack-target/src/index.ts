@@ -1,1 +1,1 @@
-export { default, default as TargetPack } from './common/pack';
+export { default, default as TargetPack } from './common/pack.js';
