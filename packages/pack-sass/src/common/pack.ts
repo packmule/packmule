@@ -56,6 +56,10 @@ export default class SassPack implements Pack {
                 loader: 'postcss-loader',
                 options: {
                     sourceMap: hints.map,
+                    ctx: {
+                        options,
+                        hints,
+                    },
                 },
             },
             {

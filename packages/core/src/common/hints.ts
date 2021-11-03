@@ -8,4 +8,5 @@ export default interface Hints {
     cache?: boolean;
     hash?: boolean;
     watch?: boolean;
+    target?: string;
 }

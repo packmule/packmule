@@ -50,6 +50,10 @@ export default class LessPack implements Pack {
                 loader: 'postcss-loader',
                 options: {
                     sourceMap: hints.map,
+                    ctx: {
+                        options,
+                        hints,
+                    },
                 },
             },
             {
