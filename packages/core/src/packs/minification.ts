@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import { ESBuildMinifyPlugin } from 'esbuild-loader';
+import browserslist from 'browserslist-to-esbuild';
 import Pack from '../common/pack.js';
 import Hints from '../common/hints.js';
 import Options from '../common/options.js';
@@ -14,7 +15,7 @@ export default class MinificationPack implements Pack {
     public generate(options: Options, hints: Hints): webpack.Configuration {
         if (hints.optimize) {
             const optimization = new ESBuildMinifyPlugin({
-                target: 'esnext',
+                target: browserslist(),
             });
 
             this.configuration.optimization!.minimizer!.push(optimization);
