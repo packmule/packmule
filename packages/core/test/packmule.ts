@@ -1,5 +1,5 @@
 import test from 'ava';
-import Packmule from '../src/index.js';
+import Packmule from '../src/common/packmule.js';
 
 test('packmule instantiation', (t) => {
     const packmule = new Packmule();
