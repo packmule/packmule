@@ -1,6 +1,5 @@
 import webpack from 'webpack';
 import ExtractPlugin from 'mini-css-extract-plugin';
-import OptimizePlugin from 'css-minimizer-webpack-plugin';
 import LintPlugin from 'stylelint-webpack-plugin';
 import { Hints, Options, Pack } from '@packmule/core';
 
@@ -111,11 +110,6 @@ export default class SassPack implements Pack {
                 },
                 ...loaders,
             ];
-        }
-
-        if (hints.optimize) {
-            const optimization = new OptimizePlugin();
-            this.configuration.optimization!.minimizer!.push(optimization);
         }
 
         const rule: webpack.RuleSetRule = {

@@ -16,6 +16,7 @@ export default class MinificationPack implements Pack {
         if (hints.optimize) {
             const optimization = new ESBuildMinifyPlugin({
                 target: browserslist(),
+                css: true,
             });
 
             this.configuration.optimization!.minimizer!.push(optimization);
