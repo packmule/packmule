@@ -2,8 +2,7 @@
 
 > Compile `TypeScript` to `JavaScript`.
 
--   `typescript` compiles `ts` and `tsx` files to `js` files.
--   `babel` transpiles generated `js` files via `babel.config.js`.
+-   `esbuild` compiles `ts` and `tsx` files to `js` files.
 -   `eslint` lints `ts` and `tsx` files via `.eslintrc`.
 
 ## Overview
@@ -41,7 +40,7 @@ _Configure files to be processed. If not used, all files will be processed._
 
 > View the `packmule` [hints documentation][packmule-hints] for more information.
 
--   **cache** - _Controls cache utilization of the `babel-loader`._
+-   **cache** - _Controls cache utilization for `eslint`._
 -   **lint** - _Controls source-code linting via `eslint-webpack-plugin`._
 -   **fix** - _Controls source-code fixing via `eslint-webpack-plugin`._
 -   **map** - _Controls source map creation._
@@ -71,14 +70,12 @@ return packmule.generate();
   
   This dependencies are used primarily by the pack internally.
   
-  * `ts-loader`
-  * `babel-loader`
+  * `esbuild-loader`
   * `eslint-webpack-plugin`
   
   These peer dependencies are needed to use the pack.
   
-  * `typescript`
-  * `@babel/core`
+  * `esbuild`
   * `eslint`
 </details>
 

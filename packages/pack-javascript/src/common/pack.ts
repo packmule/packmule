@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
+import browserslist from 'browserslist-to-esbuild';
 import formatter from 'eslint-formatter-pretty';
 import LintPlugin from 'eslint-webpack-plugin';
 import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
@@ -41,14 +42,17 @@ export default class JavaScriptPack implements Pack {
             use: [],
         };
 
-        const transpilation: webpack.RuleSetRule = {
-            loader: 'babel-loader',
+        const compilation: webpack.RuleSetRule = {
+            loader: 'esbuild-loader',
             options: {
-                cacheDirectory: hints.cache,
+                loader: 'js',
+                target: browserslist(),
             },
         };
 
-        Array.isArray(rule.use) && rule.use.push(transpilation);
+        if (Array.isArray(rule.use)) {
+            rule.use.push(compilation);
+        }
 
         this.configuration.module!.rules!.push(rule);
 

@@ -29,20 +29,18 @@
     "access": "public"
   },
   "dependencies": {
-    "babel-loader": "^8.0.6",
+    "browserslist-to-esbuild": "^1.1.0",
+    "esbuild-loader": "^2.16.0",
     "eslint-formatter-pretty": "^4.0.0",
     "eslint-webpack-plugin": "^3.0.1",
-    "micromatch": "^4.0.2",
-    "ts-loader": "^9.2.3"
+    "micromatch": "^4.0.2"
   },
   "devDependencies": {
     "@packmule/core": "*",
     "@types/micromatch": "^4.0.0"
   },
   "peerDependencies": {
-    "@babel/core": "*",
-    "@packmule/core": "*",
-    "typescript": "*"
+    "@packmule/core": "*"
   },
   "optionalDependencies": {
     "eslint": "*"

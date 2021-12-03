@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import micromatch from 'micromatch';
+import browserslist from 'browserslist-to-esbuild';
 import formatter from 'eslint-formatter-pretty';
 import LintPlugin from 'eslint-webpack-plugin';
 import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
@@ -41,28 +42,15 @@ export default class TypeScriptPack implements Pack {
             use: [],
         };
 
-        const transpilation: webpack.RuleSetRule = {
-            loader: 'babel-loader',
-            options: {
-                cacheDirectory: hints.cache,
-            },
-        };
-
         const compilation: webpack.RuleSetRule = {
-            loader: 'ts-loader',
+            loader: 'esbuild-loader',
             options: {
-                logLevel: 'warn',
-                transpileOnly: hints.watch || !hints.lint,
-                onlyCompileBundledFiles: true,
-                appendTsSuffixTo: [/\.vue$/],
-                compilerOptions: {
-                    sourceMap: hints.map,
-                },
+                loader: 'tsx',
+                target: browserslist(),
             },
         };
 
         if (Array.isArray(rule.use)) {
-            rule.use.push(transpilation);
             rule.use.push(compilation);
         }
 

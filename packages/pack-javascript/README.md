@@ -2,8 +2,8 @@
 
 > Transpile JavaScript using Babel.
 
-Internally the `JavaScript Pack` uses `Babel` to transpile the code if needed.
-To configure `Babel` settings in your project, a `.babelrc.json` file can be used.
+Internally the `JavaScript Pack` uses `esbuild` to transpile the code if needed.
+To configure compilation targets in your project, a `browerslist` configuration can be used.
 Linting code via `ESLint` can be utilized by creating an `.eslintrc` file.
 
 ## Overview
