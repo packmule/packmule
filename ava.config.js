@@ -1,15 +1,11 @@
 export default {
-    nonSemVerExperiments: {
-        configurableModuleFormat: true,
-    },
-    nodeArguments: [
-        '--loader=ts-node/esm',
-        '--experimental-specifier-resolution=node',
+    files: [
+        'packages/*/test/**/*.ts',
     ],
     extensions: {
         ts: 'module',
     },
-    files: [
-        'packages/*/test/**/*.ts',
+    nodeArguments: [
+        '--loader=esbuild-node-loader',
     ],
 }
