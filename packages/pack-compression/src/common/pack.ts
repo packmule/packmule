@@ -6,8 +6,7 @@ import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 
 interface PackOptions {
     extensions?: string[];
-    gzip?: boolean;
-    brotli?: boolean;
+    algorithm?: 'brotli' | 'gzip';
     ratio?: number;
     include?: PackIncludeOption;
 }
@@ -16,8 +15,7 @@ export default class CompressionPack implements Pack {
     private options: PackOptions;
     private defaults: PackOptions = {
         extensions: ['html', 'json', 'xml', 'js', 'css', 'svg', 'ttf', 'otf'],
-        gzip: true,
-        brotli: true,
+        algorithm: 'brotli',
         ratio: 1,
     };
 
@@ -43,7 +41,7 @@ export default class CompressionPack implements Pack {
         const expression = new RegExp(pattern, 'i');
 
         if (hints.optimize) {
-            if (this.options.gzip) {
+            if (this.options.algorithm === 'gzip') {
                 const gzip = new CompressionPlugin({
                     test: expression,
                     include: this.options.include,
@@ -53,9 +51,7 @@ export default class CompressionPack implements Pack {
                 });
 
                 this.configuration.plugins!.push(gzip);
-            }
-
-            if (this.options.brotli) {
+            } else if (this.options.algorithm === 'brotli') {
                 const brotli = new CompressionPlugin({
                     test: expression,
                     include: this.options.include,
