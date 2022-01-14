@@ -29,10 +29,10 @@
     "access": "public"
   },
   "dependencies": {
-    "image-minimizer-webpack-plugin": "^2.2.0",
-    "imagemin-mozjpeg": "^9.0.0",
+    "image-minimizer-webpack-plugin": "^3.2.3",
+    "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^9.0.0",
-    "imagemin-webp": "^6.0.0",
+    "imagemin-webp": "^7.0.0",
     "micromatch": "^4.0.2"
   },
   "devDependencies": {

@@ -21,7 +21,9 @@ export default class ImageOptimizationPack implements Pack {
         module: {
             rules: [],
         },
-        plugins: [],
+        optimization: {
+            minimizer: [],
+        },
     };
 
     constructor() {
@@ -52,29 +54,34 @@ export default class ImageOptimizationPack implements Pack {
         this.configuration.module!.rules!.push(rule);
 
         if (hints.optimize) {
-            const optimization = new ImagePlugin({
-                test: expression,
-                minimizerOptions: {
-                    plugins: [
-                        ['mozjpeg', { quality: 80 }],
-                        ['pngquant', { speed: 3, strip: true }],
-                    ],
+            const options: ImagePlugin.PluginOptions<any, any> = {
+                minimizer: {
+                    implementation: ImagePlugin.imageminMinify,
+                    options: {
+                        plugins: [
+                            ['mozjpeg', { quality: 80 }],
+                            ['pngquant', { speed: 3, strip: true }],
+                        ],
+                    },
                 },
-            });
-
-            this.configuration.plugins!.push(optimization);
+            };
 
             if (this.options.webp) {
-                const transformation = new ImagePlugin({
-                    test: expression,
-                    filename: '[path][name].webp',
-                    minimizerOptions: {
-                        plugins: [['imagemin-webp']],
+                options.generator = [
+                    {
+                        type: 'asset',
+                        filename: '[path][name].webp',
+                        implementation: ImagePlugin.imageminGenerate,
+                        options: {
+                            plugins: ['imagemin-webp'],
+                        },
                     },
-                });
-
-                this.configuration.plugins!.push(transformation);
+                ];
             }
+
+            const plugin = new ImagePlugin(options);
+
+            this.configuration.optimization?.minimizer?.push(plugin);
         }
 
         return this.configuration;
