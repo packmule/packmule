@@ -30,11 +30,10 @@
   },
   "dependencies": {
     "string-to-color": "^2.1.1",
-    "webpackbar": "^5.0.0-3"
+    "webpackbar": "^5.0.2"
   },
   "devDependencies": {
-    "@packmule/core": "*",
-    "@types/webpackbar": "^4.0.0"
+    "@packmule/core": "*"
   },
   "peerDependencies": {
     "@packmule/core": "*"
