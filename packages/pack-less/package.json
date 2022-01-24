@@ -42,7 +42,7 @@
     "@types/mini-css-extract-plugin": "^2.0.1",
     "@types/stylelint": "^13.13.1",
     "less": "^4.0.0",
-    "stylelint": "^13.13.1"
+    "stylelint": "^14.3.0"
   },
   "peerDependencies": {
     "@packmule/core": "*",
