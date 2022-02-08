@@ -43,7 +43,7 @@
     "@types/sass": "^1.16.1",
     "@types/stylelint": "^13.13.1",
     "sass": "^1.23.0",
-    "stylelint": "^13.13.1"
+    "stylelint": "^14.4.0"
   },
   "peerDependencies": {
     "@packmule/core": "*",
