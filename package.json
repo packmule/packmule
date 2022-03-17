@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.20.33",
-    "ava": "4.0.0-rc.1",
+    "ava": "4.1.0",
     "del-cli": "^4.0.1",
     "esbuild-node-loader": "^0.8.0",
     "husky": "^7.0.1",
