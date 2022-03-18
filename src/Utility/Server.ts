@@ -23,7 +23,7 @@ export default class Server {
             writeToDisk: true,
         });
 
-        const hmr = webpackHotMiddleware(compiler, {
+        const hmr = webpackHotMiddleware(compiler as any, {
             log: false,
         });
 
