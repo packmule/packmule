@@ -39,7 +39,6 @@
     "css-loader": "^5.0.1",
     "eventsource": "^1.0.7",
     "external-svg-sprite-loader": "^6.0.1",
-    "fibers": "^4.0.2",
     "file-loader": "^6.2.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.1",
@@ -71,7 +70,6 @@
   },
   "devDependencies": {
     "@types/browser-sync": "^2.26.1",
-    "@types/fibers": "^3.1.0",
     "@types/imagemin-mozjpeg": "^8.0.0",
     "@types/imagemin-pngquant": "^8.0.0",
     "@types/imagemin-svgo": "^8.0.1",
