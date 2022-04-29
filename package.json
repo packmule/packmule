@@ -1,7 +1,7 @@
 {
   "name": "@packmule/packmule",
   "description": "Stubborn configuration generator for webpack.",
-  "version": "1.3.4",
+  "version": "1.4.0-rc.0",
   "license": "MIT",
   "repository": "github:packmule/packmule",
   "bugs": "https://github.com/packmule/packmule/issues",
