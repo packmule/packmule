@@ -1,13 +1,7 @@
 {
     "compilerOptions": {
         "moduleResolution": "node",
-        "module": "commonjs",
-        "target": "es2015",
-        "newLine": "lf",
-        "outDir": "module/",
-        "declaration": true,
         "strict": true,
-        "removeComments": true,
         "allowUnreachableCode": true,
         "noUnusedParameters": false,
         "noUnusedLocals": true,
