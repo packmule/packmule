@@ -37,18 +37,11 @@ export default class ImageOptimizationPack implements Pack {
 
     public generate(options: Options, hints: Hints): webpack.Configuration {
         const pattern = '(' + this.options.extensions.map((extension: string) => `\\.${extension}`).join('|') + ')$';
-        const expression = new RegExp(pattern, 'i');
-
-        const rule: webpack.RuleSetRule = {
-            test: expression,
-            include: this.options.include,
-            type: 'asset/resource',
-        };
-
-        this.configuration.module!.rules!.push(rule);
+        const include = new RegExp(pattern, 'i');
 
         if (hints.optimize) {
             const options: ImagePlugin.PluginOptions<any, any> = {
+                include: include,
                 minimizer: {
                     implementation: ImagePlugin.imageminMinify,
                     options: {
