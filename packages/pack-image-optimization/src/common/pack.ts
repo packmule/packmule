@@ -6,7 +6,6 @@ import { Hints, Options, Pack, PackIncludeOption } from '@packmule/core';
 interface PackOptions {
     extensions: string[];
     webp?: boolean;
-    path?: string;
     include?: PackIncludeOption;
 }
 
@@ -33,11 +32,6 @@ export default class ImageOptimizationPack implements Pack {
     public include(include: PackIncludeOption): this {
         this.options.include = typeof include === 'string' ? micromatch.makeRe(include, { dot: true }) : include;
 
-        return this;
-    }
-
-    public to(path: string): this {
-        this.options.path = path;
         return this;
     }
 
