@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "css-loader": "^6.1.0",
-    "less-loader": "^10.0.1",
+    "less-loader": "^11.0.0",
     "mini-css-extract-plugin": "^2.1.0",
     "postcss-loader": "^6.1.1",
     "resolve-url-loader": "^5.0.0",
