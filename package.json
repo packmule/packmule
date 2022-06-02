@@ -5,37 +5,26 @@
     "node": "12||14||16",
     "npm": ">=7"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "prepare": "run-s setup clean build test",
+    "prepare": "run-s setup build test",
     "setup": "husky install",
-    "clean": "run-p clean:*",
-    "clean:builds": "del-cli packages/*/module packages/*/generators",
-    "clean:caches": "del-cli packages/*/*.tsbuildinfo",
-    "build": "run-s build:*",
-    "build:compile": "tsc --build",
-    "watch": "run-s clean watch:*",
-    "watch:compile": "tsc --build --watch",
-    "format": "run-s format:*",
-    "format:fix": "prettier --write packages/**",
-    "test": "ava",
-    "test:watch": "ava --watch",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "format": "prettier --write packages/**",
     "publish:nightly": "lerna publish --yes --canary --preid=nightly --dist-tag=nightly --force-publish=*",
     "publish:next": "lerna publish --yes --canary --preid=next --dist-tag=next --force-publish=*"
   },
   "devDependencies": {
     "@types/node": "^12.20.33",
-    "ava": "^4.2.0",
     "del-cli": "^4.0.1",
-    "esbuild-node-loader": "^0.8.0",
-    "husky": "^7.0.1",
+    "husky": "^8.0.1",
     "lerna": "^4.0.0",
-    "lint-staged": "^12.3.7",
+    "lint-staged": "^13.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "2.6.2",
+    "turbo": "^1.2.14",
     "typescript": "^4.0.2",
     "webpack": "^5.18.0"
-  }
+  },
+  "packageManager": "pnpm@7.1.6"
 }

@@ -15,12 +15,15 @@
   ],
   "engines": {
     "node": "12||14||16",
-    "npm": ">=7"
+    "npm": ">=8"
   },
   "author": {
     "name": "Thomas Deinhamer",
     "email": "t.deinhamer@pixelart.at",
     "url": "https://www.pixelart.at/"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts src/**/*.ts --platform=node --target=node12.20 --outdir=module/"
   },
   "files": [
     "module/"
@@ -32,7 +35,9 @@
     "webpack-assets-manifest": "^5.0.0"
   },
   "devDependencies": {
-    "@packmule/core": "*"
+    "@packmule/core": "*",
+    "esbuild": "^0.14.42",
+    "webpack": "^5.73.0"
   },
   "peerDependencies": {
     "@packmule/core": "*"
