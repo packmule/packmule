@@ -16,10 +16,10 @@ jobs:
           node-version: 16
       - uses: pnpm/action-setup@v2.2.2
       - run: |
-        pnpm install --ignore-scripts
-        pnpm build
-        pnpm test
-        pnpm publish:nightly
+          pnpm install --ignore-scripts
+          pnpm build
+          pnpm test
+          pnpm publish:nightly
         env:
           CI: true
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
