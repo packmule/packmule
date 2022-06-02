@@ -3,6 +3,6 @@ export default {
     extensions: {
         ts: 'module',
     },
-    nodeArguments: ['--loader=@esbuild-kit/esm-loader'],
+    nodeArguments: ['--no-warnings', '--loader=@esbuild-kit/esm-loader'],
     timeout: '30s',
 };
