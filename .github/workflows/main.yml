@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-20.04]
-        node-version: [12, 14, 16]
+        node-version: [14, 16, 18]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
@@ -17,7 +17,6 @@ jobs:
       - uses: pnpm/action-setup@v2.2.2
       - run: |
           pnpm install --ignore-scripts
-          pnpm build
           pnpm test
         env:
           CI: true

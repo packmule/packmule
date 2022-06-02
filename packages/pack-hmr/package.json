@@ -14,8 +14,9 @@
     "packmule-pack"
   ],
   "engines": {
-    "node": "12||14||16",
-    "npm": ">=8"
+    "node": "14||16||18",
+    "npm": ">=8",
+    "pnpm": ">=7"
   },
   "author": {
     "name": "Thomas Deinhamer",
