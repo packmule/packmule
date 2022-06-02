@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@packmule/core": "*",
-    "@types/stylelint": "^13.13.1",
+    "@types/stylelint": "^14.0.0",
     "ava": "^4.2.0",
     "esbuild": "^0.14.42",
     "@esbuild-kit/esm-loader": "^2.1.4",
