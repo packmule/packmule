@@ -11,13 +11,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: 'https://registry.npmjs.org'
+      - uses: pnpm/action-setup@v2.2.2
       - run: |
-        corepack enable
-        corepack prepare pnpm@7.1.6 --activate
         pnpm install --ignore-scripts
         pnpm build
         pnpm test
