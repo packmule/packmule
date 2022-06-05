@@ -10,9 +10,7 @@
   "types": "module/",
   "keywords": [],
   "engines": {
-    "node": "14||16||18",
-    "npm": ">=8",
-    "pnpm": ">=7"
+    "node": "14||16||18"
   },
   "author": {
     "name": "Thomas Deinhamer",
@@ -20,7 +18,7 @@
     "url": "https://www.pixelart.at/"
   },
   "scripts": {
-    "build": "esbuild src/index.ts src/**/*.ts --platform=node --target=node12.20 --outdir=module/"
+    "build": "esbuild src/index.ts src/**/*.ts --platform=node --target=node14.13 --outdir=module/"
   },
   "files": [
     "module/"
