@@ -229,13 +229,13 @@ importers:
       '@gfx/zopfli': ^1.0.14
       '@packmule/core': '*'
       '@types/micromatch': ^4.0.0
-      compression-webpack-plugin: ^9.0.0
+      compression-webpack-plugin: ^10.0.0
       esbuild: ^0.14.42
       micromatch: ^4.0.2
       webpack: ^5.73.0
     dependencies:
       '@gfx/zopfli': 1.0.15
-      compression-webpack-plugin: 9.2.0_webpack@5.73.0
+      compression-webpack-plugin: 10.0.0_webpack@5.73.0
       micromatch: 4.0.5
     devDependencies:
       '@packmule/core': link:../core
@@ -360,10 +360,10 @@ importers:
       css-loader: ^6.1.0
       esbuild: ^0.14.42
       less: ^4.0.0
-      less-loader: ^10.0.1
+      less-loader: ^11.0.0
       mini-css-extract-plugin: ^2.1.0
       postcss: ^8.4.14
-      postcss-loader: ^6.1.1
+      postcss-loader: ^7.0.0
       resolve-url-loader: ^5.0.0
       style-loader: ^3.1.0
       stylelint: ^14.6.0
@@ -371,9 +371,9 @@ importers:
       webpack: ^5.73.0
     dependencies:
       css-loader: 6.7.1_webpack@5.73.0
-      less-loader: 10.2.0_less@4.1.2+webpack@5.73.0
+      less-loader: 11.0.0_less@4.1.2+webpack@5.73.0
       mini-css-extract-plugin: 2.6.0_webpack@5.73.0
-      postcss-loader: 6.2.1_mepnsno3xmng6eyses4tepu7bu
+      postcss-loader: 7.0.0_mepnsno3xmng6eyses4tepu7bu
       resolve-url-loader: 5.0.0
       style-loader: 3.3.1_webpack@5.73.0
       stylelint-webpack-plugin: 3.3.0_pflmx4jht6ti4vacdmab3uvw5y
@@ -500,10 +500,10 @@ importers:
       esbuild: ^0.14.42
       mini-css-extract-plugin: ^2.1.0
       postcss: ^8.4.14
-      postcss-loader: ^6.1.1
+      postcss-loader: ^7.0.0
       resolve-url-loader: ^5.0.0
       sass: ^1.23.0
-      sass-loader: ^12.1.0
+      sass-loader: ^13.0.0
       style-loader: ^3.1.0
       stylelint: ^14.6.0
       stylelint-webpack-plugin: ^3.0.1
@@ -511,9 +511,9 @@ importers:
     dependencies:
       css-loader: 6.7.1_webpack@5.73.0
       mini-css-extract-plugin: 2.6.0_webpack@5.73.0
-      postcss-loader: 6.2.1_mepnsno3xmng6eyses4tepu7bu
+      postcss-loader: 7.0.0_mepnsno3xmng6eyses4tepu7bu
       resolve-url-loader: 5.0.0
-      sass-loader: 12.6.0_sass@1.52.2+webpack@5.73.0
+      sass-loader: 13.0.0_sass@1.52.2+webpack@5.73.0
       style-loader: 3.3.1_webpack@5.73.0
       stylelint-webpack-plugin: 3.3.0_pflmx4jht6ti4vacdmab3uvw5y
     devDependencies:
@@ -4786,9 +4786,9 @@ packages:
     resolution: {integrity: sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==}
     dev: false
 
-  /compression-webpack-plugin/9.2.0_webpack@5.73.0:
-    resolution: {integrity: sha512-R/Oi+2+UHotGfu72fJiRoVpuRifZT0tTC6UqFD/DUo+mv8dbOow9rVOuTvDv5nPPm3GZhHL/fKkwxwIHnJ8Nyw==}
-    engines: {node: '>= 12.13.0'}
+  /compression-webpack-plugin/10.0.0_webpack@5.73.0:
+    resolution: {integrity: sha512-wLXLIBwpul/ALcm7Aj+69X0pYT3BYt6DdPn3qrgBIh9YejV9Bju9ShhlAsjujLyWMo6SAweFIWaUoFmXZNuNrg==}
+    engines: {node: '>= 14.15.0'}
     peerDependencies:
       webpack: ^5.1.0
     dependencies:
@@ -8129,9 +8129,9 @@ packages:
       - supports-color
     dev: true
 
-  /less-loader/10.2.0_less@4.1.2+webpack@5.73.0:
-    resolution: {integrity: sha512-AV5KHWvCezW27GT90WATaDnfXBv99llDbtaj4bshq6DvAihMdNjaPDcUMa6EXKLRF+P2opFenJp89BXg91XLYg==}
-    engines: {node: '>= 12.13.0'}
+  /less-loader/11.0.0_less@4.1.2+webpack@5.73.0:
+    resolution: {integrity: sha512-9+LOWWjuoectIEx3zrfN83NAGxSUB5pWEabbbidVQVgZhN+wN68pOvuyirVlH1IK4VT1f3TmlyvAnCXh8O5KEw==}
+    engines: {node: '>= 14.15.0'}
     peerDependencies:
       less: ^3.5.0 || ^4.0.0
       webpack: ^5.0.0
@@ -9864,9 +9864,9 @@ packages:
       is-number-like: 1.0.8
     dev: false
 
-  /postcss-loader/6.2.1_mepnsno3xmng6eyses4tepu7bu:
-    resolution: {integrity: sha512-WbbYpmAaKcux/P66bZ40bpWsBucjx/TTgVVzRZ9yUO8yQfVBlameJ0ZGVaPfH64hNSBh63a+ICP5nqOpBA0w+Q==}
-    engines: {node: '>= 12.13.0'}
+  /postcss-loader/7.0.0_mepnsno3xmng6eyses4tepu7bu:
+    resolution: {integrity: sha512-IDyttebFzTSY6DI24KuHUcBjbAev1i+RyICoPEWcAstZsj03r533uMXtDn506l6/wlsRYiS5XBdx7TpccCsyUg==}
+    engines: {node: '>= 14.15.0'}
     peerDependencies:
       postcss: ^7.0.0 || ^8.0.1
       webpack: ^5.0.0
@@ -10542,9 +10542,9 @@ packages:
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  /sass-loader/12.6.0_sass@1.52.2+webpack@5.73.0:
-    resolution: {integrity: sha512-oLTaH0YCtX4cfnJZxKSLAyglED0naiYfNG1iXfU5w1LNZ+ukoA5DtyDIN5zmKVZwYNJP4KRc5Y3hkWga+7tYfA==}
-    engines: {node: '>= 12.13.0'}
+  /sass-loader/13.0.0_sass@1.52.2+webpack@5.73.0:
+    resolution: {integrity: sha512-IHCFecI+rbPvXE2zO/mqdVFe8MU7ElGrwga9hh2H65Ru4iaBJAMRteum1c4Gsxi9Cq1FOtTEDd6+/AEYuQDM4Q==}
+    engines: {node: '>= 14.15.0'}
     peerDependencies:
       fibers: '>= 3.1.0'
       node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
