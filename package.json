@@ -1,10 +1,6 @@
 {
   "private": true,
   "type": "module",
-  "engines": {
-    "node": "16",
-    "pnpm": "7"
-  },
   "scripts": {
     "prepare": "husky install",
     "build": "turbo run build",
