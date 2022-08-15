@@ -42,7 +42,7 @@
   "devDependencies": {
     "@packmule/core": "*",
     "@types/sass": "^1.16.1",
-    "esbuild": "^0.14.42",
+    "esbuild": "^0.15.3",
     "postcss": "^8.4.14",
     "sass": "^1.23.0",
     "stylelint": "^14.6.0",
