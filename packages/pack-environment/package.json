@@ -32,12 +32,12 @@
     "access": "public"
   },
   "dependencies": {
-    "dotenv-webpack": "^7.0.3"
+    "dotenv-webpack": "^8.0.1"
   },
   "devDependencies": {
     "@packmule/core": "*",
     "@types/dotenv-webpack": "^7.0.3",
-    "ava": "^4.2.0",
+    "ava": "^5.1.0",
     "esbuild": "^0.15.14",
     "@esbuild-kit/esm-loader": "^2.1.4",
     "webpack": "^5.73.0"

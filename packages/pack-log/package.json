@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@packmule/core": "*",
-    "ava": "^4.2.0",
+    "ava": "^5.1.0",
     "esbuild": "^0.15.14",
     "@esbuild-kit/esm-loader": "^2.1.4",
     "webpack": "^5.73.0"
