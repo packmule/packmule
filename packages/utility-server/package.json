@@ -29,7 +29,7 @@
   "dependencies": {
     "browser-sync": "^2.26.7",
     "browserstack-local": "^1.4.2",
-    "webpack-dev-middleware": "^5.0.0",
+    "webpack-dev-middleware": "^6.0.0",
     "webpack-hot-middleware": "^2.25.0"
   },
   "devDependencies": {
