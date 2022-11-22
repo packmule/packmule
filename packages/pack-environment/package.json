@@ -35,7 +35,7 @@
     "dotenv-webpack": "^8.0.1"
   },
   "devDependencies": {
-    "@packmule/core": "*",
+    "@packmule/core": "workspace:^",
     "@types/dotenv-webpack": "^7.0.3",
     "ava": "^5.1.0",
     "esbuild": "^0.15.14",
@@ -43,6 +43,6 @@
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "@packmule/core": "*"
+    "@packmule/core": "workspace:^"
   }
 }

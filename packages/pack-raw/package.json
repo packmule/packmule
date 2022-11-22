@@ -34,11 +34,11 @@
     "webpack-merge": "^5.0.7"
   },
   "devDependencies": {
-    "@packmule/core": "*",
+    "@packmule/core": "workspace:^",
     "esbuild": "^0.15.14",
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "@packmule/core": "*"
+    "@packmule/core": "workspace:^"
   }
 }

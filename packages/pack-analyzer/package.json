@@ -34,12 +34,12 @@
     "webpack-bundle-analyzer": "^4.4.2"
   },
   "devDependencies": {
-    "@packmule/core": "*",
+    "@packmule/core": "workspace:^",
     "@types/webpack-bundle-analyzer": "^4.4.1",
     "esbuild": "^0.15.14",
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "@packmule/core": "*"
+    "@packmule/core": "workspace:^"
   }
 }

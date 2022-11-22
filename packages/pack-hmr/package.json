@@ -34,11 +34,11 @@
     "webpack-hot-middleware": "^2.25.0"
   },
   "devDependencies": {
-    "@packmule/core": "*",
+    "@packmule/core": "workspace:^",
     "esbuild": "^0.15.14",
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "@packmule/core": "*"
+    "@packmule/core": "workspace:^"
   }
 }

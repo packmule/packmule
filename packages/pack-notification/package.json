@@ -34,11 +34,11 @@
     "webpack-notifier": "^1.8.0"
   },
   "devDependencies": {
-    "@packmule/core": "*",
+    "@packmule/core": "workspace:^",
     "esbuild": "^0.15.14",
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "@packmule/core": "*"
+    "@packmule/core": "workspace:^"
   }
 }

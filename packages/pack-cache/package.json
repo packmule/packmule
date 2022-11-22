@@ -32,13 +32,13 @@
     "access": "public"
   },
   "devDependencies": {
-    "@packmule/core": "*",
+    "@packmule/core": "workspace:^",
     "ava": "^5.1.0",
     "esbuild": "^0.15.14",
     "@esbuild-kit/esm-loader": "^2.1.4",
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "@packmule/core": "*"
+    "@packmule/core": "workspace:^"
   }
 }

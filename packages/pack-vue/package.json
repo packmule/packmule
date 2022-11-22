@@ -35,13 +35,13 @@
     "vue-loader": "^17.0.0"
   },
   "devDependencies": {
-    "@packmule/core": "*",
+    "@packmule/core": "workspace:^",
     "@types/micromatch": "^4.0.0",
     "esbuild": "^0.15.14",
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "@packmule/core": "*",
+    "@packmule/core": "workspace:^",
     "vue": "*",
     "vue-template-compiler": "*"
   }
