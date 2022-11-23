@@ -22,7 +22,7 @@
     "url": "https://www.pixelart.at/"
   },
   "scripts": {
-    "build": "esbuild src/index.ts src/**/*.ts --platform=node --target=node14.13 --outdir=module/",
+    "build": "tsc",
     "test": "ava"
   },
   "files": [
@@ -36,12 +36,6 @@
     "esbuild-loader": "^2.8.0",
     "pkg-dir": "^7.0.0",
     "webpack-merge": "^5.0.7"
-  },
-  "devDependencies": {
-    "ava": "^5.1.0",
-    "esbuild": "^0.15.14",
-    "@esbuild-kit/esm-loader": "^2.1.4",
-    "webpack": "^5.73.0"
   },
   "peerDependencies": {
     "webpack": "^5.0.0"

@@ -22,7 +22,7 @@
     "url": "https://www.pixelart.at/"
   },
   "scripts": {
-    "build": "esbuild src/index.ts src/**/*.ts --platform=node --target=node14.13 --outdir=module/"
+    "build": "tsc"
   },
   "files": [
     "module/"
@@ -42,11 +42,9 @@
   "devDependencies": {
     "@packmule/core": "workspace:^",
     "@types/sass": "^1.16.1",
-    "esbuild": "^0.15.14",
     "postcss": "^8.4.14",
     "sass": "^1.23.0",
-    "stylelint": "^14.6.0",
-    "webpack": "^5.73.0"
+    "stylelint": "^14.6.0"
   },
   "peerDependencies": {
     "@packmule/core": "*",
