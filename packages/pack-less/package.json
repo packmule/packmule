@@ -51,7 +51,7 @@
     "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "@packmule/core": "workspace:^",
+    "@packmule/core": "*",
     "less": "*",
     "postcss": "*"
   }
