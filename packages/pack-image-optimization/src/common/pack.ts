@@ -48,18 +48,21 @@ export default class ImageOptimizationPack implements Pack {
                         plugins: [
                             ['mozjpeg', { quality: 80 }],
                             ['pngquant', { speed: 3, strip: true }],
-                            ['svgo', {
-                                plugins: [
-                                    {
-                                        name: 'preset-default',
-                                        params: {
-                                            overrides: {
-                                                cleanupIDs: false,
+                            [
+                                'svgo',
+                                {
+                                    plugins: [
+                                        {
+                                            name: 'preset-default',
+                                            params: {
+                                                overrides: {
+                                                    cleanupIDs: false,
+                                                },
                                             },
                                         },
-                                    },
-                                ],
-                            }],
+                                    ],
+                                },
+                            ],
                         ],
                     },
                 },
