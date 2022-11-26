@@ -507,12 +507,12 @@ importers:
       '@types/browser-sync': ^2.26.1
       browser-sync: ^2.26.7
       browserstack-local: ^1.4.2
-      webpack-dev-middleware: ^5.0.0
+      webpack-dev-middleware: ^6.0.0
       webpack-hot-middleware: ^2.25.0
     dependencies:
       browser-sync: 2.27.10
       browserstack-local: 1.5.1
-      webpack-dev-middleware: 5.3.3
+      webpack-dev-middleware: 6.0.0
       webpack-hot-middleware: 2.25.3
     devDependencies:
       '@types/browser-sync': 2.26.3
@@ -11773,11 +11773,11 @@ packages:
       - utf-8-validate
     dev: false
 
-  /webpack-dev-middleware/5.3.3:
-    resolution: {integrity: sha512-hj5CYrY0bZLB+eTO+x/j67Pkrquiy7kWepMHmUMoPsmcUaeEnQJqFzHJOyxgWlq746/wUuA64p9ta34Kyb01pA==}
-    engines: {node: '>= 12.13.0'}
+  /webpack-dev-middleware/6.0.0:
+    resolution: {integrity: sha512-A7jSXBifCJsJqUCVISlcbx9pkmCuP0KriMRcOJ13pOb6/xMXZvh4/ygeJeSArjRd50IT5IVbBFuejGDA/zWrNQ==}
+    engines: {node: '>= 14.15.0'}
     peerDependencies:
-      webpack: ^4.0.0 || ^5.0.0
+      webpack: ^5.0.0
     dependencies:
       colorette: 2.0.19
       memfs: 3.4.12
