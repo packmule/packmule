@@ -17,7 +17,7 @@ export default class TypeScriptPack implements Pack {
 
     private configuration: webpack.Configuration = {
         resolve: {
-            extensions: ['.ts', '.tsx'],
+            extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
         module: {
             rules: [],
@@ -59,7 +59,7 @@ export default class TypeScriptPack implements Pack {
         if (hints.lint) {
             const lint = new LintPlugin({
                 context: options.root,
-                extensions: ['.ts', '.tsx'],
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
                 cache: hints.cache,
                 fix: hints.fix,
                 lintDirtyModulesOnly: hints.watch,
