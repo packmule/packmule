@@ -31,7 +31,7 @@
     "access": "public"
   },
   "dependencies": {
-    "webpack-merge": "^5.0.7"
+    "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^"

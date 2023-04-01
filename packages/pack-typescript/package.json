@@ -31,20 +31,20 @@
     "access": "public"
   },
   "dependencies": {
-    "browserslist-to-esbuild": "^1.1.0",
-    "esbuild-loader": "^2.16.0",
-    "eslint-formatter-pretty": "^4.0.0",
-    "eslint-webpack-plugin": "^3.0.1",
-    "micromatch": "^4.0.2"
+    "browserslist-to-esbuild": "^1.2.0",
+    "esbuild-loader": "^2.21.0",
+    "eslint-formatter-pretty": "^4.1.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "micromatch": "^4.0.5"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^",
-    "@types/micromatch": "^4.0.0"
+    "@types/micromatch": "^4.0.2"
   },
   "peerDependencies": {
     "@packmule/core": "*"
   },
   "optionalDependencies": {
-    "eslint": "*"
+    "eslint": "^8.37.0"
   }
 }

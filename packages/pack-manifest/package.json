@@ -31,7 +31,7 @@
     "access": "public"
   },
   "dependencies": {
-    "webpack-pwa-manifest": "^4.0.0"
+    "webpack-pwa-manifest": "^4.3.0"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^"

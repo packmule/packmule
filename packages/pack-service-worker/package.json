@@ -31,12 +31,12 @@
     "access": "public"
   },
   "dependencies": {
-    "micromatch": "^4.0.2",
-    "workbox-webpack-plugin": "^6.0.2"
+    "micromatch": "^4.0.5",
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^",
-    "@types/micromatch": "^4.0.0"
+    "@types/micromatch": "^4.0.2"
   },
   "peerDependencies": {
     "@packmule/core": "*"

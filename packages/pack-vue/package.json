@@ -31,12 +31,14 @@
     "access": "public"
   },
   "dependencies": {
-    "micromatch": "^4.0.2",
-    "vue-loader": "^17.0.0"
+    "micromatch": "^4.0.5",
+    "vue": "^3.2.47",
+    "vue-loader": "^17.0.1",
+    "vue-template-compiler": "^2.7.14"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^",
-    "@types/micromatch": "^4.0.0"
+    "@types/micromatch": "^4.0.2"
   },
   "peerDependencies": {
     "@packmule/core": "*",

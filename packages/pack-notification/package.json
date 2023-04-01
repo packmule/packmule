@@ -31,7 +31,7 @@
     "access": "public"
   },
   "dependencies": {
-    "webpack-notifier": "^1.8.0"
+    "webpack-notifier": "^1.15.0"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^"

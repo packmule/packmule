@@ -31,11 +31,11 @@
     "access": "public"
   },
   "dependencies": {
-    "webpack-bundle-analyzer": "^4.4.2"
+    "webpack-bundle-analyzer": "^4.8.0"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^",
-    "@types/webpack-bundle-analyzer": "^4.4.1"
+    "@types/webpack-bundle-analyzer": "^4.6.0"
   },
   "peerDependencies": {
     "@packmule/core": "*"

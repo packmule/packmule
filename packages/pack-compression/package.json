@@ -31,13 +31,13 @@
     "access": "public"
   },
   "dependencies": {
-    "@gfx/zopfli": "^1.0.14",
+    "@gfx/zopfli": "^1.0.15",
     "compression-webpack-plugin": "^10.0.0",
-    "micromatch": "^4.0.2"
+    "micromatch": "^4.0.5"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^",
-    "@types/micromatch": "^4.0.0"
+    "@types/micromatch": "^4.0.2"
   },
   "peerDependencies": {
     "@packmule/core": "*"

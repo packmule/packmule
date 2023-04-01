@@ -31,7 +31,7 @@
     "access": "public"
   },
   "dependencies": {
-    "webpack-hot-middleware": "^2.25.0"
+    "webpack-hot-middleware": "^2.25.3"
   },
   "devDependencies": {
     "@packmule/core": "workspace:^"

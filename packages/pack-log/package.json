@@ -32,7 +32,7 @@
     "access": "public"
   },
   "dependencies": {
-    "string-to-color": "^2.1.1",
+    "string-to-color": "^2.2.2",
     "webpackbar": "^5.0.2"
   },
   "devDependencies": {

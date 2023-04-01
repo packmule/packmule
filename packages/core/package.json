@@ -32,10 +32,11 @@
     "access": "public"
   },
   "dependencies": {
-    "browserslist-to-esbuild": "^1.1.0",
-    "esbuild-loader": "^2.8.0",
+    "browserslist-to-esbuild": "^1.2.0",
+    "esbuild-loader": "^2.21.0",
     "pkg-dir": "^7.0.0",
-    "webpack-merge": "^5.0.7"
+    "webpack": "^5.77.0",
+    "webpack-merge": "^5.8.0"
   },
   "peerDependencies": {
     "webpack": "^5.0.0"
