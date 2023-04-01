@@ -1,7 +1,7 @@
 {
   "name": "@packmule/service-worker-pack",
   "description": "Packmule pack to generate a service worker.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "MIT",
   "repository": "github:packmule/packmule",
   "bugs": "https://github.com/packmule/packmule/issues",

@@ -1,7 +1,7 @@
 {
   "name": "@packmule/image-optimization-pack",
   "description": "Packmule pack to optimize image files.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "license": "MIT",
   "repository": "github:packmule/packmule",
   "bugs": "https://github.com/packmule/packmule/issues",
